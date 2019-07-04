@@ -11,6 +11,11 @@
 *	Edit this section
 *
 * ======================================================= */
+.pesquisa {
+  display: flex;
+  justify-content: start;
+}
+
 body {
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6;
