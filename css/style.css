@@ -15,6 +15,9 @@
   display: flex;
   justify-content: start;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Open Sans", Arial, sans-serif;
