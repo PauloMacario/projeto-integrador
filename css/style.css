@@ -1228,11 +1228,11 @@ figure {
   transform: translateX(-240px);
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   #fh5co-menu-wrap {
     display: none;
   }
-}
+} */
 
 #offcanvas-menu {
   position: absolute;
