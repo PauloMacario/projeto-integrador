@@ -67,7 +67,7 @@
 							</div>
 						</div>
 					</div>
-					<header id="header-section" class="">
+					<header id="header-section" class="sticky-banner">
 						
 							<div class="nav-header">
 									<nav class="navbar navbar-expand-lg navbar-light bg-light">
