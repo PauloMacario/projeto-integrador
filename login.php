@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="css/login.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </head>
-    <body class="background">
+<?php
+	require_once("inc/header.php");
+?>
+   
         <div class="teste">
         <form action="home.html" method="POST">
         <div class="form-group">
@@ -21,5 +16,6 @@
             <a href="cadastro.php" class="btn btn-primary">Cadastrar</a> 
         </form>
         </div>
-        </body>
-</html
+<?php		
+	require_once("inc/footer.php");
+?>
