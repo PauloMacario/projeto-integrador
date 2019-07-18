@@ -19,7 +19,7 @@
 	// Main Menu Superfish
 	var mainMenu = function() {
 
-		$('#fh5co-primary-menu').superfish({
+		$('#primary-menu').superfish({
 			delay: 0,
 			animation: {
 				opacity: 'show'
@@ -40,7 +40,7 @@
 	// Offcanvas and cloning of the main menu
 	var offcanvas = function() {
 
-		var $clone = $('#fh5co-menu-wrap').clone();
+		var $clone = $('#menu').clone();
 		$clone.attr({
 			'id' : 'offcanvas-menu'
 		});
@@ -49,7 +49,7 @@
 			'id' : ''
 		});
 
-		$('#fh5co-page').prepend($clone);
+		$('#page').prepend($clone);
 
 		// click the burger
 		$('.js-fh5co-nav-toggle').on('click', function(){
