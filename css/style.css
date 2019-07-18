@@ -11,6 +11,21 @@
 *	Edit this section
 *
 * ======================================================= */
+
+/* =======================================================
+*	Itens alterados em 18/07/2019  INICIO
+* 	
+* ======================================================= */
+
+.img-sobre{
+  height:50px;
+}
+
+/* =======================================================
+*	Itens alterados em 18/07/2019  Final
+* 	
+* ======================================================= */
+
 .pesquisa {
   display: flex;
   justify-content: start;
@@ -112,7 +127,7 @@ figure {
     text-align: center;
   }
 }
-.header-top .fh5co-social a {
+.header-top .social a {
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
   margin-right: 15px;
@@ -121,14 +136,14 @@ figure {
   -o-transition: 0.5s, ease-in-out;
   transition: 0.5s, ease-in-out;
 }
-.header-top .fh5co-social a:last-child {
+.header-top .social a:last-child {
   margin-right: 0;
 }
-.header-top .fh5co-social a:hover, .header-top .fh5co-social a:focus, .header-top .fh5co-social a:active {
+.header-top .social a:hover, .header-top .social a:focus, .header-top .social a:active {
   text-decoration: none;
   color: white !important;
 }
-.header-top .fh5co-social a:hover i, .header-top .fh5co-social a:focus i, .header-top .fh5co-social a:active i {
+.header-top .social a:hover i, .header-top .social a:focus i, .header-top .social a:active i {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
@@ -136,28 +151,28 @@ figure {
   transform: scale(1.2);
 }
 @media screen and (max-width: 768px) {
-  .header-top .fh5co-social {
+  .header-top .social {
     text-align: center !important;
   }
 }
 
-.fh5co-cover,
-.fh5co-hero {
+.home-cover,
+.home {
   position: relative;
   height: 800px;
 }
 @media screen and (max-width: 768px) {
-  .fh5co-cover,
-  .fh5co-hero {
+  .home-cover,
+  .home {
     height: 700px;
   }
 }
-.fh5co-cover.fh5co-hero-2,
-.fh5co-hero.fh5co-hero-2 {
+.home-cover.home-2,
+.home.home-2 {
   height: 600px;
 }
-.fh5co-cover.fh5co-hero-2 .fh5co-overlay,
-.fh5co-hero.fh5co-hero-2 .fh5co-overlay {
+.home-cover.home-2 .overlay,
+.home.home-2 .overlay {
   position: absolute !important;
   width: 100%;
   top: 0;
@@ -168,7 +183,7 @@ figure {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.fh5co-overlay {
+.overlay {
   position: absolute !important;
   width: 100%;
   top: 0;
@@ -180,30 +195,30 @@ figure {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.fh5co-cover {
+.home-cover {
   background-size: cover;
   position: relative;
 }
 @media screen and (max-width: 768px) {
-  .fh5co-cover {
-    heifght: inherit;
+  .home-cover {
+    height: inherit;
     padding: 3em 0;
   }
 }
-.fh5co-cover .btn {
+.home-cover .btn {
   padding: 1em 2em;
   opacity: .9;
 }
-.fh5co-cover.fh5co-cover_2 {
+.home-cover.home-cover_2 {
   height: 600px;
 }
 @media screen and (max-width: 768px) {
-  .fh5co-cover.fh5co-cover_2 {
-    heifght: inherit;
+  .home-cover.home-cover_2 {
+    height: inherit;
     padding: 3em 0;
   }
 }
-.fh5co-cover .desc {
+.home-cover .desc {
   top: 50%;
   position: absolute;
   width: 100%;
@@ -212,43 +227,43 @@ figure {
   color: #fff;
 }
 @media screen and (max-width: 768px) {
-  .fh5co-cover .desc {
+  .home-cover .desc {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
-.fh5co-cover .desc h2 {
+.home-cover .desc h2 {
   color: #fff;
   text-transform: uppercase;
   font-size: 60px;
   margin-bottom: 10px;
   font-weight: 300 !important;
 }
-.fh5co-cover .desc h2 strong {
+.home-cover .desc h2 strong {
   font-weight: 700;
 }
 @media screen and (max-width: 768px) {
-  .fh5co-cover .desc h2 {
+  .home-cover .desc h2 {
     font-size: 40px;
   }
 }
-.fh5co-cover .desc span {
+.home-cover .desc span {
   display: block;
   margin-bottom: 30px;
   font-size: 28px;
   letter-spacing: 1px;
 }
-.fh5co-cover .desc span a {
+.home-cover .desc span a {
   color: #fff;
 }
-.fh5co-cover .desc span a:hover, .fh5co-cover .desc span a:focus {
+.home-cover .desc span a:hover, .home-cover .desc span a:focus {
   color: #fff !important;
 }
-.fh5co-cover .desc span a:hover.btn, .fh5co-cover .desc span a:focus.btn {
+.home-cover .desc span a:hover.btn, .home-cover .desc span a:focus.btn {
   border: 2px solid #fff !important;
   background: transparent !important;
 }
-.fh5co-cover .desc span a.fh5co-site-name {
+.home-cover .desc span a.fh5co-site-name {
   padding-bottom: 2px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
@@ -358,7 +373,7 @@ figure {
   border-left-color: #ccc;
 }
 
-#fh5co-header-section {
+#header-section {
   padding: 0;
   position: relative;
   left: 0;
@@ -399,24 +414,30 @@ figure {
   color: #cdcdcd !important;
 }
 
-#fh5co-menu-wrap {
+#menu {
   position: relative;
   z-index: 2;
   display: block;
   float: right;
   margin-top: 15px;
 }
-#fh5co-menu-wrap .sf-menu a {
+#menu .sf-menu a {
   padding: 1em .75em;
 }
 
-#fh5co-primary-menu > li > ul li.active > a {
+.menu-topo{
+  display:flex;
+  justify-content: flex-end;
+}
+
+
+#primary-menu > li > ul li.active > a {
   color: #cdcdcd !important;
 }
-#fh5co-primary-menu > li > .sf-with-ul:after {
+#primary-menu > li > .sf-with-ul:after {
   border: none !important;
   font-family: 'icomoon';
-  speak: none;
+  /* speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -434,13 +455,13 @@ figure {
   content: "\e922";
   color: rgba(0, 0, 0, 0.5);
 }
-#fh5co-primary-menu > li > ul li {
+#primary-menu > li > ul li {
   position: relative;
 }
-#fh5co-primary-menu > li > ul li > .sf-with-ul:after {
+#primary-menu > li > ul li > .sf-with-ul:after {
   border: none !important;
   font-family: 'icomoon';
-  speak: none;
+ /*  speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -458,7 +479,7 @@ figure {
   color: rgba(0, 0, 0, 0.5);
 }
 
-#fh5co-primary-menu .fh5co-sub-menu {
+#primary-menu .sub-menu {
   padding: 10px 7px 10px;
   background: #fff;
   left: 0;
@@ -472,11 +493,11 @@ figure {
   -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
-#fh5co-primary-menu .fh5co-sub-menu > li > .fh5co-sub-menu {
+#primary-menu .sub-menu > li > .sub-menu {
   left: 100%;
 }
 
-#fh5co-primary-menu .fh5co-sub-menu:before {
+#primary-menu .sub-menu:before {
   position: absolute;
   top: -9px;
   left: 20px;
@@ -485,7 +506,7 @@ figure {
   content: '';
 }
 
-#fh5co-primary-menu .fh5co-sub-menu:after {
+#primary-menu .sub-menu:after {
   position: absolute;
   top: -8px;
   left: 21px;
@@ -498,12 +519,12 @@ figure {
   content: '';
 }
 
-#fh5co-primary-menu .fh5co-sub-menu .fh5co-sub-menu:before {
+#primary-menu .sub-menu .sub-menu:before {
   top: 6px;
   left: 100%;
 }
 
-#fh5co-primary-menu .fh5co-sub-menu .fh5co-sub-menu:after {
+#primary-menu .sub-menu .sub-menu:after {
   top: 7px;
   right: 100%;
   border: none !important;
@@ -521,7 +542,7 @@ figure {
   display: none;
 }
 
-#fh5co-primary-menu .fh5co-sub-menu a {
+#primary-menu .sub-menu a {
   letter-spacing: 0;
   padding: 0 15px;
   font-size: 18px;
@@ -530,31 +551,31 @@ figure {
   text-transform: none;
   background: none;
 }
-#fh5co-primary-menu .fh5co-sub-menu a:hover {
+#primary-menu .sub-menu a:hover {
   color: #cdcdcd !important;
 }
 #fh5co-work-section,
 #fh5co-services-section,
 #fh5co-work-section_2,
-#fh5co-blog-section,
+#noticia,
 #fh5co-features {
   padding: 7em 0;
 }
-#fh5co-content-section{
+#busca-section{
   padding-top: 7em;
 }
 @media screen and (max-width: 768px) {
   #fh5co-work-section,
   #fh5co-services-section,
-  #fh5co-content-section,
+  #busca-section,
   #fh5co-work-section_2,
-  #fh5co-blog-section,
+  #noticia,
   #fh5co-features {
     padding: 4em 0;
   }
 }
 
-.fh5co-section-gray {
+.projeto-section {
   background: rgba(0, 0, 0, 0.04);
 }
 
@@ -581,7 +602,7 @@ figure {
   font-size: 20px;
 }
 
-.feature-text h3 {
+.projeto-text h3 {
   text-transform: uppercase;
   font-size: 14px;
   margin-bottom: 10px;
@@ -589,7 +610,7 @@ figure {
   color: #000;
   letter-spacing: .2em;
 }
-.feature-text h3 .number {
+.projeto-text h3 .number {
   margin-right: 5px;
   color: #cdcdcd;
   display: -moz-inline-stack;
@@ -597,7 +618,7 @@ figure {
   zoom: 1;
   *display: inline;
 }
-.feature-text p {
+.projeto-text p {
   font-size: 16px;
 }
 
@@ -694,6 +715,9 @@ figure {
 #fh5co-portfolio {
   padding: 7em 0;
   min-height: 500px;
+}
+.navbar form{
+  width:50%;;
 }
 @media screen and (max-width: 768px) {
   #fh5co-portfolio {
@@ -882,9 +906,13 @@ figure {
   margin-bottom: 0;
 }
 
-#fh5co-feature-product {
+#projeto {
   padding-top: 7em;
 
+}
+#noticia-section{
+  padding-top: 7em;
+  padding-bottom: 7em
 }
 
 #fh5co-services, #fh5co-about, #fh5co-contact {
@@ -987,33 +1015,33 @@ figure {
   margin-bottom: 30px;
 }
 
-.fh5co-testimonial, .fh5co-team {
+.mapa, .fh5co-team {
   position: relative;
   background: #fff;
   padding: 4em 0;
   border-radius: 5px;
 }
 @media screen and (max-width: 768px) {
-  .fh5co-testimonial, .fh5co-team {
+  .mapa, .fh5co-team {
     border-right: 0;
     margin-bottom: 80px;
   }
 }
-.fh5co-testimonial h2, .fh5co-team h2 {
+.mapa h2, .fh5co-team h2 {
   font-size: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 50px;
 }
-.fh5co-testimonial figure, .fh5co-team figure {
+.mapa figure, .fh5co-team figure {
   position: absolute;
   top: -50px;
   left: 50%;
   margin-left: -65px;
   background-size: cover;
 }
-.fh5co-testimonial figure img, .fh5co-team figure img {
+.mapa figure img, .fh5co-team figure img {
   width: 130px;
   height: 130px;
   border: 10px solid #fff;
@@ -1023,49 +1051,49 @@ figure {
   -ms-border-radius: 50%;
   border-radius: 50%;
 }
-.fh5co-testimonial > div, .fh5co-team > div {
+.mapa > div, .fh5co-team > div {
   padding: 30px 30px 0 30px;
 }
-.fh5co-testimonial > div h3, .fh5co-team > div h3 {
+.mapa > div h3, .fh5co-team > div h3 {
   margin-bottom: 0;
   font-size: 20px;
   color: #cdcdcd;
 }
-.fh5co-testimonial > div .position, .fh5co-team > div .position {
+.mapa > div .position, .fh5co-team > div .position {
   color: #d9d9d9;
   margin-bottom: 30px;
 }
-.fh5co-testimonial > div,
-.fh5co-testimonial blockquote, .fh5co-team > div,
+.mapa > div,
+.mapa blockquote, .fh5co-team > div,
 .fh5co-team blockquote {
   border: none;
   margin-bottom: 20px;
   padding-top: 30px;
 }
-.fh5co-testimonial > div p,
-.fh5co-testimonial blockquote p, .fh5co-team > div p,
+.mapa > div p,
+.mapa blockquote p, .fh5co-team > div p,
 .fh5co-team blockquote p {
   font-size: 18px;
   line-height: 1.6em;
   color: #555555;
 }
-.fh5co-testimonial span, .fh5co-team span {
+.mapa span, .fh5co-team span {
   font-style: italic;
   color: #b3b3b3;
 }
 
-.fh5co-blog {
+.noticia {
   margin-bottom: 60px;
 }
-.fh5co-blog a img {
+.noticia a img {
   width: 100%;
 }
 @media screen and (max-width: 768px) {
-  .fh5co-blog {
+  .noticia {
     width: 100%;
   }
 }
-.fh5co-blog .blog-text {
+.noticia .noticia-text {
   margin-bottom: 30px;
   position: relative;
   background: #fff;
@@ -1079,32 +1107,32 @@ figure {
   -moz-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
   box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
 }
-.fh5co-blog .blog-text span {
+.noticia .noticia-text span {
   display: inline-block;
   margin-bottom: 20px;
 }
-.fh5co-blog .blog-text span.posted_by {
+.noticia .noticia-text span.posted_by {
   font-style: italic;
   color: rgba(0, 0, 0, 0.3);
   font-size: 18px;
 }
-.fh5co-blog .blog-text span.comment {
+.noticia .noticia-text span.comment {
   float: right;
 }
-.fh5co-blog .blog-text span.comment a {
+.noticia .noticia-text span.comment a {
   color: rgba(0, 0, 0, 0.3);
 }
-.fh5co-blog .blog-text span.comment a i {
+.noticia .noticia-text span.comment a i {
   color: #cdcdcd;
   padding-left: 7px;
 }
-.fh5co-blog .blog-text h3 {
+.noticia .noticia-text h3 {
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: 300;
   line-height: 1.5;
 }
-.fh5co-blog .blog-text h3 a {
+.noticia .noticia-text h3 a {
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -1138,20 +1166,20 @@ figure {
   }
 }
 
-.fh5co-social-icons > a {
+.social-icons > a {
   padding: 4px 10px;
   color: #cdcdcd;
 }
-.fh5co-social-icons > a i {
+.social-icons > a i {
   font-size: 26px;
 }
-.fh5co-social-icons > a:hover, .fh5co-social-icons > a:focus, .fh5co-social-icons > a:active {
+.social-icons > a:hover, .social-icons > a:focus, .social-icons > a:active {
   text-decoration: none;
   color: #5a5a5a;
 }
 
 #footer {
-  background: #cdcdcd;
+  background: #3f3f3f;
   padding: 60px 0 40px;
 }
 #footer p {
@@ -1189,11 +1217,11 @@ figure {
   background: #cdcdcd;
   color: #fff !important;
 }
-.btn:hover, .btn:active, .btn:focus {
+/* .btn:hover, .btn:active, .btn:focus {
   background: #393e46 !important;
   color: #fff;
   outline: none !important;
-}
+} */
 .btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-default:active {
   border-color: transparent;
 }
@@ -1202,7 +1230,7 @@ figure {
   opacity: 0;
 }
 
-#fh5co-wrapper {
+#box-principal {
   overflow-x: hidden;
   position: relative;
 }
@@ -1210,17 +1238,17 @@ figure {
 .fh5co-offcanvas {
   overflow: hidden;
 }
-.fh5co-offcanvas #fh5co-wrapper {
+.fh5co-offcanvas #box-principal {
   overflow: hidden !important;
 }
 
-#fh5co-page {
+#page {
   position: relative;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-.fh5co-offcanvas #fh5co-page {
+.fh5co-offcanvas #page {
   -moz-transform: translateX(-240px);
   -webkit-transform: translateX(-240px);
   -ms-transform: translateX(-240px);
@@ -1229,7 +1257,7 @@ figure {
 }
 
 /* @media screen and (max-width: 768px) {
-  #fh5co-menu-wrap {
+  #menu {
     display: none;
   }
 } */
@@ -1267,14 +1295,14 @@ figure {
 #offcanvas-menu ul li a:hover {
   color: #cdcdcd;
 }
-#offcanvas-menu ul li > .fh5co-sub-menu {
+#offcanvas-menu ul li > .sub-menu {
   margin-top: 9px;
   padding-left: 20px;
 }
 #offcanvas-menu ul li.active > a {
   color: #cdcdcd;
 }
-#offcanvas-menu ul .fh5co-sub-menu {
+#offcanvas-menu ul .sub-menu {
   display: block !important;
 }
 
@@ -1398,6 +1426,11 @@ figure {
 
 
 @media screen and (max-width: 768px) {
+  .pesquisa{
+    display: none;
+  } 
+
+  
   .fh5co-nav-toggle {
     display: block;
     top: 0px;
