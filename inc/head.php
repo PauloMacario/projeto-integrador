@@ -7,7 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Nome_Projeto &mdash; Estenda sua mão a quem precisa</title>
+	<title>Páginas do Bem &mdash; Estenda sua mão a quem precisa</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Projeto Integrador DH" />
 	<meta name="keywords" content="" />

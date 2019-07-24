@@ -121,8 +121,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
-						<h3>Exemplo: Noticias ou Blog </h3>
-						<p>Lorem ipsum dolor sit amet, consectetur </p>
+						<h3>NOTÍCIAS</h3>
+						<p>Esteja sempre a par das melhores notícias</p>
 					</div>
 				</div>
 			</div>
@@ -130,12 +130,10 @@
 				<div class="row row-bottom-padded-md">
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="noticia animate-box">
-						<a href="#"><img class="img-responsive" src="images/cover_bg_2.jpg" alt=""></a>
+						<iframe width="100%" height="280" src="https://www.youtube.com/embed/j8L1CcanjT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>Conheça os 17 Objetivos de Desenvolvimento Sustentável</a></h3>
-									<span class="posted_by">Sep. 15th</span>
-									<span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
 									<p>Acesse aqui a Agenda 2030 na íntegra, com o documento final adotado na Cúpula das Nações Unidas sobre o Desenvolvimento Sustentável.</p>
 									
 								</div>
@@ -144,12 +142,10 @@
 					</div>
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/cover_bg_2.jpg" alt=""></a>
+						<iframe width="100%" height="280" src="https://www.youtube.com/embed/soT7jdW5bvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<div class="noticia-text">
 								<div class="noticia-title">
-									<h3><a href=""#>Notícia 2</a></h3>
-									<span class="posted_by">Sep. 15th</span>
-									<span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
+									<h3><a href=""#>Um olhar sobre o futuro do Santuário de Elefantes Brasil.</a></h3>
 									<p>Breve descrição da notícia.</p>
 									
 								</div>
@@ -159,12 +155,10 @@
 					<div class="clearfix visible-sm-block"></div>
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/cover_bg_3.jpg" alt=""></a>
+						<iframe width="100%" height="280" src="https://www.youtube.com/embed/_oeYCEYpaRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<div class="noticia-text">
 								<div class="noticia-title">
-									<h3><a href=""#>Notícia 3</a></h3>
-									<span class="posted_by">Sep. 15th</span>
-									<span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
+									<h3><a href=""#>O trabalho infantil no Brasil</a></h3>
 									<p>Breve descrição da notícia.</p>
 									
 								</div>
@@ -185,5 +179,4 @@
 		<!-- noticia-section -->
 		
 <?php		
-	require_once("inc/footer.php");		
-?>	
+	require_once("inc/footer.php");	

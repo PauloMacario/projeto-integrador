@@ -122,6 +122,7 @@
 
 		<div id="box-principal">
 			<div id="page">
+			
 				<div class="header-top">
 						<div class="container">
 							<div class="row">
@@ -137,9 +138,7 @@
 						
 							<div class="nav-header">
 									<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-											<a class="navbar-brand" href="#">Projetão</a>
-											
+											<a class="navbar-brand" href="#">Páginas do Bem</a>
 											<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
 											  <span class="navbar-toggler-icon"></span>
 											</button>
@@ -147,7 +146,7 @@
 											<div class="collapse navbar-collapse " id="conteudoNavbarSuportado">
 											  <ul class="navbar-nav ml-auto">
 												<li class="nav-item  ">
-												  <a class="nav-link" href="home.php">Home </a>
+												  <a class="nav-link" href="home.php">Home</a>
 												</li>
 
 
