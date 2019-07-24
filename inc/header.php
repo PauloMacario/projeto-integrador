@@ -54,6 +54,72 @@
 
 	</head>
 	<body>
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  	<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center ">
+	 	<h5 class="modal-title mr-auto ml-auto" id="exampleModalLabel">Login</h5>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+        
+      
+		<form action="home.html" method="POST">
+			<div class="form-group">
+				
+				<input type="text" class="form-control" id="login" placeholder="Login" name="login" required>
+			</div>
+			<div class="form-group">
+				
+				<input type="password" class="form-control" id="senha" placeholder="Senha" name="senha" required>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-success col-12">Login</button>
+			</div> 
+			<div class="form-group">	
+			<a class="nav-link btn btn-warning" href="cadastro.php" >Cadastrar</a>   <!-- data-toggle="modal" data-target="#modalCadastro" -->
+			</div> 
+		</form>
+												
+		</div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>	
+
+
+<!-- modal cadastro -->
+
+<!-- <div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="#modalCadastro" aria-hidden="true">
+  	<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center ">
+	 	<h5 class="modal-title mr-auto ml-auto" id="exampleModalLabel">Login</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> 
+      </div>
+      <div class="modal-body">
+        
+      
+		
+												
+		</div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div> -->
+												
+
+
+
 		<div id="box-principal">
 			<div id="page">
 				<div class="header-top">
@@ -72,26 +138,21 @@
 							<div class="nav-header">
 									<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-											<!-- <a class="navbar-brand" href="#">Navbar</a> -->
-											<form class="form-inline my-2 my-lg-0">
-													<input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-													<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
-														BUSCA
-													</button>
-												  </form>
+											<a class="navbar-brand" href="#">Projetão</a>
+											
 											<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
 											  <span class="navbar-toggler-icon"></span>
 											</button>
 										  
-											<div class="collapse navbar-collapse menu-topo" id="conteudoNavbarSuportado">
-											  <ul class="navbar-nav mr-auto">
-												<li class="nav-item ">
+											<div class="collapse navbar-collapse " id="conteudoNavbarSuportado">
+											  <ul class="navbar-nav ml-auto">
+												<li class="nav-item  ">
 												  <a class="nav-link" href="home.php">Home </a>
 												</li>
 
 
 												<li class="nav-item">
-													<a class="nav-link" href="Projetos.php">Projetos</a>
+													<a class="nav-link links" href="">Projetos</a>
 												</li>
 
 												<!-- <li class="nav-item dropdown">
@@ -118,13 +179,18 @@
 													<a class="nav-link" href="contato.php">Contato</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" href="login.php">Login</a>
-												</li>
+													<a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Login</a>
+													
 												
 											  </ul>
 											 
 											</div>
 										  </nav>
 							</div>
+							<!-- Button trigger modal -->
+										
+
+										<!-- Modal -->
+										
 						
 					</header>	
