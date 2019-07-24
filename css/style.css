@@ -12,19 +12,6 @@
 *
 * ======================================================= */
 
-/* =======================================================
-*	Itens alterados em 18/07/2019  INICIO
-* 	
-* ======================================================= */
-
-.img-sobre{
-  height:50px;
-}
-
-/* =======================================================
-*	Itens alterados em 18/07/2019  Final
-* 	
-* ======================================================= */
 
 .pesquisa {
   display: flex;
@@ -48,7 +35,7 @@ body.fh5co-offcanvas {
 }
 
 a {
-  color: #cdcdcd;
+  
   -webkit-transition: 0.5s, ease;
   -o-transition: 0.5s, ease;
   transition: 0.5s, ease;
@@ -128,20 +115,48 @@ figure {
   }
 }
 .header-top .social a {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
+  /* color: rgba(255, 255, 255, 0.7); */
+  font-size: 28px;
   margin-right: 15px;
   position: relative;
   -webkit-transition: 0.5s, ease-in-out;
   -o-transition: 0.5s, ease-in-out;
   transition: 0.5s, ease-in-out;
 }
+.header-top .social a .icon-facebook2{
+  color:#425f9b;   
+   
+}
+.header-top .social a .icon-facebook2:hover,
+.header-top .social a .icon-facebook2:focus,
+.header-top .social a .icon-facebook2:active{
+  color:#557fd4;     
+}
+
+.header-top .social a .icon-twitter2{
+  color:#1da1f2;
+}
+.header-top .social a .icon-twitter2:hover,
+.header-top .social a .icon-twitter2:focus,
+.header-top .social a .icon-twitter2:active{
+  color:#6ec6fd;    
+}
+.header-top .social a .icon-instagram2{
+  color:#ffdc56;
+}
+
+.header-top .social a .icon-instagram2:hover,
+.header-top .social a .icon-instagram2:focus,
+.header-top .social a .icon-instagram2:active{
+  color:#fdea9e;
+}
+
 .header-top .social a:last-child {
   margin-right: 0;
 }
 .header-top .social a:hover, .header-top .social a:focus, .header-top .social a:active {
   text-decoration: none;
-  color: white !important;
+  color: rgb(196, 82, 82) !important;
 }
 .header-top .social a:hover i, .header-top .social a:focus i, .header-top .social a:active i {
   -webkit-transform: scale(1.2);
@@ -156,10 +171,12 @@ figure {
   }
 }
 
-.home-cover,
+.home-cover , 
 .home {
   position: relative;
-  height: 800px;
+  height: 92vh;
+ 
+  
 }
 @media screen and (max-width: 768px) {
   .home-cover,
@@ -381,6 +398,8 @@ figure {
   z-index: 1022;
   background: #fff;
 }
+
+
 
 .nav-header {
   position: relative;
@@ -607,7 +626,7 @@ figure {
   font-size: 14px;
   margin-bottom: 10px;
   font-weight: 700;
-  color: #000;
+  color: #505050;
   letter-spacing: .2em;
 }
 .projeto-text h3 .number {
@@ -620,6 +639,18 @@ figure {
 }
 .projeto-text p {
   font-size: 16px;
+  height:100%;
+}
+.projeto-paragrafo{
+  height:20vh;
+  text-align: justify;
+ 
+
+}
+.projeto-paragrafo p{
+ justify-content:  center
+ 
+
 }
 
 .services {
@@ -1095,14 +1126,15 @@ figure {
 }
 .noticia .noticia-text {
   margin-bottom: 30px;
-  position: relative;
+ /*  position: relative; */
   background: #fff;
-  width: 90%;
+  width: 100%;
   padding: 30px;
   float: right;
-  margin-top: -5em;
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  
+  /* margin-top: -5em; */
+  /* border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px; */
   -webkit-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
   -moz-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
   box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
@@ -1136,6 +1168,17 @@ figure {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.noticia .noticia-title{
+   height:30vh;
+   overflow: hidden;
+   -webkit-line-clamp: 5;
+  
+}
+.noticia .noticia-title p{
+    color:#6e6e6e;
+}
+
+
 #fh5co-start-project-section {
   padding: 7em 0;
   background: #F64E8B;
@@ -1168,15 +1211,55 @@ figure {
 
 .social-icons > a {
   padding: 4px 10px;
-  color: #cdcdcd;
+ /*  color: #cdcdcd; */
 }
 .social-icons > a i {
   font-size: 26px;
 }
-.social-icons > a:hover, .social-icons > a:focus, .social-icons > a:active {
+.social-icons > a .icon-twitter2{
+  color:#1da1f2;     
+}
+.social-icons > a .icon-twitter2:hover,
+.social-icons > a .icon-twitter2:focus,
+.social-icons > a .icon-twitter2:active{       /*  6ec6fd  557fd4   fdea9e    */
+  color:#6ec6fd;     
+}
+
+.social-icons > a .icon-facebook2{
+  color:#425f9b;
+}
+.social-icons > a .icon-facebook2:hover,
+.social-icons > a .icon-facebook2:focus,
+.social-icons > a .icon-facebook2:active{
+  color:#557fd4;
+}
+
+.social-icons > a .icon-instagram{
+  color:#ffdc56;
+  
+}
+.social-icons > a .icon-instagram:hover,
+.social-icons > a .icon-instagram:focus,
+.social-icons > a .icon-instagram:active{
+  color:#fdea9e;
+  
+}
+
+.social-icons > a .icon-youtube{
+  color:#cc0000;
+}
+.social-icons > a .icon-youtube:hover,
+.social-icons > a .icon-youtube:focus,
+.social-icons > a .icon-youtube:active
+{
+  color:#e22222;
+}
+
+
+/* .social-icons > a:hover, .social-icons > a:focus, .social-icons > a:active {
   text-decoration: none;
   color: #5a5a5a;
-}
+} */
 
 #footer {
   background: #3f3f3f;
@@ -1186,9 +1269,9 @@ figure {
   color: white;
   font-size: 14px;
 }
-#footer p a {
+/* #footer p a {
   color: rgba(255, 255, 255, 0.5);
-}
+} */
 #footer p a:hover, #footer p a:active, #footer p a:focus {
   color: rgba(255, 255, 255, 0.9) !important;
 }
@@ -1528,4 +1611,21 @@ figure {
   background: url(../images/hourglass.svg) center no-repeat #222222;
 }
 
-/*# sourceMappingURL=style.css.map */
+
+/* =======================================================
+*	Itens alterados em 18/07/2019  INICIO
+* 	
+* ======================================================= */
+
+.img-sobre{
+  height:50px;
+}
+.navbar-light .navbar-nav .nav-link {
+color:#308f46;
+
+}
+
+/* =======================================================
+*	Itens alterados em 18/07/2019  Final
+* 	
+* ======================================================= */
