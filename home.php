@@ -37,8 +37,9 @@
 						</div>
 						<div class="projeto-text">
 							<h3>Criança e Adolescente</h3>
-							<p>Encontre aqui organizações que ajudam em orfanatos, creches, hospitais e lazer com as crianças e adolescentes!</p>
-							<p><a href="#">Saiba mais</a></p>
+							<div class="projeto-paragrafo">	
+							<p>Encontre aqui organizações que ajudam escolas, orfanatos, creches, hospitais e outras ações que promovam melhorias e apoio para a vida de crianças e adolescentes!</p>
+							</div>	
 						</div>	
 					</div>
 					<div class="col-lg-4 col-md-12 col-sm-12 text-center animate-box">
@@ -47,8 +48,9 @@
 						</div>
 						<div class="projeto-text">
 							<h3>Proteção aos Animais</h3>
+							<div class="projeto-paragrafo">
 							<p>Encontre aqui uma ação e seja um voluntário para auxílio em eventos de adoção de animais, veterinários ou formandos em veterinária para cuidados com os animais, etc.!</p>
-							<p><a href="#">Saiba mais</a></p>
+							</div>
 						</div>
 
 					</div>
@@ -58,8 +60,9 @@
 						</div>
 						<div class="projeto-text">
 							<h3>Meio Ambiente</h3>
+							<div class="projeto-paragrafo">
 							<p>Todos nós sabemos que o planeta Terra não está bem e que precisa da ajuda de todos os cidadãos. Seja um voluntário para contribuir com as ações práticas de conservação do meio ambiente!<p>
-							<p><a href="#">Saiba mais</a></p>
+							</div>
 						</div>
 					</div>
 				
@@ -127,14 +130,14 @@
 				<div class="row row-bottom-padded-md">
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="noticia animate-box">
-							 <iframe width="100%" height="280" src="https://www.youtube.com/embed/j8L1CcanjT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<a href="#"><img class="img-responsive" src="images/cover_bg_2.jpg" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>Conheça os 17 Objetivos de Desenvolvimento Sustentável</a></h3>
 									<span class="posted_by">Sep. 15th</span>
 									<span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
 									<p>Acesse aqui a Agenda 2030 na íntegra, com o documento final adotado na Cúpula das Nações Unidas sobre o Desenvolvimento Sustentável.</p>
-									<p><a href="#">Ler mais...</a></p>
+									
 								</div>
 							</div> 
 						</div>
@@ -148,7 +151,7 @@
 									<span class="posted_by">Sep. 15th</span>
 									<span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
 									<p>Breve descrição da notícia.</p>
-									<p><a href="#">Ler mais..</a></p>
+									
 								</div>
 							</div> 
 						</div>
@@ -163,7 +166,7 @@
 									<span class="posted_by">Sep. 15th</span>
 									<span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
 									<p>Breve descrição da notícia.</p>
-									<p><a href="#">Ler mais..</a></p>
+									
 								</div>
 							</div> 
 						</div>
