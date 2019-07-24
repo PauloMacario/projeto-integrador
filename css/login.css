@@ -12,15 +12,15 @@
 {
     margin-top: 10px;
 }
-
-.cadastro
-{
-    width: 400px;
-    height: 500px;
-    text-align: center;
-    margin: 5% 0% 4% 35%;
-    background-color: rgb(238, 232, 152);
-    border-radius: 10px;
+.box-cadastro{
+    width:100vw;
+    height:58vh;
+    display:flex;
+    justify-content: center;
+    padding:4%;
+}
+.cadastro{
+    width:40vw;
 }
 
 .cadastro label
