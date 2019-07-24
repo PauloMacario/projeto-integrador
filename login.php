@@ -3,7 +3,7 @@
 ?>
    
         <div class="teste">
-        <form action="home.html" method="POST">
+            <form action="home.html" method="POST">
         <div class="form-group">
             <label>Login</label>
             <input type="text" class="form-control" id="login" placeholder="Login" name="login" required>
@@ -14,7 +14,7 @@
         </div>
             <button type="submit" class="btn btn-primary">Login</button>
             <a href="cadastro.php" class="btn btn-primary">Cadastrar</a> 
-        </form>
+            </form>
         </div>
 <?php		
 	require_once("inc/footer.php");
