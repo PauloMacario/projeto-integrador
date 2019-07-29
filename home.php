@@ -7,7 +7,7 @@
 		<div class="home" id="home">
 					<div class="overlay"></div>
 			
-					<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/cover_nature_01.jpg);background-size: cover; background-repeat: no-repeat;">
+					<div class="home-cover text-center" data-stellar-background-ratio="0.8" style="background-image: url(images/cover_nature_01.jpg);background-size: cover; background-repeat: no-repeat;">
 						<div class="desc animate-box">
 							<h2><strong>Seja voluntário!</strong></h2>
 							<span>Encontre aqui um trabalho voluntário para participar </span>

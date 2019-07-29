@@ -54,10 +54,10 @@
 		// click the burger
 		$('.js-fh5co-nav-toggle').on('click', function(){
 
-			if ( $('body').hasClass('fh5co-offcanvas') ) {
-				$('body').removeClass('fh5co-offcanvas');
+			if ( $('body').hasClass('offcanvas') ) {
+				$('body').removeClass('offcanvas');
 			} else {
-				$('body').addClass('fh5co-offcanvas');
+				$('body').addClass('offcanvas');
 			}
 			
 
@@ -72,8 +72,8 @@
 			$('#offcanvas-menu').css('height', w.height());
 
 			if ( w.width() > 769 ) {
-				if ( $('body').hasClass('fh5co-offcanvas') ) {
-					$('body').removeClass('fh5co-offcanvas');
+				if ( $('body').hasClass('offcanvas') ) {
+					$('body').removeClass('offcanvas');
 				}
 			}
 
@@ -88,8 +88,8 @@
 		$(document).click(function (e) {
 	    var container = $("#offcanvas-menu, .js-fh5co-nav-toggle");
 	    if (!container.is(e.target) && container.has(e.target).length === 0) {
-	      if ( $('body').hasClass('fh5co-offcanvas') ) {
-				$('body').removeClass('fh5co-offcanvas');
+	      if ( $('body').hasClass('offcanvas') ) {
+				$('body').removeClass('offcanvas');
 			}
 	    }
 		});

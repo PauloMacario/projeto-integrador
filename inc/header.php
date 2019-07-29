@@ -96,34 +96,6 @@
 		</div>
 	</div>
 
-
-	<!-- modal cadastro -->
-
-	<!-- <div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="#modalCadastro" aria-hidden="true">
-  	<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center ">
-	 	<h5 class="modal-title mr-auto ml-auto" id="exampleModalLabel">Login</h5>
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button> 
-      </div>
-      <div class="modal-body">
-        
-      
-		
-												
-		</div>
-      <div class="modal-footer">
-        
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-
-
 	<div id="box-principal">
 		<div id="page">
 
@@ -142,7 +114,8 @@
 
 				<div class="nav-header">
 					<nav class="navbar navbar-expand-lg navbar-light bg-light">
-						<a class="navbar-brand" href="home.php">Páginas do Bem</a>
+						<a class="navbar-brand" href="home.php"><img src="images/logo_2.png" style="width:3,5vw; height:6vh;" alt="">
+						Páginas do Bem</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
 							<span class="navbar-toggler-icon"></span>
 						</button>

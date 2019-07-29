@@ -15,14 +15,14 @@ require_once("inc/header.php");
 
 </div>
 -->
-<div id="fh5co-contact" class="animate-box">
+<div id="contato" class="animate-box">
 	<div class="container">
 		<form action="#">
 			<div class="row">
 				<div class="col-md-6">
 					<h3 class="section-title">Fale Conosco!</h3>
 					<p>Temos uma comunicação aberta a todos que queiram entrar em contato. Envie sua mensagem a nós e responderemos o quanto antes!</p>
-					<ul class="contact-info">
+					<ul class="contato-info">
 						<li><i class="icon-location-pin"></i>Av. Dr. Cardoso de Melo, 90 - Vila Olímpia São Paulo - SP</li>
 						<!-- <li><i class="icon-phone2"></i>+ 1235 2355 98</li> -->
 						<li><i class="icon-mail"></i><a href="#">paginasdobem@contato.com</a></li>
@@ -57,7 +57,7 @@ require_once("inc/header.php");
 		</form>
 	</div>
 </div>
-<!-- END fh5co-contact -->
+<!-- END contato -->
 <section class="map">
 	<div class="mapouter">
 		<div class="gmap_canvas">
