@@ -56,13 +56,13 @@
 					<div class="clearfix visible-sm-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/cover_bg_3.jpg" alt=""></a>
+							<a href="#"><img class="img-responsive" src="images/photo-9.jpg" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
-									<h3><a href=""#>Medical Mission in Southern Kenya</a></h3>
+									<h3><a href=""#>Quer trabalhar como voluntário nas Olímpiadas de Tokyo 2020? Saiba como!</a></h3>
 									<span class="posted_by">Sep. 15th</span>
 									<span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p>Estão abertas as inscrições para o programa de voluntariado nas Olímpiadas de 2020, em Tokyo. Os interessados têm até a 1ª quinzena de dezembro para fazê-lo.</p>
 									<p><a href="#">Learn More...</a></p>
 								</div>
 							</div> 
@@ -71,10 +71,10 @@
 					<div class="clearfix visible-md-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/cover_bg_1.jpg" alt=""></a>
+							<a href="#"><img class="img-responsive" src="images/photo-10.jpg" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
-									<h3><a href=""#>Medical Mission in Southern Kenya</a></h3>
+									<h3><a href=""#>Esporte salvar vidas</a></h3>
 									<span class="posted_by">Sep. 15th</span>
 									<span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
 									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -86,7 +86,7 @@
 					<div class="clearfix visible-sm-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/cover_bg_2.jpg" alt=""></a>
+							<a href="#"><img class="img-responsive" src="images/photo-11.jpg" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>Medical Mission in Southern Kenya</a></h3>
