@@ -34,7 +34,7 @@ require_once("inc/header.php");
                                         </div>
                                     </a>
                                 </li>
-                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-02.jpeg); ">
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-children.jpg); ">
                                     <a href="#" class="color-3">
                                         <div class="case-studies-summary">
                                             <span>Ex: 2</span>
@@ -67,7 +67,7 @@ require_once("inc/header.php");
                                         </div>
                                     </a>
                                 </li>
-                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-6.jpg); ">
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-plastic1.jpg); ">
                                     <a href="#" class="color-3">
                                         <div class="case-studies-summary">
                                             <span>Vamos salvar nossos rios</span>
@@ -75,7 +75,7 @@ require_once("inc/header.php");
                                         </div>
                                     </a>
                                 </li>
-                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-3.jpeg); ">
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-plastic.jpg); ">
                                     <a href="#" class="color-4">
                                         <div class="case-studies-summary">
                                             <span>A elefanta Guida, foi uma das primeiras moradoras do primeiro Santuário de Elefantes da América Latina, localizado em Chapada dos Guimarães, a 65 de km de Cuiabá.</span>

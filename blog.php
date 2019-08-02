@@ -27,7 +27,7 @@
 				<div class="row row-bottom-padded-md">
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/photo-7.jpeg" alt=""></a>
+							<a href="#"><img class="img-responsive" src="images/photo-dog1.jpg" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>Medical Mission in Southern Kenya</a></h3>
@@ -41,7 +41,7 @@
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/photo-8.jpg" alt=""></a>
+							<a href="#"><img class="img-responsive" src="images/photo-pato.jpg" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>Porque pagar?</a></h3>
@@ -56,7 +56,7 @@
 					<div class="clearfix visible-sm-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/photo-9.jpg" alt=""></a>
+							<a href="#"><img class="img-responsive" src="images/photo-cat.jpg" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>Quer trabalhar como voluntário nas Olímpiadas de Tokyo 2020? Saiba como!</a></h3>
@@ -71,7 +71,7 @@
 					<div class="clearfix visible-md-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/photo-10.jpg" alt=""></a>
+							<a href="#"><img class="img-responsive" src="images/photo-sport.jpg" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>Esporte salvar vidas</a></h3>
@@ -86,7 +86,7 @@
 					<div class="clearfix visible-sm-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/photo-11.jpg" alt=""></a>
+							<a href="#"><img class="img-responsive" src="images/photo-education.jpg" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>Medical Mission in Southern Kenya</a></h3>
@@ -100,7 +100,7 @@
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/cover_bg_3.jpg" alt=""></a>
+							<a href="#"><img class="img-responsive" src="images/photo-pollution.jpg" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>Medical Mission in Southern Kenya</a></h3>
@@ -115,7 +115,7 @@
 					<div class="clearfix visible-sm-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/cover_bg_1.jpg" alt=""></a>
+							<a href="#"><img class="img-responsive" src="images/photo-amazonia.jpeg" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>Medical Mission in Southern Kenya</a></h3>
@@ -130,7 +130,7 @@
 					<div class="clearfix visible-md-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/cover_bg_2.jpg" alt=""></a>
+							<a href="#"><img class="img-responsive" src="images/photo-volunteer.jpg" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>Medical Mission in Southern Kenya</a></h3>
@@ -145,7 +145,7 @@
 					<div class="clearfix visible-sm-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/cover_bg_3.jpg" alt=""></a>
+							<a href="#"><img class="img-responsive" src="images/photo-tokyo.jpg" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>Medical Mission in Southern Kenya</a></h3>
