@@ -7,13 +7,13 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12 col-md-offset-12 text-center">
-								<p class="social-icons">
+								<!-- <p class="social-icons">
 									<a href="#"><i class="icon-twitter2"></i></a>
 									<a href="#"><i class="icon-facebook2"></i></a>
 									<a href="#"><i class="icon-instagram"></i></a>
 									<a href="#"><i class="icon-youtube"></i></a>
-								</p>
-								<!-- <p>Copyright 2016 Free Html5 <a href="#">Páginas do Bem</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p> -->
+								</p> -->
+								<p>Copyright Projeto-integrador<a href="home.php"> Páginas do Bem</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by Alunos DH</p>
 							</div>
 						</div>
 					</div>
