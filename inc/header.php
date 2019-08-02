@@ -103,9 +103,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12 col-sm-12 text-right social">
-							<a href="https://www.facebook.com/" class="grow"><i class="icon-facebook2"></i></a>
-							<a href="https://twitter.com/" class="grow"><i class="icon-twitter2"></i></a>
-							<a href="https://www.instagram.com/" class="grow"><i class="icon-instagram2"></i></a>
+							<a href="https://www.facebook.com/" class="grow"><i class="icon-facebook2" title="Facebook"></i></a>
+							<a href="https://twitter.com/" class="grow"><i class="icon-twitter2" title="Twitter"></i></a>
+							<a href="https://www.instagram.com/" class="grow"><i class="icon-instagram2" title="Instagram"></i></a>
 						</div>
 					</div>
 				</div>
@@ -114,8 +114,8 @@
 
 				<div class="nav-header">
 					<nav class="navbar navbar-expand-lg navbar-light bg-light">
-						<a class="navbar-brand" href="home.php"><img src="images/logo_2.png" style="width:3,5vw; height:6vh;" alt="">
-						Páginas do Bem</a>
+						<a class="navbar-brand" href="home.php"><img src="images/logo.png" style="width:3,5vw; height:6vh;" alt="Páginas do bem" id="logo" title="Páginas do bem">
+							Páginas do Bem</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
 							<span class="navbar-toggler-icon"></span>
 						</button>
@@ -133,11 +133,11 @@
 
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										Projetos</a>
+										Participe já</a>
 									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<a class="dropdown-item" href="#">Criança e Adolescente</a>
-										<a class="dropdown-item" href="#">Proteção aos Animais</a>
-										<a class="dropdown-item" href="#">Meio Ambiente</a>
+										<a class="dropdown-item" href="#">Instituições </a>
+										<a class="dropdown-item" href="#">Ações</a>
+										<a class="dropdown-item" href="#">Sou instituição</a>
 
 									</div>
 								</li>
