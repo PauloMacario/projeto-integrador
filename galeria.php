@@ -5,8 +5,9 @@ require_once("inc/header.php");
     <div class="overlay"></div>      <!-- /photo-dog.jpeg -->
     <div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo-dog.jpeg);background-size: cover; background-repeat: no-repeat;"">
         <div class="desc animate-box">
-            <h2>Galeria de <strong>Imagens</strong></h2>
-            <span>Algumas fotos da ações sociais<a href="" target="_blank" class="fh5co-site-name"></a></span>
+
+            <h2> <strong>Sirva, ame, dê o seu melhor</strong></h2>
+            
 
         </div>
     </div>
@@ -17,7 +18,7 @@ require_once("inc/header.php");
                     <div class="row">
                         <div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
                             <h3>Galeria de Fotos</h3>
-                            <p>Fotos das ações sociais dos voluntários</p>
+                            <p>Galeria que vale mil palavras</p>
                         </div>
                     </div>
 			
@@ -42,20 +43,20 @@ require_once("inc/header.php");
                                         </div>
                                     </a>
                                 </li>
-                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-3.jpeg); ">
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-volunteer1.jpg); ">
                                     <a href="#" class="color-4">
                                         <div class="case-studies-summary">
-                                            <span>A elefanta Guida, foi uma das primeiras moradoras do primeiro Santuário de Elefantes da América Latina, localizado em Chapada dos Guimarães, a 65 de km de Cuiabá.</span>
-                                            <h2>PRA SEMPRE GUIDA</h2>
+                                            <span>Voluntários</span>
+                                            <h2>Acção do Bem</h2>
                                         </div>
                                     </a>
                                 </li>
 
-                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-4.jpeg); ">
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-plastic.jpg); ">
                                     <a href="#" class="color-5">
                                         <div class="case-studies-summary">
-                                            <span>Adotar um animal é um ato de amor</span>
-                                            <h2>ADOTE UM AMIGO</h2>
+                                            <span>xxxx</span>
+                                            <h2>xxxxxx</h2>
                                         </div>
                                     </a>
                                 </li>
@@ -67,25 +68,8 @@ require_once("inc/header.php");
                                         </div>
                                     </a>
                                 </li>
-                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-plastic1.jpg); ">
-                                    <a href="#" class="color-3">
-                                        <div class="case-studies-summary">
-                                            <span>Vamos salvar nossos rios</span>
-                                            <h2>O PLANETA AGRADECE</h2>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-plastic.jpg); ">
-                                    <a href="#" class="color-4">
-                                        <div class="case-studies-summary">
-                                            <span>A elefanta Guida, foi uma das primeiras moradoras do primeiro Santuário de Elefantes da América Latina, localizado em Chapada dos Guimarães, a 65 de km de Cuiabá.</span>
-                                            <h2>PRA SEMPRE GUIDA</h2>
-                                        </div>
-                                    </a>
-                                </li>
-
                                 <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-4.jpeg); ">
-                                    <a href="#" class="color-5">
+                                    <a href="#" class="color-3">
                                         <div class="case-studies-summary">
                                             <span>Adotar um animal é um ato de amor</span>
                                             <h2>ADOTE UM AMIGO</h2>
@@ -101,15 +85,84 @@ require_once("inc/header.php");
                                     </a>
                                 </li>
 
-                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-4.jpeg); ">
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-6.jpg); ">
                                     <a href="#" class="color-5">
                                         <div class="case-studies-summary">
-                                            <span>Adotar um animal é um ato de amor</span>
-                                            <h2>ADOTE UM AMIGO</h2>
+                                            <span>xxx</span>
+                                            <h2>xxx</h2>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-plastic1.jpg); ">
+                                    <a href="#" class="color-4">
+                                        <div class="case-studies-summary">
+                                            <span>xxxx</span>
+                                            <h2>xxxxx</h2>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-horta.jpg); ">
+                                    <a href="#" class="color-5">
+                                        <div class="case-studies-summary">
+                                            <span>xxxx</span>
+                                            <h2>xxxx</h2>
                                         </div>
                                     </a>
                                 </li>
                                 
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-foof.jpg); ">
+                                    <a href="#" class="color-5">
+                                        <div class="case-studies-summary">
+                                            <span>xxxx</span>
+                                            <h2>xxxx</h2>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-people.jpg); ">
+                                    <a href="#" class="color-5">
+                                        <div class="case-studies-summary">
+                                            <span>xxxx</span>
+                                            <h2>xxxx</h2>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-construcao.jpg); ">
+                                    <a href="#" class="color-5">
+                                        <div class="case-studies-summary">
+                                            <span>xxxx</span>
+                                            <h2>xxxxx</h2>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-bazar.jpg); ">
+                                    <a href="#" class="color-5">
+                                        <div class="case-studies-summary">
+                                            <span>xxxr</span>
+                                            <h2>xxx</h2>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo_caridade.jpg); ">
+                                    <a href="#" class="color-5">
+                                        <div class="case-studies-summary">
+                                            <span>xxx</span>
+                                            <h2>xxx</h2>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-volunteer2.jpg); ">
+                                    <a href="#" class="color-5">
+                                        <div class="case-studies-summary">
+                                            <span>xxxx</span>
+                                            <h2>xxxx</h2>
+                                        </div>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
