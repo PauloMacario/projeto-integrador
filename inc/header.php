@@ -1,80 +1,15 @@
-<?php
 
-
-?>
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Páginas do Bem&mdash; Estenda sua mão a quem precisa</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Projeto Integrador DH" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-
-	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content="" />
-	<meta property="og:image" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:site_name" content="" />
-	<meta property="og:description" content="" />
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
-
-	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Superfish -->
-	<link rel="stylesheet" href="css/superfish.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/login.css">
-
-
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-</head>
-
-<body>
-	<!-- MODAL DO LOGIN - INICIO-->
+	<!--  ==================== Modal do form de login (inicialmente oculto) - (INÍCIO) ======================  -->
 
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
 			<div class="modal-content">
-
-				
-				
 				<div class="modal-header text-center ">
-						<h5 class="modal-title ml-auto" id="exampleModalLabel">Login</h5>
-				<button type="button" class="close modal-title ml-auto" data-dismiss="modal" aria-label="Close">
-         				 <span aria-hidden="true">&times;</span>
-        		</button>
-				
-					
+					<h5 class="modal-title ml-auto" id="exampleModalLabel">Login</h5>
+					<button type="button" class="close modal-title ml-auto" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
 				</div>
-
 				<div class="modal-body">
 					<form action="home.html" method="POST">
 						<div class="form-group">
@@ -89,32 +24,28 @@
 						<div class="form-group">
 							<a class="nav-link btn btn-warning" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">Cadastrar</a> <!-- data-toggle="modal" data-target="#modalCadastro" -->
 						</div>
-
 						<div class="form-group">
-							<a href="#" class="" >Esqueci minha senha.</a>
-
+							<a href="#" class="">Esqueci minha senha.</a>
 						</div>
-								
-
-
 					</form>
 				</div>
-			</div> <!--  MODAL CONTENT FINAL -->
+			</div> 
 		</div>
 	</div>
-	<!-- MODAL DO LOGIN - FINAL-->
+	<!--  ==================== Modal do form de login (inicialmente oculto) (FINAL) =======================  -->
 
-	<!-- MODAL CADASTRO - INICIO-->
+
+	<!--  ==================== Modal do form de login (inicialmente oculto) (FINAL) =======================  -->
+
 
 	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header text-center ">
 					<h5 class="modal-title ml-auto" id="exampleModalLabel">Cadastre-se</h5>
-						
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-         				 <span aria-hidden="true">&times;</span>
-       				</button> 
+						<span aria-hidden="true">&times;</span>
+					</button>
 				</div>
 				<div class="container " style="padding:2%;">
 					<form>
@@ -144,12 +75,12 @@
 						</div>
 						<div class="form-row ">
 							<div class="form-group col-12 col-md-8">
-								
+
 								<input type="text" class="form-control" id="nascimento" placeholder="Nascimento">
 							</div>
 							<div class="form-group col-12 col-md-4">
 								<select id="tipo" class="form-control">
-									
+
 									<option>Tipo</option>
 									<option>Voluntário</option>
 									<option>Parceiro</option>
@@ -160,14 +91,10 @@
 							<div class="form-group col-12 col-md-12 justify-content-center">
 								<div class="form-check">
 									<input class="form-check-input" type="checkbox" id="gridCheck" required>
-									
 									Concordo com os termos
-								
 								</div>
 							</div>
 							<div class="form-group col-12 col-md-12">
-								<!-- <a href="#" class="">Leia o termo</a> -->
-
 								<a class="" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Leia os termos de uso.</a>
 								<div class="row">
 									<div class="col">
@@ -194,40 +121,26 @@
 		</div>
 	</div>
 
-
-
-
-	
-			
-
-
-
-
-
-
-
-
-
+	<!--  ==================== Modal do form de login (inicialmente oculto) (FINAL) =======================  -->
 
 	
-	<div id="box-principal">
-		<div id="page">
+
+<!--  ==================== Cabeçalho do site - (INÍCIO) =======================  -->
 
 			<div class="header-top">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-12 col-sm-12 text-right social">
-							<a href="https://www.facebook.com/" class="grow"><i class="icon-facebook2"></i></a>
-							<a href="https://twitter.com/" class="grow"><i class="icon-twitter2"></i></a>
-							<a href="https://www.instagram.com/" class="grow"><i class="icon-instagram2"></i></a>
-							<!-- <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Login</button> -->
+							<a href="https://www.facebook.com/" class="grow"><!-- <i class="icon-facebook2"></i> --> <i class="fab fa-facebook-square" title="Facebook"></i></a>
+							<a href="https://twitter.com/" class="grow"><!-- <i class="icon-twitter2"></i> --> <i class="fab fa-twitter-square" title="Twitter"></i></a>
+							<a href="https://www.instagram.com/" class="grow"><!-- <i class="icon-instagram2"></i> --><i class="fab fa-instagram" title="Instagram""></i></a>
 						</div>
-
 					</div>
 				</div>
 			</div>
-			<header id="header-section" class="sticky-banner">
 
+<!--  ==================== Menu de navegação e logo - (INÍCIO) =======================  -->
+			<header id="header-section" class="sticky-banner">
 				<div class="nav-header">
 					<nav class="navbar navbar-expand-lg navbar-light bg-light">
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
@@ -241,23 +154,15 @@
 								<li class="nav-item  ">
 									<a class="nav-link" href="home.php">Home</a>
 								</li>
-
-
-								<!-- <li class="nav-item">
-									<a class="nav-link links" href="">Projetos</a>
-								</li> -->
-
 								<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										Participe já</a>
 									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 										<a class="dropdown-item" href="#">Instituições </a>
 										<a class="dropdown-item" href="#">Ações</a>
 										<a class="dropdown-item" href="#">Sou instituição</a>
-
 									</div>
 								</li>
-
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sobre nós</a>
 									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -267,23 +172,12 @@
 										<a class="dropdown-item" href="contato.php">Contato</a>
 									</div>
 								</li>
-								<li class="nav-item">
-									<!-- <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Login</a> -->
-								</li>
-
-
 							</ul>
-
 						</div>
-
-						 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Login</button> 
+							<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Login</button>
 					</nav>
-
-				</div>
-				<!-- Button trigger modal -->
-
-
-				<!-- Modal -->
-
-
+				</div>			
 			</header>
+<!--  ==================== Menu de navegação e logo - (FINAL) =======================  -->			
+
+<!--  ==================== Cabeçalho do site e Menu (FINAL) =======================  -->
