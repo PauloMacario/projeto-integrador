@@ -1,20 +1,34 @@
-<?php
-	require_once("inc/header.php");
-?>
 
-		<div class="home">
-			<div class="overlay"></div>
-			<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo-gt.jpeg);">
-				<div class="desc animate-box">
-					<h2><strong>Blog e Notícias</strong></h2>
-					<span>Publicações e ultimas notícias.</span>
+<!-- ====== Cabeçalho HEAD (INÍCIO)  ======== -->
+<?php  require_once("inc/head.php"); ?>
+
+
+<body>
+	<main id="box-principal">
+		<div id="page">
+
+ <!-- ====== Header e Menu de navegação (INÍCIO)  ========  -->
+<?php  require_once("inc/header.php"); ?>
+
+
+<!--  =========================== Seção home do blog de noticias -  (INÍCIO)  ==========================  -->
+
+	<section class="home">
+		<div class="overlay"></div>
+		<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo-gt.jpeg);">
+			<div class="desc animate-box">
+				<h2><strong>Blog e Notícias</strong></h2>
+				<span>Publicações e ultimas notícias.</span>
 					<!-- <span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span> -->
-				</div>
 			</div>
-
 		</div>
-		
-		<div id="noticia" class="projeto-section">
+	</section>
+
+	<!--  =========================== Seção home do blog de noticias -  (FINAL)  ==========================  -->
+
+	<!--  =========================== Seção Notícia do blog -  (INÍCIO)  ==========================  -->
+
+		<section id="noticia" class="projeto-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
@@ -158,17 +172,18 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="row">
 					<div class="col-md-12 col-md-offset-12 text-center animate-box">
-						<a href="#" class="btn btn-success btn-lg">Our Blog</a>
+						
 					</div>
 				</div>
-
 			</div>
-		</div>
-		<!-- noticia -->
+		</section>
+<!--  =========================== Seção Notícia do blog -  (INÍCIO)  ==========================  -->
 
+
+<!--  ======== Footer - (INÍCIO) ========  -->
 <?php		
 	require_once("inc/footer.php");
 ?>
+<!--  ======== Footer - (FINAL) ========  -->
