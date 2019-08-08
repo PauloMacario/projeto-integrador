@@ -158,8 +158,8 @@
 									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										Participe já</a>
 									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<a class="dropdown-item" href="#">Instituições </a>
-										<a class="dropdown-item" href="#">Ações</a>
+										<a class="dropdown-item" href="acoes.php">Ações</a>
+										<a class="dropdown-item" href="instituicoes.php">Instituições </a>
 										<a class="dropdown-item" href="#">Sou instituição</a>
 									</div>
 								</li>
