@@ -14,7 +14,7 @@
 
 <!--  =========================== Seção home - Seja voluntário  (INÍCIO)  ==========================  -->
 
-	<a href="#" target="_blank" class=""> 
+	<a href="acoes.php" target="_blank" class=""> 
 		<section class="home" id="home">
 			<div class="overlay"></div>
 			<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/cover_nature_01.jpg);background-size: cover; background-repeat: no-repeat;">
