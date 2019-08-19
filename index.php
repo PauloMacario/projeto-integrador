@@ -46,7 +46,7 @@
 					<a href="#" >
 						<div class="projeto-img">	
 							<p>
-								<img src="images/cover_children_1.jpg" alt="Criança e Adolescente" title="Criança e Adolescente"class="img-responsive img-large img-projeto">
+								<img src="images/photo-children.jpg" alt="Criança e Adolescente" title="Criança e Adolescente"class="img-responsive img-large img-projeto">
 							</p>
 						</div>
 						<div class="projeto-text">

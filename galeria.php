@@ -17,6 +17,7 @@
         <div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo-dog.jpeg);background-size: cover; background-repeat: no-repeat;"">
             <div class=" desc animate-box">
                 <h2> <strong>Sirva, ame, dê o seu melhor</strong></h2>
+                <h2> <strong><i class="fas fa-arrow-down"></i></strong></h2>
             </div>
         </div>
 </section>

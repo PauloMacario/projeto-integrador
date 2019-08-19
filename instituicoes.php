@@ -15,7 +15,7 @@
 
 		<section id="noticia" class="projeto-section">
 			<div class="container">
-				<div class="row">
+				<div class="titulo">
 					<div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
 						<h3>Conheça as instituições que precisam da sua ajuda!</h3>
 					</div>

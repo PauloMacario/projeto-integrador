@@ -1,18 +1,25 @@
-<?php
-	require_once("inc/header.php");
+
+<!-- ====== Cabeçalho HEAD (INÍCIO)  ======== -->
+<?php  require_once("inc/head.php"); ?>
+
+
+<body>
+	<main id="box-principal">
+		<div id="page">
+
+ <!-- ====== Header e Menu de navegação (INÍCIO)  ========  -->
+<?php  require_once("inc/header.php");
 ?>
 
-
-
-
-
-
-
    
-<div class="box-cadastro">
-   <div class="cadastro">
 
+<section class="box-cadastro">
    <form>
+    <div class="form-row ">
+        <div class="form-group col-md-12">
+            <h4 class="text-center">Cadastre-se</h4>
+        </div>
+    </div>
     <div class="form-row">
             <div class="form-group col-md-4">
             <!--  <label for="nome">Nome</label> -->
@@ -74,15 +81,13 @@
             </div>
     </div>
     <div class="form-row ">
-            <div class="form-group col-6  ">    
-                <button type="submit" class="btn btn-success btn-sm btn-block">Cadastrar</button>
+            <div class="form-group col-12  ">    
+                <button type="submit" class="btn btn-success btn-lg btn-block">Cadastrar</button>
             </div>   
-            <div class="form-group col-6  ">      
-          <a href="home.php" class="btn btn-sm btn-block btn-info text-center" >SAIR</a> 
-            </div>
+           
     </div>            
 </form>
-
+</section>
 
 
 

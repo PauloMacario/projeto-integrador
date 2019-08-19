@@ -12,9 +12,14 @@
 
 
 <!--  =========================== Seção Faq perguntas e respostas - (INÍCIO)  ==========================  -->
-	<section class="home">
-		<div id="faq" class="faq-section">
-			<div class="container container-faq">		
+	<section class="">
+		<div id="faq" class="animate-box">
+			<div class="container container-faq">	
+			<div class="titulo">
+					<div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
+						<h3>Perguntas mais frequentes:</h3>
+					</div>
+			</div>	
 				<div id="accordion">
 					<div class="card">
 						<div class="card-header">

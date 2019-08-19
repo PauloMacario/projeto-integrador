@@ -14,20 +14,15 @@
 <!--  =========================== Seção formulário de contato -  (INÍCIO)  ==========================  -->
 	<section>
 		<div id="contato" class="animate-box">
-			<div class="container">
+			<div class="container box-contato">
 				<form action="#">
-					<div class="row">
-						<div class="col-md-6">
-							<h3 class="section-title">Fale Conosco!</h3>
-							<p>Temos uma comunicação aberta a todos que queiram entrar em contato. Envie sua mensagem a nós e responderemos o quanto antes!</p>
-							<ul class="contato-info">
-								<li><i class="icon-location-pin"></i>Av. Dr. Cardoso de Melo, 90 - Vila Olímpia São Paulo - SP</li>
-								<!-- <li><i class="icon-phone2"></i>+ 1235 2355 98</li> -->
-								<li><i class="icon-mail"></i><a href="#">paginasdobem@contato.com</a></li>
-								<!-- <li><i class="icon-globe2"></i><a href="#">www.yoursite.com</a></li> -->
-							</ul>
+					<div class="titulo">
+						<div class="col-md-8 ">
+							<h3 class="section-title text-center">Fale Conosco!</h3>
+							<p class="text-center">Temos uma comunicação aberta a todos que queiram entrar em contato. Envie sua mensagem a nós e responderemos o quanto antes!</p>
+							
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-8">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
@@ -49,6 +44,12 @@
 										<input type="submit" value="Enviar" class="btn btn-primary">
 									</div>
 								</div>
+								<ul class="contato-info">
+								<li><i class="icon-location-pin"></i>Av. Dr. Cardoso de Melo, 90 - Vila Olímpia São Paulo - SP</li>
+								<!-- <li><i class="icon-phone2"></i>+ 1235 2355 98</li> -->
+								<li><i class="icon-mail"></i><a href="#">paginasdobem@contato.com</a></li>
+								<!-- <li><i class="icon-globe2"></i><a href="#">www.yoursite.com</a></li> -->
+							</ul>
 							</div>
 						</div>
 					</div>
