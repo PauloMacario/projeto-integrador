@@ -85,7 +85,7 @@
 					<div class="clearfix visible-md-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/photo-10.jpg" width="360" height= "240" alt=""></a>
+							<a href="#"><img class="img-responsive" src="images/photo-sport.jpg" width="360" height= "240" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>Esporte</a></h3>
@@ -145,7 +145,7 @@
 					<div class="clearfix visible-md-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">
-							<a href="#"><img class="img-responsive" src="images/photo-volunteer.jpg" width="360" height= "240" alt=""></a>
+							<a href="#"><img class="img-responsive" src="images/photo-voluntario.jpg" width="360" height= "240" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>Porque pagar?</a></h3>

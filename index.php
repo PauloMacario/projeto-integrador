@@ -17,7 +17,7 @@
 	<a href="acoes.php" target="_blank" class=""> 
 		<section class="home" id="home">
 			<div class="overlay"></div>
-			<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/cover_nature_01.jpg);background-size: cover; background-repeat: no-repeat;">
+			<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo-nature.jpg);background-size: cover; background-repeat: no-repeat;">
 				<div class="desc animate-box">
 					<h2><strong>Seja voluntário!</strong></h2>
 					<span>Encontre aqui um trabalho voluntário para participar </span>
@@ -61,13 +61,13 @@
 					<a href="#" >
 						<div class="projeto-img">	
 							<p>
-								<img src="images/cover_animals_2.jpg" alt="Proteção aos Animais" title="Proteção aos Animais" class="img-responsive img-large img-projeto">
+								<img src="images/photo-animals.jpg" alt="Proteção aos Animais" title="Proteção aos Animais" class="img-responsive img-large img-projeto">
 							</p>
 						</div>
 						<div class="projeto-text">
 							<h3>Proteção aos Animais</h3>
 							<div class="projeto-paragrafo">
-								<p>Encontre aqui uma ação e seja um voluntário para auxílio em eventos de adoção de animais, veterinários ou formandos em veterinária para cuidados com os animais, etc.!</p>
+								<p>Encontre aqui uma ação e seja um voluntário para auxílio em eventos de adoção de animais, participar dos bazares e ajudar com tratamento veterinário. Sua contribuição é muito importante!!</p>
 							</div>
 						</div>
 					</a>
@@ -76,13 +76,13 @@
 					<a href="#" >
 						<div class="projeto-img">
 							<p>
-								<img src="images/cover_meio_3.jpg" alt="Meio Ambiente" title="Meio Ambiente" class="img-responsive img-large img-projeto">
+								<img src="images/photo-meioambiente.jpg" alt="Meio Ambiente" title="Meio Ambiente" class="img-responsive img-large img-projeto">
 							</p>
 						</div>
 						<div class="projeto-text">
 							<h3>Meio Ambiente</h3>
 							<div class="projeto-paragrafo">
-								<p>Todos nós sabemos que o planeta Terra não está bem e que precisa da ajuda de todos os cidadãos. Seja um voluntário para contribuir com as ações práticas de conservação do meio ambiente!<p>
+								<p>Sabemos que o Planeta Terra não está bem e que precisa de nossa ajuda. Seja um voluntário para contribuir com as ações práticas de conservação do meio ambiente.<p>
 							</div>
 						</div>
 					</a>
