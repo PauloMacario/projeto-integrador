@@ -1,0 +1,58 @@
+﻿/*  INSERT INTO cidades (estado, cidade) VALUE ('São Paulo', 'São Paulo');  */
+
+INSERT INTO districts(id_city, zone, district) VALUE
+
+/* Regiões do Centro  */
+
+(1, 'Centro', 'Bela Vista'),(1, 'Centro', 'Bom Retiro'),(1, 'Centro', 'Cambuci'),(1, 'Centro', 'Consolação'),
+(1, 'Centro', 'Liberdade'),(1, 'Centro', 'República'),(1, 'Centro', 'Santa Cecília'),(1, 'Centro', 'Sé'),
+
+/* Regiões do Leste  */
+
+(1, 'Leste', 'Aricanduva'),(1, 'Leste', 'Carrão'),(1, 'Leste', 'Vila Formosa'),(1, 'Leste', 'Cidade Tiradentes'),
+(1, 'Leste', 'Ermelino Matarazzo'),(1, 'Leste', 'Ponte Rasa'),(1, 'Leste', 'Guaianases'),(1, 'Leste', 'Lajeado'),
+(1, 'Leste', 'Itaim Paulista'),(1, 'Leste', 'Vila Curuçá'),(1, 'Leste', 'Itaquera'),(1, 'Leste', 'Cidade Líder'),
+(1, 'Leste', 'José Bonifácio'),(1, 'Leste', 'Parque do Carmo'),(1, 'Leste', 'Mooca Água Rasa'),(1, 'Leste', 'Belém'),
+(1, 'Leste', 'Brás'),(1, 'Leste', 'Moóca'),(1, 'Leste', 'Pari'),(1, 'Leste', 'Tatuapé'),
+(1, 'Leste', 'Penha'),(1, 'Leste', 'Artur Alvim'),(1, 'Leste', 'Cangaíba'),(1, 'Leste', 'Penha'),
+(1, 'Leste', 'Vila Matilde'),(1, 'Leste', 'São Mateus'),(1, 'Leste', 'São Rafael'),(1, 'Leste', 'São Miguel'),
+(1, 'Leste', 'Jardim Helena'),(1, 'Leste', 'Vila Jacuí'),(1, 'Leste', 'Sapopemba'),(1, 'Leste', 'Vila Prudente'),
+(1, 'Leste', 'São Lucas'),
+
+/* Regiões do Norte  */
+
+(1, 'Norte', 'Casa Verde'),(1, 'Norte', 'Cachoeirinha'),(1, 'Norte', 'Limão'),(1, 'Norte', 'Brasilândia'),
+(1, 'Norte', 'Freguesia do Ó'),(1, 'Norte', 'Jaçanã'),(1, 'Norte', 'Tremembé'),(1, 'Norte', 'Perus'),
+(1, 'Norte', 'Anhanguera'),(1, 'Norte', 'Pirituba'),(1, 'Norte', 'Jaraguá'),(1, 'Norte', 'São Domingos'),
+(1, 'Norte', 'Santana'),(1, 'Norte', 'Tucuruvi'),(1, 'Norte', 'Mandaqui'),(1, 'Norte', 'Vila Maria'),
+(1, 'Norte', 'Vila Guilherme'),(1, 'Norte', 'Vila Medeiros'),
+
+/* Regiões do Oeste  */
+
+(1, 'Oeste', 'Butantã'),(1, 'Oeste', 'Morumbi'),(1, 'Oeste', 'Raposo Tavares'),(1, 'Oeste', 'Rio Pequeno'),
+(1, 'Oeste', 'Vila Sônia'),(1, 'Oeste', 'Lapa'),(1, 'Oeste', 'Barra Funda'),(1, 'Oeste', 'Jaguara'),
+(1, 'Oeste', 'Jaguaré'),(1, 'Oeste', 'Perdizes'),(1, 'Oeste', 'Vila Leopoldina'),(1, 'Oeste', 'Pinheiros'),
+(1, 'Oeste', 'Alto de Pinheiros'),(1, 'Oeste', 'Itaim Bibi'),(1, 'Oeste', 'Jardim Paulista'),(1, 'Oeste', 'Pinheiros'),
+
+/* Regiões do Sul  */
+
+(1, 'Sul', 'Campo Limpo'),(1, 'Sul', 'Capão Redondo'),(1, 'Sul', 'Vila Andrade'),(1, 'Sul', 'Capela do Socorro Cidade Dutra'),
+(1, 'Sul', 'Grajaú'),(1, 'Sul', 'Socorro'),(1, 'Sul', 'Cidade Ademar'),(1, 'Sul', 'Pedreira'),
+(1, 'Sul', 'Ipiranga'),(1, 'Sul', 'Sacomã'),(1, 'Sul', 'Jabaquara'),(1, 'Sul', 'M Boi Mirim'),
+(1, 'Sul', 'Jardim Ângela'),(1, 'Sul', 'Jardim São Luís'),(1, 'Sul', 'Parelheiros'),(1, 'Sul', 'Marsilac'),
+(1, 'Sul', 'Santo Amaro'),(1, 'Sul', 'Campo Belo'),(1, 'Sul', 'Campo Grande'),(1, 'Sul', 'Santo Amaro'),
+(1, 'Sul', 'Moema'),(1, 'Sul', 'Saúde'),(1, 'Sul', 'Vila Mariana')
+
+;
+
+
+
+
+
+
+
+
+
+
+
+
