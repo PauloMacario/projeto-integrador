@@ -52,4 +52,3 @@ Route::get('/cadastro', function(){
 }); 
 
 
-

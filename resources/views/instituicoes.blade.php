@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('conteudo')
+@section('content')
 
 <!--  =========================== Seção Instituições -  (INÍCIO)  ==========================  -->
 
@@ -50,6 +50,7 @@
                 </div>
             </div>
         </div>
+    </div>   
 </section>
 <!--  ===========================  Seção Instituições -  (FINAL)  ==========================  -->
 

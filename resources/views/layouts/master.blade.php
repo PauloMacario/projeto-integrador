@@ -7,7 +7,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Páginas do Bem&mdash; Estenda sua mão a quem precisa</title>
+	
+
+   
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Projeto Integrador DH" />
 	<meta name="keywords" content="" />
@@ -41,7 +43,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/login.css">
 	{{-- <link rel="stylesheet" href="{{asset('public/css/icomoon.css')}}"> --}}
-
+    
 
 	<!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
@@ -63,6 +65,8 @@
 		
 		<!-- Main JS -->
 		<script defer src="js/main.js"></script>
+		 <!-- Scripts -->
+		
 </head>
 <body>
 	<main id="box-principal">
@@ -98,7 +102,7 @@
 
                         <div class="collapse navbar-collapse " id="conteudoNavbarSuportado">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
+								<li class="nav-item">
                                     <a class="nav-link" href="/">Home</a>
 								</li>
 								<li class="nav-item">
@@ -113,16 +117,17 @@
 								<li class="nav-item">
 									<a class="nav-link" href="galeria">Fotos</a>									
 								</li>
+									<a href="autenticacao" class="btn-login" >Login</a>
                             </ul>
                         </div>
                             <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Login</button> -->
-                            <a href="autenticacao" class="btn-login" >Login</a>
+                            
                     </nav>
                 </div>			
             </header>
 
                 <!--  Conteudo dinâmico do projeto  -->
-                @yield('conteudo')
+                @yield('content')
 
 
 

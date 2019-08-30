@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('conteudo')
+@section('content')
 
 <!--  =========================== Seção formulário de contato -  (INÍCIO)  ==========================  -->
 <section>

@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('conteudo')
+@section('content')
 
 
 <!--  =========================== Seção Faq perguntas e respostas - (INÍCIO)  ==========================  -->

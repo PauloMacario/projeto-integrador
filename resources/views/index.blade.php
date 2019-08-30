@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('conteudo')
+@section('content')
 <!--  =========================== Seção home - Seja voluntário  (INÍCIO)  ==========================  -->
 
 <a href="acoes" target="_blank" class=""> 

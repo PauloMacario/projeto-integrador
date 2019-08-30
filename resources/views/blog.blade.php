@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('conteudo')
+@section('content')
 
 <!--  =========================== Seção home do blog de noticias -  (INÍCIO)  ==========================  -->
 
