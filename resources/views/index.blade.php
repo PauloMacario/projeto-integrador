@@ -1,8 +1,8 @@
-@extends('layouts.master')
+@extends('layouts.app')
 @section('content')
 <!--  =========================== Seção home - Seja voluntário  (INÍCIO)  ==========================  -->
 
-<a href="acoes" target="_blank" class=""> 
+<a href="eventos" target="_blank" class=""> 
 		<section class="home" id="home">
 			<div class="overlay"></div>
 			<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/cover_nature_01.jpg);background-size: cover; background-repeat: no-repeat;">
@@ -187,7 +187,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12 col-md-12 text-center animate-box">
-						<a href="blog" class="btn btn-success btn-lg">Mais Notícias</a>
+						<a href="eventos" class="btn btn-success btn-lg">Mais Notícias</a>
 					</div>
 				</div>
 			</div>

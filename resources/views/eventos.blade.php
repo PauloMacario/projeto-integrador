@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 @section('content')
 
 <!--  =========================== Seção home do blog de noticias -  (INÍCIO)  ==========================  -->
@@ -7,8 +7,8 @@
 		<div class="overlay"></div>
 		<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo-gt.jpeg);">
 			<div class="desc animate-box">
-				<h2><strong>Blog e Notícias</strong></h2>
-				<span>Publicações e ultimas notícias.</span>
+				<h2><strong>Eventos</strong></h2>
+				<span>Últimos eventos cadastrados</span>
 					<!-- <span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span> -->
 			</div>
 		</div>
@@ -22,8 +22,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
-						<h3>Bem-Vindo ao nosso Blog!</h3>
-						<p>Nosso objetivo é inspirar e mobilizar pessoas para o trabalho voluntário, e com isso viver num mundo melhor e mais humano. Quando você escreve seu texto no nosso Blog, você compartilha um pedacinho de sua experiência com outras pessoas e que podem te conhecer e aprender com a sua jornada.</p>
+						<h3>Bem-Vindo a área de eventos!</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet praesentium harum voluptatum minima perspiciatis? Natus provident unde est et. Dolore quas tempore commodi eveniet ab totam recusandae ad molestiae doloremque.</p>
 					</div>
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 @section('content')
 
 <!--  =========================== Seção Ações -  (INÍCIO)  ==========================  -->
@@ -7,7 +7,7 @@
     <div class="container">
         <div class="titulo">
             <div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
-                <h3>Participe já das ações:</h3>
+                <h3>Conheça as Ongs e Instituições participantes.</h3>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
                     <a href="#"><img class="img-responsive" src="images/photo-cat.jpg" alt="">
                         <div class="noticia-text">
                             <div class="noticia-title">
-                                <h3>Ação #1</h3>
+                                <h3>Ong #1</h3>
                                 <p>Imagem e breve texto</p>
                             </div>
                         </div>
@@ -31,7 +31,7 @@
                     <a href="#"><img class="img-responsive" src="images/photo-cat.jpg" alt="">
                         <div class="noticia-text">
                             <div class="noticia-title">
-                                <h3>Ação #2</h3>
+                                <h3>Ong #2</h3>
                                 <p>Imagem e breve texto</p>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                     <a href="#"><img class="img-responsive" src="images/photo-cat.jpg" alt="">
                         <div class="noticia-text">
                             <div class="noticia-title">
-                                <h3>Ação #3</h3>
+                                <h3>Ong #3</h3>
                                 <p>Imagem e breve texto</p>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                     <a href="#"><img class="img-responsive" src="images/photo-cat.jpg" alt="">
                         <div class="noticia-text">
                             <div class="noticia-title">
-                                <h3>Ação #4</h3>
+                                <h3>Ong #4</h3>
                                 <p>Imagem e breve texto</p>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                     <a href="#"><img class="img-responsive" src="images/photo-cat.jpg" alt="">
                         <div class="noticia-text">
                             <div class="noticia-title">
-                                <h3>Ação #5</h3>
+                                <h3>Ong #5</h3>
                                 <p>Imagem e breve texto</p>
                             </div>
                         </div>

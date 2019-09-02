@@ -83,8 +83,8 @@
                             <a href="https://www.facebook.com/" class="grow" target="_blank"><!-- <i class="icon-facebook2"></i> --> <i class="fab fa-facebook-square" title="Facebook"></i></a>
                             <a href="https://twitter.com/" class="grow" target="_blank"><!-- <i class="icon-twitter2"></i> --> <i class="fab fa-twitter-square" title="Twitter"></i></a>
                             <a href="https://www.instagram.com/" class="grow" target="_blank"><!-- <i class="icon-instagram2"></i> --><i class="fab fa-instagram" title="Instagram"></i></a>
-							<a class="link-topo" href="faq">FAQ</a>
-                        	<a class="link-topo" href="contato">Contato</a>
+							<a class="link-topo" href="/faq">FAQ</a>
+                        	<a class="link-topo" href="/contato">Contato</a>
 						</div>
                     </div>
                 </div>
@@ -97,37 +97,68 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <a class="navbar-brand" href="home"><img src="images/logo_2.png" style="width:3,5vw; height:6vh;" alt="Páginas do Bem" title="Páginas do Bem">
+                        <a class="navbar-brand" href="/" href="{{ url('/') }}><img src="images/logo_2.png" style="width:3,5vw; height:6vh;" alt="Páginas do Bem" title="Páginas do Bem">
                             Páginas do Bem</a>
 
                         <div class="collapse navbar-collapse " id="conteudoNavbarSuportado">
                             <ul class="navbar-nav ml-auto menu">
+								@guest		
 								<li class="nav-item">
                                     <a class="nav-link" href="/">Home</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="ongs">Ongs</a>
+									<a class="nav-link" href="ongs">Ongs </a>									
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="eventos">Eventos </a>									
+									<a class="nav-link" href="eventos">Eventos</a>								
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="galeria">Fotos</a>									
 								</li>
 									<a href="login" class="btn-login" >Login</a>
+
+									@if (Route::has('register'))
+									{{-- <li class="nav-item">
+										<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+									</li> --}}
+								@endif
+							@else
+								<li class="nav-item dropdown">
+									<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+									   Olá {{ Auth::user()->name }} <span class="caret"></span>
+	
+									</a>
+	
+									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+										
+									</div>
+
+								</li>
+								
+								<li class="nav-item">
+									<a class="btn btn-warning btn-logout ml-3" href="{{ route('logout') }}"
+										   onclick="event.preventDefault();
+														 document.getElementById('logout-form').submit();">
+											{{ __('Sair') }}
+									</a>
+	
+									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+										@csrf
+									</form>
+
+								</li>
+							@endguest
+
+
+
                             </ul>
                         </div>
                             <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Login</button> -->
                             
                     </nav>
                 </div>			
-            </header>
-
-                <!--  Conteudo dinâmico do projeto  -->
-                @yield('content')
-
-
-
+            </header>       
+            @yield('content')
 
             <footer>
 				<div id="footer">
@@ -154,3 +185,5 @@
 			
 
 
+
+       

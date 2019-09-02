@@ -10,45 +10,41 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-/* 
-Route::get('/', function () {
-    return view('welcome');
-}); */
 
-Route::get('/', function(){
+Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/acoes', function(){
-    return view('acoes');
-}); 
+Route::get('/ongs', function(){
+    return view('ongs');
+});
 
-Route::get('/instituicoes', function(){
-    return view('instituicoes');
-}); 
+Route::get('/eventos', function(){
+    return view('eventos');
+});
 
 Route::get('/galeria', function(){
     return view('galeria');
-}); 
-
-Route::get('/blog', function(){
-    return view('blog');
-}); 
+});
 
 Route::get('/faq', function(){
     return view('faq');
-}); 
+});
 
 Route::get('/contato', function(){
     return view('contato');
-}); 
+});
 
-Route::get('/autenticacao', function(){
+Route::get('/autenticacao', function () {
     return view('autenticacao');
-}); 
+});
 
-Route::get('/cadastro', function(){
+Route::get('/cadastro', function () {
     return view('cadastro');
-}); 
+});
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
