@@ -18,7 +18,6 @@ class UsersSeeder extends Seeder
         'occupation' => 'Profissão / Coladoração',
         'biography' => 'Descreva uma breve biografia',
         'areas' => 'Aqui será gravado as áreas de interece para buscas',
-        'address' => 'rua Xxxxxxx, 00',
         'district' => 'Bairro Yyyyyy',
         'city' => 'São Paulo',
         'remember_token' => 'teste',
@@ -39,7 +38,6 @@ class UsersSeeder extends Seeder
                             Marley já vendeu mais de 75 milhões de discos.',
             
             'areas' => 'SAÚDE, EDUCAÇÃO, SOCIAL, FOME, DESIGUALDADE',
-            'address' => 'rua Xxxxxxx, 00',
             'district' => 'Brasilândia',
             'city' => 'São Paulo',
             'remember_token' => 'teste',
@@ -59,7 +57,6 @@ class UsersSeeder extends Seeder
                             renomados cientistas do século.',
             
             'areas' => 'SAÚDE, EDUCAÇÃO, SOCIAL, TECNOLOGIA',
-            'address' => 'rua Xxxxxxx, 00',
             'district' => 'St Albans',
             'city' => 'São Paulo',
             'remember_token' => 'teste',
@@ -79,7 +76,6 @@ class UsersSeeder extends Seeder
                             É interpretado pelo comediante baiano Claudio Manoel.',
             
             'areas' => 'LAZER, EDUCAÇÃO, SOCIAL',
-            'address' => 'rua Xxxxxxx, 00',
             'district' => 'Jd Casseta & Planeta',
             'city' => 'São Paulo',
             'remember_token' => 'teste',

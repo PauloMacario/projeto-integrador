@@ -13,13 +13,11 @@
 
 Route::get('/', function () {
     return view('index');
-});
+}); 
 
-Route::get('/ongs', function(){
-    return view('ongs');
-});
+Route::get('ongs', 'OngController@index');
 
-Route::get('/eventos', function(){
+Route::get('eventos', function(){
     return view('eventos');
 });
 
@@ -41,7 +39,7 @@ Route::get('/autenticacao', function () {
 
 Route::get('/cadastro', function () {
     return view('cadastro');
-});
+}); 
 
 
 

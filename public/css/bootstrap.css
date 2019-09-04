@@ -4412,7 +4412,7 @@ input[type="button"].btn-block {
   margin-bottom: 0;
 }
 
-.card-text:last-child {
+.card-title:last-child {
   margin-bottom: 0;
 }
 

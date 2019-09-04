@@ -530,7 +530,10 @@ figure {
 }
 
 .noticia .noticia-title p{
+  height:20vh;
   color:#6e6e6e;
+  
+
 }
 /* ==========  Noticias e Blog (FINAL)  ==========  */
 
@@ -859,7 +862,7 @@ section.map {
 
 /* ============ @ MEDIAS e BRACK POINTS ( INÍCIO ) ============== */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .img-large{
     height:450px;
   }

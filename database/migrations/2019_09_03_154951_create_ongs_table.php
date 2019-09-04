@@ -17,6 +17,7 @@ class CreateOngsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name', 100);
             $table->string('segment', 45);
+            $table->string('description', 500);
             $table->string('address', 100);
             $table->string('district', 45);
             $table->string('city', 45);

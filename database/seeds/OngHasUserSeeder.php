@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class VolunteersSeeder extends Seeder
+class OngHasUserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class VolunteersSeeder extends Seeder
      */
     public function run()
     {
-        //
+      
     }
 }

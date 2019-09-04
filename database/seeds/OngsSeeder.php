@@ -14,6 +14,11 @@ class OngsSeeder extends Seeder
         DB::table('ongs')->insert([
             'name' => 'ONG Nova Mulher',
             'segment' => 'Social, Mulher',
+            'description' => 'Criar oportunidades, estimulando e fortalecendo as 
+                                mulheres para que elas possam desenvolver suas 
+                                potencialidades e ocupem o seu lugar no mundo, 
+                                promovendo a igualdade de gênero, raça e 
+                                cidadania em nossa sociedade.',
             'address' => 'R. Adolfo Kurt Boehm, 43',
             'district' => 'Jardim Centenario',
             'city' => 'São Paulo',
@@ -30,6 +35,11 @@ class OngsSeeder extends Seeder
         DB::table('ongs')->insert([
             'name' => 'Cão sem Dono',
             'segment' => 'Animail, Doação',
+            'description' => 'O Cão Sem Dono é uma ONG (Organização Não Governamental), 
+                                sem fins lucrativos, e que nasceu de um grande sonho do 
+                                seu atual presidente: tirar o maior número possível de 
+                                animais das ruas, dar tratamento adequado e integrá-los 
+                                a famílias que lhes deem amor, carinho e uma vida digna. ',
             'address' => 'Av. Giovanni Gronchi, 5411 ',
             'district' => 'Morumbi',
             'city' => 'São Paulo',
@@ -46,6 +56,13 @@ class OngsSeeder extends Seeder
         DB::table('ongs')->insert([
             'name' => 'Casa do Zezinho',
             'segment' => 'Educação, lazer',
+            'description' => 'A Casa do Zezinho, desde sua fundação, 
+                                tem sido um espaço de oportunidades de 
+                                desenvolvimento para crianças e jovens 
+                                que vivem em situação de alta vulnerabilidade 
+                                social, fomentando o desenvolvimento 
+                                humano para que dessa forma a sociedade 
+                                se transforme em um lugar melhor.',
             'address' => 'R. Anália Dolácio Albino, 77',
             'district' => 'Parque Maria Helena',
             'city' => 'São Paulo',

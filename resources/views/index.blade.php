@@ -88,7 +88,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12  text-center heading-section animate-box">
-						<h3>Busque aqui uma região para ajudar</h3>
+						<h3>Busque aqui uma Ong para ajudar</h3>
 						<form>
   							<div class="form-row align-items-center">
     							<div class="col-sm-3 my-1">										
@@ -97,24 +97,29 @@
 										<option>São Paulo</option>
 									</select>
 								</div>
-								<div class="col-sm-3 my-1">										
-									<select id="cidade" class="form-control">
-										<option selected>Cidade</option>
-										<option>São Paulo</option>
-									</select>
-								</div>
+								
 								<div class="col-sm-3 my-1">										
 									<select id="bairro" class="form-control">
 										<option selected>Bairro</option>
-										<option selected>Bairro - 1</option>
-										<option selected>Bairro - 2</option>
-										<option selected>Bairro - 3</option>
-										<option selected>Bairro - 4</option>
-										<option selected>Bairro - 5</option>
-										<option selected>Bairro - 6</option>
-										<option selected>Bairro - 7</option>											
+										<option >Bairro - 1</option>
+										<option >Bairro - 2</option>
+										<option >Bairro - 3</option>
+										<option >Bairro - 4</option>
+										<option >Bairro - 5</option>
+										<option >Bairro - 6</option>
+										<option >Bairro - 7</option>											
 									</select>
 								</div>
+								<div class="col-sm-3 my-1">										
+										<select id="bairro" class="form-control">
+											<option selected>Segmento</option>
+											<option >Saúde</option>
+											<option >Meio Ambiente</option>
+											<option >Educação</option>
+											<option >Social</option>
+											<option >Moradia</option>																				
+										</select>
+									</div>
 								<div class="col-sm-3 my-1">
 									<button type="submit" class="btn btn-success">Buscar</button>	
 								</div>								
@@ -126,8 +131,9 @@
 			<div class="container">
 				<div class="row">
 						<div class="col-md-12">
-						<div class="mapa text-center animate-box" style="height:80vh;" >
-							<p>Add Mapa de SP</p>
+						<div class="mapa text-center animate-box"  style="background-image: url(images/photo-08.jpeg);background-size: cover; background-repeat: no-repeat; height:80vh;">
+								
+							
 						</div>
 					</div> 					
 				</div>
@@ -141,8 +147,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
-						<h3>NOTÍCIAS</h3>
-						<p>Esteja sempre a par das melhores notícias</p>
+						<h3>Eventos</h3>
+						<p>Esteja sempre preparado para nossos eventos.</p>
 					</div>
 				</div>
 			</div>
@@ -187,7 +193,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12 col-md-12 text-center animate-box">
-						<a href="eventos" class="btn btn-success btn-lg">Mais Notícias</a>
+						<a href="eventos" class="btn btn-success btn-lg">Mais Eventos</a>
 					</div>
 				</div>
 			</div>
