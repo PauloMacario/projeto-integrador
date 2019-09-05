@@ -97,7 +97,7 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <a class="navbar-brand" href="/" href="{{ url('/') }}><img src="images/logo_2.png" style="width:3,5vw; height:6vh;" alt="Páginas do Bem" title="Páginas do Bem">
+                        <a class="navbar-brand" href="{{ url('/') }}""><img src="{{url('images/logo_2.png')}}" style="width:3,5vw; height:6vh;" alt="Páginas do Bem" title="Páginas do Bem">
                             Páginas do Bem</a>
 
                         <div class="collapse navbar-collapse " id="conteudoNavbarSuportado">

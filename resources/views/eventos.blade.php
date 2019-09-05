@@ -27,7 +27,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="container-fluid">
+			<div class="container">
 				<div class="row row-bottom-padded-md">
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia animate-box">

@@ -22,7 +22,7 @@
     margin-top:3% 0;
 }
 .box-login form{
-    height:450px;
+    height:500px;
     width:350px;
     padding:1% 1%;
    
@@ -40,6 +40,7 @@
     margin-top:3% 0;
 }
 .box-cadastro form{
+    width:45vw;
     min-height:70vh;
     padding:4%;
     border-radius:4px;
@@ -59,11 +60,19 @@
     background-color: black;
 }
 
+@media screen and (max-width: 767px) {
+    .box-cadastro form{
+        width:60vw;
+    }    
+
+}    
+
 @media screen and (max-width: 460px) {
     .box-login form{
-       padding:6%;
-       
-       
+       padding:6%;       
     }
+    .box-cadastro form{
+        width:90vw;
+    }    
   }
   

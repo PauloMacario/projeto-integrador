@@ -11,7 +11,7 @@
 					<!-- <span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span> -->
 			</div>
 		</div>
-	</section>
+</section>
 <section id="noticia" class="projeto-section">
 @if($ongs->isEmpty())    
     <div class="container">

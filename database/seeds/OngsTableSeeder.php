@@ -1,17 +1,13 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
-class OngsSeeder extends Seeder
+use App\Ong;
+class OngsTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+  
     public function run()
     {
-        DB::table('ongs')->insert([
+        Ong::create([
             'name' => 'ONG Nova Mulher',
             'segment' => 'Social, Mulher',
             'description' => 'Criar oportunidades, estimulando e fortalecendo as 
@@ -32,7 +28,7 @@ class OngsSeeder extends Seeder
             'image' => 'storage/perfil/novamulher.webp'
         ]);
 
-        DB::table('ongs')->insert([
+        Ong::create([
             'name' => 'Cão sem Dono',
             'segment' => 'Animail, Doação',
             'description' => 'O Cão Sem Dono é uma ONG (Organização Não Governamental), 
@@ -53,7 +49,7 @@ class OngsSeeder extends Seeder
             'image' => 'storage/perfil/caosemdono.jpeg'
         ]);
 
-        DB::table('ongs')->insert([
+        Ong::create([
             'name' => 'Casa do Zezinho',
             'segment' => 'Educação, lazer',
             'description' => 'A Casa do Zezinho, desde sua fundação, 
@@ -78,15 +74,3 @@ class OngsSeeder extends Seeder
     }
 }
 
-
-//  Cão sem Dono
-// Animais
-// Av. Giovanni Gronchi, 5411 
-// Morumbi
-// São Paulo
-
-// ONG Futuro do Amanhã
-// Educação
-// R. João Badúe, 19
-// Cidade Tiradentes
-//São Paulo
