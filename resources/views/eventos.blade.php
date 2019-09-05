@@ -28,9 +28,9 @@
 				</div>
 			</div>
 			<div class="container">
-				<div class="row row-bottom-padded-md">
+				<div class="row row-bottom-padded-md animate-box">
 					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="noticia animate-box">
+						<div class="noticia">
 							<a href="#"><img class="img-responsive" src="images/photo-dog1.jpg"  width="360" height= "240" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
@@ -44,7 +44,7 @@
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="noticia animate-box">
+						<div class="noticia">
 							<a href="#"><img class="img-responsive" src="images/photo-cbd.jpg" width="360" height= "240" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
@@ -59,7 +59,7 @@
 					</div>
 					<div class="clearfix visible-sm-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="noticia animate-box">
+						<div class="noticia">
 							<a href="#"><img class="img-responsive" src="images/photo-cat.jpg" width="360" height= "240" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
@@ -74,7 +74,7 @@
 					</div>
 					<div class="clearfix visible-md-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="noticia animate-box">
+						<div class="noticia">
 							<a href="#"><img class="img-responsive" src="images/photo-10.jpg" width="360" height= "240" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
@@ -90,7 +90,7 @@
 					</div>
 					<div class="clearfix visible-sm-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="noticia animate-box">
+						<div class="noticia ">
 							<a href="#"><img class="img-responsive" src="images/photo-education.jpg" width="360" height= "240" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
@@ -104,7 +104,7 @@
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="noticia animate-box">
+						<div class="noticia ">
 							<a href="#"><img class="img-responsive" src="images/photo-pollution.jpg" width="360" height= "240" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
@@ -119,7 +119,7 @@
 					</div>
 					<div class="clearfix visible-sm-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="noticia animate-box">
+						<div class="noticia ">
 							<a href="#"><img class="img-responsive" src="images/photo-amazonia.jpeg" width="360" height= "240" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
@@ -134,7 +134,7 @@
 					</div>
 					<div class="clearfix visible-md-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="noticia animate-box">
+						<div class="noticia ">
 							<a href="#"><img class="img-responsive" src="images/photo-volunteer.jpg" width="360" height= "240" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">
@@ -149,7 +149,7 @@
 					</div>
 					<div class="clearfix visible-sm-block"></div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="noticia animate-box">
+						<div class="noticia ">
 							<a href="#"><img class="img-responsive" src="images/photo.tokyo.jpg" width="360" height= "240" alt=""></a>
 							<div class="noticia-text">
 								<div class="noticia-title">

@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('index');
 }); 
 
+
+
 Route::get('ongs/', 'OngController@index');
 
 Route::get('ongs/adicionar', 'OngController@adicionarOng');
@@ -23,7 +25,9 @@ Route::post('ongs/salvar', 'OngController@salvarOng');
 
 
 
-
+Route::get('/home/editar', function(){
+    return view('editarPerfil');
+});
 
 
 

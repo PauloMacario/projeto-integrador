@@ -29,8 +29,8 @@
 				</div>
 			</div>
 
-			<div class="row row-bottom-padded-md">
-				<div class="col-lg-4 col-md-12 col-sm-12 text-center animate-box">
+			<div class="row row-bottom-padded-md animate-box">
+				<div class="col-lg-4 col-md-12 col-sm-12 text-center">
 					<a href="#" >
 						<div class="projeto-img">	
 							<p>
@@ -45,7 +45,7 @@
 						</div>	
 					</a>
 				</div>
-				<div class="col-lg-4 col-md-12 col-sm-12 text-center animate-box">
+				<div class="col-lg-4 col-md-12 col-sm-12 text-center">
 					<a href="#" >
 						<div class="projeto-img">	
 							<p>
@@ -60,7 +60,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-lg-4 col-md-12 col-sm-12 text-center animate-box">
+				<div class="col-lg-4 col-md-12 col-sm-12 text-center">
 					<a href="#" >
 						<div class="projeto-img">
 							<p>
@@ -85,9 +85,9 @@
 <!--  =========================== Seção motor de busca co filtros -  (INÍCIO)  ==========================  -->
 		
 		<div id="busca-section" class="projeto-section">
-			<div class="container">
+			<div class="container animate-box">
 				<div class="row">
-					<div class="col-md-12  text-center heading-section animate-box">
+					<div class="col-md-12  text-center heading-section">
 						<h3>Busque aqui uma Ong para ajudar</h3>
 						<form>
   							<div class="form-row align-items-center">
@@ -128,10 +128,10 @@
 					</div> 
 				</div>
 			</div>
-			<div class="container">
+			<div class="container animate-box">
 				<div class="row">
 						<div class="col-md-12">
-						<div class="mapa text-center animate-box"  style="background-image: url(images/photo-08.jpeg);background-size: cover; background-repeat: no-repeat; height:80vh;">
+						<div class="mapa text-center "  style="background-image: url(images/photo-08.jpeg);background-size: cover; background-repeat: no-repeat; height:80vh;">
 								
 							
 						</div>
@@ -144,18 +144,18 @@
 <!--  =========================== Seção resumo das notícias -  (INÍCIO)  ==========================  -->
 		
 		<div id="noticia-section" class="projeto-section">
-			<div class="container">
+			<div class="container animate-box">
 				<div class="row">
-					<div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
+					<div class="col-md-12 col-md-offset-12 text-center heading-section">
 						<h3>Eventos</h3>
 						<p>Esteja sempre preparado para nossos eventos.</p>
 					</div>
 				</div>
 			</div>
-			<div class="container">
+			<div class="container animate-box">
 				<div class="row row-bottom-padded-md">
 					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="noticia animate-box">
+						<div class="noticia">
 						<iframe width="100%" height="280" src="https://www.youtube.com/embed/j8L1CcanjT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<div class="noticia-text">
 								<div class="noticia-title">
@@ -166,7 +166,7 @@
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="noticia animate-box">
+						<div class="noticia">
 						<iframe width="100%" height="280" src="https://www.youtube.com/embed/soT7jdW5bvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<div class="noticia-text">
 								<div class="noticia-title">
@@ -178,7 +178,7 @@
 					</div>
 					<div class="clearfix visible-sm-block"></div>
 						<div class="col-lg-4 col-md-12 col-sm-12">
-							<div class="noticia animate-box">
+							<div class="noticia">
 							<iframe width="100%" height="280" src="https://www.youtube.com/embed/_oeYCEYpaRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								<div class="noticia-text">
 									<div class="noticia-title">

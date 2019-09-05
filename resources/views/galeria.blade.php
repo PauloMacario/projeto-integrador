@@ -24,10 +24,10 @@
                 <p>Galeria que vale mil palavras</p>
             </div>
         </div>
-        <div class="row row-bottom-padded-md">
+        <div class="row row-bottom-padded-md animate-box">
             <div class="col-12 ">
                 <ul id="galeria-list">
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo_01.jpeg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo_01.jpeg); ">
                         <!-- <a href="#" class="color-3">
                             <div class="case-studies-summary">
                                 <span>Foi uma oportunidade excepcional para a prática do bem e da solidariedade</span>
@@ -35,7 +35,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-children.jpg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-children.jpg); ">
                         <!-- <a href="#" class="color-3">
                             <div class="case-studies-summary">
                                 <span>Ex: 2</span>
@@ -43,7 +43,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-volunteer1.jpg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-volunteer1.jpg); ">
                         <!-- <a href="#" class="color-4">
                             <div class="case-studies-summary">
                                 <span>Voluntários</span>
@@ -51,7 +51,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-plastic.jpg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-plastic.jpg); ">
                         <!-- <a href="#" class="color-5">
                             <div class="case-studies-summary">
                                 <span>xxxx</span>
@@ -59,7 +59,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-5.jpg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-5.jpg); ">
                         <!-- <a href="#" class="color-6">
                             <div class="case-studies-summary">
                                 <span>Vamos Lutar contra a extinção</span>
@@ -67,7 +67,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-4.jpeg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-4.jpeg); ">
                         <!-- <a href="#" class="color-3">
                             <div class="case-studies-summary">
                                 <span>Adotar um animal é um ato de amor</span>
@@ -75,7 +75,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-3.jpeg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-3.jpeg); ">
                         <!-- <a href="#" class="color-4">
                             <div class="case-studies-summary">
                                 <span>A elefanta Guida, foi uma das primeiras moradoras do primeiro Santuário de Elefantes da América Latina, localizado em Chapada dos Guimarães, a 65 de km de Cuiabá.</span>
@@ -83,7 +83,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-6.jpg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-6.jpg); ">
                         <!-- <a href="#" class="color-5">
                             <div class="case-studies-summary">
                                 <span>xxx</span>
@@ -91,7 +91,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-plastic1.jpg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-plastic1.jpg); ">
                         <!-- <a href="#" class="color-4">
                             <div class="case-studies-summary">
                                 <span>xxxx</span>
@@ -99,7 +99,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-horta.jpg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-horta.jpg); ">
                         <!-- <a href="#" class="color-5">
                             <div class="case-studies-summary">
                                 <span>xxxx</span>
@@ -107,7 +107,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-foof.jpg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-foof.jpg); ">
                         <!-- <a href="#" class="color-5">
                             <div class="case-studies-summary">
                                 <span>xxxx</span>
@@ -115,7 +115,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-people.jpg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-people.jpg); ">
                         <!-- <a href="#" class="color-5">
                             <div class="case-studies-summary">
                                 <span>xxxx</span>
@@ -123,7 +123,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-construcao.jpg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-construcao.jpg); ">
                         <!-- <a href="#" class="color-5">
                             <div class="case-studies-summary">
                                 <span>xxxx</span>
@@ -131,7 +131,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-bazar.jpg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-bazar.jpg); ">
                         <!-- <a href="#" class="color-5">
                             <div class="case-studies-summary">
                                 <span>xxxr</span>
@@ -139,7 +139,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo_caridade.jpg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo_caridade.jpg); ">
                         <!-- <a href="#" class="color-5">
                             <div class="case-studies-summary">
                                 <span>xxx</span>
@@ -147,7 +147,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/photo-volunteer2.jpg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-volunteer2.jpg); ">
                         <!-- <a href="#" class="color-5">
                             <div class="case-studies-summary">
                                 <span>xxxx</span>

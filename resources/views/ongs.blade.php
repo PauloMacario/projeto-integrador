@@ -32,14 +32,14 @@
         </div>
         <div class="container">   
 
-        <div class="row row-bottom-padded-md">
+        <div class="row row-bottom-padded-md  animate-box">
 
     @foreach ($ongs as $ong)
         
       
 
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="noticia animate-box">
+                <div class="noticia">
                 <a href="#"><img class="img-responsive" src="{{$ong->image}}" alt="" width="250" height="200">
                         <div class="noticia-text">
                             <div class="noticia-title">
