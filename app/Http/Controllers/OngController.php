@@ -7,11 +7,7 @@ use Illuminate\Http\Request;
 
 class OngController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function index()
     {
        $ongs = Ong::all();
@@ -19,69 +15,44 @@ class OngController extends Controller
        return view('ongs')->with('ongs', $ongs);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function adicionarOng()
     {
-        //
+        return view('restrito.adicionarOng');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+   
+    public function salvarOng(Request $request)
     {
-        //
+        $arquivo = $request->file('imagem');
+      
+       
+
+
+        $nomePasta = 'perfil';
+        $arquivo->storePublicly($nomePasta);
+        $caminhoAbs = public_path() . "/storage/$nomePasta";
+        $nomeArquivo = rand(000,999).$arquivo->getClientOriginalName();
+        $caminhoRel = "storage/$nomePasta/$nomeArquivo";
+        $arquivo->move($caminhoAbs, $nomeArquivo);
+
+            $registro = Ong::create([
+            'name' => $request->input('nome'),
+            'segment' => $request->input('segmento'),
+            'description' => $request->input('descricao'),
+            'address' => $request->input('endereco'),
+            'district' => $request->input('bairro'),
+            'city' => $request->input('cidade'),
+            'image' => $caminhoRel
+             ]);
+
+        
+
+        
+      
+                return redirect('ongs');
+       
+      
+      
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Ong  $ong
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Ong $ong)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Ong  $ong
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Ong $ong)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Ong  $ong
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Ong $ong)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Ong  $ong
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Ong $ong)
-    {
-        //
-    }
 }

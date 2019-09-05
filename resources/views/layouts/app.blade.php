@@ -32,39 +32,39 @@
 	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
 
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="{{asset('css/animate.css')}}">
 	<!-- Icomoon Icon Fonts-->
 	{{-- <link rel="stylesheet" href="css/icomoon.css"> --}}
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
 	<!-- Superfish -->
-	<link rel="stylesheet" href="css/superfish.css">
+	<link rel="stylesheet" href="{{asset('css/superfish.css')}}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="{{asset('css/style.css')}}">
+	<link rel="stylesheet" href="{{asset('css/login.css')}}">
 	{{-- <link rel="stylesheet" href="{{asset('public/css/icomoon.css')}}"> --}}
     
 
 	<!-- Modernizr JS -->
-    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="{{asset('js/modernizr-2.6.2.min.js')}}"></script>
     
-    <script defer src="js/jquery.min.js"></script>
+    <script defer src="{{asset('js/jquery.min.js')}}"></script>
 		<!-- jQuery Easing -->
-		<script defer src="js/jquery.easing.1.3.js"></script>
+		<script defer src="{{asset('js/jquery.easing.1.3.js')}}"></script>
 		<!-- Bootstrap -->
-		<script defer src="js/bootstrap.min.js"></script>
+		<script defer src="{{asset('js/bootstrap.min.js')}}"></script>
 		<!-- Waypoints -->
-		<script defer src="js/jquery.waypoints.min.js"></script>
-		<script defer src="js/sticky.js"></script>
+		<script defer src="{{asset('js/jquery.waypoints.min.js')}}"></script>
+		<script defer src="{{asset('js/sticky.js')}}"></script>
 	
 		<!-- Stellar -->
-		<script defer src="js/jquery.stellar.min.js"></script>
+		<script defer src="{{asset('js/jquery.stellar.min.js')}}"></script>
 		<!-- Superfish -->
-		<script defer src="js/hoverIntent.js"></script>
-		<script defer src="js/superfish.js"></script>
+		<script defer src="{{asset('js/hoverIntent.js')}}"></script>
+		<script defer src="{{asset('js/superfish.js')}}"></script>
 		
 		<!-- Main JS -->
-		<script defer src="js/main.js"></script>
+		<script defer src="{{asset('js/main.js')}}"></script>
 		 <!-- Scripts -->
 		
 </head>
@@ -104,18 +104,18 @@
                             <ul class="navbar-nav ml-auto menu">
 								@guest		
 								<li class="nav-item">
-                                    <a class="nav-link" href="/">Home</a>
+                                    <a class="nav-link" href="{{asset('/')}}">Home</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="ongs">Ongs </a>									
+									<a class="nav-link" href="{{asset('ongs')}}">Ongs </a>									
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="eventos">Eventos</a>								
+									<a class="nav-link" href="{{asset('eventos')}}">Eventos</a>								
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="galeria">Fotos</a>									
+									<a class="nav-link" href="{{asset('galeria')}}">Fotos</a>									
 								</li>
-									<a href="login" class="btn-login" >Login</a>
+									<a href="{{asset('login')}}" class="btn-login" >Login</a>
 
 									@if (Route::has('register'))
 									{{-- <li class="nav-item">
@@ -171,7 +171,7 @@
 									<a href="#"><i class="fab fa-instagram" title="Instagram"></i></a>
 									
 								</div> 
-								<p>Copyright Projeto-integrador<a href="home"> Páginas do Bem</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by Alunos DH</p>
+								<p>Copyright Projeto-integrador<a href="{{asset('home')}}"> Páginas do Bem</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by Alunos DH</p>
 							</div>
 						</div>
 					</div>

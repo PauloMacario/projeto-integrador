@@ -29,7 +29,7 @@ class OngsSeeder extends Seeder
             'website2' => 'https://www.facebook.com/ongnovamulher',
             'website3' => 'https://www.instagram.com/ongnovamulher/',
             'website4' => 'NULL',
-            'image' => 'teste'
+            'image' => 'storage/perfil/novamulher.webp'
         ]);
 
         DB::table('ongs')->insert([
@@ -50,7 +50,7 @@ class OngsSeeder extends Seeder
             'website2' => 'https://www.facebook.com/caosemdono/',
             'website3' => 'https://twitter.com/caosemdono',
             'website4' => 'NULL',
-            'image' => 'teste'
+            'image' => 'storage/perfil/caosemdono.jpeg'
         ]);
 
         DB::table('ongs')->insert([
@@ -73,7 +73,7 @@ class OngsSeeder extends Seeder
             'website2' => 'https://www.facebook.com/casadozezinho',
             'website3' => 'https://www.instagram.com/casadozezinho/',
             'website4' => 'NULL',
-            'image' => 'teste'
+            'image' => 'storage/perfil/casadozezinho.png'
         ]);
     }
 }

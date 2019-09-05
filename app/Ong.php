@@ -13,4 +13,5 @@ class Ong extends Model
             'website3', 'website4', 'image'
 
         ];
+        public $timestamps = false;
 }

@@ -40,7 +40,7 @@
 
             <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="noticia animate-box">
-                    <a href="#"><img class="img-responsive" src="" alt="">
+                <a href="#"><img class="img-responsive" src="{{$ong->image}}" alt="" width="250" height="200">
                         <div class="noticia-text">
                             <div class="noticia-title">
                             <h3>{{$ong->name}}</h3>
