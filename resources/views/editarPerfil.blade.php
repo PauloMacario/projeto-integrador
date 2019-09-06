@@ -16,59 +16,88 @@
 
              <div class="container">
             
-                    <form method="POST" action="">
+             <form action="/home/atualizar/{{ Auth::user()->id }}" enctype="multipart/form-data" method="post">
                             @csrf
+                            {{ method_field('PUT') }}
                     
-                            <div class="form-group col-md-12 text-center">
-                                <img src="{{ asset('images/logo_2.png')}}" style="width:50px; height:50px;" alt="">
+                        <div class="form-group col-md-12 text-center mt-4">
+                            <img src="{{ asset('images/logo_2.png')}}" style="width:50px; height:50px;" alt="">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <h4 class="text-center"></h4>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="form-row">
+                                <div class="col-6" >
+                                    <label for="name" >Nome:</label>
+                                    <input id="name" type="text" class="form-control" id="name" name="nome" value="{{ Auth::user()->name  }}"  required  autofocus>
+                                </div>                            
+                                <div class="col-6 mb-3">
+                                    <label for="email">E-mail:</label>
+                                    <input id="email" type="email" class="form-control" id="email" name="email" value="{{  Auth::user()->email }}"  required >
+                                </div>
                             </div>
-                            <div class="form-group col-md-12">
-                                <h4 class="text-center"></h4>
+                        </div>   
+
+
+                        <div class="form-group col-md-12">
+                            <div class="form-row">
+                                <div class="col-6">
+                                    <label for="occupation">Ocupação:</label>
+                                    <input id="name" type="text" class="form-control" id="ucuppation" name="ocupacao" value="{{  Auth::user()->occupation }}" >
+                                </div>                            
+                                <div class="col-6 mb-3">
+                                    <label for="biography">Áreas de interesses:</label>
+                                    <input id="name" type="text" class="form-control" id="areas" name="areas" value="{{ Auth::user()->areas  }}" >
+                                </div>
                             </div>
+                        </div>   
+                        <div class="form-group col-md-12">
+                            <div class="form-row">
+                                <div class="col-6">
+                                    <label for="Bairro">Bairro:</label>
+                                    <input id="name" type="text" class="form-control" id="Bairro" name="Bairro" value="{{  Auth::user()->district }}" >
+                                </div>       
+                                <div class="col-6 mb-3">
+                                    <label for="cidade">Cidade:</label>
+                                    <input id="name" type="text" class="form-control" id="cidade" name="cidade" value="{{  Auth::user()->city }}" >
+                                </div>
+                            </div>
+                        </div> 
+                        
 
+                        <div class="form-group col-md-12">
+                            <div class="form-row">
+                                <div class="col-12">
+                                    <label for="biography">Biografia:</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" name="biografia" rows="3">{{  Auth::user()->biography }}</textarea>                                       
+                                </div>       
+                            </div>
+                        </div> 
 
+                        <div class="form-group col-md-12">
+                            <div class="form-row">
+                                <div class="col-12">
+                                    <label for="imagem">Imagem:</label>
+                                    <input type="file" class="form-control-file" id="imagem" name="imagem">
+                                </div>       
+                            </div>
+                        </div> 
+                
                     
-                           
                     
-                                <div class="col-md-6 mb-3">
-                                    <input id="name" type="text" class="form-control"  name="name" value="{{ Auth::user()->name  }}" placeholder="Nome" required  autofocus>
-                                </div>
-                            
-                                <div class="col-md-6 mb-3">
-                                    <input id="email" type="email" class="form-control" name="email" value="{{  Auth::user()->email }}" placeholder="E-mail" required >
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <input id="name" type="text" class="form-control"  name="occupation" value="{{  Auth::user()->occupation }}" placeholder="Ocupação">
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <input id="name" type="text" class="form-control"  name="biography" value="{{  Auth::user()->biography }}" placeholder="Biografia">
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <input id="name" type="text" class="form-control"  name="areas" value="{{ Auth::user()->areas  }}" placeholder="Areas de interesse">
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <input id="name" type="text" class="form-control"  name="district" value="{{  Auth::user()->district }}" placeholder="Bairro">
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <input id="name" type="text" class="form-control"  name="city" value="{{  Auth::user()->city }}" placeholder="Cidade">
-                                </div>
-
-                                
-                            <div class=" mt-3">
+                        <div class="form-group col-md-12 mt-5">
+                            <div class="form-row">                         
                                 <div class="col-md-12 mb-3">
                                     <button type="submit" class="btn btn-primary btn-block">
                                         {{ __('Atualizar') }}
                                     </button>
                                 </div>
                             </div>
-                        </form>
+                        </div>   
+                    </form>
                 
-            </div>       
+                </div>       
                        
             </div>
         </div>

@@ -3,10 +3,10 @@
 <!--  =========================== Seção home - Seja voluntário  (INÍCIO)  ==========================  -->
 
 <a href="eventos" target="_blank" class=""> 
-		<section class="home" id="home">
+		<section class="home "" id="home">
 			<div class="overlay"></div>
-			<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/cover_nature_01.jpg);background-size: cover; background-repeat: no-repeat;">
-				<div class="desc animate-box">
+			<div class="home-cover text-center " data-stellar-background-ratio="1" style="background-image: url(images/cover_nature_01.jpg);background-size: cover; background-repeat: no-repeat;">
+				<div class="desc ">
 					<h2><strong>Seja voluntário!</strong></h2>
 					<span>Encontre aqui um trabalho voluntário para participar </span>
 					<button type="button" class="btn btn-success">Comece já</button>
@@ -20,16 +20,16 @@
 
 <!--  =========================== Seção descritiva do site dos Projetos -  (INÍCIO)  ==========================  -->
 
-	<div id="projeto" class="projeto-section">
+	<div id="projeto" class="projeto-section ">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 text-center heading-section animate-box">
+				<div class="col-md-12 text-center heading-section ">
 					<h3>Encontre sua causa</h3>
 					<p>Clique numa causa e encontre organizações em São Paulo.</p>
 				</div>
 			</div>
 
-			<div class="row row-bottom-padded-md animate-box">
+			<div class="row row-bottom-padded-md ">
 				<div class="col-lg-4 col-md-12 col-sm-12 text-center">
 					<a href="#" >
 						<div class="projeto-img">	
@@ -85,7 +85,7 @@
 <!--  =========================== Seção motor de busca co filtros -  (INÍCIO)  ==========================  -->
 		
 		<div id="busca-section" class="projeto-section">
-			<div class="container animate-box">
+			<div class="container ">
 				<div class="row">
 					<div class="col-md-12  text-center heading-section">
 						<h3>Busque aqui uma Ong para ajudar</h3>
@@ -128,7 +128,7 @@
 					</div> 
 				</div>
 			</div>
-			<div class="container animate-box">
+			<div class="container ">
 				<div class="row">
 						<div class="col-md-12">
 						<div class="mapa text-center "  style="background-image: url(images/photo-08.jpeg);background-size: cover; background-repeat: no-repeat; height:80vh;">
@@ -144,7 +144,7 @@
 <!--  =========================== Seção resumo das notícias -  (INÍCIO)  ==========================  -->
 		
 		<div id="noticia-section" class="projeto-section">
-			<div class="container animate-box">
+			<div class="container ">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-12 text-center heading-section">
 						<h3>Eventos</h3>
@@ -152,7 +152,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="container animate-box">
+			<div class="container ">
 				<div class="row row-bottom-padded-md">
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="noticia">
@@ -192,7 +192,7 @@
 					<div class="clearfix visible-md-block"></div>
 				</div>
 				<div class="row">
-					<div class="col-md-12 col-md-12 text-center animate-box">
+					<div class="col-md-12 col-md-12 text-center ">
 						<a href="eventos" class="btn btn-success btn-lg">Mais Eventos</a>
 					</div>
 				</div>

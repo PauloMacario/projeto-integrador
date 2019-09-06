@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Ong;
+
 class OngsTableSeeder extends Seeder
 {
   

@@ -25,9 +25,9 @@ Route::post('ongs/salvar', 'OngController@salvarOng');
 
 
 
-Route::get('/home/editar', function(){
-    return view('editarPerfil');
-});
+Route::get('home/editar', 'UserController@editarUser');
+
+Route::put('home/atualizar/{id}', 'UserController@atualizarUser');
 
 
 
