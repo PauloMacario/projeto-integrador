@@ -13,7 +13,7 @@
         <div class="form-row">
             <div class="form-group col-md-4">
                 <!--  <label for="nome">Nome</label> -->
-                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                <input type="text" class="form-control" id="name" placeholder="Digite seu nome">
             </div>
             <div class="form-group col-md-8">
                 <!-- <label for="sobrenome">Sobrenome</label> -->

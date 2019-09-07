@@ -75,7 +75,7 @@
                             </div>
                         </a> -->
                     </li>
-                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-3.jpeg); ">
+                    <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo-03.jpeg); ">
                         <!-- <a href="#" class="color-4">
                             <div class="case-studies-summary">
                                 <span>A elefanta Guida, foi uma das primeiras moradoras do primeiro Santuário de Elefantes da América Latina, localizado em Chapada dos Guimarães, a 65 de km de Cuiabá.</span>
