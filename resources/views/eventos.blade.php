@@ -6,7 +6,7 @@
 <section class="home">
 		<div class="overlay"></div>
 		<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo-gt.jpeg);">
-			<div class="desc animate-box">
+			<div class="desc ">
 				<h2><strong>Eventos</strong></h2>
 				<span>Últimos eventos cadastrados</span>
 					<!-- <span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span> -->
@@ -21,14 +21,14 @@
 		<section id="noticia" class="projeto-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
+					<div class="col-md-12 col-md-offset-12 text-center heading-section ">
 						<h3>Bem-Vindo a área de eventos!</h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet praesentium harum voluptatum minima perspiciatis? Natus provident unde est et. Dolore quas tempore commodi eveniet ab totam recusandae ad molestiae doloremque.</p>
 					</div>
 				</div>
 			</div>
 			<div class="container">
-				<div class="row row-bottom-padded-md animate-box">
+				<div class="row row-bottom-padded-md ">
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia">
 							<a href="#"><img class="img-responsive" src="images/photo-dog1.jpg"  width="360" height= "240" alt=""></a>
@@ -164,7 +164,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-12 col-md-offset-12 text-center animate-box">
+					<div class="col-md-12 col-md-offset-12 text-center ">
 						
 					</div>
 				</div>

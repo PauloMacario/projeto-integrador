@@ -6,7 +6,7 @@
 <section id="noticia" class="projeto-section">
     <div class="container">
         <div class="titulo">
-            <div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
+            <div class="col-md-12 col-md-offset-12 text-center heading-section ">
                 <h3>Conheça as instituições que precisam da sua ajuda!</h3>
             </div>
         </div>
@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row row-bottom-padded-md">
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="noticia animate-box">
+                <div class="noticia ">
                     <a href="#"><img class="img-responsive" src="images/logo.png" alt="">
                         <div class="noticia-text">
                             <div class="noticia-title">
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="noticia animate-box">
+                <div class="noticia ">
                     <a href="#"><img class="img-responsive" src="images/logo.png" alt="">
                         <div class="noticia-text">
                             <div class="noticia-title">
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="noticia animate-box">
+                <div class="noticia ">
                     <a href="#"><img class="img-responsive" src="images/logo.png" alt="">
                         <div class="noticia-text">
                             <div class="noticia-title">

@@ -6,31 +6,11 @@
 <html class="no-js">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-
-   
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">   
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Projeto Integrador DH" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-
-	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content="" />
-	<meta property="og:image" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:site_name" content="" />
-	<meta property="og:description" content="" />
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
-
-	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-
+	@section('title', 'Páginas do Bem')
+	<title>@yield('title')</title>
+	<link rel="shortcut icon" href="{{asset('images/favicon.ico')}}" />
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="{{asset('css/animate.css')}}">
 	<!-- Icomoon Icon Fonts-->
@@ -46,7 +26,7 @@
     
 
 	<!-- Modernizr JS -->
-    <script src="{{asset('js/modernizr-2.6.2.min.js')}}"></script>
+    {{-- <script src="{{asset('js/modernizr-2.6.2.min.js')}}"></script> --}}
     
     <script defer src="{{asset('js/jquery.min.js')}}"></script>
 		<!-- jQuery Easing -->
@@ -60,7 +40,7 @@
 		<!-- Stellar -->
 		<script defer src="{{asset('js/jquery.stellar.min.js')}}"></script>
 		<!-- Superfish -->
-		<script defer src="{{asset('js/hoverIntent.js')}}"></script>
+		{{-- <script defer src="{{asset('js/hoverIntent.js')}}"></script> --}}
 		<script defer src="{{asset('js/superfish.js')}}"></script>
 		
 		<!-- Main JS -->

@@ -5,7 +5,7 @@
 <a href="eventos" target="_blank" class=""> 
 		<section class="home "" id="home">
 			<div class="overlay"></div>
-			<div class="home-cover text-center " data-stellar-background-ratio="1" style="background-image: url(images/cover_nature_01.jpg);background-size: cover; background-repeat: no-repeat;">
+			<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/cover_nature_01.jpg);background-size: cover; background-repeat: no-repeat;">
 				<div class="desc ">
 					<h2><strong>Seja voluntário!</strong></h2>
 					<span>Encontre aqui um trabalho voluntário para participar </span>
@@ -29,7 +29,7 @@
 				</div>
 			</div>
 
-			<div class="row row-bottom-padded-md ">
+			<div class="row row-bottom-padded-md " >
 				<div class="col-lg-4 col-md-12 col-sm-12 text-center">
 					<a href="#" >
 						<div class="projeto-img">	

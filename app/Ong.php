@@ -15,4 +15,9 @@ class Ong extends Model
     ];
     
     public $timestamps = false;
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'id_user')->withPivot('permission_level');
+    }
 }

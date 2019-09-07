@@ -4,10 +4,10 @@
 
 <!--  =========================== Seção Faq perguntas e respostas - (INÍCIO)  ==========================  -->
 <section class="">
-		<div id="faq" class="animate-box">
+		<div id="faq" class="">
 			<div class="container container-faq">	
 			<div class="titulo">
-					<div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
+					<div class="col-md-12 col-md-offset-12 text-center heading-section ">
 						<h3>Perguntas mais frequentes:</h3>
 					</div>
 			</div>	

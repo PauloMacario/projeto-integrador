@@ -3,7 +3,7 @@
 
 <!--  =========================== Seção formulário de contato -  (INÍCIO)  ==========================  -->
 <section>
-		<div id="contato" class="animate-box">
+		<div id="contato" class="">
 			<div class="container box-contato">
 				<form action="#">
 					<div class="titulo">

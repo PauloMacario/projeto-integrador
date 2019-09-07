@@ -5,7 +5,7 @@
 <section class="home">
 		<div class="overlay"></div>
 		<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo_caridade.jpg);">
-			<div class="desc animate-box">
+			<div class="desc ">
 				<h2><strong>Ongs</strong></h2>
 				<span>Confira abaixo as Ongs participantes.</span>
 					<!-- <span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span> -->
@@ -16,7 +16,7 @@
 @if($ongs->isEmpty())    
     <div class="container">
         <div class="titulo">
-            <div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
+            <div class="col-md-12 col-md-offset-12 text-center heading-section ">
                 <h3>Desculpe! Não temos Ongs para serem listadas.</h3>
             </div>
         </div>
@@ -25,14 +25,14 @@
 @else 
     <div class="container">
             <div class="titulo">
-                <div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
+                <div class="col-md-12 col-md-offset-12 text-center heading-section ">
                     <h3>Conheça as Ongs e Instituições participantes.</h3>
                 </div>
             </div>
         </div>
         <div class="container">   
 
-        <div class="row row-bottom-padded-md  animate-box">
+        <div class="row row-bottom-padded-md  ">
 
     @foreach ($ongs as $ong)
         

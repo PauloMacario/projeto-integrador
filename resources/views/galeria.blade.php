@@ -6,7 +6,7 @@
 <section class="home">
     <div class="overlay"></div>
     <div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo-dog.jpeg);background-size: cover; background-repeat: no-repeat;"">
-            <div class=" desc animate-box">
+            <div class=" desc ">
         <h2> <strong>Sirva, ame, dê o seu melhor</strong></h2>
         
     </div>
@@ -19,12 +19,12 @@
 <section id="galeria" class="galeria-section">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 col-md-offset-12 text-center heading-section animate-box">
+            <div class="col-md-12 col-md-offset-12 text-center heading-section ">
                 <h3>Galeria de Fotos</h3>
                 <p>Galeria que vale mil palavras</p>
             </div>
         </div>
-        <div class="row row-bottom-padded-md animate-box">
+        <div class="row row-bottom-padded-md ">
             <div class="col-12 ">
                 <ul id="galeria-list">
                     <li class="one-third" data-animate-effect="fadeIn" style="background-image: url(images/photo_01.jpeg); ">
@@ -164,7 +164,7 @@
 
         <!--  ===================== Botao seja voluntário - (INÍCIO)  ====================  -->
         <div class="row botao-voluntario">
-            <div class="col-md-12 col-md-12 text-center animate-box">
+            <div class="col-md-12 col-md-12 text-center ">
                 <a href="#" class="btn btn-success btn-lg">Seja um Voluntário</a>
             </div>
         </div>

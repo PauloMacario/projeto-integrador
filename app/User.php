@@ -34,6 +34,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function Ongs(){
+        return $this->belongsToMany(Ong::class, 'id_ong')->withPivot('permission_level');
+    }
+
 
 
      
