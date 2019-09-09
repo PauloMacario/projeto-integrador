@@ -1,12 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container-fluid">
     <div class="">
         <div class="col-md-12">
             <div class="card">
          
-                
+                <?php 
+               /*  echo "<pre>";
+                    var_dump(Auth::user());
+                    exit; */
+
+                    ?>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -17,14 +23,14 @@
                     <section class="container-fluid perfil-user">
                             <div class=" box-perfil">   
                                 <div class="container-fluid emp-profile">
-                                    <form method="post">
+                                   
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="profile-img text-center">
-                                                 @if(Auth::user()->avatar)
-                                                    <img src="{{Auth::user()->avatar}}" alt="" title="Adicione uma foto">
-                                                 @else
+                                                 @if(Auth::user()->avatar == NULL)
                                                     <img src="{{url('images/avatar-default.png')}}" alt=""  title="Adicione uma foto">
+                                                 @else
+                                                    <img src="{{url(Auth::user()->avatar)}}" alt="" title="Adicione uma foto">
 
                                                  @endif
 
@@ -32,7 +38,11 @@
                                                
                                             </div>
                                             <div class="col-md-8">
+
                                                 <div class="profile-head">
+                                                    <form method="get">
+                                                        <input id="id-perfil" type="hidden" value="{{Auth::user()->id}}">
+                                                    </form>
                                                     <h4 class="text-center">{{ Auth::user()->name }}</h4>
                                                     <h5 class="text-center">{{ Auth::user()->occupation }}</h5>
                                                     <p class="proile-bio">{{ Auth::user()->biography }}</p>
@@ -60,39 +70,54 @@
                                                     </p>
                                                     
                                                     <div class="text-center mt-5 mb-4">
-                                                        <a href="home/editar" class="btn btn-secondary">Alterar Perfil</a>
+                                                        <a href="{{url('home/editar')}}" class="btn btn-secondary">Alterar Perfil</a>
                                                     </div>
                                                     <div class="text-center mt-5">    
-                                                        <a href="ongs/adicionar" class="btn btn-warning">Criar Ong</a> 
+                                                        <a href="{{url('ongs/adicionar')}}" class="btn btn-warning">Criar Ong</a> 
                                                     </div>
                                                 </div>
                                             </div> 
                                             <!-- <div class="col-md-4">
                         
                                             </div>    -->     
-                                            <div class="col-md-8">
-                                                <div class="tab-content profile-tab" id="myTabContent">
-                        
-                                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                                        <li class="nav-item">
-                                                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Meus Eventos</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Todos Eventos</a>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                                                Tabela meus eventos
+                                            <div class="col-md-8"> 
+
+                                                    <a href="{{url('home/listarOngs/'.Auth::user()->id)}}" class="btn btn-info">Listar Ong</a>
+
+                                                <div class="col-12 mt-3">                                                                                                  
+
+                                                       
+                                                        <div>
+
+                                                            @if(isset($user))
+
+                                                            <table class="table">
+                                                                <tbody>
+                                                            
+                                                            @foreach ($user as $item)
+                                                                <tr>
+                                                                   
+                                                                    <td> <img src="{{url($item->image)}}" alt="" title="{{$item->name}}" widh="80px" height="80px"></td>
+                                                                    <td> {{$item->name}}</td>
+                                                                    <td> {{$item->description}}</td>
+                                                                 
+                                                                    
+                                                                </tr>
+                                                            @endforeach
+                                                                </tbody>
+                                                            </table>
+                                                            @endif
+                                                            
+                                                        </div>
                                                     </div>
-                                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                                   {{--  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                                             Todos eventos
-                                                    </div>
+                                                    </div> --}}
                                                     
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>           
+                                             
                                 </div>
                             </div>
                         </section>  
@@ -112,5 +137,7 @@
         </div>
     </div>
 </div>
+
+
 
 @endsection

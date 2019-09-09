@@ -4,9 +4,17 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Imagem;
 
 class UserController extends Controller
 {
+   
+    public function listarOngs($id){
+        $user = User::find($id);
+        $a = $user->ongs;
+        return view('home')->with('user', $a);  
+    }
+
     public function editarUser()
     {
         return view('editarPerfil');
@@ -14,9 +22,17 @@ class UserController extends Controller
 
     public function atualizarUser(Request $request, $id)
     {
-        $user = User::find($id);       
+        $user = User::find($id);  
+        
+        
         $arquivo = $request->file('imagem');
-        $pasta = 'perfil';
+        if($arquivo == NULL){
+            $path = $user->avatar;
+        }else{
+            $pasta = 'perfil';
+            $path = Imagem::criarCaminhoImagem($arquivo, $pasta);
+        }
+        
         
         $user->name       = $request->input('nome');
         $user->email      = $request->input('email');
@@ -25,11 +41,11 @@ class UserController extends Controller
         $user->areas      = $request->input('areas');
         $user->district   = $request->input('bairro');
         $user->city       = $request->input('cidade');
-        $user->avatar     = $user->path;
+        $user->avatar     = $path;
 
         $user->save();
         
-        return redirect('home');
+        return view('home');
     }
 
 

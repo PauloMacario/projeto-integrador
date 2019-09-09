@@ -36,6 +36,7 @@
 		<!-- Waypoints -->
 		<script defer src="{{asset('js/jquery.waypoints.min.js')}}"></script>
 		<script defer src="{{asset('js/sticky.js')}}"></script>
+		<script defer src="{{asset('js/listas.js')}}">
 	
 		<!-- Stellar -->
 		<script defer src="{{asset('js/jquery.stellar.min.js')}}"></script>

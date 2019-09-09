@@ -56,7 +56,7 @@
                             <div class="form-row">
                                 <div class="col-6">
                                     <label for="Bairro">Bairro:</label>
-                                    <input id="name" type="text" class="form-control" id="Bairro" name="Bairro" value="{{  Auth::user()->district }}" >
+                                    <input id="name" type="text" class="form-control" id="Bairro" name="bairro" value="{{  Auth::user()->district }}" >
                                 </div>       
                                 <div class="col-6 mb-3">
                                     <label for="cidade">Cidade:</label>

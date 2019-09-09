@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Ong;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Imagem;
 
 class OngController extends Controller
 {
@@ -21,23 +22,17 @@ class OngController extends Controller
     }
 
    
-    public function salvarOng(Request $request, Imagem $imagem)
+    public function salvarOng(Request $request)
     {
         $arquivo = $request->file('imagem');
-        $pasta = 'perfil';
-        if (empty($arquivo)) {
-            abort(400, 'Nenhum arquivo foi enviado');
-        } 
        
-        $path = $imagem->criarCaminhoImagem($arquivo, $pasta);   
-
-       /*  $nomePasta = 'perfil';
-        $arquivo->storePublicly($nomePasta);
-        $caminhoAbs = public_path() . "/storage/$nomePasta";
-        $nomeArquivo = rand(000,999).$arquivo->getClientOriginalName();
-        $caminhoRel = "storage/$nomePasta/$nomeArquivo";
-        $arquivo->move($caminhoAbs, $nomeArquivo); */
-
+        if($arquivo == NULL){
+            $path = '';
+        }else{
+            $pasta = 'perfil';
+            $path = Imagem::criarCaminhoImagem($arquivo, $pasta);
+        }
+       
         Ong::create([
             'name' => $request->input('nome'),
             'segment' => $request->input('segmento'),
@@ -50,7 +45,7 @@ class OngController extends Controller
 
         
       
-        return redirect('ongs');
+        return redirect('home');
        
       
       

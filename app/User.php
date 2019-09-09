@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -34,11 +35,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function Ongs(){
-        return $this->belongsToMany(Ong::class, 'id_ong')->withPivot('permission_level');
+    public function ongs(){
+      return $this->belongsToMany('App\Ong', 'ong_has_user', 'id_ong', 'id_user' ); 
     }
-
-
 
      
 }

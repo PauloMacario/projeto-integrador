@@ -16,7 +16,6 @@ Route::get('/', function () {
 }); 
 
 
-
 Route::get('ongs/', 'OngController@index');
 
 Route::get('ongs/adicionar', 'OngController@adicionarOng');
@@ -29,8 +28,11 @@ Route::get('home/editar', 'UserController@editarUser');
 
 Route::put('home/atualizar/{id}', 'UserController@atualizarUser');
 
+Route::get('home/listarOngs/{id}', "UserController@listarOngs");
 
-
+Route::get('/teste', function(){
+    view('teste');
+});
 
 
 

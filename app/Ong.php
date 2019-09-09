@@ -18,6 +18,6 @@ class Ong extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'id_user')->withPivot('permission_level');
+        return $this->belongsToMany('App\User', 'ong_has_user', 'id_user', 'id_ong');
     }
 }
