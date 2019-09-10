@@ -29,6 +29,12 @@ class UserController extends Controller
     }
 
 
+    public function  listarUp($id)
+    {
+        $user = User::find($id);
+        $a = $user->ongs;
+        return view('home')->with('user', $a);  
+    }
 
 
 
@@ -39,12 +45,6 @@ class UserController extends Controller
         return view('editarPerfil');
     }
 
-    public function  listarUp($id)
-    {
-        $user = User::find($id);
-        $a = $user->ongs;
-        return view('home')->with('user', $a);  
-    }
 
     public function atualizarUser(Request $request, $id)
     {
@@ -71,7 +71,7 @@ class UserController extends Controller
 
         $user->save();
         
-        return view('home');
+        return redirect('home/');
     }
 
 

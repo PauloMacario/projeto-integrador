@@ -28,7 +28,7 @@ class CreateOngsTable extends Migration
             $table->string('website2', 100)->nullable();
             $table->string('website3', 100)->nullable();
             $table->string('website4', 100)->nullable();
-            $table->string('image', 100)->nullable();
+            $table->string('avatar', 100)->nullable();
             
         });
     }

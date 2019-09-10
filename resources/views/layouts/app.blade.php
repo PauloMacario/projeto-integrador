@@ -91,8 +91,9 @@
                             Páginas do Bem</a>
 
                         <div class="collapse navbar-collapse " id="conteudoNavbarSuportado">
+							@guest
+									
                             <ul class="navbar-nav ml-auto menu">
-								@guest		
 								<li class="nav-item">
                                     <a class="nav-link" href="{{asset('/')}}">Home</a>
 								</li>
@@ -106,42 +107,59 @@
 									<a class="nav-link" href="{{asset('galeria')}}">Fotos</a>									
 								</li>
 									<a href="{{asset('login')}}" class="btn-login" >Login</a>
-
-									@if (Route::has('register'))
-									{{-- <li class="nav-item">
-										<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-									</li> --}}
-								@endif
+								
+							</ul>	
 							@else
+							<ul class="navbar-nav ml-auto menu">
+								<li class="nav-item">
+                                    <a class="nav-link" href="{{asset('home')}}">Perfil</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{{asset('')}}">Buscas</a>									
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{{asset('')}}">Minha Ong</a>								
+								</li>
+								{{-- <li class="nav-item">
+									<a class="nav-link" href="{{asset('galeria')}}">Fotos</a>									
+								</li> --}}
+
 								<li class="nav-item dropdown">
 									<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-									   Olá {{ Auth::user()->name }} <span class="caret"></span>
-	
-									</a>
-	
+									   Olá {{ Auth::user()->name }} <span class="caret"></span>	
+									</a>	
 									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+											<a class="dropdown-item" href="{{url('home/perfilEditar')}}">Alterar Perfil</a>
+											<a class="dropdown-item " href="{{asset('home')}}">Link ativo</a>
+											<a class="dropdown-item" href="{{asset('home')}}">Encerrar Conta</a>
+
+
+
+
+
+
+
+
+
+
+									{{-- 		<a href="{{url('home/perfilEditar')}}" class="btn btn-secondary">Alterar Perfil</a> --}}
 										
 									</div>
-
-								</li>
-								
+								</li>								
 								<li class="nav-item">
 									<a class="btn btn-warning btn-logout ml-3" href="{{ route('logout') }}"
-										   onclick="event.preventDefault();
-														 document.getElementById('logout-form').submit();">
-											{{ __('Sair') }}
-									</a>
-	
+										onclick="event.preventDefault();
+										document.getElementById('logout-form').submit();">
+										{{ __('Sair') }}
+									</a>	
 									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 										@csrf
 									</form>
-
-								</li>
-							@endguest
-
-
-
+								</li>					
+								
+								
                             </ul>
+							@endguest
                         </div>
                             <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Login</button> -->
                             

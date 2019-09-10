@@ -4,13 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class OngHasUser extends Model
+class ActionEventHasUser extends Model
 {
-    protected $table = 'ong_has_user';
+    protected $table = 'action_event_has_user';
     protected $fillable = [
-        'id_user', 'id_ong', 'permission_level'
+        'id_action_event', 'id_user'
     ];
 
     public $timestamps = false;
-
 }

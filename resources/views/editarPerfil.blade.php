@@ -16,7 +16,7 @@
 
              <div class="container">
             
-             <form action="/home/atualizar/{{ Auth::user()->id }}" enctype="multipart/form-data" method="post">
+             <form action="/home/perfilAtualizar/{{ Auth::user()->id }}" enctype="multipart/form-data" method="post">
                             @csrf
                             {{ method_field('PUT') }}
                     

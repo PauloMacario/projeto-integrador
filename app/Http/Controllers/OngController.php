@@ -18,7 +18,7 @@ class OngController extends Controller
 
     public function adicionarOng()
     {
-        return view('restrito.adicionarOng');
+        return view('adicionarOng');
     }
 
    

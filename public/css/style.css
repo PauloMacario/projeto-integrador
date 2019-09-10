@@ -57,6 +57,11 @@ figure {
   margin-bottom: 2em;
 }
 
+
+ul{
+  list-style: none;
+}
+
 ::-webkit-selection {
   color: #fcfcfc;
   background: #cdcdcd;
@@ -975,4 +980,3 @@ section.map {
 
 
 /* ============ @ MEDIAS e BRACK POINTS ( FINAL ) ============== */
-

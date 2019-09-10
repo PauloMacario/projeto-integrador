@@ -1,10 +1,10 @@
-@extends('../layouts.app')
+@extends('layouts.app')
 @section('content')
 
 
 
 <section class="box-cadastro">
-<form action="{{ asset('ongs/salvar') }}" enctype="multipart/form-data" method="post">
+<form action="{{ asset('') }}" enctype="multipart/form-data" method="post">
         @csrf
         <div class="form-row ">
             <div class="form-group col-md-12">
@@ -14,38 +14,38 @@
         <div class="form-row">
             <div class="form-group col-md-8">
                 <!--  <label for="nome">Nome</label> -->
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da Ong">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da Ong" required>
             </div>
             <div class="form-group col-md-4">
                 <!-- <label for="sobrenome">Sobrenome</label> -->
-                <input type="text" class="form-control" id="segmento" name="segmento" placeholder="Segmento">
+                <input type="text" class="form-control" id="segmento" name="segmento" placeholder="Segmento" required>
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-12">
                 <!-- <label for="email">Email</label> -->
-                <input type="text" class="form-control" id="descricao" name="descricao" placeholder="descrição">
+                <input type="text" class="form-control" id="descricao" name="descricao" placeholder="descrição" required>
             </div>
             <div class="form-group col-md-12">
                 <!-- <label for="email2">Email</label> -->
-                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço">
+                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço" required>
             </div>
         </div>
         <div class="form-row ">
             <div class="form-group col-md-6">
                 <!-- <label for="inputCity">City</label> -->
-                <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro">
+                <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" required>
             </div>
             <div class="form-group col-md-6">
                 <!-- <label for="inputCity">City</label> -->
-                <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade">
+                <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" required>
             </div>
         </div> 
         <div class="form-row ">
            
             <div class="form-group col-md-12">
                 <label for="imagem">Imagem</label> 
-                <input type="file" class="form-control" id="imagem" name="imagem" >
+                <input type="file" class="form-control" id="imagem" name="imagem"required>
             </div>
         </div>
        

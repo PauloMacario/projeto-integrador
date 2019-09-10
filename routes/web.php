@@ -18,15 +18,15 @@ Route::get('/', function () {
 
 Route::get('ongs/', 'OngController@index');
 
-Route::get('ongs/adicionar', 'OngController@adicionarOng');
+Route::get('home/novaOng', 'OngController@adicionarOng');
 
 Route::post('ongs/salvar', 'OngController@salvarOng');
 
 
 
-Route::get('home/editar', 'UserController@editarUser');
+Route::get('home/perfilEditar', 'UserController@editarUser');
 
-Route::put('home/atualizar/{id}', 'UserController@atualizarUser');
+Route::put('home/perfilAtualizar/{id}', 'UserController@atualizarUser');
 
 /* Route::get('home/listarOngs/{id}', "UserController@listarOngs"); */
 
