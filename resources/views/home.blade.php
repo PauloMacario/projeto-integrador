@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class="container-fluid">
-    <div class="">
+<div class="">
+   {{--  <div class=""> --}}
         <div class="col-md-12">
             <div class="card">
          
@@ -40,7 +40,8 @@
                                             <div class="col-md-8">
 
                                                 <div class="profile-head">
-                                                    <form method="get">
+                                                    <form>
+                                                       
                                                         <input id="id-perfil" type="hidden" value="{{Auth::user()->id}}">
                                                     </form>
                                                     <h4 class="text-center">{{ Auth::user()->name }}</h4>
@@ -80,18 +81,54 @@
                                             <!-- <div class="col-md-4">
                         
                                             </div>    -->     
-                                            <div class="col-md-8"> 
+                                            <div class="col-md-8">
 
-                                                    <a href="{{url('home/listarOngs/'.Auth::user()->id)}}" class="btn btn-info">Listar Ong</a>
+                                                    <div class="col-12 mt-3 text-center">
+                                                        <h3>Ongs que acompanho.</h3> 
+                                                    </div>  
 
-                                                <div class="col-12 mt-3">                                                                                                  
+                                                 <div class="col-12 mt-3"> 
+                                                    <script>
+                                                        $(document).ready(function(){
 
-                                                       
-                                                        <div>
+                                                            var id = $('#id-perfil').val()
+                                                            console.log(id)
+                                                            $.ajax({
+                                                                method:'GET',
+                                                                url: 'home/ong/'+id,
+                                                               
+                                                              
+                                                                           
+                                                                success: function(response){
+                                                                            for(var i = 0 ; i < response.length; i++){
+                                                                                var imagem = response[i].image  
+                                                                                var nome = response[i].name  
+                                                                                var descricao = response[i].description   
+                                                                                $('#tabela').append('<tr><td><img src="'+imagem+'"></td> <td>'+nome+'</td><td>'+descricao+'</td></tr>')
+
+                                                                                }
+                                                                            }
+                                                                        })
+                                                                    });
+                                                    </script>
+                                                    <table id="tabela" class="table table-striped table-responsive-sm my-ongs">
+                                                        <thead>
+                                                            <tr >
+                                                                <th scope="col" class="text-center" width="25%">Logo</th>
+                                                                <th scope="col" class="text-center" width="25%">Nome</th>
+                                                                <th scope="col" class="text-center" width="50%">Descrição</th>
+                                                            </tr>
+                                                        </thead>  
+                                                        <tbody>
+                                                            
+                                                        </tbody>
+                                                    </table>
+    
 
                                                             @if(isset($user))
+                                                            ssss
 
-                                                            <table class="table">
+                                                           {{--  <table class="table">
                                                                 <tbody>
                                                             
                                                             @foreach ($user as $item)
@@ -105,10 +142,16 @@
                                                                 </tr>
                                                             @endforeach
                                                                 </tbody>
-                                                            </table>
+                                                            </table> --}}
+
+                                                            
+
+
+
+
                                                             @endif
                                                             
-                                                        </div>
+                                                        
                                                     </div>
                                                    {{--  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                                             Todos eventos
@@ -133,9 +176,8 @@
                             <li><img src="{{ Auth::user()->avatar }}" alt="" title="{{ Auth::user()->name }}"></li>
                         </ul>    
  --}}
-            </div>
         </div>
-    </div>
+  {{--   </div> --}}
 </div>
 
 

@@ -28,11 +28,9 @@ Route::get('home/editar', 'UserController@editarUser');
 
 Route::put('home/atualizar/{id}', 'UserController@atualizarUser');
 
-Route::get('home/listarOngs/{id}', "UserController@listarOngs");
+/* Route::get('home/listarOngs/{id}', "UserController@listarOngs"); */
 
-Route::get('/teste', function(){
-    view('teste');
-});
+
 
 
 
@@ -61,6 +59,14 @@ Route::get('/autenticacao', function () {
 Route::get('/cadastro', function () {
     return view('cadastro');
 }); 
+
+
+
+Route::get('home/ong/{id}', 'UserController@allOngs'); 
+
+
+
+
 
 
 

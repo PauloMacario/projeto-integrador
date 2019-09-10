@@ -15,9 +15,35 @@ class UserController extends Controller
         return view('home')->with('user', $a);  
     }
 
+    //teste do Ajax listagem de Ongs do usuario
+
+    public function allOngs($id)
+    {
+        $user = User::find($id);
+        $a = $user->ongs;
+    
+
+       return $a;
+
+     
+    }
+
+
+
+
+
+
+
     public function editarUser()
     {
         return view('editarPerfil');
+    }
+
+    public function  listarUp($id)
+    {
+        $user = User::find($id);
+        $a = $user->ongs;
+        return view('home')->with('user', $a);  
     }
 
     public function atualizarUser(Request $request, $id)

@@ -3,20 +3,21 @@
 
 
 <div class="container mt-5 mb-5">
- <?php
-var_dump($ongs);
-exit;
+        <table id="table">
+                <thead>
+                    <th>IMG</th>
+                    <th>NOME</th>
+                    <th>DESCRICAO</th>
+                </thead>
 
-?>
 
-   <ul>
-        @foreach ($dados as $dado)
-           
-            
-        @endforeach
-    </ul>
+
+
+            </table>
+
 </div>
 
 
 
 @endsection
+

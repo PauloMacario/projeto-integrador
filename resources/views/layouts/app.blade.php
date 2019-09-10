@@ -22,21 +22,24 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
 	<link rel="stylesheet" href="{{asset('css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('css/login.css')}}">
+	<link rel="stylesheet" href="{{asset('css/perfil.css')}}">
+	
 	{{-- <link rel="stylesheet" href="{{asset('public/css/icomoon.css')}}"> --}}
     
 
 	<!-- Modernizr JS -->
     {{-- <script src="{{asset('js/modernizr-2.6.2.min.js')}}"></script> --}}
-    
-    <script defer src="{{asset('js/jquery.min.js')}}"></script>
-		<!-- jQuery Easing -->
-		<script defer src="{{asset('js/jquery.easing.1.3.js')}}"></script>
+	
+	
+	<script defer src="{{asset('js/jquery.min.js')}}"></script>
+	<!-- jQuery Easing -->
+	<script defer src="{{asset('js/jquery.easing.1.3.js')}}"></script>
 		<!-- Bootstrap -->
 		<script defer src="{{asset('js/bootstrap.min.js')}}"></script>
 		<!-- Waypoints -->
 		<script defer src="{{asset('js/jquery.waypoints.min.js')}}"></script>
 		<script defer src="{{asset('js/sticky.js')}}"></script>
-		<script defer src="{{asset('js/listas.js')}}">
+		
 	
 		<!-- Stellar -->
 		<script defer src="{{asset('js/jquery.stellar.min.js')}}"></script>
@@ -46,7 +49,13 @@
 		
 		<!-- Main JS -->
 		<script defer src="{{asset('js/main.js')}}"></script>
-		 <!-- Scripts -->
+		
+		<script  src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+		
+		 
+
+	
+		
 		
 </head>
 <body>
@@ -161,6 +170,11 @@
 		</div>
 	</main>
 </body>
+
+
+
+	
+
 </html>
 	
 			
