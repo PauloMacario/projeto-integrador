@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Ong;
+use App\OngHasUser;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Imagem;
 
@@ -60,13 +62,16 @@ class UserController extends Controller
         return view('home')->with('user', $a);  
     }
 
+ 
+    
     //teste do Ajax listagem de Ongs do usuario
 
     public function allOngs($id)
     {
         $user = User::find($id);
-        $a = $user->ongs;
-        return $a;
+        $user->ongs;
+        
+        return $user;
     }
 
 

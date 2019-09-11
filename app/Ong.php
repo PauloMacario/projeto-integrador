@@ -18,6 +18,6 @@ class Ong extends Model
 
     public function users()
     {
-        return $this->belongsToMany('App\User', 'ong_has_user', 'id_user', 'id_ong');
+        return $this->belongsToMany('App\User', 'ong_has_user', 'id_ong', 'id_user');
     }
 }

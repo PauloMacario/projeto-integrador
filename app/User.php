@@ -36,8 +36,10 @@ class User extends Authenticatable
     ];
 
     public function ongs(){
-      return $this->belongsToMany('App\Ong', 'ong_has_user', 'id_ong', 'id_user' ); 
+      return $this->belongsToMany('App\Ong', 'ong_has_user', 'id_user', 'id_ong'); 
     }
+
+    
 
      
 }

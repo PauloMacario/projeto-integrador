@@ -1,5 +1,7 @@
 <?php
-
+use App\User;
+use App\Ong;
+use App\OngHasUser;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('ongs/', 'OngController@index');
 
-Route::get('home/novaOng', 'OngController@adicionarOng');
+Route::get('home/{id}/novaOng', 'OngController@adicionarOng');
 
 Route::post('home/novaOng/salvar', 'OngController@salvarOng');
 
@@ -62,14 +64,32 @@ Route::get('/cadastro', function () {
 
 
 
+
+
 Route::get('home/ong/{id}', 'UserController@allOngs'); 
 
 
+Route::get('home/ong/admin{id}', 'UserController@allOngsAdmin'); 
 
 
 
+
+Route::get('minhasOngs' , function () {
+    return view('minhasOngs');
+}); 
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('teste', function(){
+
+    
+    $user = User::find(1);
+    $user->ongs;
+    
+    return $user->toJson();
+
+});

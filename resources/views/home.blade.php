@@ -63,7 +63,7 @@
                                         <a href="{{url('home/perfilEditar')}}" class="btn btn-secondary">Alterar Perfil</a>
                                     </div> --}}
                                     <div class="text-center mt-5">    
-                                        <a href="{{url('home/novaOng')}}" class="btn btn-warning">Criar Ong</a> 
+                                        <a href="{{url('home/'.Auth::user()->id.'/novaOng')}}" class="btn btn-warning">Criar Ong</a> 
                                     </div>
                                 </div>
                             </div> 
@@ -79,20 +79,17 @@
                                                         method:'GET',
                                                         url: 'home/ong/'+id,                                             
                                                             success: function(response){
-                                                                for(var i = 0 ; i < response.length; i++){
-                                                                    var avatar = response[i].avatar  
-                                                                    var nome = response[i].name  
-                                                                    var descricao = response[i].description   
-                                                                    $('#tabela').append('<tr><td><img src="'+avatar+'"></td> <td>'+nome+'</td><td>'+descricao+'</td></tr>')
+                                                              
+                                                               for(var i = 0; i < response.ongs.length; i++ ){
+                                                                   
 
-                                                                    }
-                                                                }
-
+                                                                $('#tabela').append('<tr><td><img src="'+response.ongs[i].avatar+'"></td> <td>'+response.ongs[i].name+'</td><td>'+response.ongs[i].description+'</td></tr>') 
+                                                               }
+                                                            }                                      
                                                                
                                                             })
                                                         });
                                         </script>
-
                                       
                                         <table id="tabela" class="table table-striped table-responsive-sm my-ongs">
                                             <thead>

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Ong;
+use App\OngHasUser;
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Imagem;
 
@@ -15,15 +18,18 @@ class OngController extends Controller
        return view('ongs')->with('ongs', $ongs);
     }
 
+ 
     // Redireciona para o form de cadastro de Ong
-    public function adicionarOng()
+    public function adicionarOng($id)
     {
-        return view('adicionarOng');
+        $user = User::find($id);
+        return view('adicionarOng')->with('user', $user);
     }
     
      // Salva a Ong 
     public function salvarOng(Request $request)
     {
+        $userId =  $request->input('id');
         $arquivo = $request->file('imagem');
        
         if($arquivo == NULL){
@@ -32,7 +38,7 @@ class OngController extends Controller
             $pasta = 'perfil';
             $path = Imagem::criarCaminhoImagem($arquivo, $pasta);
         }
-       
+       // Salva a ong no bando
         Ong::create([
             'name' => $request->input('nome'),
             'segment' => $request->input('segmento'),
@@ -41,10 +47,15 @@ class OngController extends Controller
             'district' => $request->input('bairro'),
             'city' => $request->input('cidade'),
             'avatar' => $path
-        ]);    
+        ]);  
+        // Vincula a ong acima cadastrada ao usuario que cadastrou e o coloca como adm    
+        $ong = Ong::all() -> last();
 
-        
-      
+        OngHasUser::create([
+            'id_user' =>  $userId,
+            'id_ong' => $ong->id,
+            'permission_level' => 1
+        ]);
         return redirect('home');
        
       

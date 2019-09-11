@@ -118,7 +118,7 @@
 									<a class="nav-link" href="{{asset('')}}">Buscas</a>									
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{asset('')}}">Minha Ong</a>								
+									<a class="nav-link" href="{{asset('minhasOngs')}}">Minha Ong</a>								
 								</li>
 								{{-- <li class="nav-item">
 									<a class="nav-link" href="{{asset('galeria')}}">Fotos</a>									
@@ -129,7 +129,7 @@
 									   Olá {{ Auth::user()->name }} <span class="caret"></span>	
 									</a>	
 									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item" href="{{url('home/perfilEditar')}}">Alterar Perfil</a>
+											<a class="dropdown-item" href="{{url('home/perfilEditar')}}">Alterar Perfil</a>											
 											<a class="dropdown-item " href="{{asset('home')}}">Link ativo</a>
 											<a class="dropdown-item" href="{{asset('home')}}">Encerrar Conta</a>
 
@@ -188,6 +188,7 @@
 		</div>
 	</main>
 </body>
+
 
 
 
