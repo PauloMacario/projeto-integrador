@@ -40,8 +40,12 @@
 
             <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="noticia">
-                <a href="#"><img class="img-responsive" src="{{url($ong->image)}}" alt="" width="250" height="200">
-                        <div class="noticia-text">
+            @if($ong->avatar)        
+                <a href="#"><img class="img-responsive" src="{{url($ong->avatar)}}" alt="" width="250" height="200">
+            @else 
+                <a href="#"><img class="img-responsive" src="{{url('images/ongDefault.jpg')}}" alt="" width="250" height="200">    
+            @endif
+            <div class="noticia-text">
                             <div class="noticia-title">
                             <h3>{{$ong->name}}</h3>
                                 <p>{{$ong->description}}</p>

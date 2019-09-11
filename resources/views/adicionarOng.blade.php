@@ -4,7 +4,7 @@
 
 
 <section class="box-cadastro">
-<form action="{{ asset('') }}" enctype="multipart/form-data" method="post">
+<form action="{{ asset('/home/novaOng/salvar') }}" enctype="multipart/form-data" method="post">
         @csrf
         <div class="form-row ">
             <div class="form-group col-md-12">
@@ -45,7 +45,7 @@
            
             <div class="form-group col-md-12">
                 <label for="imagem">Imagem</label> 
-                <input type="file" class="form-control" id="imagem" name="imagem"required>
+                <input type="file" class="form-control" id="imagem" name="imagem">
             </div>
         </div>
        

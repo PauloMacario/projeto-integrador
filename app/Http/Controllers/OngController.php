@@ -8,20 +8,20 @@ use App\Http\Controllers\Imagem;
 
 class OngController extends Controller
 {
-   
+   // Busca todas as ongs cadastradas e redireciona para view ongs
     public function index()
     {
-       $ongs = Ong::all();
-       
+       $ongs = Ong::all();       
        return view('ongs')->with('ongs', $ongs);
     }
 
+    // Redireciona para o form de cadastro de Ong
     public function adicionarOng()
     {
         return view('adicionarOng');
     }
-
-   
+    
+     // Salva a Ong 
     public function salvarOng(Request $request)
     {
         $arquivo = $request->file('imagem');
@@ -40,7 +40,7 @@ class OngController extends Controller
             'address' => $request->input('endereco'),
             'district' => $request->input('bairro'),
             'city' => $request->input('cidade'),
-            'image' => $path
+            'avatar' => $path
         ]);    
 
         

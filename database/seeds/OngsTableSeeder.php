@@ -26,7 +26,7 @@ class OngsTableSeeder extends Seeder
             'website2' => 'https://www.facebook.com/ongnovamulher',
             'website3' => 'https://www.instagram.com/ongnovamulher/',
             'website4' => 'NULL',
-            'image' => 'storage/perfil/novamulher.webp'
+            'avatar' => 'storage/perfil/novamulher.webp'
         ]);
 
         Ong::create([
@@ -47,7 +47,7 @@ class OngsTableSeeder extends Seeder
             'website2' => 'https://www.facebook.com/caosemdono/',
             'website3' => 'https://twitter.com/caosemdono',
             'website4' => 'NULL',
-            'image' => 'storage/perfil/caosemdono.jpeg'
+            'avatar' => 'storage/perfil/caosemdono.jpeg'
         ]);
 
         Ong::create([
@@ -70,7 +70,7 @@ class OngsTableSeeder extends Seeder
             'website2' => 'https://www.facebook.com/casadozezinho',
             'website3' => 'https://www.instagram.com/casadozezinho/',
             'website4' => 'NULL',
-            'image' => 'storage/perfil/casadozezinho.png'
+            'avatar' => 'storage/perfil/casadozezinho.png'
         ]);
     }
 }

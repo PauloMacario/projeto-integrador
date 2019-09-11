@@ -9,25 +9,7 @@ use App\Http\Controllers\Imagem;
 class UserController extends Controller
 {
    
-    public function listarOngs($id){
-        $user = User::find($id);
-        $a = $user->ongs;
-        return view('home')->with('user', $a);  
-    }
-
-    //teste do Ajax listagem de Ongs do usuario
-
-    public function allOngs($id)
-    {
-        $user = User::find($id);
-        $a = $user->ongs;
     
-
-       return $a;
-
-     
-    }
-
 
     public function  listarUp($id)
     {
@@ -36,10 +18,8 @@ class UserController extends Controller
         return view('home')->with('user', $a);  
     }
 
-
-
-
-
+    
+  
     public function editarUser()
     {
         return view('editarPerfil');
@@ -73,6 +53,22 @@ class UserController extends Controller
         
         return redirect('home/');
     }
+
+    public function listarOngs($id){
+        $user = User::find($id);
+        $a = $user->ongs;
+        return view('home')->with('user', $a);  
+    }
+
+    //teste do Ajax listagem de Ongs do usuario
+
+    public function allOngs($id)
+    {
+        $user = User::find($id);
+        $a = $user->ongs;
+        return $a;
+    }
+
 
 
 }

@@ -17,11 +17,13 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="profile-img text-center">
-                                @if(Auth::user()->avatar == NULL)
-                                    <img src="{{url('images/avatar-default.png')}}" alt=""  title="Adicione uma foto">
-                                @else
-                                    <img src="{{url(Auth::user()->avatar)}}" alt="" title="Adicione uma foto">
-                                @endif
+                                    <a href="#">
+                                        @if(Auth::user()->avatar == NULL)
+                                            <img src="{{url('images/avatar-default.png')}}" alt=""  title="Adicione uma foto">
+                                        @else
+                                            <img src="{{url(Auth::user()->avatar)}}" alt="" title="Adicione uma foto">
+                                        @endif
+                                    </a>    
                                 </div>
                                     
                             </div>
@@ -48,7 +50,7 @@
                                             <span> {{ Auth::user()->email }} </span>
                                     </p>
                                     <p> <span><i class="fas fa-globe-africa icone-perfil"></i> </span>
-                                        <span>www.site.com.br</span>
+                                        <span><a href="{{ Auth::user()->website1 }}">{{ Auth::user()->website1 }}</a></span>
                                     </p>
                                     <p><span><i class="fas fa-map-signs icone-perfil"></i> </span>
                                         <span>{{ Auth::user()->district }}</span>
@@ -78,16 +80,20 @@
                                                         url: 'home/ong/'+id,                                             
                                                             success: function(response){
                                                                 for(var i = 0 ; i < response.length; i++){
-                                                                    var imagem = response[i].image  
+                                                                    var avatar = response[i].avatar  
                                                                     var nome = response[i].name  
                                                                     var descricao = response[i].description   
-                                                                    $('#tabela').append('<tr><td><img src="'+imagem+'"></td> <td>'+nome+'</td><td>'+descricao+'</td></tr>')
+                                                                    $('#tabela').append('<tr><td><img src="'+avatar+'"></td> <td>'+nome+'</td><td>'+descricao+'</td></tr>')
 
                                                                     }
                                                                 }
+
+                                                               
                                                             })
                                                         });
                                         </script>
+
+                                      
                                         <table id="tabela" class="table table-striped table-responsive-sm my-ongs">
                                             <thead>
                                                 <tr >

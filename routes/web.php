@@ -20,7 +20,7 @@ Route::get('ongs/', 'OngController@index');
 
 Route::get('home/novaOng', 'OngController@adicionarOng');
 
-Route::post('ongs/salvar', 'OngController@salvarOng');
+Route::post('home/novaOng/salvar', 'OngController@salvarOng');
 
 
 
