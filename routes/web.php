@@ -71,7 +71,7 @@ Route::get('home/ong/{id}', 'UserController@allOngs');
 
 Route::get('home/ong/admin{id}', 'UserController@allOngsAdmin'); 
 
-
+Route::get('eventos','EventsController@index');
 
 
 Route::get('minhasOngs' , function () {
