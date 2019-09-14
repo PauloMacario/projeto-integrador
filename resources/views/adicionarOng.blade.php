@@ -13,15 +13,12 @@
         </div>
         <div class="form-row">
             <div class="form-group col-md-8">
-                        <!--  <label for="nome">Nome</label> -->
             <input type="hidden" class="form-control" id="id" name="id" value="{{$user->id}}">
             </div>
             <div class="form-group col-md-8">
-                <!--  <label for="nome">Nome</label> -->
                 <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da Ong" required>
             </div>
             <div class="form-group col-md-4">
-                <!-- <label for="sobrenome">Sobrenome</label> -->
                 <input type="text" class="form-control" id="segmento" name="segmento" placeholder="Segmento" required>
             </div>
         </div>
