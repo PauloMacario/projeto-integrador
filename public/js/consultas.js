@@ -3,6 +3,7 @@
     const rua = document.querySelector("#endereco");
     const bairro = document.querySelector("#bairro");
     const localidade = document.querySelector("#cidade");
+    const uf = document.querySelector("#uf");
 
     CEP.oninput = () => {
         console.log(CEP.value)
@@ -10,6 +11,7 @@
             rua.value = "";
             bairro.value = "";
             localidade.value = "";
+            uf.value = "";
         }
 
         fetch(`https://viacep.com.br/ws/${CEP.value}/json/`)
@@ -18,6 +20,7 @@
                 rua.value = data.logradouro;
                 bairro.value = data.bairro;
                 localidade.value = data.localidade;
+                uf.value = data.uf;
             });
 
         CEP.value = CEP.value.replace(/D/g, "").replace(/^(\d{5})(\d)/, "$1-$2");
