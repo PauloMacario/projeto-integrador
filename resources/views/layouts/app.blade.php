@@ -99,7 +99,7 @@
                                     <a class="nav-link" href="{{asset('/')}}">Início</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{asset('ongs')}}">Ongs </a>									
+									<a class="nav-link" href="{{asset('ongs')}}">Ongs</a>									
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="{{asset('eventos')}}">Eventos</a>								
@@ -113,10 +113,19 @@
 							@else
 							<ul class="navbar-nav ml-auto menu">
 								<li class="nav-item">
+									<a class="nav-link" href="{{asset('home')}}">Home</a>
+								</li>
+								<li class="nav-item">
 									<a class="nav-link" href="{{asset('/')}}">Início</a>
 								</li>
 								<li class="nav-item">
-                                    <a class="nav-link" href="{{asset('home')}}">Home</a>
+									<a class="nav-link" href="{{asset('ongs')}}">Ongs</a>									
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{{asset('eventos')}}">Eventos</a>								
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{{asset('galeria')}}">Fotos</a>									
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="{{asset('')}}">Buscar</a> <!-- linkar pag de eventos -->							
@@ -137,15 +146,14 @@
 									<a id="navbarDropdown" class="nav-link dropdown-toggle ml-2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
 									{{ Auth::user()->name }} <span class="caret"></span>	
 									</a>	
-									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item" href="{{url('home/perfilEditar')}}">Alterar Perfil</a>											
+									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">										
 											<a class="dropdown-item " href="{{asset('home')}}">Link ativo</a>
 											<a class="dropdown-item" href="{{asset('home')}}">Encerrar Conta</a>
 									{{-- 		<a href="{{url('home/perfilEditar')}}" class="btn btn-secondary">Alterar Perfil</a> --}}
 										
 									</div>
 								</li>								
-								<li class="nav-item">
+								<li class="nav-item mt-2">
 									<a class="btn-logout ml-3" href="{{ route('logout') }}"
 										onclick="event.preventDefault();
 										document.getElementById('logout-form').submit();">
