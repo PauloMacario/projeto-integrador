@@ -8,7 +8,7 @@ class Ong extends Model
 {       
     
     protected $fillable =[
-       'name', 'segment', 'description', 'address', 'district', 'city', 
+       'name', 'segment', 'description', 'address', 'district', 'city', 'uf', 
        'phone1', 'phone2', 'email', 'website1', 'website2', 
        'website3', 'website4', 'avatar'
 

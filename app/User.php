@@ -13,7 +13,7 @@ class User extends Authenticatable
 
     protected $fillable = [
         'name', 'email', 'password', 'occupation', 'biography','areas', 
-        'district', 'city', 'avatar'
+        'district', 'city', 'uf', 'avatar'
     ];
     public $timestamps = false;
 

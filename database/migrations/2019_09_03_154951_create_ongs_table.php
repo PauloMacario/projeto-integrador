@@ -21,6 +21,7 @@ class CreateOngsTable extends Migration
             $table->string('address', 100);
             $table->string('district', 45);
             $table->string('city', 45);
+            $table->string('uf', 2);
             $table->bigInteger('phone1')->nullable();
             $table->bigInteger('phone2')->nullable();
             $table->string('email', 100)->nullable();

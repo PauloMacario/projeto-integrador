@@ -2,8 +2,8 @@
 @section('content')
 <!--  =========================== Seção home - Seja voluntário  (INÍCIO)  ==========================  -->
 
-<a href="eventos" target="_blank" class=""> 
-		<section class="home "" id="home">
+<a href="login" target="_blank" class=""> 
+		<section class="home " id="home">
 			<div class="overlay"></div>
 			<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/cover_nature_01.jpg);background-size: cover; background-repeat: no-repeat;">
 				<div class="desc ">
@@ -31,7 +31,7 @@
 
 			<div class="row row-bottom-padded-md " >
 				<div class="col-lg-4 col-md-12 col-sm-12 text-center">
-					<a href="#" >
+					<a href="eventos" >
 						<div class="projeto-img">	
 							<p>
 								<img src="images/photo-children.jpg" alt="Criança e Adolescente" title="Criança e Adolescente"class="img-responsive img-large img-projeto">
@@ -46,7 +46,7 @@
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-12 col-sm-12 text-center">
-					<a href="#" >
+					<a href="eventos" >
 						<div class="projeto-img">	
 							<p>
 								<img src="images/cover_animals_2.jpg" alt="Proteção aos Animais" title="Proteção aos Animais" class="img-responsive img-large img-projeto">
@@ -61,7 +61,7 @@
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-12 col-sm-12 text-center">
-					<a href="#" >
+					<a href="eventos" >
 						<div class="projeto-img">
 							<p>
 								<img src="images/cover_meio_3.jpg" alt="Meio Ambiente" title="Meio Ambiente" class="img-responsive img-large img-projeto">

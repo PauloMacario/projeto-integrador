@@ -27,22 +27,24 @@
         </div>
         <div class="form-row">
             <div class="form-group col-md-12">
-                <!-- <label for="email">Email</label> -->
                 <input type="text" class="form-control" id="descricao" name="descricao" placeholder="descrição" required>
             </div>
-            <div class="form-group col-md-12">
-                <!-- <label for="email2">Email</label> -->
+            <div class="form-group col-md-4">
+                    <input type="text" class="form-control" id="CEP" name="CEP" placeholder="CEP" required>
+            </div>
+            <div class="form-group col-md-8">
                 <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço" required>
             </div>
         </div>
         <div class="form-row ">
-            <div class="form-group col-md-6">
-                <!-- <label for="inputCity">City</label> -->
+            <div class="form-group col-md-5">
                 <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" required>
             </div>
-            <div class="form-group col-md-6">
-                <!-- <label for="inputCity">City</label> -->
+            <div class="form-group col-md-5">
                 <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" required>
+            </div>
+            <div class="form-group col-md-2">
+                <input type="text" class="form-control" id="uf" name="uf" placeholder="Estado" required>
             </div>
         </div> 
         <div class="form-row ">

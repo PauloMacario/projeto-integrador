@@ -1,29 +1,25 @@
 @extends('layouts.app')
 @section('content')
 
-@if($eventos)
-sim 
-@else 
-
-
-@endif
 
 <!--  =========================== Seção home do blog de noticias -  (INÍCIO)  ==========================  -->
-
+<!--
 <section class="home">
 		<div class="overlay"></div>
 		<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo-gt.jpeg);">
 			<div class="desc ">
 				<h2><strong>Eventos</strong></h2>
 				<span>Últimos eventos cadastrados</span>
-					<!-- <span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span> -->
+					 <span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span> 
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<!--  =========================== Seção home do blog de noticias -  (FINAL)  ==========================  -->
 
 	<!--  =========================== Seção Notícia do blog -  (INÍCIO)  ==========================  -->
+
+
 
 		<section id="noticia" class="projeto-section">
 			<div class="container">
@@ -34,21 +30,31 @@ sim
 					</div>
 				</div>
 			</div>
+
+			@if($eventos->isEmpty())    
+    <div class="container">
+        <div class="titulo">
+            <div class="col-md-12 col-md-offset-12 text-center heading-section ">
+                <h3>Desculpe! Não temos Eventos para serem listadas.</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+@else 
+
 			<div class="container">
 				<div class="row row-bottom-padded-md ">
 
 						@foreach ($eventos as $evento)
-
-
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="noticia">
-							<a href="#"><img class="img-responsive" src="images/photo-dog1.jpg"  width="360" height= "240" alt="">{{$evento->image}}</a>
+							<a href="#">{{$evento->image}}</a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>{{$evento->title}}</a></h3>
-									<span class="posted_by">Sep. 15th</span>
+									<span class="posted_by">{{$evento->date}}</span>
 									<span class="comment"><a href="">21<i class="fas fa-comment"></i></a></span>
-									<p>Certifique-se de que seus cosméticos e produtos de limpeza são livres de crueldade (Cruelty Free)..</p>
+									<p>{{$evento->description}}</p>
 									<p><a href="#">Leia mais...</a></p>
 								</div>
 							</div> 
@@ -60,6 +66,7 @@ sim
 						</div>
 					</div>
 				</div>
+				@endif
 				<div class="row">
 					<div class="col-md-12 col-md-offset-12 text-center ">
 						

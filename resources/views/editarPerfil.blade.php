@@ -54,13 +54,21 @@
                         </div>   
                         <div class="form-group col-md-12">
                             <div class="form-row">
-                                <div class="col-6">
-                                    <label for="Bairro">Bairro:</label>
-                                    <input id="name" type="text" class="form-control" id="Bairro" name="bairro" value="{{  Auth::user()->district }}" >
+                                <div class="col-4">
+                                    <label>CEP:</label>
+                                    <input type="text" class="form-control" id="CEP" name="CEP">
+                                </div>   
+                                <div class="col-4">
+                                    <label>Bairro:</label>
+                                    <input type="text" class="form-control" id="bairro" name="bairro" value="{{  Auth::user()->district }}" >
                                 </div>       
-                                <div class="col-6 mb-3">
-                                    <label for="cidade">Cidade:</label>
-                                    <input id="name" type="text" class="form-control" id="cidade" name="cidade" value="{{  Auth::user()->city }}" >
+                                <div class="col-4">
+                                    <label>Cidade:</label>
+                                    <input type="text" class="form-control" id="cidade" name="cidade" value="{{  Auth::user()->city }}" >
+                                </div>
+                                <div class="col-4">
+                                    <label>Rua:</label>
+                                    <input type="hidden" class="form-control" id="endereco" name="endereco" value="" >
                                 </div>
                             </div>
                         </div> 
