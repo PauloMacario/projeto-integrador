@@ -141,22 +141,12 @@
 											<a class="dropdown-item" href="{{url('home/perfilEditar')}}">Alterar Perfil</a>											
 											<a class="dropdown-item " href="{{asset('home')}}">Link ativo</a>
 											<a class="dropdown-item" href="{{asset('home')}}">Encerrar Conta</a>
-
-
-
-
-
-
-
-
-
-
 									{{-- 		<a href="{{url('home/perfilEditar')}}" class="btn btn-secondary">Alterar Perfil</a> --}}
 										
 									</div>
 								</li>								
 								<li class="nav-item">
-									<a class="btn btn-warning btn-logout ml-3" href="{{ route('logout') }}"
+									<a class="btn-logout ml-3" href="{{ route('logout') }}"
 										onclick="event.preventDefault();
 										document.getElementById('logout-form').submit();">
 										{{ __('Sair') }}

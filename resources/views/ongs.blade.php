@@ -5,11 +5,13 @@
 <section class="home">
 		<div class="overlay"></div>
 		<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo_caridade.jpg);">
-			<div class="desc ">
-				<h2><strong>Ongs</strong></h2>
-				<span>Confira abaixo as Ongs participantes.</span>
-					<!-- <span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span> -->
-			</div>
+            <a href="#titulo" target="" class=""> 
+                <div class="desc ">
+                    <h2><strong>Ongs</strong></h2>
+                    <span>Confira abaixo as Ongs participantes.</span>
+                        <!-- <span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span> -->
+                </div>
+            </a> 
 		</div>
 </section>
 <section id="noticia" class="projeto-section">
@@ -24,7 +26,7 @@
     <div class="container">
 @else 
     <div class="container">
-            <div class="titulo">
+            <div class="titulo" id="titulo">
                 <div class="col-md-12 col-md-offset-12 text-center heading-section ">
                     <h3>Conheça as Ongs e Instituições participantes.</h3>
                 </div>
@@ -39,7 +41,7 @@
       
 
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="noticia">
+                <div class="noticia box-img-animate">
             @if($ong->avatar)        
                 <a href="#"><img class="img-responsive" src="{{url($ong->avatar)}}" alt="" width="250" height="200">
             @else 

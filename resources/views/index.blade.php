@@ -6,11 +6,13 @@
 		<section class="home " id="home">
 			<div class="overlay"></div>
 			<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/cover_nature_01.jpg);background-size: cover; background-repeat: no-repeat;">
-				<div class="desc ">
-					<h2><strong>Seja voluntário!</strong></h2>
-					<span>Encontre aqui um trabalho voluntário para participar </span>
-					<button type="button" class="btn btn-success">Comece já</button>
-				</div>
+				<a href="eventos" target="_blank" class=""> 
+					<div class="desc ">
+						<h2><strong>Seja voluntário!</strong></h2>
+						<span>Encontre aqui um trabalho voluntário para participar </span>
+						<button type="button" class="btn btn-success">Comece já</button>
+					</div>
+				</a>
 			</div>
 		</section>
 	</a>
@@ -84,61 +86,90 @@
 
 <!--  =========================== Seção motor de busca co filtros -  (INÍCIO)  ==========================  -->
 		
-		<div id="busca-section" class="projeto-section">
-			<div class="container ">
-				<div class="row">
-					<div class="col-md-12  text-center heading-section">
-						<h3>Busque aqui uma Ong para ajudar</h3>
-						<form>
-  							<div class="form-row align-items-center">
-    							<div class="col-sm-3 my-1">										
-									<select id="inputState" class="form-control">
-										<option selected>Estado</option>
-										<option>São Paulo</option>
-									</select>
-								</div>
-								
-								<div class="col-sm-3 my-1">										
-									<select id="bairro" class="form-control">
-										<option selected>Bairro</option>
-										<option >Bairro - 1</option>
-										<option >Bairro - 2</option>
-										<option >Bairro - 3</option>
-										<option >Bairro - 4</option>
-										<option >Bairro - 5</option>
-										<option >Bairro - 6</option>
-										<option >Bairro - 7</option>											
-									</select>
-								</div>
-								<div class="col-sm-3 my-1">										
-										<select id="bairro" class="form-control">
-											<option selected>Segmento</option>
-											<option >Saúde</option>
-											<option >Meio Ambiente</option>
-											<option >Educação</option>
-											<option >Social</option>
-											<option >Moradia</option>																				
-										</select>
-									</div>
-								<div class="col-sm-3 my-1">
-									<button type="submit" class="btn btn-success">Buscar</button>	
-								</div>								
-							</div>	
-						</form>
-					</div> 
-				</div>
-			</div>
-			<div class="container ">
-				<div class="row">
-						<div class="col-md-12">
-						<div class="mapa text-center "  style="background-image: url(images/photo-08.jpeg);background-size: cover; background-repeat: no-repeat; height:80vh;">
-								
-							
+<div id="busca-section" class="projeto-section">
+	<div class="container ">
+		<div class="row">
+			<div class="col-md-12  text-center heading-section">
+				<h3>Busque aqui uma Ong para ajudar</h3>
+				<form>
+					  <div class="form-row align-items-center">
+						<div class="col-sm-9 my-1">										
+							<input type="text" id="busca" class="form-control" required>
 						</div>
-					</div> 					
-				</div>
-			</div>
+						<div class="col-sm-3 my-1">
+							<button type="" id="btn-busca" class="btn btn-success">Buscar</button>	
+						</div>								
+					</div>	
+				</form>
+			</div> 
 		</div>
+	</div>
+	<div class="container ">
+		<div class="row">
+			<div class="col-md-12" id="box-busca">
+				<div class="alert alert-danger text-center" style="display:none;" id="alert-busca">
+					Digite uma palavra no campo.
+				</div>
+
+<script>
+
+
+$('#btn-busca').click(function(e){									
+    var busca = $('#busca').val()
+    if(!busca){
+        $('#alert-busca').prop('style', 'display:block;')
+        }else{
+            $.ajax({
+                method:'GET',
+                url: 'busca/'+busca,                                             
+                success: function(response){
+                    if(response.length > 0){
+                        $('#box-result').css('display', 'block')
+                        $('#box-result').css('max-height', '800px')
+                        $('#box-result').css('overflow', 'scroll')
+                            for(var i = 0; i < response.length; i++ ){
+                                $('#tabela').addClass('reset').append('<tr class="result-busca"><td><a href="ong/'+response[i].id+'" ><img src="'+response[i].avatar+'"></a></td><td>'+response[i].name+'</td><td>'+response[i].description+'</td> <td>'+response[i].district+'</td></tr>') 
+                            }
+                        }
+                        else{
+                            alert('Nenhum resultado encontrado')
+                            $('#tabela').empty()
+                        }
+                    }  											
+                }) 
+            }
+            e.preventDefault()
+                if($('.result-busca').length >0 ){
+                    $('.reset').empty()
+                }				
+});
+
+
+
+</script>
+
+
+				<div id="box-result" style="display:none; max-height:800px; overflow:scroll; ">
+					<table id="tabela" class="table table-striped table-responsive-sm my-ongs">
+						<thead>
+							<tr >
+								<th scope="col" class="text-center" width="25%">Logo</th>
+								<th scope="col" class="text-center" width="25%">Nome</th>
+								<th scope="col" class="text-center" width="25%">Descrição</th>
+								<th scope="col" class="text-center" width="25%">Bairro</th>
+							</tr>
+						</thead>  
+						<tbody>
+								
+						</tbody>
+						</table>
+					</div>	
+							
+					
+				</div>
+			</div> 					
+		</div>
+	</div>
 <!--  =========================== Seção motor de busca com filtros -  (FINAL)  ==========================  -->
 
 <!--  =========================== Seção resumo das notícias -  (INÍCIO)  ==========================  -->
@@ -154,7 +185,7 @@
 			</div>
 			<div class="container ">
 				<div class="row row-bottom-padded-md">
-					<div class="col-lg-4 col-md-12 col-sm-12">
+					<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
 						<div class="noticia">
 						<iframe width="100%" height="280" src="https://www.youtube.com/embed/j8L1CcanjT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<div class="noticia-text">
@@ -165,7 +196,7 @@
 							</div> 
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
+					<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
 						<div class="noticia">
 						<iframe width="100%" height="280" src="https://www.youtube.com/embed/soT7jdW5bvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<div class="noticia-text">
@@ -177,7 +208,7 @@
 						</div>
 					</div>
 					<div class="clearfix visible-sm-block"></div>
-						<div class="col-lg-4 col-md-12 col-sm-12">
+						<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
 							<div class="noticia">
 							<iframe width="100%" height="280" src="https://www.youtube.com/embed/_oeYCEYpaRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								<div class="noticia-text">

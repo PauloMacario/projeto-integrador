@@ -14,11 +14,12 @@ class CreateActionEventHasUserTable extends Migration
     public function up()
     {
         Schema::create('action_event_has_user', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->unsignedBigInteger('id_action_event');
             $table->unsignedBigInteger('id_user');
             $table->foreign('id_action_event')->references('id')->on('actions_events');
             $table->foreign('id_user')->references('id')->on('users');
-            $table->primary(['id_action_event', 'id_user']);
+           
             
         });
     }

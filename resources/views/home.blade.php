@@ -63,7 +63,7 @@
                                         <a href="{{url('home/perfilEditar')}}" class="btn btn-secondary">Alterar Perfil</a>
                                     </div> --}}
                                     <div class="text-center mt-5">    
-                                        <a href="{{url('home/'.Auth::user()->id.'/novaOng')}}" class="btn btn-warning">Criar Ong</a> 
+                                        <a href="{{url('home/'.Auth::user()->id.'/novaOng')}}" class="btn-editar">Criar Ong</a> 
                                     </div>
                                 </div>
                             </div> 
@@ -91,12 +91,12 @@
                                                         });
                                         </script>
                                       
-                                        <table id="tabela" class="table table-striped table-responsive-sm my-ongs">
+                                        <table id="tabela" class="table table-striped  my-ongs">
                                             <thead>
                                                 <tr >
-                                                    <th scope="col" class="text-center" width="25%">Logo</th>
-                                                    <th scope="col" class="text-center" width="25%">Nome</th>
-                                                    <th scope="col" class="text-center" width="50%">Descrição</th>
+                                                    <th scope="" class="text-center" width="25%">Logo</th>
+                                                    <th scope="" class="text-center" width="25%">Nome</th>
+                                                    <th scope="" class="text-center" width="50%">Descrição</th>
                                                 </tr>
                                             </thead>  
                                             <tbody>

@@ -3,17 +3,19 @@
 
 
 <!--  =========================== Seção home do blog de noticias -  (INÍCIO)  ==========================  -->
-<!--
+
 <section class="home">
 		<div class="overlay"></div>
 		<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo-gt.jpeg);">
-			<div class="desc ">
-				<h2><strong>Eventos</strong></h2>
-				<span>Últimos eventos cadastrados</span>
-					 <span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span> 
+			<a href="#titulo" class=""> 
+				<div class="desc ">
+					<h2><strong>Eventos</strong></h2>
+					<span>Últimos eventos cadastrados</span>
+						
+					</div>
+				</a>	
 			</div>
-		</div>
-	</section> -->
+		</section>
 
 	<!--  =========================== Seção home do blog de noticias -  (FINAL)  ==========================  -->
 
@@ -24,7 +26,7 @@
 		<section id="noticia" class="projeto-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 col-md-offset-12 text-center heading-section ">
+					<div class="col-md-12 col-md-offset-12 text-center heading-section" id="titulo">
 						<h3>Bem-Vindo a área de eventos!</h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet praesentium harum voluptatum minima perspiciatis? Natus provident unde est et. Dolore quas tempore commodi eveniet ab totam recusandae ad molestiae doloremque.</p>
 					</div>
@@ -46,7 +48,7 @@
 				<div class="row row-bottom-padded-md ">
 
 						@foreach ($eventos as $evento)
-					<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="col-lg-4 col-md-4 col-sm-6 box-img-animate">
 						<div class="noticia">
 							<a href="#">{{$evento->image}}</a>
 							<div class="noticia-text">

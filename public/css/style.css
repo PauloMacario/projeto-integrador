@@ -325,6 +325,9 @@ ul{
 .img-projeto:hover{
   border-radius: 3px;
   filter:brightness(70%);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+   transform: scale(1.1);
 }
 
 .mapa{
@@ -563,7 +566,7 @@ ul{
 #galeria-list li {
   display: block;
   padding: 0;
-  margin: 0 0 10px 1%;
+  margin: 0 0 50px 50px;
   list-style: none;
   height: 250px;
   background-position: center center;
@@ -820,12 +823,29 @@ section.map {
 .btn-login:hover{
   
   color:#fff !important;
-  background-color: rgb(108, 168, 157)
+  background-color: rgb(108, 168, 157);
 }
-.btn-logout:hover{
+/* .btn-logout:hover{
   color:rgb(255, 255, 255)!important;
 }
+ */
 
+.btn-logout.btn-logout, .btn-editar{
+  padding:6px 16px;
+  BORDER:1PX SOLID rgb(108, 168, 157);
+  border-radius:5px; 
+  color:rgb(108, 168, 157);
+ 
+}
+
+.btn-logout:hover, .btn-editar:hover{
+  
+  color:#fff !important;
+  background-color: rgb(108, 168, 157);
+}
+.btn-logout:hover, .btn-editar:hover{
+  color:rgb(255, 255, 255)!important;
+}
 .btn-success{
   color: #fff;
   background-color: #7BC0B3;
@@ -865,6 +885,86 @@ section.map {
 /* ==========  FOOTER (FINAL)  ==========  */
 
 
+
+.desc h2{
+
+  transition: all 550ms;
+}
+
+.desc h2:hover{
+  color:rgb(255, 255, 255);
+  font-size: 4.8em;
+  transition: all 550ms;
+  text-shadow: 2px 2px rgb(65, 64, 64);
+}
+.box-img-animate{
+  transition: all 550ms;
+}
+
+.box-img-animate:hover{
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform:scale(1.1);
+  transition: all 550ms;
+}
+.box-img-galeria{
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+ 
+  
+}
+
+.img-galeria{
+  width:300px;
+  height:250px;
+  margin:2%;
+}
+
+.img-galeria img{
+  width:100%;
+  height:100%;
+}
+
+.bgbox{
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2 !important;
+  display:none;
+}
+.img-modal-box{
+  position:fixed;
+  left:50%;
+  top:50%;
+  width:800px;
+  height:600px;
+  background-color: rgb(255, 255, 255);
+  margin-left:-400px;
+  margin-top:-300px;
+  padding:1%;
+}
+
+.img-modal-box button{
+  border-radius:50%;
+  padding:3px 10px;
+  color:#000;
+  background-color: #7BC0B3;
+  border:1px solid #000;
+  cursor: pointer;
+  float:right;
+}
+
+#tabela thead{
+  width:100% !important;
+}
+
+
+
 /* ============ @ MEDIAS e BRACK POINTS ( INÍCIO ) ============== */
 
 @media screen and (max-width: 991px) {
@@ -885,6 +985,17 @@ section.map {
     padding:10px 16px;
    
   }
+
+  .img-modal-box{
+   
+    width:600px;
+    height:450px;
+    margin-left:-300px;
+    margin-top:-225px;
+  
+  }
+
+  
 
 }
 
@@ -945,6 +1056,21 @@ section.map {
   .noticia {
     width: 100%;
   }
+
+  #galeria-list li {
+    
+    margin: 0 0 20px 20px;
+    
+  }
+
+  .img-modal-box{
+   
+    width:500px;
+    height:400px;
+    margin-left:-250px;
+    margin-top:-200px;
+  
+  }
   
 
 }  
@@ -964,6 +1090,15 @@ section.map {
   #galeria-list li.one-third {
     width: 100%;
   }
+
+  .img-modal-box{
+   
+    width:380px;
+    height:300px;
+    margin-left:-190px;
+    margin-top:-150px;
+  
+  }
 }
 
 
@@ -976,7 +1111,16 @@ section.map {
     font-size:1rem;
     margin-right: 0;
   }
-}   
+} 
+
 
 
 /* ============ @ MEDIAS e BRACK POINTS ( FINAL ) ============== */
+
+
+
+
+
+
+
+

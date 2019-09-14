@@ -20,4 +20,14 @@ class Ong extends Model
     {
         return $this->belongsToMany('App\User', 'ong_has_user', 'id_ong', 'id_user');
     }
+
+    public function galleries()
+    {
+        return $this->hasMany('App\Gallery', 'id_ong');
+    }
+
+    public function actionEvent()
+    {
+        return $this->hasMany('App\ActionEvent', 'id_ong');
+    }
 }

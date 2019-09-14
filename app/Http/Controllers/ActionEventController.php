@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ActionEvent;
 
-class EventsController extends Controller
+class ActionEventController extends Controller
 {
     public function index()
     {

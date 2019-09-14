@@ -18,6 +18,22 @@ class OngController extends Controller
        return view('ongs')->with('ongs', $ongs);
     }
 
+    public function listarOng($id)
+    {
+       $ongs = Ong::find($id);       
+       return view('homeOng')->with('ongs', $ongs);
+    }
+    
+    public function buscarOng($busca)
+    {
+        $result = Ong::where('name', 'LIKE', "%{$busca}%")->get();  
+        if(count($result) <=0){
+            $result = Ong::where('district', 'LIKE', "%{$busca}%")->get(); 
+        }
+        
+        return $result;
+     }
+    
  
     // Redireciona para o form de cadastro de Ong
     public function adicionarOng($id)
@@ -56,7 +72,7 @@ class OngController extends Controller
             'id_ong' => $ong->id,
             'permission_level' => 1
         ]);
-        return redirect('home');
+        return redirect('minhasOngs');
        
       
       

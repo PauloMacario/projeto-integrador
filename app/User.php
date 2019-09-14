@@ -39,6 +39,10 @@ class User extends Authenticatable
       return $this->belongsToMany('App\Ong', 'ong_has_user', 'id_user', 'id_ong'); 
     }
 
+    public function actionEvent(){
+        return $this->belongsToMany('App\ActionEvent', 'action_event_has_user', 'id_user', 'id_action_event'); 
+      }
+
     
 
      

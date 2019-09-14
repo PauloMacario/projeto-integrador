@@ -14,12 +14,13 @@ class CreateOngHasUserTable extends Migration
     public function up()
     {
         Schema::create('ong_has_user', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->unsignedBigInteger('id_ong');
             $table->unsignedBigInteger('id_user');
             $table->integer('permission_level');
             $table->foreign('id_ong')->references('id')->on('ongs');
             $table->foreign('id_user')->references('id')->on('users');
-            $table->primary(['id_ong', 'id_user']);
+           
 
         });
     }

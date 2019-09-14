@@ -26,6 +26,11 @@ Route::post('home/novaOng/salvar', 'OngController@salvarOng');
 
 
 
+Route::get('busca/{busca}', 'OngController@buscarOng');
+
+
+
+
 Route::get('home/perfilEditar', 'UserController@editarUser');
 
 Route::put('home/perfilAtualizar/{id}', 'UserController@atualizarUser');
@@ -71,7 +76,7 @@ Route::get('home/ong/{id}', 'UserController@allOngs');
 
 Route::get('home/ong/admin{id}', 'UserController@allOngsAdmin'); 
 
-Route::get('eventos','EventsController@index');
+Route::get('eventos','ActionEventController@index');
 
 
 Route::get('minhasOngs' , function () {
