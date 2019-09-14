@@ -66,9 +66,13 @@
                                     <label>Cidade:</label>
                                     <input type="text" class="form-control" id="cidade" name="cidade" value="{{  Auth::user()->city }}" >
                                 </div>
-                                <div class="col-4">
+                                <div class="">
                                     <label>Rua:</label>
-                                    <input type="hidden" class="form-control" id="endereco" name="endereco" value="" >
+                                    <input type="hidden" class="form-control" id="endereco" name="endereco" value="">
+                                </div>
+                                <div class="">
+                                    <label>Estado:</label>
+                                    <input type="hidden" class="form-control" id="uf" name="uf" value="">
                                 </div>
                             </div>
                         </div> 
