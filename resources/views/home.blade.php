@@ -15,7 +15,7 @@
                 <div class=" box-perfil">   
                     <div class="container-fluid emp-profile">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <div class="profile-img text-center">
                                     <a href="#">
                                         @if(Auth::user()->avatar == NULL)
@@ -44,7 +44,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <div class="profile-work text-center">
                                     <p><span><i class="far fa-envelope icone-perfil"></i> </span>
                                             <span> {{ Auth::user()->email }} </span>
@@ -62,8 +62,9 @@
                                   {{--   <div class="text-center mt-5 mb-4">
                                         <a href="{{url('home/perfilEditar')}}" class="btn btn-secondary">Alterar Perfil</a>
                                     </div> --}}
-                                    <div class="text-center mt-5">    
-                                        <a href="{{url('home/'.Auth::user()->id.'/novaOng')}}" class="btn-editar">Criar Ong</a> 
+                                    <div class="text-center mt-5">
+                                        <p><a href="{{url('home/perfilEditar')}}" class="btn-editar">Alterar Perfil</a></p>	    
+                                        <p></p><a href="{{url('home/'.Auth::user()->id.'/novaOng')}}" class="btn-editar">Criar Ong</a></p> 
                                     </div>
                                 </div>
                             </div> 
