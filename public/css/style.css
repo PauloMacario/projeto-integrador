@@ -396,7 +396,7 @@ ul{
 }
 
 #busca-section{
-  padding-top: 7em;
+  padding-top: 5em;
 }
 
 .projeto-section, .galeria-section, .faq-section {
@@ -430,7 +430,7 @@ ul{
 }
 
 #galeria, #projeto, #faq {
-  padding: 7em 0;
+  padding-top: 7em;
   min-height: 500px;
 }
 
@@ -473,7 +473,7 @@ ul{
 
 /* ==========  Noticias e Blog (INÍCIO)  ==========  */
 #noticia-section{
-  padding-top: 7em;
+  padding-top: 3em;
   padding-bottom: 7em
 }
 
