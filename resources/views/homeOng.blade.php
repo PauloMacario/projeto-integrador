@@ -3,7 +3,7 @@
 @section('content')
 
 
-@if(isset($ong))
+@if(isset($ongs))
 sssss
 @else 
 não

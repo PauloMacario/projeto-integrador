@@ -54,7 +54,7 @@ class OngController extends Controller
             $pasta = 'perfil';
             $path = Imagem::criarCaminhoImagem($arquivo, $pasta);
         }
-       // Salva a ong no bando
+       // Salva a ong no banco
         Ong::create([
             'name' => $request->input('nome'),
             'segment' => $request->input('segmento'),

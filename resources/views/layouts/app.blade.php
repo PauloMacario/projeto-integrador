@@ -113,9 +113,6 @@
 							@else
 							<ul class="navbar-nav ml-auto menu">
 								<li class="nav-item">
-									<a class="nav-link" href="{{asset('home')}}">Home</a>
-								</li>
-								<li class="nav-item">
 									<a class="nav-link" href="{{asset('/')}}">Início</a>
 								</li>
 								<li class="nav-item">
@@ -131,13 +128,6 @@
 									<a class="nav-link" href="{{asset('')}}">Buscar</a> <!-- linkar pag de eventos -->							
 								</li>
 
-								@if (Auth::user()->id == 1) <!-- criar controller ONG_HAS_USER -->
-									
-								<li class="nav-item">
-									<a class="nav-link" href="{{asset('home/minhas-ongs/admin')}}">Minha Ong</a>								
-								</li>
-
-								@endif
 								{{-- <li class="nav-item">
 									<a class="nav-link" href="{{asset('galeria')}}">Fotos</a>									
 								</li> --}}
@@ -147,7 +137,10 @@
 									{{ Auth::user()->name }} <span class="caret"></span>	
 									</a>	
 									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">										
-											<a class="dropdown-item " href="{{asset('home')}}">Link ativo</a>
+											<a class="dropdown-item " href="{{asset('home')}}">Meu perfil</a>
+											@if (Auth::user()->id == 1) <!-- criar controller ONG_HAS_USER -->
+												<a class="dropdown-item" href="home-ong/{{Auth::user()->id }}">Minha Ong</a>																			
+											@endif
 											<a class="dropdown-item" href="{{asset('home')}}">Encerrar Conta</a>
 									{{-- 		<a href="{{url('home/perfilEditar')}}" class="btn btn-secondary">Alterar Perfil</a> --}}
 										

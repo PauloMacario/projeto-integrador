@@ -44,6 +44,8 @@ Route::get('home/listar-ongs/{id}', 'UserController@allOngs');
 
 /*  ############  Rotas do Perfil auth Ong   (INICIO) ############ */
 
+Route::get('home-ong/{id}', 'OngController@listarOng');
+
 
 /*  ############  Rotas Minhas ongs admin  (INICIO) ############ */
 
