@@ -19,6 +19,7 @@ class UsersTableSeeder extends Seeder
             'areas' => 'SAÚDE, EDUCAÇÃO, SOCIAL, FOME, DESIGUALDADE',
             'district' => 'Brasilândia',
             'city' => 'São Paulo',
+            'uf' => 'SP',
             'remember_token' => 'teste'
            
            
@@ -34,6 +35,7 @@ class UsersTableSeeder extends Seeder
             'areas' => 'SAÚDE, EDUCAÇÃO, SOCIAL, TECNOLOGIA',
             'district' => 'St Albans',
             'city' => 'São Paulo',
+            'uf' => 'SP',
             'remember_token' => 'teste'
            
            
@@ -49,6 +51,7 @@ class UsersTableSeeder extends Seeder
             'areas' => 'LAZER, EDUCAÇÃO, SOCIAL',
             'district' => 'Jd Casseta & Planeta',
             'city' => 'São Paulo',
+            'uf' => 'SP',
             'remember_token' => 'teste'
            
            

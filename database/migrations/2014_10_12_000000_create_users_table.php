@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('areas', 255)->nullable();
             $table->string('district', 45)->nullable();
             $table->string('city', 45)->nullable();
-            $table->string('uf', 2);
+            $table->string('uf', 2)->nullable();
             $table->string('avatar', 100)->nullable();
             $table->rememberToken();
             
