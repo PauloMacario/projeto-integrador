@@ -2,27 +2,69 @@
 use App\User;
 use App\Ong;
 use App\OngHasUser;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
+/*  ############  Rotas da Index   (INICIO) ############ */
+
+// Lista todas Ongs cadastradas
+Route::get('ongs/', 'OngController@index');
+
+// Lista todos Eventos cadastrados
+Route::get('eventos','ActionEventController@index');
+
+
+
+
+
+
+/*  ############  Rotas de Ongs   (INICIO) ############ */
+
+
+
+/*  ############  Rotas Eventos   (INICIO) ############ */
+
+
+
+/*  ############  Rotas do Perfil auth User   (INICIO) ############ */
+
+
+Route::get('home/perfil-editar', 'UserController@editarUser');
+
+Route::put('home/perfil-atualizar/{id}', 'UserController@atualizarUser');
+
+Route::get('home/{id}/nova-ong', 'OngController@adicionarOng');
+
+// Realiza o cadastro da ong ------ Falta menssagens de error
+Route::post('home/nova-ong/salvar', 'OngController@salvarOng');
+
+// Lista ongs do usuario via AJAX na home do perfil
+Route::get('home/listar-ongs/{id}', 'UserController@allOngs'); 
+
+
+
+
+/*  ############  Rotas do Perfil auth Ong   (INICIO) ############ */
+
+
+/*  ############  Rotas Minhas ongs admin  (INICIO) ############ */
+
+
+Route::get('home/minhas-ongs/admin' , function () {
+    return view('minhasOngs');
+}); 
+
+Route::get('home/minhas-ongs/admin/{id}', 'UserController@allOngsAdmin'); 
+
+
+
+
 
 Route::get('/', function () {
     return view('index');
 }); 
 
 
-Route::get('ongs/', 'OngController@index');
 
-Route::get('home/{id}/novaOng', 'OngController@adicionarOng');
 
-Route::post('home/novaOng/salvar', 'OngController@salvarOng');
 
 
 
@@ -31,9 +73,6 @@ Route::get('busca/{busca}', 'OngController@buscarOng');
 
 
 
-Route::get('home/perfilEditar', 'UserController@editarUser');
-
-Route::put('home/perfilAtualizar/{id}', 'UserController@atualizarUser');
 
 /* Route::get('home/listarOngs/{id}', "UserController@listarOngs"); */
 
@@ -43,45 +82,21 @@ Route::put('home/perfilAtualizar/{id}', 'UserController@atualizarUser');
 
 
 
-Route::get('eventos', function(){
-    return view('eventos');
-});
-
-Route::get('/galeria', function(){
-    return view('galeria');
-});
-
-Route::get('/faq', function(){
-    return view('faq');
-});
-
-Route::get('/contato', function(){
-    return view('contato');
-});
-
-Route::get('/autenticacao', function () {
-    return view('autenticacao');
-});
-
-Route::get('/cadastro', function () {
-    return view('cadastro');
-}); 
 
 
 
 
 
-Route::get('home/ong/{id}', 'UserController@allOngs'); 
 
 
-Route::get('home/ong/admin{id}', 'UserController@allOngsAdmin'); 
-
-Route::get('eventos','ActionEventController@index');
 
 
-Route::get('minhasOngs' , function () {
-    return view('minhasOngs');
-}); 
+
+
+
+
+
+
 
 
 Auth::routes();
@@ -90,11 +105,34 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('teste', function(){
-
     
-    $user = User::find(1);
-    $user->ongs;
     
-    return $user->toJson();
-
+    
 });
+        
+
+
+
+
+
+
+
+Route::get('/galeria', function(){
+            return view('galeria');          // CRIAR METODO DE BUSCA DE FOTOS ALEATORIAS COM PAGINAÇÃO
+        });
+        
+Route::get('/faq', function(){
+            return view('faq');
+        });
+        
+Route::get('/contato', function(){
+            return view('contato');
+        });
+        
+Route::get('/autenticacao', function () {
+            return view('autenticacao');
+        });
+        
+Route::get('/cadastro', function () {
+            return view('cadastro');
+        }); 

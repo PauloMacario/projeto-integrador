@@ -18,7 +18,7 @@ class Ong extends Model
 
     public function users()
     {
-        return $this->belongsToMany('App\User', 'ong_has_user', 'id_ong', 'id_user');
+        return $this->belongsToMany('App\User', 'ong_has_user', 'id_ong', 'id_user')->withPivot(['permission_level']); 
     }
 
     public function galleries()

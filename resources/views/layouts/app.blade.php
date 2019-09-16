@@ -134,7 +134,7 @@
 								@if (Auth::user()->id == 1) <!-- criar controller ONG_HAS_USER -->
 									
 								<li class="nav-item">
-									<a class="nav-link" href="{{asset('minhasOngs')}}">Minha Ong</a>								
+									<a class="nav-link" href="{{asset('home/minhas-ongs/admin')}}">Minha Ong</a>								
 								</li>
 
 								@endif

@@ -39,7 +39,7 @@ class OngController extends Controller
     public function adicionarOng($id)
     {
         $user = User::find($id);
-        return view('adicionarOng')->with('user', $user);
+        return view('novaOng')->with('user', $user);
     }
     
      // Salva a Ong 
@@ -62,6 +62,7 @@ class OngController extends Controller
             'address' => $request->input('endereco'),
             'district' => $request->input('bairro'),
             'city' => $request->input('cidade'),
+            'uf' => $request->input('uf'),
             'avatar' => $path
         ]);  
         // Vincula a ong acima cadastrada ao usuario que cadastrou e o coloca como adm    
@@ -72,7 +73,7 @@ class OngController extends Controller
             'id_ong' => $ong->id,
             'permission_level' => 1
         ]);
-        return redirect('minhasOngs');
+        return redirect('home/minhas-ongs/admin');
        
       
       

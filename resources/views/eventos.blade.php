@@ -10,7 +10,7 @@
 			<a href="#titulo" class=""> 
 				<div class="desc ">
 					<h2><strong>Eventos</strong></h2>
-					<span>Últimos eventos cadastrados</span>
+					<span>Alguns de nossos eventos cadastrados</span>
 						
 					</div>
 				</a>	

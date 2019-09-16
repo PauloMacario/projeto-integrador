@@ -24,7 +24,7 @@ class UserController extends Controller
   
     public function editarUser()
     {
-        return view('editarPerfil');
+        return view('perfilEditar');
     }
 
 
@@ -49,6 +49,8 @@ class UserController extends Controller
         $user->areas      = $request->input('areas');
         $user->district   = $request->input('bairro');
         $user->city       = $request->input('cidade');
+        $user->uf         = $request->input('uf');
+
         $user->avatar     = $path;
 
         $user->save();
@@ -70,8 +72,13 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->ongs;
-        
         return $user;
+    }
+
+    public function allOngsAdmin($id)
+    {
+       $ongAdmin = User::with('ongs')->get();
+        return $ongAdmin;
     }
 
 

@@ -6,7 +6,7 @@
 		<section class="home" id="home">
 			<div class="overlay"></div>
 			<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/cover_nature_01.jpg);background-size: cover; background-repeat: no-repeat;">
-				<a href="login" target="_blank" class=""> 
+				<a href="login" class=""> 
 					<div class="desc ">
 						<h2><strong>Seja voluntário!</strong></h2>
 						<span>Encontre aqui um trabalho voluntário para participar </span>
@@ -35,7 +35,7 @@
 					<a href="eventos" >
 						<div class="projeto-img">	
 							<p>
-								<img src="images/photo-children.jpg" alt="Criança e Adolescente" title="Criança e Adolescente"class="img-responsive img-large img-projeto">
+								<img src="{{ url ('images/photo-children.jpg')}}" alt="Criança e Adolescente" title="Criança e Adolescente"class="img-responsive img-large img-projeto">
 							</p>
 						</div>
 						<div class="projeto-text">
@@ -50,7 +50,7 @@
 					<a href="eventos" >
 						<div class="projeto-img">	
 							<p>
-								<img src="images/cover_animals_2.jpg" alt="Proteção aos Animais" title="Proteção aos Animais" class="img-responsive img-large img-projeto">
+								<img src="{{ url ('images/cover_animals_2.jpg')}}" alt="Proteção aos Animais" title="Proteção aos Animais" class="img-responsive img-large img-projeto">
 							</p>
 						</div>
 						<div class="projeto-text">
@@ -65,7 +65,7 @@
 					<a href="eventos" >
 						<div class="projeto-img">
 							<p>
-								<img src="images/cover_meio_3.jpg" alt="Meio Ambiente" title="Meio Ambiente" class="img-responsive img-large img-projeto">
+								<img src="{{ url ('images/cover_meio_3.jpg')}}" alt="Meio Ambiente" title="Meio Ambiente" class="img-responsive img-large img-projeto">
 							</p>
 						</div>
 						<div class="projeto-text">
@@ -177,30 +177,30 @@ $('#btn-busca').click(function(e){
 			<div class="container ">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-12 text-center heading-section">
-						<h3>Notícias</h3>
-						<p>Acompanhe as notícias mais atuais.</p>
+						<h3>Conheça as  Ongs participantes</h3>
+						
 					</div>
 				</div>
 			</div>
 			<div class="container ">
 				<div class="row row-bottom-padded-md">
-					<div class="col-lg-4 col-md-12 col-sm-12">
+					<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
 						<div class="noticia">
-						<iframe width="100%" height="280" src="https://www.youtube.com/embed/j8L1CcanjT8?mute=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<img width="100%" height="280" src="" >
 							<div class="noticia-text">
 								<div class="noticia-title">
-									<h3><a target="_blank" href="https://www.youtube.com/watch?v=j8L1CcanjT8">Conheça os 17 Objetivos de Desenvolvimento Sustentável</a></h3>
+									<h3><a href="">Conheça os 17 Objetivos de Desenvolvimento Sustentável</a></h3>
 									<p>Acesse aqui a Agenda 2030 na íntegra, com o documento final adotado na Cúpula das Nações Unidas sobre o Desenvolvimento Sustentável.</p>									
 								</div>
 							</div> 
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
+					<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
 						<div class="noticia">
-						<iframe width="100%" height="280" src="https://www.youtube.com/embed/soT7jdW5bvE?mute=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<img width="100%" height="280" src="" >
 							<div class="noticia-text">
 								<div class="noticia-title">
-									<h3><a target="_blank" href="https://www.youtube.com/watch?v=soT7jdW5bvE">Um olhar sobre o futuro do Santuário de Elefantes Brasil.</a></h3>
+									<h3><a href="">Um olhar sobre o futuro do Santuário de Elefantes Brasil.</a></h3>
 									<p>Breve descrição da notícia.</p>									
 								</div>
 							</div> 
@@ -209,10 +209,10 @@ $('#btn-busca').click(function(e){
 					<div class="clearfix visible-sm-block"></div>
 						<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
 							<div class="noticia">
-								<iframe width="100%" height="280" src="https://www.youtube.com/embed/_oeYCEYpaRo?mute=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<img width="100%" height="280" src="" >
 								<div class="noticia-text">
 									<div class="noticia-title">
-										<h3><a target="_blank" href="https://www.youtube.com/watch?v=_oeYCEYpaRo">O trabalho infantil no Brasil</a></h3>
+										<h3><a href="">O trabalho infantil no Brasil</a></h3>
 										<p>Breve descrição da notícia.</p>
 										
 									</div>

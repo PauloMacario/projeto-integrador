@@ -63,8 +63,8 @@
                                         <a href="{{url('home/perfilEditar')}}" class="btn btn-secondary">Alterar Perfil</a>
                                     </div> --}}
                                     <div class="text-center mt-5">
-                                        <p><a href="{{url('home/perfilEditar')}}" class="btn-editar">Alterar Perfil</a></p>	    
-                                        <p></p><a href="{{url('home/'.Auth::user()->id.'/novaOng')}}" class="btn-editar">Criar Ong</a></p> 
+                                        <p><a href="{{url('home/perfil-editar')}}" class="btn-editar">Alterar Perfil</a></p>	    
+                                        <p></p><a href="{{url('home/'.Auth::user()->id.'/nova-ong')}}" class="btn-editar">Criar Ong</a></p> 
                                     </div>
                                 </div>
                             </div> 
@@ -78,7 +78,7 @@
                                                 var id = $('#id-perfil').val()
                                                 $.ajax({
                                                         method:'GET',
-                                                        url: 'home/ong/'+id,                                             
+                                                        url: 'home/listar-ongs/'+id,                                             
                                                             success: function(response){
                                                               
                                                                for(var i = 0; i < response.ongs.length; i++ ){

@@ -11,7 +11,7 @@
     <div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo-dog.jpeg);background-size: cover; background-repeat: no-repeat;"">
         <a href="#galeria" target="" class="">     
             <div class=" desc ">
-                <h2> <strong>Sirva, ame, dê o seu melhor</strong></h2>
+                <h2> <strong>Galeria de imagens</strong></h2>
         
             </div>
         </a>    
