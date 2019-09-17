@@ -3,7 +3,7 @@
 @section('content')
 
 
-@if(isset($ongs))
+@if(isset($ong))
 sssss
 @else 
 não
@@ -22,7 +22,7 @@ não
                 <div class=" box-perfil">   
                     <div class="container-fluid emp-profile">
                         <div class="row bg-success">
-                            <div class="col-md-4 bg-warning">
+                            <div class="col-md-3 bg-warning">
                                 <div class="profile-img text-center">
                                       <a href="#">
                                       @if(!isset($ong))

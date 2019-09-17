@@ -20,8 +20,8 @@ class OngController extends Controller
 
     public function listarOng($id)
     {
-       $ongs = Ong::find($id);       
-       return view('homeOng')->with('ongs', $ongs);
+       $ong = Ong::find($id);       
+       return view('homeOng')->with('ong', $ong);
     }
     
     public function buscarOng($busca)
@@ -46,7 +46,7 @@ class OngController extends Controller
     public function salvarOng(Request $request)
     {
         $userId =  $request->input('id');
-        $arquivo = $request->file('imagem');
+        $arquivo = $request->file('avatar');
        
         if($arquivo == NULL){
             $path = '';

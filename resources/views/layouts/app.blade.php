@@ -128,9 +128,6 @@
 									<a class="nav-link" href="{{asset('')}}">Buscar</a> <!-- linkar pag de eventos -->							
 								</li>
 
-								{{-- <li class="nav-item">
-									<a class="nav-link" href="{{asset('galeria')}}">Fotos</a>									
-								</li> --}}
 
 								<li class="nav-item dropdown">
 									<a id="navbarDropdown" class="nav-link dropdown-toggle ml-2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -139,9 +136,9 @@
 									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">										
 											<a class="dropdown-item " href="{{asset('home')}}">Meu perfil</a>
 											@if (Auth::user()->id == 1) <!-- criar controller ONG_HAS_USER -->
-												<a class="dropdown-item" href="home-ong/{{Auth::user()->id }}">Minha Ong</a>																			
+												<a class="dropdown-item" href="{{url('home-ong/'.Auth::user()->id)}}">Minha Ong</a>																			
 											@endif
-											<a class="dropdown-item" href="{{asset('home')}}">Encerrar Conta</a>
+											<a class="dropdown-item" href="{{asset('home')}}">Excluir Conta</a>
 									{{-- 		<a href="{{url('home/perfilEditar')}}" class="btn btn-secondary">Alterar Perfil</a> --}}
 										
 									</div>
