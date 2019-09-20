@@ -20,6 +20,7 @@
 	<!-- Superfish -->
 	<link rel="stylesheet" href="{{asset('css/superfish.css')}}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
 	<link rel="stylesheet" href="{{asset('css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('css/login.css')}}">
 	<link rel="stylesheet" href="{{asset('css/perfil.css')}}">
@@ -50,7 +51,11 @@
 		<!-- Main JS -->
 		<script defer src="{{asset('js/main.js')}}"></script>
 
-		<script  src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+		
+
+		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 
 		<script defer src={{url('js/consultas.js')}}></script>
 

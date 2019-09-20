@@ -32,56 +32,40 @@
         <div class="row">
             <div class="col-12 box-img-galeria">
                <div class="img-galeria box-img-animate ">
-
-                   <a href="javascript:;" class="galeria">
-                       <img src="images/photo_01.jpeg"  alt="">
+                   <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos">
+                       <img src="{{asset("images/photo_01.jpeg")}}" alt="">
                    </a>
-
                </div>
                <div class="img-galeria box-img-animate">
-
-                    <a href="javascript:;" class="galeria">
-                        <img src="images/photo_01.jpeg"  alt="">
+                    <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos">
+                        <img src="{{asset("images/photo_01.jpeg")}}" alt="">
                     </a>
- 
                 </div>
                 <div class="img-galeria box-img-animate">
-
-                        <a href="javascript:;" class="galeria">
-                            <img src="images/photo_01.jpeg"  alt="">
+                    <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos">
+                        <img src="{{asset("images/photo_01.jpeg")}}" alt="">
+                    </a>    
+                </div>
+                <div class="img-galeria box-img-animate">
+                    <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos">
+                        <img src="{{asset("images/photo_01.jpeg")}}" alt="">
+                    </a>
+                </div>
+                <div class="img-galeria box-img-animate">
+                        <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos">
+                            <img src="{{asset("images/photo_01.jpeg")}}" alt="">
                         </a>
-     
                     </div>
-                    <div class="img-galeria box-img-animate">
-
-                            <a href="javascript:;" class="galeria">
-                                <img src="images/photo_01.jpeg"  alt="">
-                            </a>
-         
-                        </div>
-                        <div class="img-galeria box-img-animate">
-         
-                             <a href="javascript:;" class="galeria">
-                                 <img src="images/photo_01.jpeg"  alt="">
-                             </a>
-          
-                         </div>
-                         <div class="img-galeria">
-         
-                                 <a href="javascript:;" class="galeria">
-                                     <img src="images/photo_01.jpeg"  alt="">
-                                 </a>
-              
-                             </div>
-               
-              
-            </div>
-
-                     
+                    <div class="img-galeria">
+                    <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos">
+                        <img src="{{asset("images/photo_01.jpeg")}}" alt="">
+                    </a>
+                </div>
+            </div>       
         </div>
 
 
-        <div class="bgbox">
+      <!--  <div class="bgbox">
         <div class="img-modal-box">
                 <button>X</button>
             <img src="" alt="" width="100%">
@@ -102,7 +86,7 @@
                 })
             })
             
-        </script>
+        </script> -->
 
         <!--  ===================== Seção Galeria de fotos da Ongs - (INÍCIO)  ====================  -->
 
@@ -112,7 +96,7 @@
             <div class="col-md-12 col-md-12 text-center ">
                 <a href="#" class="btn btn-success btn-lg">Seja um Voluntário</a>
             </div>
-        </div> --}}
+        </div> --}} 
     </div>
 </section>
 <!--  ===================== Botao seja voluntário - (FINAL)  ====================  -->
