@@ -2,98 +2,102 @@
 
 @section('content')
 
-
-@if(isset($ong))
-sssss
+{{--  @if (isset($ong) && isset($admin))
+     {{$admin}}
 @else 
-não
+    não
 @endif
+ 
+
+ --}}
+
 
 <div class=""> 
     <div class="col-md-12">
         <div class="card">
-        @if (session('status'))
-            <div class="warning warning-success" role="warning">
-                {{ session('status') }}
-                        
-            </div>
-        @endif
+      
             <section class="container-fluid perfil-user">
                 <div class=" box-perfil">   
                     <div class="container-fluid emp-profile">
-                        <div class="row bg-success">
-                            <div class="col-md-3 bg-warning">
+                        <div class="row ">
+                            <div class="col-md-4 d-flex justify-content-center align-items-center">
                                 <div class="profile-img text-center">
                                       <a href="#">
-                                      @if(!isset($ong))
+                                        @if(!isset($ong))
                                             <img src="{{url('images/avatar-default.png')}}" alt=""  title="Adicione uma foto">
                                         @else
                                             <img src="{{url($ong->avatar)}}" alt="" title="Adicione uma foto">
-                                        @endif
+                                        @endif 
                                     </a>    
                                 </div>
                                     
                             </div>
-                            <div class="col-md-8 bg-secondary">
-                                <div class="profile-head bg-warning">
+                            <div class="col-md-7">
+                                <div class="profile-head mr-3">
 
-                                    <p class="text-center"><span>nome</span></p>
-                                    <p class="text-center"><span>Segmento</span></p>
-                                    <p class="text-center"><span> Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição</span></p>
-                                    
-                                    <p class="text-center"><span><i class="fas fa-globe-africa icone-perfil"></i> www.teste.com.br</span></p>
-                                    <p class="text-center"><span><i class="fas fa-globe-africa icone-perfil"></i> www.teste.com.br</span></p>
-                                    <p class="text-center"><span><i class="fas fa-globe-africa icone-perfil"></i> www.teste.com.br</span></p>
-                                    <p class="text-center"><span><i class="fas fa-globe-africa icone-perfil"></i> www.teste.com.br</span></p>
+                                    <h4 class="text-center"><span>{{$ong->name}}</span></h4>
+                                    <h5 class="text-center"><span>{{$ong->segment}}</span></h5>
+                                    <p class="text-center"><span>{{$ong->description}}</span></p>
+                                   
+                                    @if(isset($ong) && $ong->website1 != null)
+                                        <p class="text-center"><span class="mr-5"><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website1}}" target="_blank">{{$ong->website1}}</a></span> <span class="mr-5"><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website2}}" target="_blank">{{$ong->website1}} </a></span></p>
 
-                                    <form>                                        
-                                        <input id="id-perfil" type="hidden" value="{{-- {{Auth::user()->id}} --}}">
-                                    </form>
-                                    <h4 class="text-center">{{-- {{ Auth::user()->name }} --}}</h4>
-                                    <h5 class="text-center">{{-- {{ Auth::user()->occupation }} --}}</h5>
-                                    
-                                    <p class="proile-bio"> {{--  {{ Auth::user()->biography }} --}}</p>
+                                        <p class="text-center"><span class="mr-5"><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website3}}" target="_blank">{{$ong->website1}}</a></span><span class="mr-5"><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website4}}" target="_blank">{{$ong->website1}} </a></span></p>
+                                        
+
+                                    @endif
                                    
                                 </div>
                             </div>
                         </div>
-                        <div class="row bg-danger">
-                            <div class="col-md-4 bg-dark">
+                        <div class="row ">
+                            <div class="col-md-4 ">
                                 <div class="profile-work text-center">
 
 
                                 
-
+                                 
                                     <p><span><span><i class="fas fa-road icone-perfil"></i> </span>
-                                        <span>Endereço</span></span>
+                                        <span>{{$ong->address}}</span></span>
                                     </p>
                                     <p><span><span><i class="fas fa-map-signs icone-perfil"></i> </span>
-                                        <span>Bairro</span></span>
+                                        <span>{{$ong->district}}</span></span>
                                     </p>
                                     <p><span><span><i class="fas fa-map-marked-alt icone-perfil"></i> </span>
-                                        <span>Cidade</span></span>
+                                        <span>{{$ong->city}}</span></span>
                                     </p>
-                                    <p><span><span><i class="fas fa-phone-alt icone-perfil"></i></i> </span>
-                                        <span>Fone</span></span>
-                                    </p>
-                                    <p><span><span><i class="fas fa-phone-alt icone-perfil"></i></i> </span>
-                                        <span>Fone</span></span>
-                                    </p>
-                                    <p><span><span><i class="far fa-envelope icone-perfil"></i> </span>
-                                        <span>Email</span></span>
+                                    <p><span><span><i class="fas fa-map-marked-alt icone-perfil"></i> </span>
+                                        <span>{{$ong->uf}}</span></span>
                                     </p>
 
-
+                                    @if(isset($ong) && $ong->phone1 != null)
+                                        <p><span><span><i class="fas fa-phone-alt icone-perfil"></i></i> </span>
+                                            <span>{{$ong->phone1}}</span></span>
+                                        </p>
+                                        <p><span><span><i class="fas fa-phone-alt icone-perfil"></i></i> </span>
+                                            <span>{{$ong->phone2}}</span></span>
+                                        </p>
+                                        <p><span><span><i class="far fa-envelope icone-perfil"></i> </span>
+                                            <span>{{$ong->email}}</span></span>
+                                        </p>
+                                    @endif 
+                                    @if ($admin == 1)
+                                    
+                                    <div class="text-center mt-5">
+                                        <p><a href="{{url('home/perfil-ong-editar')}}/{{$ong->id}}" class="btn-editar">Alterar informações</a></p>	    
+                                        <p></p><a href="{{url('')}}" class="btn-editar">Criar Evento</a></p> 
+                                    </div>
+                                    @endif
 
 
                                    
                                 </div>
                             </div> 
-                            <div class="col-md-8 bg-warning">
-                                <div class="col-12 mt-3 text-center">
+                            <div class="col-md-7">
+                                <div class="col-12 mt-3 mr-3 text-center">
                                     <h3>Eventos</h3> 
                                 </div>
-                                    <div class="col-12 mt-3"> 
+                                    <div class="col-12 mt-3 mr-3"> 
                                       {{--   <script>
                                             $(document).ready(function(){
                                                 var id = $('#id-perfil').val()
@@ -142,4 +146,6 @@ não
             </section>                       
     </div>
 </div>
+
+
 @endsection

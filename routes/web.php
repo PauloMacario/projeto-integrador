@@ -1,117 +1,81 @@
 <?php
-use App\User;
-use App\Ong;
-use App\OngHasUser;
 
-/*  ############  Rotas da Index   (INICIO) ############ */
+/*  ########################  PERFIL USER  ########################## */
 
-// Lista todas Ongs cadastradas
+// ######################### INICIO  Rotas Autenticadas   #################################
+
+Route::middleware(['auth'])->group(function (){
+
+    // Lista home PERFIL USER
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    // Editando PERFIL USER
+    Route::get('home/perfil-editar', 'UserController@editarUser');
+    Route::put('home/perfil-atualizar/{id}', 'UserController@atualizarUser');
+
+    // Lista ongs do usuario via AJAX na home do perfil
+    
+    Route::get('home/minhas-ongs/admin' , function (){ return view('homeOng'); });
+
+    /*  #######################  PERFIL ONG  ########################### */
+    
+    // Criando uma nova ONG
+    Route::get('home/ong-criar', 'OngController@adicionarOng');
+    Route::post('home/ong-salvar/{id}', 'OngController@salvarOng');
+    
+    // Editando PERFIL ONG
+    Route::get('home/perfil-ong-editar/{id}', 'OngController@editarOng');
+    Route::put('home/perfil-ong-atualizar/{id}', 'OngController@atualizarOng');
+    
+    // Lista perfil da ONG com a permissão do USER
+    Route::get('home/ong/{id}/user/{user?}', 'OngController@listarOng');
+    
+    Route::get('busca/{id}', 'OngController@buscarOng');
+    
+    // Deltar usuario e seus relacionamentos
+    Route::delete('/delete/{id}', 'UserController@delete');
+    
+    
+    
+    /*  ######################  Rotas EVENTOS   ############################# */
+    Route::get('eventos/{id}', 'ActionEventController@listaEvento');
+    
+    
+    /*  ######################  Rotas BUSCAS    ########################### */
+    
+    
+});
+// ######################### FINAL Rotas Autenticadas   #################################
+
+
+
+
+// ######################### Rotas de BUSCAS   #################################
+Route::get('busca/{busca}', 'OngController@buscarOng');
+
+Route::get('home/listar-ongs/{id}', 'UserController@allOngs');
+
+
+// ####################### Rotas para acesso site NÃO LOGADO   ################################
+
+Route::get('/', function () { return view('index'); });
+
+Route::get('/galeria', function(){ return view('galeria'); });
+
+Route::get('/faq', function(){ return view('faq'); });
+
+Route::get('/contato', function(){ return view('contato'); });
+
 Route::get('ongs/', 'OngController@index');
 
-// Lista todos Eventos cadastrados
 Route::get('eventos','ActionEventController@index');
 
 
 
-
-
-
-/*  ############  Rotas de Ongs   (INICIO) ############ */
-
-
-
-/*  ############  Rotas Eventos   (INICIO) ############ */
-
-
-
-/*  ############  Rotas do Perfil auth User   (INICIO) ############ */
-
-
-Route::get('home/perfil-editar', 'UserController@editarUser');
-
-Route::put('home/perfil-atualizar/{id}', 'UserController@atualizarUser');
-
-Route::get('home/{id}/nova-ong', 'OngController@adicionarOng');
-
-// Realiza o cadastro da ong ------ Falta menssagens de error
-Route::post('home/nova-ong/salvar', 'OngController@salvarOng');
-
-// Lista ongs do usuario via AJAX na home do perfil
-Route::get('home/listar-ongs/{id}', 'UserController@allOngs'); 
-
-
-
-
-/*  ############  Rotas do Perfil auth Ong   (INICIO) ############ */
-
-Route::get('home-ong/{id}', 'OngController@listarOng');
-
-
-/*  ############  Rotas Minhas ongs admin  (INICIO) ############ */
-
-
-Route::get('home/minhas-ongs/admin' , function () {
-    return view('minhasOngs');
-}); 
-
-Route::get('home/minhas-ongs/admin/{id}', 'UserController@allOngsAdmin'); 
-
-
-
-
-
-Route::get('/', function () {
-    return view('index');
-}); 
-
-
-
-
-
-
-
-Route::get('busca/{busca}', 'OngController@buscarOng');
-
-
-
-
-
-/* Route::get('home/listarOngs/{id}', "UserController@listarOngs"); */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('teste', function(){
-    
-    
-    
-});
-        
+/* Route::get('/home', 'HomeController@index');
+Route::get('/auth/logout', 'Auth\AuthController@logout');
+*/
 
 
 
@@ -119,22 +83,13 @@ Route::get('teste', function(){
 
 
 
-Route::get('/galeria', function(){
-            return view('galeria');          // CRIAR METODO DE BUSCA DE FOTOS ALEATORIAS COM PAGINAÇÃO
-        });
-        
-Route::get('/faq', function(){
-            return view('faq');
-        });
-        
-Route::get('/contato', function(){
-            return view('contato');
-        });
-        
-Route::get('/autenticacao', function () {
-            return view('autenticacao');
-        });
-        
-Route::get('/cadastro', function () {
-            return view('cadastro');
-        }); 
+
+
+
+/*   Route::get('/teste', function () {
+    return view('novoEvento');
+});  */
+
+
+
+

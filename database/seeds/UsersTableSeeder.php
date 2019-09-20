@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
 
         User::create([
             'name' => 'Stephen William Hawking', 
-            'email' => 'Stephen@gmail.com',         
+            'email' => 'stephen@gmail.com',         
             'password' => '$2y$10$74OPjIwSdjl.uS7crJw.9eh48vQklcgHHxVVDNFVDmrsh09kT.E/W',
             'occupation' => 'Morto',
             'biography' => 'Stephen William Hawking foi um físico teórico e cosmólogo britânico reconhecido internacionalmente por sua contribuição à ciência, sendo um dos mais renomados cientistas do século.',            

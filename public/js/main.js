@@ -145,6 +145,71 @@
 		stickyBanner();
 	});
 
+	$(function(){
+        $('#imagem').change(function(){
+            const file =$(this)[0].files[0]
+            const fileReader = new FileReader()
+            fileReader.onloadend = function(){
+                 $('#preview').attr('src', fileReader.result)   
+            }
+            fileReader.readAsDataURL(file)
+        })
+
+	})
+	
+
+	$(function(){
+		var id = $('#id-perfil').val()
+		$.ajax({
+				method:'GET',
+				url: 'home/listar-ongs/'+id,                                             
+					success: function(response){
+					  
+					   for(var i = 0; i < response.ongs.length; i++ ){
+						   
+
+						$('#tabela').prepend('<tr><td><a href="/home/ong/'+response.ongs[i].id+'/user/'+id+'" ><img src="'+response.ongs[i].avatar+'"></a></td> <td>'+response.ongs[i].name+'</td><td>'+response.ongs[i].description+'</td></tr>') 
+					   }
+					}                                      
+					   
+					})
+				});
+
+
+	
+
+$('#btn-busca').click(function(e){									
+    var busca = $('#busca').val()
+    if(!busca){
+        $('#alert-busca').prop('style', 'display:block;')
+        }else{
+            $.ajax({
+                method:'GET',
+                url: 'busca/'+busca,                                             
+                success: function(response){
+                    if(response.length > 0){
+                        $('#box-result').css('display', 'block')
+                        $('#box-result').css('max-height', '800px')
+                        $('#box-result').css('overflow', 'scroll')
+                            for(var i = 0; i < response.length; i++ ){
+                                $('#tabela').addClass('reset').append('<tr class="result-busca"><td><a href="ong/'+response[i].id+'" ><img src="'+response[i].avatar+'"></a></td><td>'+response[i].name+'</td><td>'+response[i].description+'</td> <td>'+response[i].district+'</td></tr>') 
+                            }
+                        }
+                        else{
+                            alert('Nenhum resultado encontrado')
+                            $('#tabela').empty()
+                        }
+                    }  											
+                }) 
+            }
+            e.preventDefault()
+                if($('.result-busca').length >0 ){
+                    $('.reset').empty()
+                }				
+});
+
+
+			
 
 }());
 

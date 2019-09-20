@@ -43,7 +43,12 @@
 							<div class="projeto-paragrafo">	
 								<p>Encontre aqui organizações que ajudam escolas, orfanatos, creches, hospitais e outras ações que promovam melhorias e apoio para a vida de crianças e adolescentes!</p>
 							</div>	
+
+							
 						</div>	
+					
+
+
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-12 col-sm-12 text-center">
@@ -59,6 +64,11 @@
 								<p>Encontre aqui uma ação e seja um voluntário para auxílio em eventos de adoção de animais, veterinários ou formandos em veterinária para cuidados com os animais, etc.!</p>
 							</div>
 						</div>
+
+						<div class="projeto-paragrafo text-center">	
+							<button class=" btn btn-primary">Ver Mais...</button>
+						</div>	
+
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-12 col-sm-12 text-center">
@@ -87,8 +97,8 @@
 		
 <div id="busca-section" class="projeto-section">
 	<div class="container ">
-		<div class="row">
-			<div class="col-md-12  text-center heading-section">
+		<div class="row text-center">
+			<div class="col-12 col-md-6  text-center heading-section ml-auto mr-auto">
 				<h3>Busque aqui uma Ong para ajudar</h3>
 				<form>
 					  <div class="form-row align-items-center">
@@ -111,7 +121,7 @@
 				</div>
 
 <script>
-
+/* 
 
 $('#btn-busca').click(function(e){									
     var busca = $('#busca').val()
@@ -144,7 +154,7 @@ $('#btn-busca').click(function(e){
 });
 
 
-
+ */
 </script>
 
 
@@ -205,6 +215,7 @@ $('#btn-busca').click(function(e){
 								</div>
 							</div> 
 						</div>
+						
 					</div>
 					<div class="clearfix visible-sm-block"></div>
 						<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
@@ -227,8 +238,13 @@ $('#btn-busca').click(function(e){
 					</div>
 				</div> -->
 			</div>
+			<div class="projeto-paragrafo text-center mt-4">	
+					<button class=" btn btn-primary">Ver Mais...</button>
+				</div>	
 		</div>
+		
         <!--  =========================== Seção resumo das notícias -  (FINAL)  ==========================  -->
         
         
 @endsection		
+

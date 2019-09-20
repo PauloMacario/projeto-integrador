@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Ong;
 use App\OngHasUser;
+use App\Segment;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Imagem;
@@ -16,13 +17,35 @@ class OngController extends Controller
     {
        $ongs = Ong::all();       
        return view('ongs')->with('ongs', $ongs);
+    } 
+
+
+
+
+
+    public function listarOng($id, $user)
+    {
+        $ong = Ong::find($id);  
+        $permission =  OngHasUser::all()
+                        ->where('id_ong', '=', $id)
+                        ->where('id_user', '=',  $user )
+                        ->where('permission_level', '=' , 1)
+                        ->first();
+        
+        if($permission == NULL ){
+            $admin = 0;
+            return view('/homeOng')->with(['ong' => $ong ,'admin' => $admin]);
+        }else {
+            $admin = 1;
+            return view('/homeOng')->with(['ong' => $ong ,'admin' => $admin]);
+        } 
+
     }
 
-    public function listarOng($id)
-    {
-       $ong = Ong::find($id);       
-       return view('homeOng')->with('ong', $ong);
-    }
+
+
+
+
     
     public function buscarOng($busca)
     {
@@ -36,17 +59,78 @@ class OngController extends Controller
     
  
     // Redireciona para o form de cadastro de Ong
-    public function adicionarOng($id)
+    public function adicionarOng()
     {
-        $user = User::find($id);
-        return view('novaOng')->with('user', $user);
+        $segmentos = Segment::all();
+        return view('novaOng')->with('segmentos', $segmentos);
     }
+
+    public function editarOng($id)
+    {
+        $ong = Ong::find($id);
+        $segmentos = Segment::all();
+   
+        return view('perfilOngEditar')->with(['ong' => $ong ,'segmentos' => $segmentos]);
+    }
+
+
+    public function atualizarOng(Request $request, $id)
+    {
+        $ong = ong::find($id);  
+        
+        
+        $arquivo = $request->file('imagem');
+        $userId = $request->input('id');
+        if($arquivo == NULL){
+            $path = $ong->avatar;
+        }else{
+            $pasta = 'perfil';
+            $path = Imagem::criarCaminhoImagem($arquivo, $pasta);
+        }
+        
+        
+        $ong->name = $request->input('nome');
+        $ong->segment = $request->input('segmento');
+        $ong->description = $request->input('descricao');
+        $ong->email = $request->input('email');
+        $ong->phone1 = $request->input('phone1');
+        $ong->phone2 = $request->input('phone2');
+        $ong->address = $request->input('endereco');
+        $ong->district = $request->input('bairro');
+        $ong->city = $request->input('cidade');
+        $ong->uf = $request->input('uf');
+        $ong->website1 = $request->input('site1');
+        $ong->website2 = $request->input('site2');
+        $ong->website3 = $request->input('site3');
+        $ong->website4 = $request->input('site4');
+        $ong->avatar = $path;
+
+        $ong->save();
+        $url = url('home/ong/'.$id.'/'.'user'.'/'.$userId);
+
+        return redirect($url);
+       
+       /*  return redirect('home/'); */
+    }
+
     
      // Salva a Ong 
-    public function salvarOng(Request $request)
+    public function salvarOng(Request $request, $id)
     {
-        $userId =  $request->input('id');
-        $arquivo = $request->file('avatar');
+ 
+     
+        $result =  OngHasUser::all()->where('id_user', '=', $id)->where('permission_level', '=', 1 );
+
+       /*  var_dump($result); */
+
+        if(count($result) > 0){
+            $error = 'erro';
+            return redirect('home/')->with('error', $error); 
+
+        } else{
+
+        $user = User::find($id);
+        $arquivo = $request->file('imagem');
        
         if($arquivo == NULL){
             $path = '';
@@ -69,14 +153,19 @@ class OngController extends Controller
         $ong = Ong::all() -> last();
 
         OngHasUser::create([
-            'id_user' =>  $userId,
+            'id_user' => $user->id,
             'id_ong' => $ong->id,
             'permission_level' => 1
         ]);
-        return redirect('home/minhas-ongs/admin');
-       
+    
+   
+        return redirect('home/')->with('ong', $ong); 
+     
+         }
+       } 
       
-      
-    }
+ 
 
 }
+
+

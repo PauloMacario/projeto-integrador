@@ -6,7 +6,7 @@
 <html class="no-js">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">   
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	@section('title', 'Páginas do Bem')
 	<title>@yield('title')</title>
@@ -23,14 +23,14 @@
 	<link rel="stylesheet" href="{{asset('css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('css/login.css')}}">
 	<link rel="stylesheet" href="{{asset('css/perfil.css')}}">
-	
+
 	{{-- <link rel="stylesheet" href="{{asset('public/css/icomoon.css')}}"> --}}
-    
+
 
 	<!-- Modernizr JS -->
     {{-- <script src="{{asset('js/modernizr-2.6.2.min.js')}}"></script> --}}
-	
-	
+
+
 	<script defer src="{{asset('js/jquery.min.js')}}"></script>
 	<!-- jQuery Easing -->
 	<script defer src="{{asset('js/jquery.easing.1.3.js')}}"></script>
@@ -39,25 +39,25 @@
 		<!-- Waypoints -->
 		<script defer src="{{asset('js/jquery.waypoints.min.js')}}"></script>
 		<script defer src="{{asset('js/sticky.js')}}"></script>
-		
-	
+
+
 		<!-- Stellar -->
 		<script defer src="{{asset('js/jquery.stellar.min.js')}}"></script>
 		<!-- Superfish -->
 		{{-- <script defer src="{{asset('js/hoverIntent.js')}}"></script> --}}
 		<script defer src="{{asset('js/superfish.js')}}"></script>
-		
+
 		<!-- Main JS -->
 		<script defer src="{{asset('js/main.js')}}"></script>
-		
-		<script  src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-		
-		<script defer src={{url('js/consultas.js')}}></script>
-		 
 
-	
-		
-		
+		<script  src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+		<script defer src={{url('js/consultas.js')}}></script>
+
+
+
+
+
 </head>
 <body>
 	<main id="box-principal">
@@ -68,9 +68,9 @@
             <div class="header-top">
                 <div class="container-fluid">
                     <div class="row">
-						
+
                         <div class="col-md-12 col-sm-12 text-right social">
-							
+
                             <a href="https://www.facebook.com/" class="grow" target="_blank"><!-- <i class="icon-facebook2"></i> --> <i class="fab fa-facebook-square" title="Facebook"></i></a>
                             <a href="https://twitter.com/" class="grow" target="_blank"><!-- <i class="icon-twitter2"></i> --> <i class="fab fa-twitter-square" title="Twitter"></i></a>
                             <a href="https://www.instagram.com/" class="grow" target="_blank"><!-- <i class="icon-instagram2"></i> --><i class="fab fa-instagram" title="Instagram"></i></a>
@@ -93,76 +93,125 @@
 
                         <div class="collapse navbar-collapse " id="conteudoNavbarSuportado">
 							@guest
-									
+
                             <ul class="navbar-nav ml-auto menu">
 								<li class="nav-item">
                                     <a class="nav-link" href="{{asset('/')}}">Início</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{asset('ongs')}}">Ongs</a>									
+									<a class="nav-link" href="{{asset('ongs')}}">Ongs</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{asset('eventos')}}">Eventos</a>								
+									<a class="nav-link" href="{{asset('eventos')}}">Eventos</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{asset('galeria')}}">Fotos</a>									
+									<a class="nav-link" href="{{asset('galeria')}}">Fotos</a>
 								</li>
 									<a href="{{asset('login')}}" class="btn-login" >Login</a>
-								
-							</ul>	
+
+							</ul>
 							@else
 							<ul class="navbar-nav ml-auto menu">
 								<li class="nav-item">
 									<a class="nav-link" href="{{asset('/')}}">Início</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{asset('ongs')}}">Ongs</a>									
+									<a class="nav-link" href="{{asset('ongs')}}">Ongs</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{asset('eventos')}}">Eventos</a>								
+									<a class="nav-link" href="{{asset('eventos')}}">Eventos</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{asset('galeria')}}">Fotos</a>									
+									<a class="nav-link" href="{{asset('galeria')}}">Fotos</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{asset('')}}">Buscar</a> <!-- linkar pag de eventos -->							
+									<a class="nav-link" href="{{asset('')}}">Buscar</a> <!-- linkar pag de eventos -->
 								</li>
 
+							{{-- 	@if (Auth::user()->id == 1) <!-- criar controller ONG_HAS_USER -->
+
+								<li class="nav-item">
+									<a class="nav-link" href="{{asset('home/minhas-ongs/admin')}}">Minha Ong</a>
+								</li>
+
+								@endif --}}
+								{{-- <li class="nav-item">
+									<a class="nav-link" href="{{asset('galeria')}}">Fotos</a>
+								</li> --}}
 
 								<li class="nav-item dropdown">
 									<a id="navbarDropdown" class="nav-link dropdown-toggle ml-2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-									{{ Auth::user()->name }} <span class="caret"></span>	
-									</a>	
-									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">										
-											<a class="dropdown-item " href="{{asset('home')}}">Meu perfil</a>
-											@if (Auth::user()->id == 1) <!-- criar controller ONG_HAS_USER -->
-												<a class="dropdown-item" href="{{url('home-ong/'.Auth::user()->id)}}">Minha Ong</a>																			
-											@endif
-											<a class="dropdown-item" href="{{asset('home')}}">Excluir Conta</a>
+									{{ Auth::user()->name }} <span class="caret"></span>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+											<a class="dropdown-item " href="{{asset('home')}}">Link ativo</a>
+                                            
+                                            <a class="dropdown-item" href="{{asset('home')}}" data-toggle="modal" data-target="#modalExemplo">Encerrar Conta</a>
 									{{-- 		<a href="{{url('home/perfilEditar')}}" class="btn btn-secondary">Alterar Perfil</a> --}}
-										
+
 									</div>
-								</li>								
+								</li>
 								<li class="nav-item mt-2">
 									<a class="btn-logout ml-3" href="{{ route('logout') }}"
 										onclick="event.preventDefault();
 										document.getElementById('logout-form').submit();">
 										{{ __('Sair') }}
-									</a>	
+									</a>
 									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 										@csrf
 									</form>
-								</li>					
-								
-								
+								</li>
+
+
                             </ul>
 							@endguest
                         </div>
                             <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Login</button> -->
-                            
+
                     </nav>
-                </div>			
-            </header>       
+                </div>
+
+
+
+
+
+            </header>
+
+                {{--  ###############  MODAL DE ALERTA DE EXCLUSÂO DE PERFIL--}}
+                            @guest
+
+                            @else
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="">
+                                        <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Exclusão de conta.</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            Você esta prestes a excluir sua conta, todos os dados vinculados na sua conta, fotos, ongs, eventos, et... Serão excluídos permanentemente.
+                                            <h4 >Você desejá excluir?</h4>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-alert" data-dismiss="modal">Cancelar</button>
+                                            <form action="/delete/0" method="POST">
+                                                    @csrf
+                                                    {{ method_field('DELETE') }}
+
+
+                                                <input type="hidden" name="identificador" value="{{ Auth::user()->id }}">
+                                                <button type="submit" class="btn btn-danger">Excluir</button>
+                                            </form>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                            @endguest
+
             @yield('content')
 
             <footer>

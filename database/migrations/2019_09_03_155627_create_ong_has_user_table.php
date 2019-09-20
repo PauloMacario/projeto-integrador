@@ -18,8 +18,8 @@ class CreateOngHasUserTable extends Migration
             $table->unsignedBigInteger('id_ong');
             $table->unsignedBigInteger('id_user');
             $table->integer('permission_level');
-            $table->foreign('id_ong')->references('id')->on('ongs');
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->foreign('id_ong')->references('id')->on('ongs')->onDelete('cascade');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
            
 
         });

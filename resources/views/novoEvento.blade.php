@@ -5,14 +5,15 @@
 
 
 <section class="box-cadastro-ong">
-<form action="/home/ong-salvar/{{ Auth::user()->id }}" enctype="multipart/form-data" method="post">
+<form action="" enctype="multipart/form-data" method="post">
         @csrf
         <div class="form-group col-md-12 text-center">
-                <img src="{{ asset('images/logo_2.png')}}" style="width:50px; height:50px;" alt="">
-            </div>
-            <div class="form-group col-md-12">
-                    <h4 class="text-center">Crie uma Ong</h4>
-            </div>
+            <img src="{{ asset('images/logo_2.png')}}" style="width:50px; height:50px;" alt="">
+        </div>
+        <div class="form-group col-md-12">
+            <h4 class="text-center">Crie uma Ong</h4>
+        </div>
+       
     
         <div class="form-row">
                {{--  <div class="form-group col-md-8">
@@ -28,9 +29,9 @@
                 <label for="segmento">Segmento</label>
                 <select class="form-control" id="segmento" name="segmento" value="">
                     <option selected>...</option>
-                  @foreach ($segmentos as $segmento)
+                 {{--  @foreach ($segmentos as $segmento)
                  <option >{{$segmento->name}}</option>
-                  @endforeach
+                  @endforeach --}}
                 </select>
 
 
@@ -64,34 +65,36 @@
                 <label for="uf">Estado</label>
                 <input type="text" class="form-control" id="uf" name="uf" required>
             </div>
-        </div> 
-        <div class="form-row ">
-                <div class="form-group col-md-12 mt-3">
-                        <div class="custom-file mt-3">
-                            <input type="file" class="custom-file-input" id="imagem" name="imagem">
-                            <label class="custom-file-label" for="">Escolha uma foto...</label>                                
-                        </div>
-                    </div>
-            </div>    
-            <div class="form-row mb-4">
-                <div class="text-center preview-text "style="">
-                    <h6 >Pré-Visualização</h6>
-                </div>
-                <div class="preview-img d-flex justify-content-center">
-                   <div>
-                       <img src="{{url('images/preview-default.png')}}" alt="" title="Pré-Visualização" id="preview">
-                   </div>
-                  
+        </div>   
+        
+        
+        <div class="form-group col-md-12 mt-3">
+                <div class="custom-file mt-3">
+                    <input type="file" class="custom-file-input" id="imagem" name="imagem">
+                    <label class="custom-file-label" for="">Escolha uma foto...</label>                                
                 </div>
             </div>
-        
+        <div class="form-row mb-4">
+            <div class="text-center preview-text "style="">
+                <h6 >Pré-Visualização</h6>
+            </div>
+            <div class="preview-img d-flex justify-content-center">
+               <div>
+                   <img src="{{url('images/preview-default.png')}}" alt="" title="Pré-Visualização" id="preview">
+               </div>
+              
+            </div>
+        </div>
+
         <div class="form-row ">
             <div class="form-group col-12  ">
                 <button type="submit" class="btn btn-success btn-lg btn-block">Gravar</button>
             </div>
+        </div>
+
             
 
-        </div>
+      
     </form>
 
    

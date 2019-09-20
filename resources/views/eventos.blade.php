@@ -48,14 +48,17 @@
 				<div class="row row-bottom-padded-md ">
 
 						@foreach ($eventos as $evento)
-					<div class="col-lg-4 col-md-4 col-sm-6 box-img-animate">
+					<div class="col-md-4 col-12 box-img-animate">
 						<div class="noticia">
-							<a href="#">{{$evento->image}}</a>
+							<a href="{{url('eventos/'.$evento->id)}}">
+								<img src="{{$evento->image}}" alt="">
+								
+								</a>
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a href=""#>{{$evento->title}}</a></h3>
 									<span class="posted_by">{{$evento->date}}</span>
-									<span class="comment"><a href="">21<i class="fas fa-comment"></i></a></span>
+									
 									<p>{{$evento->description}}</p>
 									<p><a href="#">Leia mais...</a></p>
 								</div>

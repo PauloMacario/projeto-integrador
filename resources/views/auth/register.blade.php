@@ -68,6 +68,15 @@
                 <button type="submit" class="btn btn-primary btn-block">
                     {{ __('Cadastrar') }}
                 </button>
+
+
+            </div>
+            <div class="col-md-12 mb-3">
+                    <a href="login" class="btn btn-secondary btn-block">
+                        {{ __('Já tenho Login') }}
+                    </a>
+    
+                    
             </div>
         </div>
     </form>

@@ -940,7 +940,7 @@ section.map {
 .img-modal-box{
   position:fixed;
   left:50%;
-  top:50%;
+  top:55%;
   width:800px;
   height:600px;
   background-color: rgb(255, 255, 255);
@@ -968,6 +968,9 @@ section.map {
 /* ============ @ MEDIAS e BRACK POINTS ( INÍCIO ) ============== */
 
 @media screen and (max-width: 991px) {
+  
+ 
+  
   .img-large{
     height:450px;
   }
@@ -1001,6 +1004,9 @@ section.map {
 
 
 @media screen and (max-width: 768px) {
+  
+ 
+  
   .home-cover .desc {
     padding-left: 15px;
     padding-right: 15px;

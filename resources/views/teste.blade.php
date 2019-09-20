@@ -1,6 +1,18 @@
 @extends('layouts.app')
 @section('content')
+@if(isset($evento) || isset($ong) )
 
+{{$evento}}
+{{$ong}}
+
+
+
+@else 
+
+
+
+
+@endif
 
 <div class="container mt-5 mb-5">
         <table id="table">

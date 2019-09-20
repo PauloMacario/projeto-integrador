@@ -40,17 +40,21 @@
         
       
 
-            <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-6 mb-4">
                 <div class="noticia box-img-animate">
-            @if($ong->avatar)        
-                <a href="#"><img class="img-responsive" src="{{url($ong->avatar)}}" alt="" width="250" height="200">
-            @else 
-                <a href="#"><img class="img-responsive" src="{{url('images/ongDefault.jpg')}}" alt="" width="250" height="200">    
-            @endif
-            <div class="noticia-text">
+                    @if($ong->avatar)        
+                        <a href="login"><img class="img-responsive" src="{{url($ong->avatar)}}" alt="" width="250" height="200">
+                    @else 
+                        <a href="login"><img class="img-responsive" src="{{url('images/ongDefault.jpg')}}" alt="" width="250" height="200">    
+                    @endif
+                        <div class="noticia-text">
                             <div class="noticia-title">
                             <h3>{{$ong->name}}</h3>
                                 <p>{{$ong->description}}</p>
+                            </div>
+                            <div class="mt-2 text-center ">
+                             
+                                <p>Ler mais...</p>
                             </div>
                         </div>
                     </a>

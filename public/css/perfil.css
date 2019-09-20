@@ -27,9 +27,48 @@ ul li{
     margin-bottom:30px;
   }
   .profile-img img{
-    width: 70%;
-    height: 100%;
+    width: 200px;
+    height: 180px;
   }
+
+ 
+
+  .profile-event-box{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+  }
+
+
+  .profile-event-img{
+    text-align: center;
+    margin-bottom:30px;
+  }
+  .profile-event-img img{
+    width: 600px;
+    height: 400px;
+    border-radius:8px;
+  }
+  .event-description{
+    width:70%;
+    padding:2%;
+    font-size: 1.8rem;
+
+  }
+
+  .event-description p span{
+   
+    font-size: 1.2rem;
+
+  }
+
+
+
+
+
+
+
   .profile-img .file {
     position: relative;
     overflow: hidden;
@@ -87,6 +126,12 @@ ul li{
     margin-top: 5%;
     text-align:left;
   }
+
+  .profile-event{
+    padding: 2%;
+    margin-top: 1%;
+    text-align:left;
+  }
   .profile-work{
   
   }
@@ -130,5 +175,27 @@ ul li{
   
   @media only screen and (max-width: 991px) { 
     
+  
+  }
+
+
+
+
+
+
+  @media only screen and (max-width: 460px) { 
+    
+    .profile-event-img{
+      text-align: center;
+      margin-bottom:10px;
+    }
+    .profile-event-img img{
+      width: 280px;
+      height: 260px;
+    }
+    .event-description{
+      width:90%;
+      padding:1%;
+    }
   
   }

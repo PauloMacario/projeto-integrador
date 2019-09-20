@@ -41,6 +41,19 @@ class UserController extends Controller
             $path = Imagem::criarCaminhoImagem($arquivo, $pasta);
         }
         
+        $request->validate([
+            "nome" => "max:100 | min:3",
+            "biografia" => "max:1000",
+            "email" => "max:45",
+            "ocupacao" => "max:50|nullable",
+            "website1" => "max:100",
+            "areas" => "max:255",
+            "bairro" => "max:45",
+            "cidade" => "max:45",
+            "avatar" => "max:100"
+        ]); 
+
+
         
         $user->name       = $request->input('nome');
         $user->email      = $request->input('email');
@@ -49,8 +62,7 @@ class UserController extends Controller
         $user->areas      = $request->input('areas');
         $user->district   = $request->input('bairro');
         $user->city       = $request->input('cidade');
-        $user->uf         = $request->input('uf');
-
+        $user->website1   = $request->input('website1');
         $user->avatar     = $path;
 
         $user->save();
@@ -79,6 +91,26 @@ class UserController extends Controller
     {
        $ongAdmin = User::with('ongs')->get();
         return $ongAdmin;
+    }
+
+    public function delete(Request $request)
+    {
+        // pega o id do usuario que esta oculto
+        $userId = $request->input('identificador');
+        $user = User::find($userId);
+        $userOng = $user->ongs;
+        $userOng = json_decode($userOng, true);
+
+
+       if(count($userOng) > 0){
+           $user->ongs()->delete();
+        }
+
+        $user->delete();
+
+
+        return redirect('/');
+
     }
 
 
