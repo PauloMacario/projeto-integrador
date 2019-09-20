@@ -8,7 +8,7 @@ class ActionEvent extends Model
 {
     protected $table = 'actions_events';
     protected $fillable = [
-    'id_ong', 'title', 'description', 'address', 'district', 'city', 
+    'title', 'description', 'address', 'district', 'city', 'uf',
        'date', 'image'
     ];
 

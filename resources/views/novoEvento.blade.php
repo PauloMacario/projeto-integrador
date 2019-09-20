@@ -6,12 +6,12 @@
 
 <section class="box-cadastro-ong">
 <form action="" enctype="multipart/form-data" method="post">
-        @csrf
+        @csrf {{method_field('PUT')}}
         <div class="form-group col-md-12 text-center">
             <img src="{{ asset('images/logo_2.png')}}" style="width:50px; height:50px;" alt="">
         </div>
         <div class="form-group col-md-12">
-            <h4 class="text-center">Crie uma Ong</h4>
+            <h4 class="text-center">Crie um Evento!</h4>
         </div>
        
     
@@ -20,23 +20,27 @@
                 <input type="hidden" class="form-control" id="id" name="id" value="{{ Auth::user()->id }}">
                 </div> --}}
             <div class="form-group col-md-8">
-                <label for="nome">Nome da Ong</label>
-                <input type="text" class="form-control" id="nome" name="nome"  required>
+                <label for="nome">Nome do Evento</label>
+                <input type="text" class="form-control" id="nome" name="title"  required>
             </div>
-            <div class="form-group col-12 col-md-4">
-                {{-- <input type="text" class="form-control" id="segmento" name="segmento" placeholder="Segmento" required> --}}
+            <div class="form-group col-md-4">
+                <label for="date">Data do evento</label>
+                <input type="date" class="form-control" id="date" name="date"  required>
+            </div>
+            {{-- <div class="form-group col-12 col-md-4">
+                <input type="text" class="form-control" id="segmento" name="segmento" placeholder="Segmento" required>
 
                 <label for="segmento">Segmento</label>
                 <select class="form-control" id="segmento" name="segmento" value="">
                     <option selected>...</option>
-                 {{--  @foreach ($segmentos as $segmento)
+                 @foreach ($segmentos as $segmento)
                  <option >{{$segmento->name}}</option>
-                  @endforeach --}}
+                  @endforeach
                 </select>
 
 
 
-            </div>
+            </div> --}}
         </div>
         <div class="form-row">
             <div class="form-group col-md-12">
@@ -70,7 +74,7 @@
         
         <div class="form-group col-md-12 mt-3">
                 <div class="custom-file mt-3">
-                    <input type="file" class="custom-file-input" id="imagem" name="imagem">
+                    <input type="file" class="custom-file-input" id="imagem" name="image">
                     <label class="custom-file-label" for="">Escolha uma foto...</label>                                
                 </div>
             </div>

@@ -85,7 +85,7 @@
                                     
                                     <div class="text-center mt-5">
                                         <p><a href="{{url('home/perfil-ong-editar')}}/{{$ong->id}}" class="btn-editar">Alterar informações</a></p>	    
-                                        <p></p><a href="{{url('')}}" class="btn-editar">Criar Evento</a></p> 
+                                        <p><a href="{{url('home/evento-criar')}}" class="btn-editar">Criar Evento</a></p> 
                                     </div>
                                     @endif
 

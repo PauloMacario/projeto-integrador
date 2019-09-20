@@ -39,6 +39,8 @@ Route::middleware(['auth'])->group(function (){
     
     /*  ######################  Rotas EVENTOS   ############################# */
     Route::get('eventos/{id}', 'ActionEventController@listaEvento');
+    Route::get('home/evento-criar', 'ActionEventController@adicionarEvento');
+    Route::put('home/evento-salvar/{id}', 'ActionEventController@salvarEvento');
     
     
     /*  ######################  Rotas BUSCAS    ########################### */
