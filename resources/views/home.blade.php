@@ -49,10 +49,16 @@
                                     <h5 class="text-center">{{ Auth::user()->occupation }}</h5>
                                     
                                     <p class="proile-bio">  {{ Auth::user()->biography }}</p>
-                                    <ul>
-                                        <li>Interesses:  {{ Auth::user()->areas }} </li>
-                                        
-                                    </ul>
+
+                                    @if (Auth::user()->areas == NULL)
+                                        <ul>
+                                            <li>Interesses: Adicione seus interesses </li>                                      
+                                        </ul>
+                                        @else    
+                                        <ul>
+                                            <li>Interesses:  {{ Auth::user()->areas }} </li>
+                                        </ul>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -63,13 +69,25 @@
                                             <span> {{ Auth::user()->email }} </span>
                                     </p>
                                     <p> <span><i class="fas fa-globe-africa icone-perfil"></i> </span>
+                                        @if (Auth::user()->website == NULL)
+                                        <span>Meu website</span>
+                                        @else
                                         <span><a href="{{ Auth::user()->website1 }}">{{ Auth::user()->website1 }}</a></span>
+                                        @endif
                                     </p>
                                     <p><span><i class="fas fa-map-signs icone-perfil"></i> </span>
+                                        @if (Auth::user()->district == NULL)
+                                        <span>Meu bairro</span>
+                                        @else
                                         <span>{{ Auth::user()->district }}</span>
+                                        @endif
                                     </p>
                                     <p><span><i class="fas fa-map-marked-alt icone-perfil"></i> </span>
+                                        @if (Auth::user()->city == NULL)
+                                        <span>Minha cidade</span>
+                                        @else
                                         <span>{{ Auth::user()->city }}</span>
+                                        @endif
                                     </p>
                                     
                                   {{--   <div class="text-center mt-5 mb-4">
@@ -83,7 +101,7 @@
                             </div> 
                             <div class="col-md-7">
                                 <div class="col-12 col-md-12 mt-3 text-center">
-                                    <h3>Minha Ong.</h3> 
+                                    <h3>Minhas ONGs</h3> 
                                 </div>
                                     <div class="col-12 mt-3"> 
                                       
@@ -91,7 +109,7 @@
                                         <table id="tabela" class="table table-striped  my-ongs">
                                             <thead>
                                                 <tr >
-                                                    <th class="text-center" width="25%">Logo</th>
+                                                    <th class="text-center" width="25%"></th>
                                                     <th class="text-center" width="25%">Nome</th>
                                                     <th class="text-center" width="50%">Descrição</th>
                                                 </tr>

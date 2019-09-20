@@ -99,7 +99,7 @@
                                     <a class="nav-link" href="{{asset('/')}}">Início</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{asset('ongs')}}">Ongs</a>
+									<a class="nav-link" href="{{asset('ongs')}}">ONGs</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="{{asset('eventos')}}">Eventos</a>
@@ -116,7 +116,7 @@
 									<a class="nav-link" href="{{asset('/')}}">Início</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{asset('ongs')}}">Ongs</a>
+									<a class="nav-link" href="{{asset('ongs')}}">ONGs</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="{{asset('eventos')}}">Eventos</a>
@@ -144,7 +144,7 @@
 									{{ Auth::user()->name }} <span class="caret"></span>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item " href="{{asset('home')}}">Link ativo</a>
+											<a class="dropdown-item " href="{{asset('home')}}">Meu Perfil</a>
                                             
                                             <a class="dropdown-item" href="{{asset('home')}}" data-toggle="modal" data-target="#modalExemplo">Encerrar Conta</a>
 									{{-- 		<a href="{{url('home/perfilEditar')}}" class="btn btn-secondary">Alterar Perfil</a> --}}
