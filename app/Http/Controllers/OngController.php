@@ -15,49 +15,30 @@ class OngController extends Controller
    // Busca todas as ongs cadastradas e redireciona para view ongs
     public function index()
     {
-       $ongs = Ong::all();       
+       $ongs = Ong::all();
        return view('ongs')->with('ongs', $ongs);
-    } 
+    }
 
-
-
-
-
-    public function listarOng($id, $user)
+    public function listarOng($idOng)
     {
-        $ong = Ong::find($id);  
-        $permission =  OngHasUser::all()
-                        ->where('id_ong', '=', $id)
-                        ->where('id_user', '=',  $user )
-                        ->where('permission_level', '=' , 1)
-                        ->first();
-        
-        if($permission == NULL ){
-            $admin = 0;
-            return view('/homeOng')->with(['ong' => $ong ,'admin' => $admin]);
-        }else {
-            $admin = 1;
-            return view('/homeOng')->with(['ong' => $ong ,'admin' => $admin]);
-        } 
+        $ong = Ong::find($idOng);
+      /*   $ong->users; */
 
+        return view('homeOng', compact('ong'));
     }
 
 
-
-
-
-    
     public function buscarOng($busca)
     {
-        $result = Ong::where('name', 'LIKE', "%{$busca}%")->get();  
+        $result = Ong::where('name', 'LIKE', "%{$busca}%")->get();
         if(count($result) <=0){
-            $result = Ong::where('district', 'LIKE', "%{$busca}%")->get(); 
+            $result = Ong::where('district', 'LIKE', "%{$busca}%")->get();
         }
-        
+
         return $result;
      }
-    
- 
+
+
     // Redireciona para o form de cadastro de Ong
     public function adicionarOng()
     {
@@ -69,16 +50,16 @@ class OngController extends Controller
     {
         $ong = Ong::find($id);
         $segmentos = Segment::all();
-   
+
         return view('perfilOngEditar')->with(['ong' => $ong ,'segmentos' => $segmentos]);
     }
 
 
     public function atualizarOng(Request $request, $id)
     {
-        $ong = ong::find($id);  
-        
-        
+        $ong = ong::find($id);
+
+
         $arquivo = $request->file('imagem');
         $userId = $request->input('id');
         if($arquivo == NULL){
@@ -87,8 +68,8 @@ class OngController extends Controller
             $pasta = 'perfil';
             $path = Imagem::criarCaminhoImagem($arquivo, $pasta);
         }
-        
-        
+
+
         $ong->name = $request->input('nome');
         $ong->segment = $request->input('segmento');
         $ong->description = $request->input('descricao');
@@ -106,32 +87,32 @@ class OngController extends Controller
         $ong->avatar = $path;
 
         $ong->save();
-        $url = url('home/ong/'.$id.'/'.'user'.'/'.$userId);
+        $url = url('homeOng/'.$id);
 
         return redirect($url);
-       
+
        /*  return redirect('home/'); */
     }
 
-    
-     // Salva a Ong 
+
+     // Salva a Ong
     public function salvarOng(Request $request, $id)
     {
- 
-     
+
+
         $result =  OngHasUser::all()->where('id_user', '=', $id)->where('permission_level', '=', 1 );
 
        /*  var_dump($result); */
 
         if(count($result) > 0){
             $error = 'erro';
-            return redirect('home/')->with('error', $error); 
+            return redirect('home/')->with('error', $error);
 
         } else{
 
         $user = User::find($id);
         $arquivo = $request->file('imagem');
-       
+
         if($arquivo == NULL){
             $path = '';
         }else{
@@ -148,8 +129,8 @@ class OngController extends Controller
             'city' => $request->input('cidade'),
             'uf' => $request->input('uf'),
             'avatar' => $path
-        ]);  
-        // Vincula a ong acima cadastrada ao usuario que cadastrou e o coloca como adm    
+        ]);
+        // Vincula a ong acima cadastrada ao usuario que cadastrou e o coloca como adm
         $ong = Ong::all() -> last();
 
         OngHasUser::create([
@@ -157,14 +138,14 @@ class OngController extends Controller
             'id_ong' => $ong->id,
             'permission_level' => 1
         ]);
-    
-   
-        return redirect('home/')->with('ong', $ong); 
-     
+
+
+        return redirect('homeOng/'.$ong->id);
+
          }
-       } 
-      
- 
+       }
+
+
 
 }
 

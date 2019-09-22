@@ -4,18 +4,18 @@
 
 /* ul{
   width:100%;
- 
+
   list-style: none;
 }
 ul li{
 
   display:inline;
   margin:1px 4px;
- 
+
 } */
 .emp-profile{
     padding: 1% 0;
-    margin-top: 3%;
+    margin-top: 1%;
     margin-bottom: 3%;
     border-radius: 0.5rem;
     background: #fff;
@@ -28,10 +28,28 @@ ul li{
   }
   .profile-img img{
     width: 200px;
-    height: 180px;
+    height: 200px;
+    border-radius:50%;
   }
 
- 
+  .profile-ong-img{
+    text-align: center;
+    margin-bottom:30px;
+  }
+
+  .profile-ong-img img{
+    width: 350px;
+    height: 320px;
+
+  }
+
+  .ong-description{
+    border-bottom:1px solid #7BC0B3;
+    margin-bottom:20px;
+}
+
+
+
 
   .profile-event-box{
     display:flex;
@@ -58,7 +76,7 @@ ul li{
   }
 
   .event-description p span{
-   
+
     font-size: 1.2rem;
 
   }
@@ -132,14 +150,8 @@ ul li{
     margin-top: 1%;
     text-align:left;
   }
-  .profile-work{
-  
-  }
-  
-  .profile-work{
-  
-  }    
-  
+
+
   .profile-tab label{
     font-weight: 600;
   }
@@ -149,7 +161,7 @@ ul li{
   }
 
   .my-ongs{
-      
+
   }
   .my-ongs tr td,th{
       vertical-align: center;
@@ -166,16 +178,16 @@ ul li{
   color:#7BC0B3;
   font-size: 1.8rem;
   margin-right:8px;
-  
+
 }
 
 
 
 
-  
-  @media only screen and (max-width: 991px) { 
-    
-  
+
+  @media only screen and (max-width: 991px) {
+
+
   }
 
 
@@ -183,8 +195,8 @@ ul li{
 
 
 
-  @media only screen and (max-width: 460px) { 
-    
+  @media only screen and (max-width: 460px) {
+
     .profile-event-img{
       text-align: center;
       margin-bottom:10px;
@@ -197,5 +209,10 @@ ul li{
       width:90%;
       padding:1%;
     }
-  
+    .profile-ong-img img{
+        width: 260px;
+        height: 240px;
+
+      }
+
   }

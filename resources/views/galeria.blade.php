@@ -9,12 +9,12 @@
 <section class="home">
     <div class="overlay"></div>
     <div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo-dog.jpeg);background-size: cover; background-repeat: no-repeat;"">
-        <a href="#galeria" target="" class="">     
+        <a href="#galeria" target="" class="">
             <div class=" desc ">
                 <h2> <strong>Galeria de imagens</strong></h2>
-        
+
             </div>
-        </a>    
+        </a>
     </div>
 </section>
 <!--  =========================== Seção Home Galeria - (FINAL)  ==========================  -->
@@ -37,18 +37,18 @@
                    </a>
                </div>
                <div class="img-galeria box-img-animate">
-                    <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos">
-                        <img src="{{asset("images/photo_01.jpeg")}}" alt="">
+                    <a href="{{asset("images/photo-6.jpg")}}" class="galeria" data-lightbox="photos">
+                        <img src="{{asset("images/photo-6.jpg")}}" alt="">
                     </a>
                 </div>
                 <div class="img-galeria box-img-animate">
                     <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos">
                         <img src="{{asset("images/photo_01.jpeg")}}" alt="">
-                    </a>    
+                    </a>
                 </div>
                 <div class="img-galeria box-img-animate">
-                    <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos">
-                        <img src="{{asset("images/photo_01.jpeg")}}" alt="">
+                    <a href="{{asset("images/photo-6.jpg")}}" class="galeria" data-lightbox="photos">
+                        <img src="{{asset("images/photo-6.jpg")}}" alt="">
                     </a>
                 </div>
                 <div class="img-galeria box-img-animate">
@@ -57,11 +57,11 @@
                         </a>
                     </div>
                     <div class="img-galeria">
-                    <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos">
-                        <img src="{{asset("images/photo_01.jpeg")}}" alt="">
+                    <a href="{{asset("images/photo-6.jpg")}}" class="galeria" data-lightbox="photos">
+                        <img src="{{asset("images/photo-6.jpg")}}" alt="">
                     </a>
                 </div>
-            </div>       
+            </div>
         </div>
 
 
@@ -69,7 +69,7 @@
         <div class="img-modal-box">
                 <button>X</button>
             <img src="" alt="" width="100%">
-           
+
         </div>
     </div>
         <script defer>
@@ -81,11 +81,11 @@
                 })
                 $('.bgbox, img-modal-box button').bind('click', function(){
                     $('.bgbox, .img-modal-box').fadeOut('fast')
-                  
+
 
                 })
             })
-            
+
         </script> -->
 
         <!--  ===================== Seção Galeria de fotos da Ongs - (INÍCIO)  ====================  -->
@@ -96,7 +96,7 @@
             <div class="col-md-12 col-md-12 text-center ">
                 <a href="#" class="btn btn-success btn-lg">Seja um Voluntário</a>
             </div>
-        </div> --}} 
+        </div> --}}
     </div>
 </section>
 <!--  ===================== Botao seja voluntário - (FINAL)  ====================  -->
