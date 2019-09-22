@@ -105,11 +105,11 @@
 						
 					<div class="card">
 						<div class="card-header">
-							<a class="collapsed card-link " data-toggle="collapse" href="#collapseFive">
+							<a class="collapsed card-link " data-toggle="collapse" href="#collapseEight">
 							Ainda tenho dúvidas. Como eu faço para entrar em contato?
 							</a>
 							</div>
-							 <div id="collapseFive" class="collapse" data-parent="#accordion">
+							 <div id="collapseEight" class="collapse" data-parent="#accordion">
 							 <div class="card-body">
 							Em dúvidas específicas, recomendamos que entre em contato diretamente com a instituição responsável. 
 						   </div>
