@@ -38,7 +38,7 @@
             <div class="col-12 mt-4">
                 <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                     <label class="" for="remember">
-                        {{ __('Remember Me') }}
+                        {{ __('Lembrar senha') }}
                     </label>
                 </div>
             <div class="col-12 mb-2">

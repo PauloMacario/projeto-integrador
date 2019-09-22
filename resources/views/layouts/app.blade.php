@@ -76,11 +76,13 @@
 
                         <div class="col-md-12 col-sm-12 text-right social">
 
+							<a class="link-topo" href="/faq">FAQ</a>
+							<a class="link-topo" href="/contato">Contato</a>
                             <a href="https://www.facebook.com/" class="grow" target="_blank"><!-- <i class="icon-facebook2"></i> --> <i class="fab fa-facebook-square" title="Facebook"></i></a>
                             <a href="https://twitter.com/" class="grow" target="_blank"><!-- <i class="icon-twitter2"></i> --> <i class="fab fa-twitter-square" title="Twitter"></i></a>
                             <a href="https://www.instagram.com/" class="grow" target="_blank"><!-- <i class="icon-instagram2"></i> --><i class="fab fa-instagram" title="Instagram"></i></a>
-							<a class="link-topo" href="/faq">FAQ</a>
-                        	<a class="link-topo" href="/contato">Contato</a>
+							
+                        	
 						</div>
                     </div>
                 </div>
@@ -230,7 +232,7 @@
 									<a href="#"><i class="fab fa-instagram" title="Instagram"></i></a>
 									
 								</div> 
-								<p>Copyright Projeto-integrador<a href="{{asset('home')}}"> Páginas do Bem</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by Alunos DH</p>
+								<p>Copyright Projeto Integrador <a href="{{asset('home')}}"> Páginas do Bem</a>. Todos os direitos reservados.</p>
 							</div>
 						</div>
 					</div>
