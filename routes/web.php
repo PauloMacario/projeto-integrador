@@ -5,13 +5,16 @@
 // ######################### INICIO  Rotas Autenticadas   #################################
 
 Route::middleware(['auth'])->group(function (){
-
+    
     // Lista home PERFIL USER
     Route::get('/home', 'HomeController@index')->name('home');
-
+    
     // Editando PERFIL USER
     Route::get('home/perfil-editar', 'UserController@editarUser');
     Route::put('home/perfil-atualizar/{id}', 'UserController@atualizarUser');
+    
+    // Deltar usuario e seus relacionamentos
+    Route::delete('/delete/{id}', 'UserController@delete');
 
     // Lista ongs do usuario via AJAX na home do perfil
 
@@ -31,19 +34,9 @@ Route::middleware(['auth'])->group(function (){
     Route::get('homeOng/perfil-ong-editar/{id}', 'OngController@editarOng');
     Route::put('homeOng/perfil-ong-atualizar/{id}', 'OngController@atualizarOng');
 
-    // Lista perfil da ONG com a permissão do USER
-
-
-    /* Route::get('home/ong/{id}/user/{user?}', 'OngController@listarOng');   Rota desativada */
-
-
-
-    Route::get('busca/{id}', 'OngController@buscarOng');
-
-    // Deltar usuario e seus relacionamentos
-    Route::delete('/delete/{id}', 'UserController@delete');
-
-
+    Route::get('homeOng/galeria/postar/{id}', 'GalleryController@adicionarFoto');
+    Route::post('homeOng/galeria/salvar/', 'GalleryController@postarFoto');
+   
 
     /*  ######################  Rotas EVENTOS   ############################# */
     Route::get('eventos/{id}', 'ActionEventController@listaEvento');
@@ -60,17 +53,22 @@ Route::middleware(['auth'])->group(function (){
 
 
 
+
 // ######################### Rotas de BUSCAS   #################################
 Route::get('busca/{busca}', 'OngController@buscarOng');
 
 Route::get('home/listar-ongs/{id}', 'UserController@allOngs');
+
+Route::get('homeOng/listar-eventos/{id}', 'ActionEvent@allEvents');
+
+Route::get('homeOng/listar-fotos/{id}', 'GalleryController@allFotos'); 
 
 
 // ####################### Rotas para acesso site NÃO LOGADO   ################################
 
 Route::get('/', function () { return view('index'); });
 
-Route::get('/galeria', function(){ return view('galeria'); });
+Route::get('/galeria', 'GalleryController@index');
 
 Route::get('/faq', function(){ return view('faq'); });
 

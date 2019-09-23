@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ActionEvent;
 use App\User;
 use App\Ong;
 use App\OngHasUser;
@@ -22,9 +23,9 @@ class OngController extends Controller
     public function listarOng($idOng)
     {
         $ong = Ong::find($idOng);
-      /*   $ong->users; */
+        $eventos = ActionEvent::all()->where('id_ong', '=', $ong->id);
 
-        return view('homeOng', compact('ong'));
+        return view('homeOng')->with(['ong' => $ong ,'eventos' => $eventos]);
     }
 
 
@@ -61,7 +62,7 @@ class OngController extends Controller
 
 
         $arquivo = $request->file('imagem');
-        $userId = $request->input('id');
+       /*  $userId = $request->input('id'); */
         if($arquivo == NULL){
             $path = $ong->avatar;
         }else{

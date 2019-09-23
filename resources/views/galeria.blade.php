@@ -2,8 +2,6 @@
 @section('content')
 
 
-
-
 <!--  =========================== Seção Home Galeria - (INÍCIO)  ==========================  -->
 
 <section class="home">
@@ -21,7 +19,7 @@
 
 <!--  ===================== Seção Galeria de fotos da Ongs - (INÍCIO)  ====================  -->
 
-<section id="galeria" class="galeria-section">
+<section id="galeria" class="galeria-section  mb-5">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-md-offset-12 text-center heading-section ">
@@ -29,40 +27,53 @@
                 <p>Galeria que vale mil palavras</p>
             </div>
         </div>
+
+
+
+@if($fotos->isEmpty()  )
+
+
         <div class="row">
             <div class="col-12 box-img-galeria">
-               <div class="img-galeria box-img-animate ">
-                   <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos">
-                       <img src="{{asset("images/photo_01.jpeg")}}" alt="">
-                   </a>
-               </div>
-               <div class="img-galeria box-img-animate">
-                    <a href="{{asset("images/photo-6.jpg")}}" class="galeria" data-lightbox="photos">
-                        <img src="{{asset("images/photo-6.jpg")}}" alt="">
-                    </a>
-                </div>
-                <div class="img-galeria box-img-animate">
+                <div class="img-galeria box-img-animate ">
                     <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos">
                         <img src="{{asset("images/photo_01.jpeg")}}" alt="">
                     </a>
                 </div>
                 <div class="img-galeria box-img-animate">
-                    <a href="{{asset("images/photo-6.jpg")}}" class="galeria" data-lightbox="photos">
-                        <img src="{{asset("images/photo-6.jpg")}}" alt="">
+                    <a href="{{asset("images/photo-amazonia.jpeg")}}" class="galeria" data-lightbox="photos">
+                        <img src="{{asset("images/photo-amazonia.jpeg")}}" alt="">
                     </a>
                 </div>
                 <div class="img-galeria box-img-animate">
-                        <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos">
-                            <img src="{{asset("images/photo_01.jpeg")}}" alt="">
-                        </a>
-                    </div>
-                    <div class="img-galeria">
-                    <a href="{{asset("images/photo-6.jpg")}}" class="galeria" data-lightbox="photos">
-                        <img src="{{asset("images/photo-6.jpg")}}" alt="">
+                    <a href="{{asset("images/photo-volunteer.jpg")}}" class="galeria" data-lightbox="photos">
+                        <img src="{{asset("images/photo-volunteer.jpg")}}" alt="">
                     </a>
                 </div>
             </div>
+        </div> 
+@else 
+
+<div class="row">
+        <div class="col-12 box-img-galeria">
+
+            @foreach ($fotos as $foto)
+                
+            <div class="img-galeria box-img-animate ">
+                <a href="{{url($foto->image)}}" class="galeria" data-lightbox="photos">
+                <img src="{{url($foto->image)}}" title="{{$foto->name}}" alt="">
+                </a>
+            </div>
+            @endforeach
+            
         </div>
+    </div>        
+
+
+
+
+             
+   
 
 
       <!--  <div class="bgbox">
@@ -97,9 +108,14 @@
                 <a href="#" class="btn btn-success btn-lg">Seja um Voluntário</a>
             </div>
         </div> --}}
+
+        <!--  ===================== Botao seja voluntário - (FINAL)  ====================  -->
+        @endif
     </div>
-</section>
-<!--  ===================== Botao seja voluntário - (FINAL)  ====================  -->
+</section>        
+
+
+
 
 
 @endsection

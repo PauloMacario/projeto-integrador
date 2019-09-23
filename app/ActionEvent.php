@@ -13,4 +13,9 @@ class ActionEvent extends Model
     ];
 
     public $timestamps = false;
+
+    public function ongs()
+     {
+         return $this->belongsTo('App\Ong', 'id');
+     }
 }

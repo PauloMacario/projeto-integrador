@@ -2,7 +2,7 @@
 
 @section('content')
 
-@if(isset($ong) )
+@if(isset($ong))
 
 
 <div class="">
@@ -15,7 +15,12 @@
                         <div class="row ">
                             <div class="col-md-12 d-flex justify-content-center align-items-center">
                                 <div class="profile-ong-img text-center">
-                                      <a href="#">
+                                      
+                                        <form>
+                                            <input id="id-ong" type="hidden" value="{{$ong->id}}">
+                                        </form>
+                                    
+                                    <a href="#">
                                         @if($ong->avatar == NULL)
                                             <img src="{{url('images/avatar-ong-default.png')}}" alt=""  title="Adicione uma foto">
                                         @else
@@ -39,63 +44,60 @@
                             </div>
                         </div>
                         <div class="row ">
-                            <div class="col-md-4 ong-contact ">
+                            <div class="col-md-12 ong-contact ">
                                 <div class="profile-work text-center ">
 
 
+                                <div class="row ong-description">        
+                                    <div class="col-md-6  text-rigth">
+                                        @if(isset($ong) && $ong->website1 != null)
+                                        <p class=" ml-2"><span class=""><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website1}}" target="_blank">{{$ong->website1}}</a></span></p>
+                                        <p class=" ml-2"><span class=""><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website2}}" target="_blank">{{$ong->website1}} </a></span></p>
 
-
-                                    @if(isset($ong) && $ong->website1 != null)
-                                    <p class=" ml-2"><span class=""><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website1}}" target="_blank">{{$ong->website1}}</a></span></p>
-                                    <p class=" ml-2"><span class=""><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website2}}" target="_blank">{{$ong->website1}} </a></span></p>
-
-                                    <p class=" ml-2"><span class=""><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website3}}" target="_blank">{{$ong->website1}}</a></span></p>
-                                    <p class=" ml-2"><span class=""><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website4}}" target="_blank">{{$ong->website1}} </a></span></p>
-
-
-                                    <p class=" ml-2"><span><span><i class="fas fa-road icone-perfil"></i> </span>
-                                        <span>{{$ong->address}}</span></span>
-                                    </p>
-                                    <p class=" ml-2"><span><span><i class="fas fa-map-signs icone-perfil"></i> </span>
-                                        <span>{{$ong->district}}</span></span>
-                                    </p>
-                                    <p class=" ml-2"><span><span><i class="fas fa-map-marked-alt icone-perfil"></i> </span>
-                                        <span>{{$ong->city}}</span></span>
-                                    </p>
-                                    <p class=" ml-2"><span><span><i class="fas fa-map-marked-alt icone-perfil"></i> </span>
-                                        <span>{{$ong->uf}}</span></span>
-                                    </p>
-
-                                    @if(isset($ong) && $ong->phone1 != null)
-                                        <p class=" ml-2"><span><span><i class="fas fa-phone-alt icone-perfil"></i></i> </span>
-                                            <span>{{$ong->phone1}}</span></span>
+                                        <p class=" ml-2"><span class=""><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website3}}" target="_blank">{{$ong->website1}}</a></span></p>
+                                        <p class=" ml-2"><span class=""><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website4}}" target="_blank">{{$ong->website1}} </a></span></p>
+                                        <p class=" ml-2"><span><i class="far fa-envelope icone-perfil"></i>{{$ong->email}}</span></p>
+                                    </div>
+                                    <div class="col-md-6 text-rigth">
+                                        <p class=" ml-2"><span><i class="fas fa-road icone-perfil"></i>{{$ong->address}}</span>
                                         </p>
-                                        <p class=" ml-2"><span><span><i class="fas fa-phone-alt icone-perfil"></i></i> </span>
-                                            <span>{{$ong->phone2}}</span></span>
+                                        <p class=" ml-2"><span><i class="fas fa-map-signs icone-perfil"></i>{{$ong->district}}</span>
                                         </p>
-                                        <p class=" ml-2"><span><span><i class="far fa-envelope icone-perfil"></i> </span>
-                                            <span>{{$ong->email}}</span></span>
+                                        <p class=" ml-2"><span><i class="fas fa-map-marked-alt icone-perfil"></i>{{$ong->city}}</span>
                                         </p>
-                                    @endif
+                                        <p class=" ml-2"><span><i class="fas fa-map-marked-alt icone-perfil"></i>{{$ong->uf}}</span>
+                                        </p>
 
+                                        @if(isset($ong) && $ong->phone1 != null)
+                                            <p class=" ml-2">
+                                                <span class=" mr-3"><i class="fas fa-phone-alt icone-perfil"></i>{{$ong->phone1}}</span>                                       
+                                                <span><i class="fas fa-phone-alt icone-perfil"></i> {{$ong->phone2}}</span>
+                                            </p>
+                                        @endif
+                                    <div>        
+                                </div>        
 
                                     @endif
-                                    <div class=" ml-2 mt-5">
+                                    
+                                    
+                                    
+                                </div>
+                                
+                                    <div class="col-12 col-md-12 ml-2 mt-5 ">
+
                                         @foreach ($ong->users as $item)
                                             @if($item->pivot->id_user == Auth::user()->id && $item->pivot->permission_level == 1)
                                                 <p><a href="{{url('homeOng/perfil-ong-editar')}}/{{$ong->id}}" class="btn-editar">Alterar informações</a></p>
                                                 <p><a href="{{url('homeOng/evento/criar/'.$ong->id)}}" class="btn-editar">Criar Evento</a></p>
+                                                <p><a href="{{url('homeOng/galeria/postar/'.$ong->id)}}" class="btn-editar">Postar foto</a></p>
                                             @endif
                                     @endforeach
 
                                     </div>
+                                 
                                     @endif
-
-
-
-                                </div>
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-12">
                                 <div class="col-12 mt-3 mr-3 text-center">
                                     <h3>Eventos</h3>
                                 </div>
@@ -103,24 +105,41 @@
 
 
 
-                                        <table id="tabela" class="table table-striped table-responsive-sm my-ongs">
+                                        <table id="tabela-eventos" class="table table-striped table-responsive-sm my-ongs">
                                             <thead>
                                                 <tr >
-                                                    <th scope="col" class="text-center" width="25%"></th>
-                                                    <th scope="col" class="text-center" width="25%">Nome</th>
-                                                    <th scope="col" class="text-center" width="50%">Descrição</th>
+                                                    <th scope="col" class="text-center" width="10%"></th>
+                                                    <th scope="col" class="text-center" width="20%">Nome</th>
+                                                    <th scope="col" class="text-center" width="40%">Descrição</th>
+                                                    <th scope="col" class="text-center" width="40%">Data</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach ($eventos as $evento)
+                                                <tr >
+                                                <td class="text-center" width="10%"><a href="{{url('eventos/'.$evento->id)}}" ><img src="{{url($evento->image)}}" ></a></td>
+                                                    <td class="text-center" width="20%">{{$evento->title}}</td>
+                                                    <td class="text-center" width="40%">{{$evento->description}}</td>
+                                                    <td class="text-center" width="30%">{{$evento->date}}</td>
+                                                </tr>
 
+
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
                                         <div class="col-12 mt-3 text-center">
                                             <h3>Fotos</h3>
                                         </div>
-                                    <div class="col-12 mt-3">
-                                    </div>
+                                        <div class="col-12 mt-3">
+
+                                                <div class="col-12">
+                                                <div id="foto-homeOng" class="" >
+                                                   
+                                                </div>
+        
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>

@@ -174,6 +174,51 @@
 
 					})
 				});
+				
+// ################  Lista no HomeOng os Eventos ####################
+$(function(){
+	var id = $('#id-ong').val()
+	$.ajax({
+			method:'GET',
+			url: 'listar-eventos/'+id,
+				success: function(response){
+					console.log(response)
+				   for(var i = 0; i < response.ongs.length; i++ ){
+
+
+					$('#tabela').prepend('<tr><td><a href="/homeOng/'+response.ongs[i].id+'" ><img src="'+response.ongs[i].avatar+'"></a></td> <td>'+response.ongs[i].name+'</td><td>'+response.ongs[i].description+'</td></tr>')
+				   }
+				}
+
+				})
+			});
+
+
+// ################ Lista no HomeOng as Fotos ####################
+
+
+$(function(){
+	var id = $('#id-ong').val()
+	$.ajax({
+			method:'GET',
+			url: 'listar-fotos/'+id,
+				success: function(response){
+					console.log(response)
+				   for(var i = 0; i < response.length; i++ ){
+					console.log(response[i].image)
+
+					$('#foto-homeOng').prepend('<div class="fotos"><img src="../'+response[i].image+'"> </div>')
+				   }
+				}
+
+				})
+			});
+
+
+
+
+
+
 
 
 

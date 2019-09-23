@@ -80,7 +80,7 @@
                     <label class="custom-file-label" for="">Escolha uma foto...</label>
                 </div>
             </div>
-        <div class="form-row mb-4">
+        <div class="form-row mb-4 d-flex justify-content-center">
             <div class="text-center preview-text "style="">
                 <h6 >Pré-Visualização</h6>
             </div>

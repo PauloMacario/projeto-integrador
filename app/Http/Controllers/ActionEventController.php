@@ -27,10 +27,21 @@ class ActionEventController extends Controller
         return view('homeEventos', compact('evento', 'ong'));
     }
 
+    public function allEvents($id)
+    {
+
+        $ongEventos = ActionEvent::all()->where('id_ong', '=', $id);
+        return $ongEventos;
+    }
+
+
+
+
+
     public function adicionarEvento($id2)
     {
         $segmentos = Segment::all();
-        $ong = Segment::find($id2);
+        $ong = Ong::find($id2);
         return view('novoEvento', compact('segmentos', 'ong'));
     }
 
@@ -80,7 +91,7 @@ class ActionEventController extends Controller
 
 
 
-            return redirect('eventos/'. $evento->id);
+            return redirect('evento/'. $evento->id);
 
             }
     }

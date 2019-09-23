@@ -36,32 +36,29 @@
 
         <div class="row row-bottom-padded-md  ">
 
-    @foreach ($ongs as $ong)
-
-
-
+            @foreach ($ongs as $ong)
             <div class="col-md-4 col-sm-6 mb-4">
                 <div class="noticia box-img-animate">
-                    @if($ong->avatar)
-                        <a href="{{url('homeOng/'.$ong->id)}}"><img class="img-responsive" src="{{url($ong->avatar)}}" alt="" width="250" height="200">
-                    @else
-                        <a href="login"><img class="img-responsive" src="{{url('images/ongDefault.jpg')}}" alt="" width="250" height="200">
-                    @endif
+                @if($ong->avatar)
+                    <a href="{{url('homeOng/'.$ong->id)}}"><img class="img-responsive" src="{{url($ong->avatar)}}" title="{{$ong->name}}" alt="" width="250" height="200">
+                @else
+                    <a href="{{url('homeOng/'.$ong->id)}}"><img class="img-responsive" src="{{url('images/ongDefault.jpg')}}" title="{{$ong->name}}" alt="" width="250" height="200">
+                @endif
+                    </a>
+                    <a href="{{url('homeOng/'.$ong->id)}}">
                         <div class="noticia-text">
                             <div class="noticia-title">
-                            <h3>{{$ong->name}}</h3>
+                                <h3>{{$ong->name}}</h3>
                                 <p>{{$ong->description}}</p>
                             </div>
                             <div class="mt-2 text-center ">
-
-                                <p>Ler mais...</p>
+                                <p> Saber mais...</p>
                             </div>
                         </div>
                     </a>
-
                 </div>
             </div>
-    @endforeach
+            @endforeach
         </div>
     </div>
 @endif

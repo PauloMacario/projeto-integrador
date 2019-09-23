@@ -81,7 +81,15 @@ ul li{
 
   }
 
+#foto-homeOng{
+  display:flex;
+  justify-content: space-evenly;
+}
 
+#foto-homeOng img{
+  width:100px;
+  height:100px;
+}
 
 
 

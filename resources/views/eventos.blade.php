@@ -7,13 +7,13 @@
 <section class="home">
 		<div class="overlay"></div>
 		<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo-gt.jpeg);">
-			<a href="#titulo" class=""> 
+			<a href="#titulo" class="">
 				<div class="desc ">
 					<h2><strong>Eventos</strong></h2>
 					<span>Alguns de nossos eventos cadastrados</span>
-						
+
 					</div>
-				</a>	
+				</a>
 			</div>
 		</section>
 
@@ -33,7 +33,7 @@
 				</div>
 			</div>
 
-			@if($eventos->isEmpty())    
+			@if($eventos->isEmpty())
     <div class="container">
         <div class="titulo">
             <div class="col-md-12 col-md-offset-12 text-center heading-section ">
@@ -42,30 +42,57 @@
         </div>
     </div>
     <div class="container">
-@else 
+@else
 
 			<div class="container">
 				<div class="row row-bottom-padded-md ">
+                    @foreach ($eventos as $evento)
+                        <div class="col-md-4 col-sm-6 mb-4">
+                            <div class="noticia box-img-animate">
+                                <a href="{{url('homeOng/'.$evento->id)}}"><img class="img-responsive" src="{{url($evento->image)}}" title="{{$evento->title}}" alt="" width="250" height="200"></a>
+                                <a href="{{url('homeOng/'.$evento->id)}}">
+                                    <div class="noticia-text">
+                                        <div class="noticia-title">
+                                            <h3>{{$evento->title}}</h3>
+                                            <p>{{$evento->description}}</p>
+                                        </div>
+                                        <div class="mt-2 text-center ">
+                                            <p> Saber mais...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
 
-						@foreach ($eventos as $evento)
-					<div class="col-md-4 col-12 box-img-animate">
+
+
+
+
+
+
+
+
+
+
+
+					{{-- <div class="col-md-4 col-12 box-img-animate">
 						<div class="noticia">
 							<a href="{{url('eventos/'.$evento->id)}}">
-								<img src="{{$evento->image}}" alt="">
-								
-								</a>
-							<div class="noticia-text">
-								<div class="noticia-title">
-									<h3><a href=""#>{{$evento->title}}</a></h3>
-									<span class="posted_by">{{$evento->date}}</span>
-									
-									<p>{{$evento->description}}</p>
-									<p><a href="#">Leia mais...</a></p>
-								</div>
-							</div> 
-						</div>
-					</div>
+								<img src="{{$evento->image}}" alt="" title="{{$evento->title}}" width="250px" height="200px">
+                            </a>
+                            <a href="{{url('eventos/'.$evento->id)}}">
+                                <div class="noticia-text">
+                                    <div class="noticia-title">
+                                        <h3>{{$evento->title}}</h3>
+                                        <span class="posted_by">{{$evento->date}}</span>
 
+                                        <p>{{$evento->description}}</p>
+                                        <p>Leia mais...</p>
+                                    </div>
+                                </div>
+                            </a>
+						</div>
+					</div> --}}
 					@endforeach
 
 						</div>
@@ -74,7 +101,7 @@
 				@endif
 				<div class="row">
 					<div class="col-md-12 col-md-offset-12 text-center ">
-						
+
 					</div>
 				</div>
 			</div>
@@ -82,4 +109,4 @@
 <!--  =========================== Seção Notícia do blog -  (FINAL)  ==========================  -->
 
 
-@endsection		
+@endsection
