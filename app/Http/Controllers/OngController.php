@@ -24,7 +24,6 @@ class OngController extends Controller
     {
         $ong = Ong::find($idOng);
         $eventos = ActionEvent::all()->where('id_ong', '=', $ong->id);
-
         return view('homeOng')->with(['ong' => $ong ,'eventos' => $eventos]);
     }
 
@@ -35,7 +34,6 @@ class OngController extends Controller
         if(count($result) <=0){
             $result = Ong::where('district', 'LIKE', "%{$busca}%")->get();
         }
-
         return $result;
      }
 
@@ -59,8 +57,6 @@ class OngController extends Controller
     public function atualizarOng(Request $request, $id)
     {
         $ong = ong::find($id);
-
-
         $arquivo = $request->file('imagem');
        /*  $userId = $request->input('id'); */
         if($arquivo == NULL){

@@ -19,24 +19,17 @@ class ActionEventController extends Controller
 
     public function listaEvento($id)
     {
-
         $evento = ActionEvent::find($id);
         $idOng = $evento->id_ong;
         $ong = Ong::find($idOng);
-
         return view('homeEventos', compact('evento', 'ong'));
     }
 
     public function allEvents($id)
     {
-
         $ongEventos = ActionEvent::all()->where('id_ong', '=', $id);
         return $ongEventos;
     }
-
-
-
-
 
     public function adicionarEvento($id2)
     {
@@ -49,19 +42,16 @@ class ActionEventController extends Controller
     // Salva o Evento
     public function salvarEvento(Request $request)
     {
-
         $user = $request->input('id');
         $ong = $request->input('id2');
-
         $verifica = OngHasUser::all()->where('id_user', '=', $user)
-                                ->where('id_ong', '=', $ong)
-                                ->where('permission_level', '=', 1);
+                                     ->where('id_ong', '=', $ong)
+                                     ->where('permission_level', '=', 1);
 
         if(count($verifica) <= 0){
             $error = 'erro';
             return redirect('home/')->with('error', $error);
         }else{
-
 
         $arquivo = $request->file('imagem');
 
@@ -86,12 +76,7 @@ class ActionEventController extends Controller
             ]);
 
             $evento = ActionEvent::all()->last();
-
-
-
-
-
-            return redirect('evento/'. $evento->id);
+            return redirect('eventos/'. $evento->id);
 
             }
     }

@@ -16,7 +16,6 @@ class GalleryController extends Controller
         return view('galeria', compact('fotos'));
     }
 
-
     public function allFotos($id)
     {
         $ongFotos = Gallery::all()->where('id_ong', '=', $id);
@@ -25,43 +24,38 @@ class GalleryController extends Controller
 
     public function adicionarFoto($id)
     {
-    
       $ong = Ong::find($id);
       $ongId = $ong->id;
       return view('galeriaPostar')->with('ong',$ongId);
     }
 
-    
+
 
     public function postarFoto(Request $request)
     {
-       
         $ong = $request->input('id');
         $arquivo = $request->file('imagem');
-      
+
         $request->validate([
             "imagem" => "required",
-        ]);    
+        ]);
 
         $pasta = 'fotos';
         $path = Imagem::criarCaminhoImagem($arquivo, $pasta);
-       
+
         Gallery::create([
             'name' => $request->input('nome'),
             'id_ong' => $ong,
             'image' => $path
-           
-           
+
+
         ]);
+        /* $url = url('homeOng/'.$ong); */
+        return redirect('homeOng/'.$ong);
 
-       
-        $url = url('homeOng/'.$ong);
 
-        return redirect($url);
-
-       
     }
 
 
-    
+
 }

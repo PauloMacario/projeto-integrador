@@ -174,7 +174,7 @@
 
 					})
 				});
-				
+
 // ################  Lista no HomeOng os Eventos ####################
 $(function(){
 	var id = $('#id-ong').val()
@@ -237,7 +237,7 @@ $('#btn-busca').click(function(e){
                         $('#box-result').css('max-height', '800px')
                         $('#box-result').css('overflow', 'scroll')
                             for(var i = 0; i < response.length; i++ ){
-                                $('#tabela').addClass('reset').append('<tr class="result-busca"><td><a href="ong/'+response[i].id+'" ><img src="'+response[i].avatar+'"></a></td><td>'+response[i].name+'</td><td>'+response[i].description+'</td> <td>'+response[i].district+'</td></tr>')
+                                $('#tabela').addClass('reset').append('<tr class="result-busca"><td><a href="homeOng/'+response[i].id+'" ><img src="'+response[i].avatar+'"></a></td><td>'+response[i].name+'</td><td>'+response[i].description+'</td> <td>'+response[i].district+'</td></tr>')
                             }
                         }
                         else{

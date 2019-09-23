@@ -84,11 +84,13 @@ ul li{
 #foto-homeOng{
   display:flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 #foto-homeOng img{
   width:100px;
   height:100px;
+  margin-bottom:10px;
 }
 
 
