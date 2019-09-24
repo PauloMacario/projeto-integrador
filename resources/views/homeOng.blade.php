@@ -37,65 +37,123 @@
                                     <h5 class="text-center">Segmento: <span>{{$ong->segment}}</span></h5>
                                     <p><span>{{$ong->description}}</span></p>
 
-
-
-
                                 </div>
                             </div>
                         </div>
-                        <div class="row ">
+                        <div class="row">
                             <div class="col-md-12 ong-contact ">
-                                <div class="profile-work text-center ">
-
+                                <div class="profile-work text-center">
 
                                 <div class="row ong-description">        
-                                    <div class="col-md-6  text-rigth">
-                                        @if(isset($ong) && $ong->website1 != null)
-                                        <p class=" ml-2"><span class=""><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website1}}" target="_blank">{{$ong->website1}}</a></span></p>
-                                        <p class=" ml-2"><span class=""><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website2}}" target="_blank">{{$ong->website1}} </a></span></p>
-
-                                        <p class=" ml-2"><span class=""><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website3}}" target="_blank">{{$ong->website1}}</a></span></p>
-                                        <p class=" ml-2"><span class=""><i class="fas fa-globe-africa icone-perfil"></i><a href="htpp://{{$ong->website4}}" target="_blank">{{$ong->website1}} </a></span></p>
-                                        <p class=" ml-2"><span><i class="far fa-envelope icone-perfil"></i>{{$ong->email}}</span></p>
+                                    <div class="col-md-6  text-right">
+                                        <table class="table">
+                                            <tbody>
+                                                    <tr>
+                                                        <td align="right">
+                                                            <span><i class="fas fa-globe-africa icone-perfil"></i> </span>
+                                                        </td>
+                                                        <td align="left">
+                                                            @if ($ong->website1 == NULL)
+                                                            Adicione seu website
+                                                            @else
+                                                            <span><a href="htpp://{{$ong->website1}}" target="_blank">{{$ong->website1}}</a></span>
+                                                            @endif
+                                                        </td>
+                                                    </tr>
+                                                    @if ($ong->website2 == NULL)                                        
+                                                    @else
+                                                        <tr>
+                                                            <td align="right">
+                                                                <span><i class="fas fa-globe-africa icone-perfil"></i> </span>
+                                                            </td>
+                                                            <td align="left">
+                                                                <span><a href="htpp://{{$ong->website2}}" target="_blank">{{$ong->website2}}</a></span>
+                                                            </td>
+                                                        </tr>
+                                                    @endif
+                                                    @if ($ong->website3 == NULL)                                        
+                                                    @else
+                                                        <tr>
+                                                            <td align="right">
+                                                                <span><i class="fas fa-globe-africa icone-perfil"></i> </span>
+                                                            </td>
+                                                            <td align="left">
+                                                                <span><a href="htpp://{{$ong->website3}}" target="_blank">{{$ong->website3}}</a></span>
+                                                            </td>
+                                                        </tr>
+                                                    @endif
+                                                    @if ($ong->website4 == NULL)
+                                                    @else
+                                                        <tr>
+                                                            <td align="right">
+                                                                <span><i class="fas fa-globe-africa icone-perfil"></i> </span>
+                                                            </td>
+                                                            <td align="left">
+                                                                <span><a href="htpp://{{$ong->website4}}" target="_blank">{{$ong->website4}}</a></span>
+                                                            </td>
+                                                        </tr>
+                                                    @endif                                                    
+                                                        <tr>
+                                                            <td align="right"><i class="fas fa-phone-alt icone-perfil"></td>
+                                                    @if ($ong->phone1 == NULL)
+                                                            <td align="left">Adicione um número de contato</td>
+                                                    @else
+                                                            <td align="left">{{$ong->phone1}}</td>
+                                                        </tr>
+                                                    @endif
+                                                    @if ($ong->phone2 == NULL)
+                                                    @else
+                                                    <tr>
+                                                        <td align="right"><i class="fas fa-phone-alt icone-perfil"></td>
+                                                        <td align="left">{{$ong->phone2}}</td>
+                                                    </tr>
+                                                    @endif
+                                                    <tr>
+                                                        <td align="right"><i class="far fa-envelope icone-perfil"></td>
+                                                        <td align="left">{{$ong->email}}</td>
+                                                    </tr>     
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div class="col-md-6 text-rigth">
-                                        <p class=" ml-2"><span><i class="fas fa-road icone-perfil"></i>{{$ong->address}}</span>
-                                        </p>
-                                        <p class=" ml-2"><span><i class="fas fa-map-signs icone-perfil"></i>{{$ong->district}}</span>
-                                        </p>
-                                        <p class=" ml-2"><span><i class="fas fa-map-marked-alt icone-perfil"></i>{{$ong->city}}</span>
-                                        </p>
-                                        <p class=" ml-2"><span><i class="fas fa-map-marked-alt icone-perfil"></i>{{$ong->uf}}</span>
-                                        </p>
 
-                                        @if(isset($ong) && $ong->phone1 != null)
-                                            <p class=" ml-2">
-                                                <span class=" mr-3"><i class="fas fa-phone-alt icone-perfil"></i>{{$ong->phone1}}</span>                                       
-                                                <span><i class="fas fa-phone-alt icone-perfil"></i> {{$ong->phone2}}</span>
-                                            </p>
-                                        @endif
-                                    <div>        
-                                </div>        
+                                    
+                                    <div class="col-md-6 text-right">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="right"><i class="fas fa-road icone-perfil"></i></td>
+                                                    <td align="left">{{$ong->address}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right"><i class="fas fa-map-signs icone-perfil"></i></td>
+                                                    <td align="left">{{$ong->district}}</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right"><i class="fas fa-map-marked-alt icone-perfil"></i></td>
+                                                    <td align="left">{{$ong->city}}</span></span></td>                                               
+                                                </tr>
+                                                <tr>
+                                                    <td align="right"><i class="fas fa-map-marked-alt icone-perfil"></i></td>
+                                                    <td align="left">{{$ong->uf}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
 
-                                    @endif
-                                    
-                                    
-                                    
-                                </div>
+                                    </div>
                                 
-                                    <div class="col-12 col-md-12 ml-2 mt-5 ">
+                                    <div class="col-12 col-md-12 ml-2 mt-5 d-flex flex-wrap justify-content-center">
 
                                         @foreach ($ong->users as $item)
                                             @if($item->pivot->id_user == Auth::user()->id && $item->pivot->permission_level == 1)
-                                                <p><a href="{{url('homeOng/perfil-ong-editar')}}/{{$ong->id}}" class="btn-editar">Alterar informações</a></p>
-                                                <p><a href="{{url('homeOng/evento/criar/'.$ong->id)}}" class="btn-editar">Criar Evento</a></p>
+                                                <p class="mr-3"><a href="{{url('homeOng/perfil-ong-editar')}}/{{$ong->id}}" class="btn-editar">Alterar informações</a></p>
+                                                <p class="mr-3"><a href="{{url('homeOng/evento/criar/'.$ong->id)}}" class="btn-editar">Criar Evento</a></p>
                                                 <p><a href="{{url('homeOng/galeria/postar/'.$ong->id)}}" class="btn-editar">Postar foto</a></p>
                                             @endif
-                                    @endforeach
+                                        @endforeach
 
                                     </div>
                                  
-                                    @endif
+@endif
                             </div>
                             <div class="col-md-12">
                                 <div class="col-12 mt-3 mr-3 text-center">
