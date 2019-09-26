@@ -18,4 +18,8 @@ class ActionEvent extends Model
      {
          return $this->belongsTo('App\Ong', 'id');
      }
+
+     public function users(){
+        return $this->belongsToMany('App\User', 'action_event_has_user', 'id_action_event', 'id_user');
+      }
 }

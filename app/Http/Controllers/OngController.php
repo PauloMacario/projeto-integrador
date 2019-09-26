@@ -7,6 +7,7 @@ use App\User;
 use App\Ong;
 use App\OngHasUser;
 use App\Segment;
+use App\Gallery;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Imagem;
@@ -23,8 +24,10 @@ class OngController extends Controller
     public function listarOng($idOng)
     {
         $ong = Ong::find($idOng);
-        $eventos = ActionEvent::all()->where('id_ong', '=', $ong->id);
-        return view('homeOng')->with(['ong' => $ong ,'eventos' => $eventos]);
+        $eventos = ActionEvent::where('id_ong', '=', $ong->id)->paginate(4);
+
+        $fotos = Gallery::all()->where('id_ong', '=', $ong->id);
+        return view('homeOng')->with(['ong' => $ong ,'eventos' => $eventos, 'fotos' => $fotos]);
     }
 
 

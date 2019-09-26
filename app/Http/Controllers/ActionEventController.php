@@ -7,7 +7,9 @@ use App\Http\Controllers\Imagem;
 use App\Ong;
 use App\OngHasUser;
 use App\ActionEvent;
+use App\ActionEventHasUser;
 use App\Segment;
+
 
 class ActionEventController extends Controller
 {
@@ -17,12 +19,15 @@ class ActionEventController extends Controller
        return view('eventos')->with('eventos', $eventos);
     }
 
-    public function listaEvento($id)
+    public function listarEvento($id)
     {
+        $total=[];
         $evento = ActionEvent::find($id);
+        $idUser =  $evento->users;
+        $total = count($idUser);
         $idOng = $evento->id_ong;
         $ong = Ong::find($idOng);
-        return view('homeEventos', compact('evento', 'ong'));
+        return view('homeEventos', compact('evento', 'ong' ,'idUser', 'total'));
     }
 
     public function allEvents($id)
@@ -112,6 +117,35 @@ class ActionEventController extends Controller
             return redirect('eventos/'. $evento->id);
 
             }
+    }
+
+    public function participar($idEvento, $idUser)
+    {
+
+
+        ActionEventHasUser::create([
+            'id_action_event' =>  $idEvento,
+            'id_user' =>  $idUser
+
+        ]);
+
+
+        return back()->with('sucess','Participação confirmada com sucesso.');
+    }
+
+    public function cancelarParticipacao(Request $request)
+    {
+
+        $idEvento = $request->input('idEvento');
+        $idUser = $request->input('idUser');
+
+        $eventoUser = ActionEventHasUser::all()
+                                            ->where('id_action_event', '=',  $idEvento )
+                                            ->where('id_user', '=', $idUser)->first();
+
+        $eventoUser->delete();
+
+        return back()->with('sucess','Participação cancelada.');
     }
 
 }

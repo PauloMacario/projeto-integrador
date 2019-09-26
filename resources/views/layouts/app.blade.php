@@ -51,7 +51,7 @@
 		<!-- Main JS -->
 		<script defer src="{{asset('js/main.js')}}"></script>
 
-		
+
 
 		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
@@ -81,8 +81,8 @@
                             <a href="https://www.facebook.com/" class="grow" target="_blank"><!-- <i class="icon-facebook2"></i> --> <i class="fab fa-facebook-square" title="Facebook"></i></a>
                             <a href="https://twitter.com/" class="grow" target="_blank"><!-- <i class="icon-twitter2"></i> --> <i class="fab fa-twitter-square" title="Twitter"></i></a>
                             <a href="https://www.instagram.com/" class="grow" target="_blank"><!-- <i class="icon-instagram2"></i> --><i class="fab fa-instagram" title="Instagram"></i></a>
-							
-                        	
+
+
 						</div>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
 									<a class="nav-link" href="{{asset('galeria')}}">Fotos</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{asset('')}}">Buscar</a> <!-- linkar pag de eventos -->
+									<a class="nav-link" href="{{asset('busca')}}">Buscar</a> <!-- linkar pag de eventos -->
 								</li>
 
 							{{-- 	@if (Auth::user()->id == 1) <!-- criar controller ONG_HAS_USER -->
@@ -152,7 +152,7 @@
 									</a>
 									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 											<a class="dropdown-item " href="{{asset('home')}}">Meu Perfil</a>
-                                            
+
                                             <a class="dropdown-item" href="{{asset('home')}}" data-toggle="modal" data-target="#modalExemplo">Encerrar Conta</a>
 									{{-- 		<a href="{{url('home/perfilEditar')}}" class="btn btn-secondary">Alterar Perfil</a> --}}
 
@@ -230,14 +230,14 @@
 									<a href="#"><i class="fab fa-facebook-square" title="Facebook"></i></a>
 									<a href="#"><i class="fab fa-twitter-square" title="Twitter"></i></a>
 									<a href="#"><i class="fab fa-instagram" title="Instagram"></i></a>
-									
-								</div> 
+
+								</div>
 								<p>Copyright Projeto Integrador <a href="{{asset('home')}}"> Páginas do Bem</a>. Todos os direitos reservados.</p>
 							</div>
 						</div>
 					</div>
 				</div>
-			</footer>	
+			</footer>
 		</div>
 	</main>
 </body>
@@ -245,12 +245,11 @@
 
 
 
-	
+
 
 </html>
-	
-			
 
 
 
-       
+
+

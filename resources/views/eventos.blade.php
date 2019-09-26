@@ -33,7 +33,7 @@
 				</div>
 			</div>
 
-			@if($eventos->isEmpty())
+			@if(!isset($eventos))
     <div class="container">
         <div class="titulo">
             <div class="col-md-12 col-md-offset-12 text-center heading-section ">
@@ -49,8 +49,8 @@
                     @foreach ($eventos as $evento)
                         <div class="col-md-4 col-sm-6 mb-4">
                             <div class="noticia box-img-animate">
-                                <a href="{{url('homeOng/'.$evento->id)}}"><img class="img-responsive" src="{{url($evento->image)}}" title="{{$evento->title}}" alt="" width="250" height="200">
-                                
+                                <a href="{{url('eventos/'.$evento->id)}}"><img class="img-responsive" src="{{url($evento->image)}}" title="{{$evento->title}}" alt="" width="250" height="200"></a>
+                                <a href="{{url('eventos/'.$evento->id)}}">
                                     <div class="noticia-text">
                                         <div class="noticia-title">
                                             <h3>{{$evento->title}}</h3>

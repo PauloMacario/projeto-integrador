@@ -12,4 +12,6 @@ class ActionEventHasUser extends Model
     ];
 
     public $timestamps = false;
+
+
 }

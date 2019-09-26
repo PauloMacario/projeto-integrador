@@ -2,11 +2,11 @@
 @section('content')
 <!--  =========================== Seção home - Seja voluntário  (INÍCIO)  ==========================  -->
 
-<a href="login" target="_blank" class=""> 
+<a href="login" target="_blank" class="">
 		<section class="home" id="home">
 			<div class="overlay"></div>
 			<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/cover_nature_01.jpg);background-size: cover; background-repeat: no-repeat;">
-				<a href="login" class=""> 
+				<a href="login" class="">
 					<div class="desc ">
 						<h2><strong>Seja voluntário!</strong></h2>
 						<span>Encontre aqui um trabalho voluntário para participar </span>
@@ -33,27 +33,27 @@
 			<div class="row row-bottom-padded-md " >
 				<div class="col-lg-4 col-md-12 col-sm-12 text-center">
 					<a href="eventos" >
-						<div class="projeto-img">	
+						<div class="projeto-img">
 							<p>
 								<img src="{{ url ('images/photo-children.jpg')}}" alt="Criança e Adolescente" title="Criança e Adolescente"class="img-responsive img-large img-projeto">
 							</p>
 						</div>
 						<div class="projeto-text">
 							<h3>Criança e Adolescente</h3>
-							<div class="projeto-paragrafo">	
+							<div class="projeto-paragrafo">
 								<p>Encontre aqui organizações que ajudam escolas, orfanatos, creches, hospitais e outras ações que promovam melhorias e apoio para a vida de crianças e adolescentes!</p>
-							</div>	
+							</div>
 
-							
-						</div>	
-					
+
+						</div>
+
 
 
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-12 col-sm-12 text-center">
 					<a href="eventos" >
-						<div class="projeto-img">	
+						<div class="projeto-img">
 							<p>
 								<img src="{{ url ('images/cover_animals_2.jpg')}}" alt="Proteção aos Animais" title="Proteção aos Animais" class="img-responsive img-large img-projeto">
 							</p>
@@ -65,9 +65,9 @@
 							</div>
 						</div>
 
-						<div class="projeto-paragrafo text-center">	
+						<div class="projeto-paragrafo text-center">
 							<button class=" btn btn-primary">Ver Mais...</button>
-						</div>	
+						</div>
 
 					</a>
 				</div>
@@ -85,16 +85,16 @@
 							</div>
 						</div>
 					</a>
-				</div>				
+				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
 
-<!--  =========================== Seção descritiva do site dos Projetos -  (FINAL)  ==========================  -->	
+<!--  =========================== Seção descritiva do site dos Projetos -  (FINAL)  ==========================  -->
 
 
 <!--  =========================== Seção motor de busca co filtros -  (INÍCIO)  ==========================  -->
-		
+
 <div id="busca-section" class="projeto-section">
 	<div class="container ">
 		<div class="row text-center">
@@ -102,15 +102,15 @@
 				<h3>Busque aqui uma Ong para ajudar</h3>
 				<form>
 					  <div class="form-row align-items-center">
-						<div class="col-sm-9 my-1">										
+						<div class="col-sm-9 my-1">
 							<input type="text" id="busca" class="form-control" required placeholder="Digite aqui qualquer palavra">
 						</div>
 						<div class="col-sm-3 my-1">
-							<button type="" id="btn-busca" class="btn btn-success">Buscar</button>	
-						</div>								
-					</div>	
+							<button type="" id="btn-busca" class="btn btn-success">Buscar</button>
+						</div>
+					</div>
 				</form>
-			</div> 
+			</div>
 		</div>
 	</div>
 	<div class="container ">
@@ -119,43 +119,6 @@
 				<div class="alert alert-danger text-center" style="display:none;" id="alert-busca">
 					Digite uma palavra no campo.
 				</div>
-
-<script>
-/* 
-
-$('#btn-busca').click(function(e){									
-    var busca = $('#busca').val()
-    if(!busca){
-        $('#alert-busca').prop('style', 'display:block;')
-        }else{
-            $.ajax({
-                method:'GET',
-                url: 'busca/'+busca,                                             
-                success: function(response){
-                    if(response.length > 0){
-                        $('#box-result').css('display', 'block')
-                        $('#box-result').css('max-height', '800px')
-                        $('#box-result').css('overflow', 'scroll')
-                            for(var i = 0; i < response.length; i++ ){
-                                $('#tabela').addClass('reset').append('<tr class="result-busca"><td><a href="ong/'+response[i].id+'" ><img src="'+response[i].avatar+'"></a></td><td>'+response[i].name+'</td><td>'+response[i].description+'</td> <td>'+response[i].district+'</td></tr>') 
-                            }
-                        }
-                        else{
-                            alert('Nenhum resultado encontrado')
-                            $('#tabela').empty()
-                        }
-                    }  											
-                }) 
-            }
-            e.preventDefault()
-                if($('.result-busca').length >0 ){
-                    $('.reset').empty()
-                }				
-});
-
-
- */
-</script>
 
 
 				<div id="box-result" style="display:none; max-height:800px; overflow:scroll; ">
@@ -167,28 +130,28 @@ $('#btn-busca').click(function(e){
 								<th scope="col" class="text-center" width="25%">Descrição</th>
 								<th scope="col" class="text-center" width="25%">Bairro</th>
 							</tr>
-						</thead>  
+						</thead>
 						<tbody>
-								
+
 						</tbody>
 						</table>
-					</div>	
-							
-					
+					</div>
+
+
 				</div>
-			</div> 					
+			</div>
 		</div>
 	</div>
 <!--  =========================== Seção motor de busca com filtros -  (FINAL)  ==========================  -->
 
 <!--  =========================== Seção resumo das notícias -  (INÍCIO)  ==========================  -->
-		
+
 		<div id="noticia-section" class="projeto-section">
 			<div class="container ">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-12 text-center heading-section">
 						<h3>Conheça as  Ongs participantes</h3>
-						
+
 					</div>
 				</div>
 			</div>
@@ -196,38 +159,38 @@ $('#btn-busca').click(function(e){
 				<div class="row row-bottom-padded-md">
 					<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
 						<div class="noticia">
-						<img width="100%" height="280" src="" >
+						<img width="100%" height="280" src="{{url('images/photo-education.jpg')}}" >
 							<div class="noticia-text">
 								<div class="noticia-title">
-									<h3><a href="">Conheça os 17 Objetivos de Desenvolvimento Sustentável</a></h3>
-									<p>Acesse aqui a Agenda 2030 na íntegra, com o documento final adotado na Cúpula das Nações Unidas sobre o Desenvolvimento Sustentável.</p>									
+									<h3><a href="{{url('eventos')}}">Escola da família</a></h3>
+									<p>Eventos diversos para toda a família se divertir e contribuir com suas idéias.</p>
 								</div>
-							</div> 
+							</div>
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
 						<div class="noticia">
-						<img width="100%" height="280" src="" >
+						<img width="100%" height="280" src="{{url('images/photo-bazar.jpg')}}" >
 							<div class="noticia-text">
 								<div class="noticia-title">
-									<h3><a href="">Um olhar sobre o futuro do Santuário de Elefantes Brasil.</a></h3>
-									<p>Breve descrição da notícia.</p>									
+									<h3><a href="{{url('eventos')}}">Bazar do inverno comunitário </a></h3>
+									<p>Bazar realizado com intuíto de doação e arrecadação de roupas para pessoas necessitadas, venha nos ajudar a ajudar.</p>
 								</div>
-							</div> 
+							</div>
 						</div>
-						
+
 					</div>
 					<div class="clearfix visible-sm-block"></div>
 						<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
 							<div class="noticia">
-								<img width="100%" height="280" src="" >
+								<img width="100%" height="280" src="{{url('images/photo-dog1.jpg')}}" >
 								<div class="noticia-text">
 									<div class="noticia-title">
-										<h3><a href="">O trabalho infantil no Brasil</a></h3>
-										<p>Breve descrição da notícia.</p>
-										
+										<h3><a href="{{url('eventos')}}">Doação de Pets</a></h3>
+										<p>Doação de Caẽs e gatos, você que gosta de animais e tem a intenção de adotar um animalzinho, venha conhecer nossa ong e nossos amiguinhos</p>
+
 									</div>
-								</div> 
+								</div>
 							</div>
 						</div>
 					<div class="clearfix visible-md-block"></div>
@@ -238,13 +201,13 @@ $('#btn-busca').click(function(e){
 					</div>
 				</div> -->
 			</div>
-			<div class="projeto-paragrafo text-center mt-4">	
+			<div class="projeto-paragrafo text-center mt-4">
 					<button class=" btn btn-primary">Ver Mais...</button>
-				</div>	
+				</div>
 		</div>
-		
+
         <!--  =========================== Seção resumo das notícias -  (FINAL)  ==========================  -->
-        
-        
-@endsection		
+
+
+@endsection
 

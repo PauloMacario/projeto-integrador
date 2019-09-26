@@ -28,7 +28,7 @@ textarea{
   resize: none;
 }
 
-a {  
+a {
   -webkit-transition: 0.5s, ease;
   -o-transition: 0.5s, ease;
   transition: 0.5s, ease;
@@ -77,6 +77,19 @@ ul{
   background: #7BC0B3;
 }
 /* =========== Reset e estilos base da estrutura ( FINAL )   ============ */
+::-webkit-scrollbar {
+  background: rgb(227, 245, 242);
+  border-radius:10px;
+  width:12px;
+}
+
+
+::-webkit-scrollbar-thumb        {
+  background: rgb(165, 233, 222);
+  border-radius:10px;
+  border:1px solid rgb(131, 180, 172);
+  }
+
 
 
 
@@ -96,14 +109,14 @@ ul{
 }
 
 .header-top {
- 
+
   padding: 4px 0px;
   background: #7BC0B3;
 }
 
-.social a {  
+.social a {
   font-size: 22px;
-  
+
   margin-right: 15px;
   position: relative;
   -webkit-transition: 0.5s, ease-in-out;
@@ -112,14 +125,14 @@ ul{
 }
 
 
-.social a:hover { 
+.social a:hover {
   color:#e2e3e4;
-  
-} 
+
+}
 
 .social a .fa-facebook-square{
   color:#f8f9fa;
-  transition: 450ms;    
+  transition: 450ms;
   -webkit-transition: 0.5s, ease-in-out;
   -o-transition: 0.5s, ease-in-out;
   transition: 0.5s, ease-in-out;
@@ -133,31 +146,31 @@ ul{
 
 .social a .fa-facebook-square{
   color:#f8faf8;
-  transition: 450ms; 
+  transition: 450ms;
 }
 
 .social a .fa-facebook-square:hover,
 .social a .fa-facebook-square:focus,
 .social a .fa-facebook-square:active{
   color:#557fd4;
-   
+
 }
 
 .social a .fa-twitter-square{
   color:#f8faf8;
-  transition: 450ms; 
+  transition: 450ms;
 }
 
 .social a .fa-twitter-square:hover,
 .social a .fa-twitter-square:focus,
 .social a .fa-twitter-square:active{
   color:#4fabe4;
-  
+
 }
 
 .social a .fa-instagram{
   color:#f8f9fa;
-  transition: 450ms; 
+  transition: 450ms;
 }
 
 .social a .fa-instagram:hover,
@@ -170,7 +183,7 @@ ul{
 .link-topo{
   font-size: 16px !important;
   color:#ffffff;
- 
+
 }
 
 .link-topo:hover{
@@ -484,7 +497,7 @@ ul{
 .noticia a img {
   width: 100%;
 }
-  
+
 .noticia .noticia-text {
   margin-bottom: 30px;
   background: #fff;
@@ -530,17 +543,17 @@ ul{
 .noticia .noticia-text h3 a {
   color: rgba(0, 0, 0, 0.6);
 }
-  
+
 .noticia .noticia-title{
   height:30vh;
   overflow: hidden;
-  -webkit-line-clamp: 5;    
+  -webkit-line-clamp: 5;
 }
 
 .noticia .noticia-title p{
   height:20vh;
   color:#6e6e6e;
-  
+
 
 }
 /* ==========  Noticias e Blog (FINAL)  ==========  */
@@ -625,7 +638,7 @@ ul{
 }
 
 #galeria-list li.one-third {
-  width: 23%;  
+  width: 23%;
 }
 
 #galeria-list li.one-half {
@@ -637,7 +650,7 @@ ul{
 /* ==========  Contato (INÍCIO)  ==========  */
 #contato {
   padding: 7em 0em 0em 0em;
-  
+
 }
 
 #contato .contato-info {
@@ -648,7 +661,7 @@ ul{
   list-style: none;
   margin: 0 0 20px 0;
   position: relative;
-  padding-left: 40px; 
+  padding-left: 40px;
 }
 #contato .contato-info li i {
   position: absolute;
@@ -667,7 +680,7 @@ ul{
  display:flex;
  align-items: center;
  flex-direction: column;
-} 
+}
 
 #contato .form-control {
   -webkit-box-shadow: none;
@@ -708,7 +721,7 @@ section.map {
 .gmap_canvas iframe {
     width: 100%;
     height: 100%;
-}  
+}
 /* ==========  Contato (FINAL)  ==========  */
 
 
@@ -742,13 +755,13 @@ section.map {
 }
 
 .social-icons > a .icon-twitter2{
-  color:#f8f9fa;     
+  color:#f8f9fa;
 }
 
 .social-icons > a .icon-twitter2:hover,
 .social-icons > a .icon-twitter2:focus,
-.social-icons > a .icon-twitter2:active{      
-  color:#6ec6fd;     
+.social-icons > a .icon-twitter2:active{
+  color:#6ec6fd;
 }
 
 .social-icons > a .icon-facebook2{
@@ -763,14 +776,14 @@ section.map {
 
 .social-icons > a .icon-instagram{
   color:#f8f9fa;
-  
+
 }
 
 .social-icons > a .icon-instagram:hover,
 .social-icons > a .icon-instagram:focus,
 .social-icons > a .icon-instagram:active{
   color:#e00e66;
-  
+
 }
 
 .social-icons > a .icon-youtube{
@@ -815,13 +828,13 @@ section.map {
 
 .btn-login{
   padding:6px 16px;
-  border-radius:5px; 
+  border-radius:5px;
   color:#fff;
   background-color: #7BC0B3;
 }
 
 .btn-login:hover{
-  
+
   color:#fff !important;
   background-color: rgb(108, 168, 157);
 }
@@ -833,13 +846,13 @@ section.map {
 .btn-logout.btn-logout, .btn-editar{
   padding:6px 16px;
   BORDER:1PX SOLID rgb(108, 168, 157);
-  border-radius:5px; 
+  border-radius:5px;
   color:rgb(108, 168, 157);
- 
+
 }
 
 .btn-logout:hover, .btn-editar:hover{
-  
+
   color:#fff !important;
   background-color: rgb(108, 168, 157);
 }
@@ -912,8 +925,8 @@ section.map {
   justify-content: space-evenly;
   flex-wrap: wrap;
 
- 
-  
+
+
 }
 
 .img-galeria{
@@ -963,18 +976,21 @@ section.map {
   width:100% !important;
 }
 
+.box-busca{
+    min-height:80vh;
+}
 
 
 /* ============ @ MEDIAS e BRACK POINTS ( INÍCIO ) ============== */
 
 @media screen and (max-width: 991px) {
-  
- 
-  
+
+
+
   .img-large{
     height:450px;
   }
-  
+
   .menu{
     display:block;
     margin-left:20px;
@@ -986,27 +1002,27 @@ section.map {
 
   .btn-login{
     padding:10px 16px;
-   
+
   }
 
   .img-modal-box{
-   
+
     width:600px;
     height:450px;
     margin-left:-300px;
     margin-top:-225px;
-  
+
   }
 
-  
+
 
 }
 
 
 @media screen and (max-width: 768px) {
-  
- 
-  
+
+
+
   .home-cover .desc {
     padding-left: 15px;
     padding-right: 15px;
@@ -1032,7 +1048,7 @@ section.map {
     padding: 3em 0;
   }
   #galeria-list li {
-    margin-left: 0;  
+    margin-left: 0;
   }
   #galeria-list li a .case-studies-summary {
     bottom: 1em;
@@ -1054,7 +1070,7 @@ section.map {
   .titulo{
     display:block;
     margin-top:10%;
-   } 
+   }
   .mapa{
     border-right: 0;
     margin-bottom: 80px;
@@ -1064,22 +1080,22 @@ section.map {
   }
 
   #galeria-list li {
-    
+
     margin: 0 0 20px 20px;
-    
+
   }
 
   .img-modal-box{
-   
+
     width:500px;
     height:400px;
     margin-left:-250px;
     margin-top:-200px;
-  
-  }
-  
 
-}  
+  }
+
+
+}
 
 
 
@@ -1098,12 +1114,12 @@ section.map {
   }
 
   .img-modal-box{
-   
+
     width:380px;
     height:300px;
     margin-left:-190px;
     margin-top:-150px;
-  
+
   }
 }
 
@@ -1117,7 +1133,7 @@ section.map {
     font-size:1rem;
     margin-right: 0;
   }
-} 
+}
 
 
 

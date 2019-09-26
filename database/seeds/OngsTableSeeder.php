@@ -5,7 +5,7 @@ use App\Ong;
 
 class OngsTableSeeder extends Seeder
 {
-  
+
     public function run()
     {
         Ong::create([
@@ -23,7 +23,7 @@ class OngsTableSeeder extends Seeder
             'website2' => 'https://www.facebook.com/ongnovamulher',
             'website3' => 'https://www.instagram.com/ongnovamulher/',
             'website4' => 'NULL',
-            'avatar' => 'storage/perfil/novamulher.jpg'
+            'avatar' => 'images/novamulher.jpg'
         ]);
 
         Ong::create([
@@ -41,7 +41,7 @@ class OngsTableSeeder extends Seeder
             'website2' => 'https://www.facebook.com/caosemdono/',
             'website3' => 'https://twitter.com/caosemdono',
             'website4' => 'NULL',
-            'avatar' => 'storage/perfil/caosemdono.jpg'
+            'avatar' => 'images/caosemdono.jpg'
         ]);
 
         Ong::create([
@@ -59,7 +59,7 @@ class OngsTableSeeder extends Seeder
             'website2' => 'https://www.facebook.com/casadozezinho',
             'website3' => 'https://www.instagram.com/casadozezinho/',
             'website4' => 'NULL',
-            'avatar' => 'storage/perfil/casadozezinho.jpg'
+            'avatar' => 'images/casadozezinho.jpg'
         ]);
     }
 }

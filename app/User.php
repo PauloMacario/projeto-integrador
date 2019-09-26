@@ -12,7 +12,7 @@ class User extends Authenticatable
     use Notifiable;
 
     protected $fillable = [
-        'name', 'email', 'password', 'occupation', 'biography','areas', 
+        'name', 'email', 'password', 'occupation', 'biography','areas',
         'district', 'city', 'uf', 'avatar'
     ];
     public $timestamps = false;
@@ -36,14 +36,14 @@ class User extends Authenticatable
     ];
 
     public function ongs(){
-      return $this->belongsToMany('App\Ong', 'ong_has_user', 'id_user', 'id_ong')->withPivot(['permission_level']); 
+      return $this->belongsToMany('App\Ong', 'ong_has_user', 'id_user', 'id_ong')->withPivot(['permission_level']);
     }
 
-    public function actionEvent(){
-        return $this->belongsToMany('App\ActionEvent', 'action_event_has_user', 'id_user', 'id_action_event'); 
+    public function actionsEvents(){
+        return $this->belongsToMany('App\ActionEvent', 'action_event_has_user', 'id_user', 'id_action_event');
       }
 
-    
 
-     
+
+
 }
