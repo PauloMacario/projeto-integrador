@@ -49,8 +49,8 @@
                     @foreach ($eventos as $evento)
                         <div class="col-md-4 col-sm-6 mb-4">
                             <div class="noticia box-img-animate">
-                                <a href="{{url('homeOng/'.$evento->id)}}"><img class="img-responsive" src="{{url($evento->image)}}" title="{{$evento->title}}" alt="" width="250" height="200"></a>
-                                <a href="{{url('homeOng/'.$evento->id)}}">
+                                <a href="{{url('homeOng/'.$evento->id)}}"><img class="img-responsive" src="{{url($evento->image)}}" title="{{$evento->title}}" alt="" width="250" height="200">
+                                
                                     <div class="noticia-text">
                                         <div class="noticia-title">
                                             <h3>{{$evento->title}}</h3>

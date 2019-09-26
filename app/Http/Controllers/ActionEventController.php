@@ -38,6 +38,39 @@ class ActionEventController extends Controller
         return view('novoEvento', compact('segmentos', 'ong'));
     }
 
+    // Edita Evento
+
+    public function editarEvento($id){
+        $evento = ActionEvent::find($id);
+        $segmentos = Segment::all();
+        return view('editarEvento', compact('evento', 'segmentos'));
+    }
+
+    public function atualizarEvento(Request $request, $id)
+    {
+        $evento = ActionEvent::find($id);
+        $arquivo = $request->file('imagem');
+        if($arquivo == NULL){
+            $path = $evento->image;
+        }else{
+            $pasta = 'perfil-evento';
+            $path = Imagem::criarCaminhoImagem($arquivo, $pasta);
+        }
+
+
+        $evento->title = $request->input('nome');
+        $evento->description = $request->input('descricao');
+        $evento->address = $request->input('endereco');
+        $evento->district = $request->input('bairro');
+        $evento->city = $request->input('cidade');
+        $evento->uf = $request->input('uf');
+        $evento->date = $request->input('data');
+        $evento->image = $path;
+
+        $evento->save();
+
+        return redirect('eventos/'.$id);
+    }
 
     // Salva o Evento
     public function salvarEvento(Request $request)

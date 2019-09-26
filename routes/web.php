@@ -40,6 +40,9 @@ Route::middleware(['auth'])->group(function (){
 
     /*  ######################  Rotas EVENTOS   ############################# */
     Route::get('eventos/{id}', 'ActionEventController@listaEvento');
+    Route::get('evento-editar/{id}', 'ActionEventController@editarEvento');
+    Route::put('evento-atualizar/{id}', 'ActionEventController@atualizarEvento');
+
     Route::get('homeOng/evento/criar/{id2}', 'ActionEventController@adicionarEvento');
     Route::put('homeOng/evento/salvar', 'ActionEventController@salvarEvento');
 

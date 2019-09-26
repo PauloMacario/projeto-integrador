@@ -51,11 +51,14 @@
                                     <div class="col-12 col-md-12 text-center">
 
                                     <a href="{{url('homeOng/'.$ong->id)}}" class="">
-                                         <p>Publicação: <span class="badge badge-info">{{$ong->name}}</span></p> </p>
+                                         <p>Publicação: <span class="badge badge-info">{{$ong->name}}</span></p>
                                     </a>
                                     </div>
                                     <div class="col-12 mt-3">
-
+                                        <div class="text-left mt-2 col-md-2">
+                                            <p><a href="{{url('evento-editar')}}/{{$evento->id}}" class="btn-editar form-control">Editar Evento</a></p>
+                                            
+                                        </div>
 
                                     </div>
 
