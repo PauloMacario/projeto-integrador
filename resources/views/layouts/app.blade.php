@@ -145,20 +145,35 @@
 								{{-- <li class="nav-item">
 									<a class="nav-link" href="{{asset('galeria')}}">Fotos</a>
 								</li> --}}
-
+								<li class="nav-item  ml-3">
+									
+									@if(Auth::user()->avatar == null)
+										<a href="/home"><img src="{{ url('images/avatar-default.png') }}" id="icon-avatar"  title="{{Auth::user()->name }}"></a>
+									@else 
+										<a href="/home"><img src="{{ url(Auth::user()->avatar) }}" id="icon-avatar"  title="{{Auth::user()->name }}"></a>
+									@endif
+								</li>
 								<li class="nav-item dropdown">
 									<a id="navbarDropdown" class="nav-link dropdown-toggle ml-2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-									{{ Auth::user()->name }} <span class="caret"></span>
+									
+										<span class="caret"></span>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item " href="{{asset('home')}}">Meu Perfil</a>
-
-                                            <a class="dropdown-item" href="{{asset('home')}}" data-toggle="modal" data-target="#modalExemplo">Encerrar Conta</a>
+											<a class="dropdown-item " href="{{url('minhaOng/')}}/{{Auth::user()->id}}">Minha ONG</a>
+											<a class="dropdown-item  " href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+										{{ __('Sair') }}
+									</a>
+									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+										@csrf
+									</form>
+											<div class="dropdown-divider"></div>
+                                            <a class=" dropdown-item " href="{{asset('home')}}" data-toggle="modal" data-target="#modalExemplo">Encerrar Conta</a>
 									{{-- 		<a href="{{url('home/perfilEditar')}}" class="btn btn-secondary">Alterar Perfil</a> --}}
 
 									</div>
 								</li>
-								<li class="nav-item mt-2">
+							
+							{{-- 	<li class="nav-item mt-2">
 									<a class="btn-logout ml-3" href="{{ route('logout') }}"
 										onclick="event.preventDefault();
 										document.getElementById('logout-form').submit();">
@@ -167,7 +182,7 @@
 									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 										@csrf
 									</form>
-								</li>
+								</li> --}}
 
 
                             </ul>

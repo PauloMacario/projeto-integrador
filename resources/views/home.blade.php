@@ -6,21 +6,29 @@
     <div class="col-md-12">
         <div class="card pt-5">
             @if (session('ong'))
-                <div class="alert alert-success alert-dismissible fade show mt-4 ml-4 ml-4 mr-4" role="alert">
-                    Sua <strong>Ong </strong> foi criada com sucesso !.
+                <div class="alert alert-danger alert-dismissible fade show mt-1 ml-4 ml-4 mr-4" role="alert">
+                    <strong>Você já possui um Ong cadastrada.</strong>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+            @endif    
 
-                @elseif(session('error'))
-                    <div class="alert alert-danger alert-dismissible fade show mt-4 ml-4 ml-4 mr-4" role="alert">
-                        <strong>Você já possui um Ong cadastrada.</strong>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                @endif
+            @if (session('semOng'))
+                <div class="alert alert-warning alert-dismissible fade show mt-1 ml-4 ml-4 mr-4" role="alert">
+                    <strong> {{ session('semOng') }}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+             @endif 
+               {{--  <div class="alert alert-success alert-dismissible fade show mt-4 ml-4 ml-4 mr-4" role="alert">
+                    Sua <strong>Ong </strong> foi criada com sucesso !.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div> --}}
+               
             <section class="container-fluid perfil-user">
                 <div class=" box-perfil">
                     <div class="row">

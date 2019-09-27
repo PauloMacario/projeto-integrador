@@ -9,6 +9,7 @@
 
 <div class="col-md-12">
     <div class="card">
+           
             <section class="container perfil-user box-event">
                     @if (session('sucess'))
 
@@ -19,6 +20,14 @@
                             </button>
                           </div>
                     @endif
+                    @if (session('eventoCriado'))
+                    <div class="alert alert-success alert-dismissible fade show mt-1 ml-4 ml-4 mr-4" role="alert">
+                    <strong>{{session('eventoCriado')}}</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                @endif     
                 <div class=" box-perfil ">
                     <div class="container emp-profile box-perfil-event">
                         <div class="row">

@@ -114,10 +114,20 @@ class ActionEventController extends Controller
             ]);
 
             $evento = ActionEvent::all()->last();
-            return redirect('eventos/'. $evento->id);
+            return redirect('eventos/'. $evento->id)->with('eventoCriado', 'Evento criado com sucesso!');
 
             }
     }
+
+    public function excluirEvento(Request $request)
+    {
+        $idEvento = $request->input('idEvento');
+        $idOng = $request->input('idOng');
+        $idResult = ActionEvent::find($idEvento);
+
+        $idResult->delete();
+        return redirect('homeOng/'.$idOng)->with('excluido', 'Evento excluído com sucesso!');
+    }    
 
     public function participar($idEvento, $idUser)
     {

@@ -19,6 +19,10 @@ Route::middleware(['auth'])->group(function (){
     // Deltar usuario e seus relacionamentos
     Route::delete('/delete/{id}', 'UserController@delete');
 
+    Route::get('minhaOng/{id}', 'UserController@ongAdmin');
+
+
+
     // Lista ongs do usuario via AJAX na home do perfil
 
    /*  Route::get('home/minhas-ongs/admin' , function (){ return view('homeOng'); });
@@ -39,7 +43,8 @@ Route::middleware(['auth'])->group(function (){
 
     Route::get('homeOng/galeria/postar/{id}', 'GalleryController@adicionarFoto');
     Route::post('homeOng/galeria/salvar/', 'GalleryController@postarFoto');
-
+    Route::post('homeOng/seguir', 'OngHasUserController@seguir');
+    
 
     /*  ######################  Rotas EVENTOS   ############################# */
     Route::get('eventos/{id}', 'ActionEventController@listarEvento');
@@ -50,6 +55,8 @@ Route::middleware(['auth'])->group(function (){
     Route::get('evento-editar/{id}', 'ActionEventController@editarEvento');
     Route::put('evento-atualizar/{id}', 'ActionEventController@atualizarEvento');
 
+    Route::delete('evento/excluir', 'ActionEventController@excluirEvento');
+   
     // Confirmar participação no evento ou cancelar
     Route::get('evento/{idevento}/confirmar/{iduser}', 'ActionEventController@participar');
     Route::delete('evento/cancelar/participacao', 'ActionEventController@cancelarParticipacao');

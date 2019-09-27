@@ -42,7 +42,7 @@
                 @if($ong->avatar)
                     <a href="{{url('homeOng/'.$ong->id)}}"><img class="img-responsive" src="{{url($ong->avatar)}}" title="{{$ong->name}}" alt="" width="250" height="200">
                 @else
-                    <a href="{{url('homeOng/'.$ong->id)}}"><img class="img-responsive" src="{{url('images/ongDefault.jpg')}}" title="{{$ong->name}}" alt="" width="250" height="200">
+                    <a href="{{url('homeOng/'.$ong->id)}}"><img class="img-responsive" src="{{url('images/avatar-ong-default.png')}}" title="{{$ong->name}}" alt="" width="250" height="200">
                 @endif
                     </a>
                     <a href="{{url('homeOng/'.$ong->id)}}">

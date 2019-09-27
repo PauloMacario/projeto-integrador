@@ -87,10 +87,23 @@ class UserController extends Controller
         return $user;
     }
 
-    public function allOngsAdmin($id)
-    {
-       $ongAdmin = User::with('ongs')->get();
-        return $ongAdmin;
+    public function ongAdmin($id)
+    {       
+        $ongAdmin = OngHasUser::all()->where('id_user', '=', $id)->where('permission_level', '=', 1);
+
+        if(count($ongAdmin) > 0 ){        
+           foreach($ongAdmin as $ong ):
+                $ongAdmin = $ong->id_ong;
+           endforeach;  
+           
+        return redirect('homeOng/'.$ongAdmin);         
+        }else{
+            return redirect('home/')->with('semOng','Você ainda não possui ong criada.');    
+        }
+      
+       
+       /*  $ongAdmin = User::find('ongs')->get();
+        return $ongAdmin; */
     }
 
     public function delete(Request $request)

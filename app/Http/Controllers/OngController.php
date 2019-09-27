@@ -140,7 +140,7 @@ class OngController extends Controller
         ]);
 
 
-        return redirect('homeOng/'.$ong->id);
+        return redirect('homeOng/'.$ong->id)->with('ongCriada', 'Sua ONG foi criada com sucesso! Informe mais dados sobre ela.');
 
          }
        }
