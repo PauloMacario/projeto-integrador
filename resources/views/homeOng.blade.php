@@ -6,6 +6,7 @@
 
 
 
+
 <div class="">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4">
@@ -148,8 +149,44 @@
                                                         <p class="mr-3"><a href="{{url('homeOng/evento/criar/'.$ong->id)}}" class="btn-editar">Criar Evento</a></p>
                                                         <p><a href="{{url('homeOng/galeria/postar/'.$ong->id)}}" class="btn-editar">Postar foto</a></p>
                                                         @break
-                                            @endif 
+                                            @endif
                                         @endforeach
+
+                                       
+                                       
+                                        @foreach ($OngUser as $value)
+
+                                            @if($value->id_user == Auth::user()->id && $value->permission_level == 0)
+                                                <form action="{{url('homeOng/nao-seguir')}}" method="post">
+                                                    @csrf {{method_field('DELETE')}}
+                                                    <input type="hidden" name="idOng" id="idOng" value="{{$ong->id}}">
+                                                    <input type="hidden" name="idUser" id="idUser" value="{{Auth::user()->id}}">
+                                                    <button type="submit" class="mb-2 btn btn-warning">Não Seguir</button>
+                                                </form>    
+                                            
+                                         
+                                               
+                                                @break
+                                            @elseif($value->id_user == Auth::user()->id && $value->permission_level == 1)
+                                                
+                                            @break
+
+                                          
+                                            @endif
+                                            @if ($loop->last)
+                                            <form action="{{url('homeOng/seguir')}}" method="post">
+                                                @csrf {{method_field('post')}}
+                                                <input type="hidden" name="idOng" id="idOng" value="{{$ong->id}}">
+                                                <input type="hidden" name="idUser" id="idUser" value="{{Auth::user()->id}}">
+                                                <button type="submit" class="mb-2 btn btn-info">Seguir</button>
+                                            </form>
+
+                                            @endif
+                                            
+                                        @endforeach
+                                            
+                                           
+                                           
                                         
                                         
                                         

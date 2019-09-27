@@ -43,7 +43,11 @@ Route::middleware(['auth'])->group(function (){
 
     Route::get('homeOng/galeria/postar/{id}', 'GalleryController@adicionarFoto');
     Route::post('homeOng/galeria/salvar/', 'GalleryController@postarFoto');
+   
+   // seguir ong
     Route::post('homeOng/seguir', 'OngHasUserController@seguir');
+     // NÃO seguir ong
+    Route::delete('homeOng/nao-seguir', 'OngHasUserController@naoSeguir');
     
 
     /*  ######################  Rotas EVENTOS   ############################# */

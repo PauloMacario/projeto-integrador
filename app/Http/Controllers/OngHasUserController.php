@@ -33,4 +33,24 @@ class OngHasUserController extends Controller
         }
 
     }
+
+    public function naoSeguir(Request $request){
+
+        $idOng = $request->input('idOng');
+        $idUser = $request->input('idUser');
+
+        $ongUser = OngHasUser::all()
+                                ->where('id_ong','=', $idOng)
+                                ->where('id_user','=',$idUser)
+                                ->where('permission_level','=',0)->first();
+
+        $result = $ongUser->delete();
+
+        if($result){
+            return redirect('homeOng/'. $idOng)->with('seguir', 'Você não segue mais esta ONG');;
+        }else{
+            return redirect('homeOng/'. $idOng)->with('erro', 'Não foi possível desvincular');;
+        }
+
+    }
 }

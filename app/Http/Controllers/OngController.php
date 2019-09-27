@@ -27,7 +27,11 @@ class OngController extends Controller
         $eventos = ActionEvent::where('id_ong', '=', $ong->id)->paginate(4);
 
         $fotos = Gallery::all()->where('id_ong', '=', $ong->id);
-        return view('homeOng')->with(['ong' => $ong ,'eventos' => $eventos, 'fotos' => $fotos]);
+
+        $OngUser = OngHasUser::all()->where('id_ong', '=', $ong->id);
+                                   
+
+        return view('homeOng', compact('ong', 'eventos', 'fotos', 'OngUser'));
     }
 
 
