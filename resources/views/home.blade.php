@@ -57,7 +57,11 @@
 
                                 <p class="mt-1 mr-3">
                                     <i class="fa fa-briefcase icone-perfil"></i>
+                                    @if (Auth::user()->occupation == NULL)
+                                    Adicione sua profissão
+                                    @else
                                     {{ Auth::user()->occupation }} </p>
+                                    @endif
 
                                 <p class="mt-1 mr-3">
                                     <i class="far fa-envelope icone-perfil"></i>
@@ -68,7 +72,7 @@
 
 
                                 @if (Auth::user()->website == NULL)
-                                    Meu website</p>
+                                    Adicione seu website</p>
                                 @else
                                     {{ Auth::user()->website1 }}</p>
                                 @endif
@@ -86,7 +90,7 @@
 
 
                                 @if (Auth::user()->city == NULL)
-                                Minha cidade</p>
+                                    Minha cidade</p>
                                 @else
                                     {{ Auth::user()->city }}</p>
                                 @endif
@@ -101,7 +105,7 @@
                                    {{ Auth::user()->biography }}</p>
                                 @if (Auth::user()->areas == NULL)
 
-                                        Causas: Adiciona a causa de seu interesse</p>
+                                        Causas: Adicione a causa de seu interesse</p>
                                 @else
                                     <p class="mt-1 mr-3">
                                             <i class="fa fa-sign-language icone-perfil"></i>

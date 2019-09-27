@@ -18,7 +18,7 @@
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
-                          </div>
+                    </div>
                     @endif
                     @if (session('eventoCriado'))
                     <div class="alert alert-success alert-dismissible fade show mt-1 ml-4 ml-4 mr-4" role="alert">
@@ -34,20 +34,24 @@
                             <div class="col-md-12 d-flex justify-content-center align-items-center ">
                                 <div class="profile-event-img text-center">
                                     <a href="">
+                                        @if (($evento->image) == NULL)
+                                        <img src="{{url('images/avatar-ong-default.png')}}" > 
+                                        @else    
                                         <img src="{{url($evento->image)}}" alt="" title="{{$evento->title}}">
+                                        @endif
+                                        
 
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12 ">
+                            <div class="col-md-12 ">  
                                 <div class="profile-event-box text-center">
-                                        <span><h3>{{$evento->title}}</h3></span>
-                                        <div class="event-description ">
-                                            <p><span>{{$evento->description}}</span>
-                                                <span></span>
-                                        </p>
+                                    <span><h3>{{$evento->title}}</h3></span>
+                                    <div class="event-description ">
+                                        <p><span>{{$evento->description}}</span>
+                                    </p>
                                     </div>
 
                                     <p> <span><i class="fas fa-map-marker-alt icone-perfil mt-3"></i>{{$evento->address}}</span>
@@ -59,17 +63,17 @@
                                     </p>
 
                                     <p><span><i class="fas fa-calendar-alt icone-perfil mt-3"></i>{{$evento->date}}</span>
-                                        <span></span>
                                     </p>
-
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
 
 
+                        <div class="row mt-3">
+                            <div class="col-md-12">
 
-                        <div class="row  mt-3">
-                            <div class="col-md-12 ">
                                 <div class="col-12 text-center mt-3">
                                     @if(!$evento->users->isEmpty())
 
@@ -86,7 +90,7 @@
                                                         <input type="hidden" name="idEvento" value="{{$evento->id}}">
                                                         <input type="hidden" name="idUser" value="{{Auth::user()->id}}">
 
-                                                        <button class="btn btn-danger" type="submit" >Cancelar participação</button>
+                                                        <button class="btn btn-danger" type="submit" >Cancelar</button>
                                                     </form>
                                                  @break
 
@@ -97,7 +101,7 @@
 
                                         @endif
                                         @if(!isset($participante))
-                                            <p class="mr-3"><a href="{{url('evento/'.$evento->id.'/confirmar/')}}/{{Auth::user()->id}}" class="btn btn-info">Participar</a></p>
+                                            <p class=""><a href="{{url('evento/'.$evento->id.'/confirmar/')}}/{{Auth::user()->id}}" class="btn btn-info">Participar</a></p>
                                         @endif
 
 
@@ -116,7 +120,7 @@
                                     @endif
 
 
-                                        </div>
+                                        
  --}}
                                         @if(isset($total))
 
@@ -135,11 +139,18 @@
                                             </div>
                                         </div>
                                         @endif
-
                                         <div class="col-12 mt-3 d-flex justify-content-center align-items-center">
 
-                                            <div class="text-center mt-2 col-md-2">
-                                                <p><a href="{{url('homeOng')}}/{{$ong->id}}" class="btn-editar form-control">Voltar</a></p>
+                                            <div class="text-center mt-2 col-md-4">
+                                                <p>Organizado por: <a href="{{url('homeOng')}}/{{$ong->id}}" class="badge badge-secondary">{{$ong->name}}</a></p>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="col-12 mt-3 d-flex justify-content-center align-items-center">
+
+                                            <div class="text-center mt-2 col-md-4">
+                                                <p><a href="{{url('/home')}}" class="btn-editar form-control">Voltar</a></p>
 
                                             </div>
 
@@ -148,11 +159,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
                     </section>
-                </div>
-            </div>
+    </div>
+</div>
 
 
             @endsection

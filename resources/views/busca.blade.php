@@ -6,7 +6,7 @@
 	<div class="container ">
 		<div class="row text-center">
 			<div class="col-12 col-md-6  text-center heading-section ml-auto mr-auto">
-				<h3>Busque aqui uma Ong para ajudar</h3>
+				<h3>Busque aqui uma ONG para ajudar</h3>
 				<form>
 					  <div class="form-row align-items-center">
 						<div class="col-sm-9 my-1">

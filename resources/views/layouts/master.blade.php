@@ -106,7 +106,7 @@
                                     <a class="nav-link" href="/">Home</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="ongs">Ongs</a>
+									<a class="nav-link" href="ongs">ONGs</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="eventos">Eventos </a>									

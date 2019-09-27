@@ -1,9 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-
-
-
 <section class="box-cadastro-ong">
 <form action="ong-salvar/{{ Auth::user()->id }}" enctype="multipart/form-data" method="post">
         @csrf
@@ -11,18 +8,22 @@
                 <img src="{{ asset('images/logo_2.png')}}" style="width:50px; height:50px;" alt="">
             </div>
             <div class="form-group col-md-12">
-                    <h4 class="text-center">Crie uma Ong</h4>
+                    <h4 class="text-center">Crie uma ONG</h4>
             </div>
 
         <div class="form-row">
                {{--  <div class="form-group col-md-8">
                 <input type="hidden" class="form-control" id="id" name="id" value="{{ Auth::user()->id }}">
                 </div> --}}
-            <div class="form-group col-md-8">
-                <label for="nome">Nome da Ong</label>
+            <div class="form-group col-12 col-md-12">
+                <label for="nome">Nome da ONG</label>
                 <input type="text" class="form-control" id="nome" name="nome"  required>
             </div>
-            <div class="form-group col-12 col-md-4">
+            <div class="col-12 col-md-6">
+                <label for="bairro">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group col-12 col-md-6 mb-3">
                 {{-- <input type="text" class="form-control" id="segmento" name="segmento" placeholder="Segmento" required> --}}
 
                 <label for="segmento">Segmento</label>
@@ -39,30 +40,30 @@
         </div>
         <div class="form-row">
             <div class="form-group col-md-12">
-                <label for="descricao">Descrção</label>
+                <label for="descricao">Descrição</label>
                 <textarea class="form-control" id="descricao" name="descricao" placeholder="max 500 caracteres ..."  required ></textarea>
             </div>
             <div class="form-group col-md-4">
                 <label for="nome">CEP</label>
-                <input type="text" class="form-control" id="CEP" name="CEP"  required>
+                <input type="text" class="form-control" id="CEP" name="CEP" placeholder="00000-000" required>
             </div>
             <div class="form-group col-md-8">
                 <label for="nome">Endereço</label>
-                <input type="text" class="form-control" id="endereco" name="endereco"  required>
+                <input type="text" class="form-control" id="endereco" name="endereco" readonly required>
             </div>
         </div>
         <div class="form-row ">
             <div class="form-group col-md-5">
                 <label for="bairro">Bairro</label>
-                <input type="text" class="form-control" id="bairro" name="bairro"  required>
+                <input type="text" class="form-control" id="bairro" name="bairro" readonly required>
             </div>
             <div class="form-group col-md-5">
                 <label for="cidade">Cidade</label>
-                <input type="text" class="form-control" id="cidade" name="cidade"  required>
+                <input type="text" class="form-control" id="cidade" name="cidade" readonly required>
             </div>
             <div class="form-group col-md-2">
                 <label for="uf">Estado</label>
-                <input type="text" class="form-control" id="uf" name="uf" required>
+                <input type="text" class="form-control" id="uf" name="uf" readonly required>
             </div>
         </div>
         <div class="form-row ">

@@ -242,8 +242,11 @@
                                 @else
                                     @foreach ($eventos as $evento)
                                         <tr >
-                                                
+                                            @if (($evento->image) == NULL)
+                                            <td class="text-center" ><a href="{{url('eventos/'.$evento->id)}}" ><img src="{{url('images/avatar-ong-default.png')}}" ></a></td>    
+                                            @else    
                                             <td class="text-center" ><a href="{{url('eventos/'.$evento->id)}}" ><img src="{{url($evento->image)}}" ></a></td>
+                                            @endif
                                             <td class="text-center" >{{$evento->title}}</td>
                                             <td class="text-center text-truncate" style="max-width: 150px;"  >{{$evento->description}}</td>
                                             <td class="text-center" >{{$evento->date}}</td>

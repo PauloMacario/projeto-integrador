@@ -22,15 +22,27 @@
                 <div class="form-group col-md-8">
                     <input type="hidden" class="form-control" id="id2" name="id2" value="{{$ong->id }}">
                 </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-9">
                 <label for="nome">Nome do Evento</label>
                 <input type="text" class="form-control" id="titulo" name="titulo"  required>
             </div>
             <div class="form-group col-md-3">
                 <label for="date">Data do evento</label>
-                <input type="date" class="form-control" id="data" name="data"  required>
+                <input class="form-control"
+                type="text"
+                name="data"
+                placeholder="dd/mm/yyyy"
+                onkeyup="
+                    var v = this.value;
+                    if (v.match(/^\d{2}$/) !== null) {
+                        this.value = v + '/';
+                    } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                        this.value = v + '/';
+                    }"
+                maxlength="10" required>
             </div>
-            <div class="form-group col-12 col-md-3">
+
+            {{-- <div class="form-group col-12 col-md-3">
 
                 <label for="segmento">Segmento</label>
                 <select class="form-control" id="segmento" name="segmento" value="">
@@ -39,14 +51,14 @@
                  <option >{{$segmento->name}}</option>
                   @endforeach
                 </select>
+            </div> --}}
 
 
 
-            </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-12">
-                <label for="descricao">Descrção</label>
+                <label for="descricao">Descrição</label>
                 <textarea class="form-control" id="descricao" name="descricao" placeholder="max 500 caracteres ..."  required ></textarea>
             </div>
             <div class="form-group col-md-4">
@@ -55,21 +67,21 @@
             </div>
             <div class="form-group col-md-8">
                 <label for="nome">Endereço</label>
-                <input type="text" class="form-control" id="endereco" name="endereco"  required>
+                <input type="text" class="form-control" id="endereco" name="endereco" readonly required>
             </div>
         </div>
         <div class="form-row ">
             <div class="form-group col-md-5">
                 <label for="bairro">Bairro</label>
-                <input type="text" class="form-control" id="bairro" name="bairro"  required>
+                <input type="text" class="form-control" id="bairro" name="bairro" readonly required>
             </div>
             <div class="form-group col-md-5">
                 <label for="cidade">Cidade</label>
-                <input type="text" class="form-control" id="cidade" name="cidade"  required>
+                <input type="text" class="form-control" id="cidade" name="cidade" readonly required>
             </div>
             <div class="form-group col-md-2">
                 <label for="uf">Estado</label>
-                <input type="text" class="form-control" id="uf" name="uf" required>
+                <input type="text" class="form-control" id="uf" name="uf" readonly required>
             </div>
         </div>
 

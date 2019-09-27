@@ -97,11 +97,11 @@
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <label>Bairro:</label>
-                                    <input type="text" class="form-control" id="bairro" name="bairro" value="{{  Auth::user()->district }}" >
+                                    <input type="text" class="form-control" id="bairro" name="bairro" value="{{  Auth::user()->district }}" readonly>
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <label>Cidade:</label>
-                                    <input type="text" class="form-control" id="cidade" name="cidade" value="{{  Auth::user()->city }}" >
+                                    <input type="text" class="form-control" id="cidade" name="cidade" value="{{  Auth::user()->city }}" readonly>
                                 </div>
                                 <div class="">
                                     <input type="hidden" class="form-control" id="endereco" name="endereco" value="">

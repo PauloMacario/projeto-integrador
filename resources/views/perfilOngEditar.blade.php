@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="box-cadastro-ong">
     <div class="box-editar">
         <form action="/homeOng/perfil-ong-atualizar/{{$ong->id}}" enctype="multipart/form-data" method="post">
                 @csrf
@@ -10,7 +10,7 @@
                 <img src="{{ asset('images/logo_2.png')}}" style="width:50px; height:50px;" alt="">
             </div>
             <div class="form-group col-md-12">
-                <h4 class="text-center">Atualize seus dados.</h4>
+                <h4 class="text-center">Atualize os dados da sua ONG</h4>
             </div>
             <div class="form-group col-md-12">
                 <div class="form-row">
@@ -18,12 +18,15 @@
 
                         <input id="id" type="hidden" class="form-control-sm form-control" id="id" name="id" value="{{Auth::user()->id}}" >
 
-                    <div class="col-12 col-md-6" >
-                        <label for="name" >Nome:</label>
+                    <div class="col-12 col-md-12" >
+                        <label for="name" >Nome da ONG:</label>
                         <input id="name" type="text" class="form-control-sm form-control" id="name" name="nome" value="{{$ong->name}}"  required  autofocus>
                     </div>
+                    <div class="col-12 col-md-6">
+                        <label for="bairro">Email</label>
+                        <input type="email" class="form-control-sm form-control" id="email" name="email" value="{{$ong->email}}" >
+                    </div>
                     <div class="col-12 col-md-6 mb-3">
-
                         <label for="segmento">Segmento</label>
                         <select  class="form-control-sm form-control" id="segmento" name="segmento" value="">
                             <option selected>{{$ong->segment}}</option>
@@ -37,22 +40,18 @@
             <div class="form-group col-md-12">
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <label for="descricao">Descrção</label>
+                        <label for="descricao">Descrição</label>
                         <textarea class="form-control-sm form-control" id="descricao" name="descricao" placeholder="max 500 caracteres ...">{{$ong->description}}</textarea>
                     </div>
                 </div>
             </div>
             <div class="form-group col-md-12">
                 <div class="form-row">
-                    <div class="col-12 col-md-4">
-                        <label for="bairro">Email</label>
-                        <input type="email" class="form-control-sm form-control" id="email" name="email" value="{{$ong->email}}" >
-                    </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-6">
                         <label for="phone1">Telefone 1</label>
                         <input type="text" class="form-control-sm form-control" id="phone1" name="phone1" value="{{$ong->phone1}}" >
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-6">
                         <label for="phone2">Telefone 2</label>
                         <input type="text" class="form-control-sm form-control" id="phone2" name="phone2" value="{{$ong->phone2}}" >
                     </div>
@@ -114,10 +113,21 @@
 
             <div class="form-group col-md-12 mt-3">
                 <div class="custom-file mt-3">
-                    <input type="file" class="custom-file-input  id="imagem" name="imagem">
+                    <input type="file" class="custom-file-input"  id="imagem" name="imagem">
                     <label class="custom-file-label " for="">Escolha uma foto...</label>
                 </div>
             </div>
+            <div class="form-row mb-4">
+                    <div class="text-center preview-text "style="">
+                        <h6 >Pré-Visualização</h6>
+                    </div>
+                    <div class="preview-img d-flex justify-content-center">
+                       <div>
+                           <img src="{{url('images/preview-default.png')}}" alt="" title="Pré-Visualização" class="preview-img-avatar" id="preview">
+                       </div>
+    
+                    </div>
+                </div>
             <div class="form-group col-md-12 mt-5" >
                 <div class="form-row">
                     <div class="col-md-12 mb-3">
