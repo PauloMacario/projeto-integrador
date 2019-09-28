@@ -164,22 +164,38 @@
 				method:'GET',
 				url: 'home/listar-ongs/'+id,
 					success: function(response){
+						console.log(response)
 					   for(var i = 0; i < response.ongs.length; i++ ){
 
                         if(response.ongs[i].pivot.permission_level == 1){
 
 
-                            $('#ong-admin-title').attr('style', 'display:block;')
-                            $('#tabela').attr('style', 'display:block;')
+                            $('#card').attr('style', 'display:block;')
+                            
+							if(response.ongs[i].avatar == ''){
+								$('#card').prepend('<img src="images/avatar-ong-default.png" class="card-img-top" width="100px" height="200px" alt="...">\
+								<div class="card-body"><h5 class="card-title">'+response.ongs[i].name+'</h5>\
+									 <p class="card-text">'+ response.ongs[i].description +'</p>\
+									<a href="/homeOng/'+response.ongs[i].id+'" class="btn-editar">Minha ONG</a>\
+								<div> ')
+							}else{
+							$('#card').prepend('<img src="' + response.ongs[i].avatar + '" class="card-img-top" width="100px" height="200px" alt="...">\
+												<div class="card-body"><h5 class="card-title">'+response.ongs[i].name+'</h5>\
+												 	<p class="card-text">'+ response.ongs[i].description +'</p>\
+													<a href="/homeOng/'+response.ongs[i].id+'" class="btn-editar">Minha ONG</a>\
+												<div> ')
 
-						    $('#tabela').prepend('<tr><td><a href="/homeOng/'+response.ongs[i].id+'" ><img src="'+response.ongs[i].avatar+'"></a></td> <td>'+response.ongs[i].name+'</td><td>'+response.ongs[i].description+'</td></tr>')
-
+								}
                             }
                         else if(response.ongs[i].pivot.permission_level == 0){
 
                             $('#ong-follow-title').attr('style', 'display:block;')
                             $('#tabela-acompanho').attr('style', 'display:block;')
-                            $('#tabela-acompanho').prepend('<tr><td><a href="/homeOng/'+response.ongs[i].id+'" ><img src="'+response.ongs[i].avatar+'"></a></td> <td>'+response.ongs[i].name+'</td><td>'+response.ongs[i].description+'</td></tr>')
+							$('#tabela-acompanho').prepend('<tr>\
+																<td><a href="/homeOng/'+response.ongs[i].id+'" ><img src="'+response.ongs[i].avatar+'"></a></td>\
+																<td>'+response.ongs[i].name+'</td>\
+																<td>'+response.ongs[i].description+'</td>\
+															</tr>')
 
                         }
                         }
@@ -196,53 +212,25 @@
 				url: 'home/listar-eventos/'+id,
 					success: function(response){
 						console.log(response)
-					   for(var i = 0; i < response.ongs.length; i++ ){
 
-                        if(response.ongs[i].pivot.permission_level == 1){
+						if(response){
+							/* $('#card-evento').attr('style', 'display:block;') */
+							for(var i = 0; i < response.actions_events.length; i++ ){
+								$('#card-evento-title').attr('style', 'display:block;')
+								
+								$('#card-evento').prepend('<div class="evento-content box-img-animate"><a href="/homeOng/'+response.actions_events[i].id+'" class="galeria" class="d-flex align-items-center ">\
+																<img src="'+response.actions_events[i].image+'" title="" >\
+															</a>\
+															<div class="text-truncate" >'+response.actions_events[i].description+'</div></div>')
 
-
-                            $('#ong-admin-title').attr('style', 'display:block;')
-                            $('#tabela').attr('style', 'display:block;')
-
-						    $('#tabela').prepend('<tr><td><a href="/homeOng/'+response.ongs[i].id+'" ><img src="'+response.ongs[i].avatar+'"></a></td> <td>'+response.ongs[i].name+'</td><td>'+response.ongs[i].description+'</td></tr>')
-
-                            }
-                        else if(response.ongs[i].pivot.permission_level == 0){
-
-                            $('#ong-follow-title').attr('style', 'display:block;')
-                            $('#tabela-acompanho').attr('style', 'display:block;')
-                            $('#tabela-acompanho').prepend('<tr><td><a href="/homeOng/'+response.ongs[i].id+'" ><img src="'+response.ongs[i].avatar+'"></a></td> <td>'+response.ongs[i].name+'</td><td>'+response.ongs[i].description+'</td></tr>')
-
-                        }
-                        }
+                            
+                      
+						}
+					}
 					}
 
 					})
 				});
-
-
-
-// ################ Lista no HomeOng as Fotos ####################
-
-
-/* $(function(){
-	var id = $('#id-ong').val()
-	$.ajax({
-			method:'GET',
-			url: 'listar-fotos/'+id,
-				success: function(response){
-					$.each(response, function(index, value) {
-						$('#foto-homeOng').prepend('<div class="fotos"><img src="../'+value.image+'"> </div>')
-					  });
-				}
-
-				})
-			}); */
-
-
-
-
-
 
 
 
@@ -262,7 +250,7 @@ $('#btn-busca').click(function(e){
                         $('#box-result').css('max-height', '800px')
                         $('#box-result').css('overflow', 'scroll')
                             for(var i = 0; i < response.length; i++ ){
-                                $('#tabela').addClass('reset').append('<tr class="result-busca"><td><a href="homeOng/'+response[i].id+'" ><img src="'+response[i].avatar+'"></a></td><td width="30%">'+response[i].name+'</td><td>'+response[i].description+'</td> <td>'+response[i].district+'</td></tr>')
+                                $('#tabela').addClass('reset').append('<tr class="result-busca"><td width="25%"><a href="homeOng/'+response[i].id+'" ><img src="'+response[i].avatar+'"></a></td><td width="25%">'+response[i].name+'</td><td width="25%">'+response[i].description+'</td> <td width="25%">'+response[i].district+'</td></tr>')
                             }
                         }
                         else{

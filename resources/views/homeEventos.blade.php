@@ -149,8 +149,8 @@
                                         </div>
                                         <div class="col-12 mt-3 d-flex justify-content-center align-items-center">
 
-                                            <div class="text-center mt-2 col-md-4">
-                                                <p><a href="{{url('/home')}}" class="btn-editar form-control">Voltar</a></p>
+                                            <div class="text-center">
+                                                <p><a href="{{url('/home')}}" class="btn-editar form-control">Meu perfil</a></p>
 
                                             </div>
 

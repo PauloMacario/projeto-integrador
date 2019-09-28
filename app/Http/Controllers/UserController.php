@@ -87,11 +87,12 @@ class UserController extends Controller
         $user->ongs;
         return $user;
     }
+
     //teste do Ajax listagem de eventos do usuario
     public function eventoParticipar($id)
     {
-        $user = ActionEvent::find($id);
-        
+        $user = User::find($id);
+        $user->actionsEvents;
         return $user;
     }
 

@@ -140,6 +140,8 @@
 
                                         <div class="col-12 col-md-12 ml-2 mt-5 text-center">
 
+                                               
+
                                          @foreach ($ong->users as $item)
                                                
                                         
@@ -148,7 +150,13 @@
                                                         <p class="mr-3"><a href="{{url('homeOng/perfil-ong-editar')}}/{{$ong->id}}" class="btn-editar">Alterar informações</a></p>
                                                         <p class="mr-3"><a href="{{url('homeOng/evento/criar/'.$ong->id)}}" class="btn-editar">Criar Evento</a></p>
                                                         <p><a href="{{url('homeOng/galeria/postar/'.$ong->id)}}" class="btn-editar">Postar foto</a></p>
+                                                       
                                                         @break
+                                           
+                                           
+                                                      
+                                           
+                                           
                                             @endif
                                         @endforeach
 
@@ -313,7 +321,7 @@
                         @if($fotos->isEmpty())
                             <h6>Ainda não possui fotos cadastrados!</h6>
                         @else
-                        <div id="foto-homeOng" class="" >
+                        <div class="foto-homeOng" class="" >
                             @foreach ($fotos as $foto)
                                     <div class="fotos  box-img-animate ">
                                         <a href="{{url($foto->image)}}" class="galeria" data-lightbox="photos">

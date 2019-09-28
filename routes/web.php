@@ -20,7 +20,9 @@ Route::middleware(['auth'])->group(function (){
 
     // Deltar usuario e seus relacionamentos
     Route::delete('/delete/{id}', 'UserController@delete');
-
+    
+   
+    
     Route::get('minhaOng/{id}', 'UserController@ongAdmin');
 
 

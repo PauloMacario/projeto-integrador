@@ -2,8 +2,9 @@
 
 @section('content')
 
+
 <div class="">
-    <div class="col-md-12">
+    <div class="col-md-12 perfil-content">
         <div class="card pt-5">
             @if (session('ong'))
                 <div class="alert alert-danger alert-dismissible fade show mt-1 ml-4 ml-4 mr-4" role="alert">
@@ -121,33 +122,49 @@
                     </div>
                 </div>
             </section>
-            <section class="container">
+            <section class="container-fluid">
                 <div class="row">
-                        <div class="col-12 col-md-12">
-                                <div class="col-12 col-md-12 mt-3 text-center" >
-                                    <h3 id="ong-admin-title" style="display:none;">Minha ONG</h3>
-                                </div>
-                                    <div class="col-12 mb-3">
-
-                                        <div class="col-12">
-                                        <table id="tabela" class="table table-striped  my-ongs" style="display:none;">
-                                            <thead>
-                                                <tr >
-                                                    <th class="text-center" width=""></th>
-                                                    <th class="text-center" width="25%">Nome</th>
-                                                    <th class="text-center" width="100%">Descrição</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-
-                                            </tbody>
-                                        </table>
-                                    </div>
+                        <div class="col-12 col-md-4 d-flex align-items-start justify-content-center mt-3 mb-3">
+                            <div class="col-12 col-sm-8 col-md-10 d-flex justify-content-center  mt-3">                      
+                                <div class="card text-center " id="card" style=" display:none; ">
+                                    
                                 </div>
                             </div>
                         </div>
+                        <div class="col-12 col-md-8">
                         <div class="row">
-                            <div class="col-12 col-md-12 mt-5 mb-5">
+                            <div class="col-12 col-md-12 mt-3 text-center" >
+                                <h3 id="card-evento-title" style="display:none;">Eventos</h3>
+                            </div>
+                            <div class="col-12 mb-3 card-evento" id="card-evento" >
+                              
+                            </div> 
+                        </div>
+                        <div class="row">
+                        <div class="col-12 col-md-12 mt-3 text-center mt-4 " >
+                            <h3  id="ong-follow-title" style="display:none;">ONGs que eu acompanho.</h3>
+                        </div>
+                            <div class="col-12 mt-3">
+                                <div class="col-12">
+                                <table id="tabela-acompanho" class="table table-striped  my-ongs" style="display:none;">
+                                    <thead>
+                                        <tr >
+                                            <th class="text-center" width=""></th>
+                                            <th class="text-center" width="25%">Nome</th>
+                                            <th class="text-center" width="100%">Descrição</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+                    </div>   
+                </div>
+                       
+                            {{-- <div class="col-12 col-md-12 mt-5 mb-5">
                                 <div class="col-12 col-md-12 mt-3 text-center mt-4 " >
                                     <h3  id="ong-follow-title" style="display:none;">ONGs que eu acompanho.</h3>
                                 </div>
@@ -167,8 +184,8 @@
                                         </table>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div> --}}
+                        
             </section>
 
 
