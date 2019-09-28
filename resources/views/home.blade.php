@@ -149,7 +149,7 @@
                         <div class="row">
                             <div class="col-12 col-md-12 mt-5 mb-5">
                                 <div class="col-12 col-md-12 mt-3 text-center mt-4 " >
-                                    <h3  id="ong-follow-title" style="display:none;">Ongs que eu acompanho.</h3>
+                                    <h3  id="ong-follow-title" style="display:none;">ONGs que eu acompanho.</h3>
                                 </div>
                                     <div class="col-12 mt-3">
                                         <div class="col-12">

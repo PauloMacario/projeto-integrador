@@ -157,12 +157,43 @@
 
 	})
 
-
+	// lista AJAX para ONG
 	 $(function(){
 		var id = $('#id-perfil').val()
 		$.ajax({
 				method:'GET',
 				url: 'home/listar-ongs/'+id,
+					success: function(response){
+					   for(var i = 0; i < response.ongs.length; i++ ){
+
+                        if(response.ongs[i].pivot.permission_level == 1){
+
+
+                            $('#ong-admin-title').attr('style', 'display:block;')
+                            $('#tabela').attr('style', 'display:block;')
+
+						    $('#tabela').prepend('<tr><td><a href="/homeOng/'+response.ongs[i].id+'" ><img src="'+response.ongs[i].avatar+'"></a></td> <td>'+response.ongs[i].name+'</td><td>'+response.ongs[i].description+'</td></tr>')
+
+                            }
+                        else if(response.ongs[i].pivot.permission_level == 0){
+
+                            $('#ong-follow-title').attr('style', 'display:block;')
+                            $('#tabela-acompanho').attr('style', 'display:block;')
+                            $('#tabela-acompanho').prepend('<tr><td><a href="/homeOng/'+response.ongs[i].id+'" ><img src="'+response.ongs[i].avatar+'"></a></td> <td>'+response.ongs[i].name+'</td><td>'+response.ongs[i].description+'</td></tr>')
+
+                        }
+                        }
+					}
+
+					})
+				});
+	
+	// lista AJAX para EVENTOS
+	$(function(){
+		var id = $('#id-perfil').val()
+		$.ajax({
+				method:'GET',
+				url: 'home/listar-eventos/'+id,
 					success: function(response){
 						console.log(response)
 					   for(var i = 0; i < response.ongs.length; i++ ){

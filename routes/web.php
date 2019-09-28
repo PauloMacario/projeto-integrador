@@ -9,8 +9,10 @@ Route::middleware(['auth'])->group(function (){
     // Lista home PERFIL USER
     Route::get('/home', 'HomeController@index')->name('home');
 
-     // lista ong administrada pelo ususario
+     // lista ong em AJAX
      Route::get('home/listar-ongs/{id}', 'UserController@allOngs');
+     // lista evento em AJAX
+     Route::get('home/listar-eventos/{id}', 'UserController@eventoParticipar');
 
     // Editando PERFIL USER
     Route::get('home/perfil-editar', 'UserController@editarUser');

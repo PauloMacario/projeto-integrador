@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Ong;
 use App\OngHasUser;
+use App\ActionEvent;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Imagem;
 
@@ -86,6 +87,14 @@ class UserController extends Controller
         $user->ongs;
         return $user;
     }
+    //teste do Ajax listagem de eventos do usuario
+    public function eventoParticipar($id)
+    {
+        $user = ActionEvent::find($id);
+        
+        return $user;
+    }
+
 
     public function ongAdmin($id)
     {       
