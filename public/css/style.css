@@ -845,11 +845,13 @@ section.map {
 
 .btn-logout.btn-logout, .btn-editar{
   padding:6px 16px;
-  BORDER:1PX SOLID rgb(108, 168, 157);
+  border:1PX SOLID rgb(108, 168, 157);
   border-radius:5px;
   color:rgb(108, 168, 157);
 
 }
+
+
 
 .btn-logout:hover, .btn-editar:hover{
 
@@ -879,6 +881,22 @@ section.map {
 .btn-link:hover{
   color:rgb(86, 138, 128);
 }
+
+.btn-excluir{
+    padding:6px 16px;
+    border:1PX solid rgb(196, 29, 7);
+    border-radius:5px;
+    color:rgb(196, 29, 7);
+  }
+
+.btn-excluir:hover{
+    color:#fff !important;
+    background-color: rgb(196, 29, 7);
+
+}
+
+
+
 /* ==========  BOTÕES E ICONES REDES SOCIAIS (FINAL)  ==========  */
 
 /* ==========  FOOTER (INÍCIO)  ==========  */

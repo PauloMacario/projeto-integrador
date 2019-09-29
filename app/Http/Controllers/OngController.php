@@ -29,7 +29,7 @@ class OngController extends Controller
         $fotos = Gallery::all()->where('id_ong', '=', $ong->id);
 
         $OngUser = OngHasUser::all()->where('id_ong', '=', $ong->id);
-                                   
+
 
         return view('homeOng', compact('ong', 'eventos', 'fotos', 'OngUser'));
     }
@@ -147,9 +147,40 @@ class OngController extends Controller
         return redirect('homeOng/'.$ong->id)->with('ongCriada', 'Sua ONG foi criada com sucesso! Informe mais dados sobre ela.');
 
          }
+
        }
 
-     
+       public function delete(Request $request, $id)
+       {
+
+            $idUser = $request->input('idUser');
+            $ong = Ong::find($id)->first();
+            $ongHasUser = OngHasUser::all()->where('id_ong', '=', $id)
+                                    ->where('id_user', '=', $idUser)
+                                    ->where('permission_level', '=', 1)
+                                    ->first();
+            if($ongHasUser){
+                $eventos = ActionEvent::all()->where('id_ong', '=', $id);
+                foreach($eventos as $value):
+                    $value->delete();
+                endforeach;
+
+                $fotos = Gallery::all()->where('id_ong', '=', $id);
+                foreach($fotos as $value):
+                    $value->delete();
+                endforeach;
+                $ongHasUser->delete();
+                $ong->delete();
+
+                return redirect('home')->with('excluiu', 'Sua ONG foi excluída!');
+            }else{
+
+                return redirect('home')->with('naoExcluiu', 'Não foi possível excluir!');
+            }
+
+       }
+
+
 
 
 

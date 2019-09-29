@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
-                  
+
                 <section class="container perfil-user mt-3">
                     <div class=" box-perfil">
                         <div class="container-fluid emp-profile">
@@ -140,28 +140,67 @@
 
                                         <div class="col-12 col-md-12 ml-2 mt-5 text-center">
 
-                                               
+                                           {{-- ##############  modal de esclusão da ong ################# --}}
+                                           <div class="modal fade" id="modalExcluirOng" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Excluir ONG: {{$ong->name}}</h5>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                                        <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                     <p>Você está prestes a excluir sua ONG e todo conteúdo criado e compartilhado por ela!</p>
+                                                    <p>Quer mesmo excluir a ONG {{$ong->name}}?</p>
+
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                      <form action="{{url('homeOng/deletar-ong')}}/{{$ong->id}}" method="post">
+                                                          @csrf {{method_field('DELETE')}}
+
+                                                          <input type="hidden" name="idUser" id="idUser" value="{{Auth::user()->id}}">
+                                                          <button type="submit" class="btn btn-danger">Excluir ONG</button>
+                                                      </form>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+
+
+
+
+
+
+                                         {{-- ##############  modal de esclusão da ong final ################# --}}
+
+
 
                                          @foreach ($ong->users as $item)
-                                               
-                                        
-                                         
+
+
+
                                             @if($item->pivot->id_user == Auth::user()->id && $item->pivot->permission_level == 1)
                                                         <p class="mr-3"><a href="{{url('homeOng/perfil-ong-editar')}}/{{$ong->id}}" class="btn-editar">Alterar informações</a></p>
                                                         <p class="mr-3"><a href="{{url('homeOng/evento/criar/'.$ong->id)}}" class="btn-editar">Criar Evento</a></p>
                                                         <p><a href="{{url('homeOng/galeria/postar/'.$ong->id)}}" class="btn-editar">Postar foto</a></p>
-                                                       
+
+                                                        <p> <a href="#" class="btn-excluir " data-toggle="modal" data-target="#modalExcluirOng">
+                                                                Excluir ONG
+                                                        </a> </p>
+
                                                         @break
-                                           
-                                           
-                                                      
-                                           
-                                           
+
+
+
+
+
                                             @endif
                                         @endforeach
 
-                                       
-                                       
+
+
                                         @foreach ($OngUser as $value)
 
                                             @if($value->id_user == Auth::user()->id && $value->permission_level == 0)
@@ -170,16 +209,16 @@
                                                     <input type="hidden" name="idOng" id="idOng" value="{{$ong->id}}">
                                                     <input type="hidden" name="idUser" id="idUser" value="{{Auth::user()->id}}">
                                                     <button type="submit" class="mb-2 btn btn-warning">Não Seguir</button>
-                                                </form>    
-                                            
-                                         
-                                               
+                                                </form>
+
+
+
                                                 @break
                                             @elseif($value->id_user == Auth::user()->id && $value->permission_level == 1)
-                                                
+
                                             @break
 
-                                          
+
                                             @endif
                                             @if ($loop->last)
                                             <form action="{{url('homeOng/seguir')}}" method="post">
@@ -190,19 +229,19 @@
                                             </form>
 
                                             @endif
-                                            
+
                                         @endforeach
-                                            
-                                           
-                                           
-                                        
-                                        
-                                        
-                                              
-                                               
+
+
+
+
+
+
+
+
 
                                         </div>
-                                  
+
                             </div>
 
                     </div>
@@ -217,7 +256,7 @@
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                @endif   
+                @endif
                 @if (session('excluido'))
                 <div class="alert alert-success alert-dismissible fade show mt-1 ml-4 ml-4 mr-4" role="alert">
                 <strong>{{session('excluido')}}</strong>
@@ -225,7 +264,7 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-            @endif     
+            @endif
             @if (session('seguir'))
             <div class="alert alert-success alert-dismissible fade show mt-1 ml-4 ml-4 mr-4" role="alert">
             <strong>{{session('seguir')}}</strong>
@@ -233,12 +272,12 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            @endif     
+            @endif
 
             <div class="col-12 mt-3 mr-3 text-center">
                     <h3>Eventos</h3>
                 </div>
-               
+
                     <div class="col-12 mt-3 mr-3 box-eventos">
                         <table id="tabela-eventos" class="table table-striped table-responsive-sm my-ongs">
 
@@ -251,23 +290,23 @@
                                     @foreach ($eventos as $evento)
                                         <tr >
                                             @if (($evento->image) == NULL)
-                                            <td class="text-center" ><a href="{{url('eventos/'.$evento->id)}}" ><img src="{{url('images/avatar-ong-default.png')}}" ></a></td>    
-                                            @else    
+                                            <td class="text-center" ><a href="{{url('eventos/'.$evento->id)}}" ><img src="{{url('images/avatar-ong-default.png')}}" ></a></td>
+                                            @else
                                             <td class="text-center" ><a href="{{url('eventos/'.$evento->id)}}" ><img src="{{url($evento->image)}}" ></a></td>
                                             @endif
                                             <td class="text-center" >{{$evento->title}}</td>
                                             <td class="text-center text-truncate" style="max-width: 150px;"  >{{$evento->description}}</td>
                                             <td class="text-center" >{{$evento->date}}</td>
-                                            
-                                        @foreach($ong->users as $item)    
-                                            
+
+                                        @foreach($ong->users as $item)
+
                                           @if($item->pivot->id_user == Auth::user()->id && $item->pivot->permission_level == 1)
                                                 <td class="text-center" >
 
                                                 <a href="{{url('evento-editar')}}/{{$evento->id}}" >
                                                     <i class="fas fa-edit"></i>
                                                 </a>
-                                           
+
                                         </td>
 
                                         <td class="text-center" >
@@ -302,7 +341,7 @@
                                                 </div>
 
                                         </td>
-                                        @endif 
+                                        @endif
                                         </tr>
                                         @endforeach
                                     @endforeach

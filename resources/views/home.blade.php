@@ -13,7 +13,7 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-            @endif    
+            @endif
 
             @if (session('semOng'))
                 <div class="alert alert-warning alert-dismissible fade show mt-1 ml-4 ml-4 mr-4" role="alert">
@@ -22,14 +22,23 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-             @endif 
+             @endif
+
+             @if (session('excluiu'))
+             <div class="alert alert-warning alert-dismissible fade show mt-1 ml-4 ml-4 mr-4" role="alert">
+                 <strong> {{ session('excluiu') }}</strong>
+                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
+            @endif
                {{--  <div class="alert alert-success alert-dismissible fade show mt-4 ml-4 ml-4 mr-4" role="alert">
                     Sua <strong>Ong </strong> foi criada com sucesso !.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div> --}}
-               
+
             <section class="container-fluid perfil-user">
                 <div class=" box-perfil">
                     <div class="row">
@@ -125,9 +134,9 @@
             <section class="container-fluid">
                 <div class="row">
                         <div class="col-12 col-md-4 d-flex align-items-start justify-content-center mt-3 mb-3">
-                            <div class="col-12 col-sm-8 col-md-10 d-flex justify-content-center  mt-3">                      
+                            <div class="col-12 col-sm-8 col-md-10 d-flex justify-content-center  mt-3">
                                 <div class="card text-center " id="card" style=" display:none; ">
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -137,8 +146,8 @@
                                 <h3 id="card-evento-title" style="display:none;">Eventos</h3>
                             </div>
                             <div class="col-12 mb-3 card-evento" id="card-evento" >
-                              
-                            </div> 
+
+                            </div>
                         </div>
                         <div class="row">
                         <div class="col-12 col-md-12 mt-3 text-center mt-4 " >
@@ -161,9 +170,9 @@
                             </div>
                         </div>
                         </div>
-                    </div>   
+                    </div>
                 </div>
-                       
+
                             {{-- <div class="col-12 col-md-12 mt-5 mb-5">
                                 <div class="col-12 col-md-12 mt-3 text-center mt-4 " >
                                     <h3  id="ong-follow-title" style="display:none;">ONGs que eu acompanho.</h3>
@@ -185,7 +194,7 @@
                                     </div>
                                 </div>
                             </div> --}}
-                        
+
             </section>
 
 
