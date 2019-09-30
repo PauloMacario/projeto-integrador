@@ -41,14 +41,9 @@
 						<div class="projeto-text">
 							<h3>Criança e Adolescente</h3>
 							<div class="projeto-paragrafo">
-								<p>Encontre aqui organizações que ajudam escolas, orfanatos, creches, hospitais e outras ações que promovam melhorias e apoio para a vida de crianças e adolescentes!</p>
+								<p>Encontre aqui eventos que ajudam escolas, orfanatos, creches, hospitais e outras ações que promovam melhorias e apoio para a vida de crianças e adolescentes!</p>
 							</div>
-
-
 						</div>
-
-
-
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-12 col-sm-12 text-center">
@@ -64,12 +59,8 @@
 								<p>Encontre aqui uma ação e seja um voluntário para auxílio em eventos de adoção de animais, veterinários ou formandos em veterinária para cuidados com os animais, etc.!</p>
 							</div>
 						</div>
-
-						<div class="projeto-paragrafo text-center">
-							<button class=" btn btn-primary">Ver Mais...</button>
-						</div>
-
 					</a>
+
 				</div>
 				<div class="col-lg-4 col-md-12 col-sm-12 text-center">
 					<a href="eventos" >
@@ -88,7 +79,13 @@
 				</div>
 			</div>
 		</div>
+		<div class="projeto-paragrafo text-center mt-4">
+			<a href="{{url('eventos')}}">
+			<button class=" btn btn-primary">Ver Mais...</button>
+			</a>
+		</div>
 	</div>
+
 
 <!--  =========================== Seção descritiva do site dos Projetos -  (FINAL)  ==========================  -->
 
@@ -146,65 +143,61 @@
 
 <!--  =========================== Seção resumo das notícias -  (INÍCIO)  ==========================  -->
 
-		<div id="noticia-section" class="projeto-section">
-			<div class="container ">
-				<div class="row">
-					<div class="col-md-12 col-md-offset-12 text-center heading-section">
-						<h3>Conheça as  ONGs participantes</h3>
-
-					</div>
+<div id="noticia-section" class="projeto-section">
+		<div class="container ">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-12 text-center heading-section">
+					<h3>Notícias</h3>
+					<p>Acompanhe as notícias mais atuais.</p>
 				</div>
 			</div>
-			<div class="container ">
-				<div class="row row-bottom-padded-md">
-					<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
-						<div class="noticia">
-						<img width="100%" height="280" src="{{url('images/photo-education.jpg')}}" >
-							<div class="noticia-text">
-								<div class="noticia-title">
-									<h3><a href="{{url('eventos')}}">Escola da família</a></h3>
-									<p>Eventos diversos para toda a família se divertir e contribuir com suas idéias.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
-						<div class="noticia">
-						<img width="100%" height="280" src="{{url('images/photo-bazar.jpg')}}" >
-							<div class="noticia-text">
-								<div class="noticia-title">
-									<h3><a href="{{url('eventos')}}">Bazar do inverno comunitário </a></h3>
-									<p>Bazar realizado com intuíto de doação e arrecadação de roupas para pessoas necessitadas, venha nos ajudar a ajudar.</p>
-								</div>
-							</div>
-						</div>
-
-					</div>
-					<div class="clearfix visible-sm-block"></div>
-						<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
-							<div class="noticia">
-								<img width="100%" height="280" src="{{url('images/photo-dog1.jpg')}}" >
-								<div class="noticia-text">
-									<div class="noticia-title">
-										<h3><a href="{{url('eventos')}}">Doação de Pets</a></h3>
-										<p>Doação de Caẽs e gatos, você que gosta de animais e tem a intenção de adotar um animalzinho, venha conhecer nossa ong e nossos amiguinhos</p>
-
-									</div>
-								</div>
-							</div>
-						</div>
-					<div class="clearfix visible-md-block"></div>
-				</div>
-				<!-- <div class="row">
-					<div class="col-md-12 col-md-12 text-center ">
-						<a href="eventos" class="btn btn-success btn-lg">Mais Eventos</a>
-					</div>
-				</div> -->
-			</div>
-			<div class="projeto-paragrafo text-center mt-4">
-					<button class=" btn btn-primary">Ver Mais...</button>
-				</div>
 		</div>
+		<div class="container ">
+			<div class="row row-bottom-padded-md">
+				<div class="col-lg-4 col-md-12 col-sm-12">
+					<div class="noticia">
+					<iframe width="100%" height="280" src="https://www.youtube.com/embed/j8L1CcanjT8?mute=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<div class="noticia-text">
+							<div class="noticia-title">
+								<h3><a target="_blank" href="https://www.youtube.com/watch?v=j8L1CcanjT8">Conheça os 17 Objetivos de Desenvolvimento Sustentável</a></h3>
+								<p>Acesse aqui a Agenda 2030 na íntegra, com o documento final adotado na Cúpula das Nações Unidas sobre o Desenvolvimento Sustentável.</p>									
+							</div>
+						</div> 
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-12 col-sm-12">
+					<div class="noticia">
+					<iframe width="100%" height="280" src="https://www.youtube.com/embed/soT7jdW5bvE?mute=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<div class="noticia-text">
+							<div class="noticia-title">
+								<h3><a target="_blank" href="https://www.youtube.com/watch?v=soT7jdW5bvE">Um olhar sobre o futuro do Santuário de Elefantes Brasil.</a></h3>
+								<p>Breve descrição da notícia.</p>									
+							</div>
+						</div> 
+					</div>
+				</div>
+				<div class="clearfix visible-sm-block"></div>
+					<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
+						<div class="noticia">
+							<iframe width="100%" height="280" src="https://www.youtube.com/embed/_oeYCEYpaRo?mute=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<div class="noticia-text">
+								<div class="noticia-title">
+									<h3><a target="_blank" href="https://www.youtube.com/watch?v=_oeYCEYpaRo">O trabalho infantil no Brasil</a></h3>
+									<p>Breve descrição da notícia.</p>
+									
+								</div>
+							</div> 
+						</div>
+					</div>
+				<div class="clearfix visible-md-block"></div>
+			</div>
+			<!-- <div class="row">
+				<div class="col-md-12 col-md-12 text-center ">
+					<a href="eventos" class="btn btn-success btn-lg">Mais Eventos</a>
+				</div>
+			</div> -->
+		</div>
+	</div>
 
         <!--  =========================== Seção resumo das notícias -  (FINAL)  ==========================  -->
 
