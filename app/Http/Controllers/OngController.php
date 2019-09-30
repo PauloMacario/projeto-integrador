@@ -154,23 +154,15 @@ class OngController extends Controller
        {
 
             $idUser = $request->input('idUser');
-            $ong = Ong::find($id)->first();
+            $ong = Ong::find($id);
             $ongHasUser = OngHasUser::all()->where('id_ong', '=', $id)
                                     ->where('id_user', '=', $idUser)
                                     ->where('permission_level', '=', 1)
                                     ->first();
             if($ongHasUser){
-                $eventos = ActionEvent::all()->where('id_ong', '=', $id);
-                foreach($eventos as $value):
-                    $value->delete();
-                endforeach;
 
-                $fotos = Gallery::all()->where('id_ong', '=', $id);
-                foreach($fotos as $value):
-                    $value->delete();
-                endforeach;
-                $ongHasUser->delete();
-                $ong->delete();
+
+               $ong->delete();
 
                 return redirect('home')->with('excluiu', 'Sua ONG foi excluída!');
             }else{

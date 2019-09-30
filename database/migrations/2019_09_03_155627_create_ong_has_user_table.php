@@ -20,7 +20,7 @@ class CreateOngHasUserTable extends Migration
             $table->integer('permission_level');
             $table->foreign('id_ong')->references('id')->on('ongs')->onDelete('cascade');
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
-           
+
 
         });
     }

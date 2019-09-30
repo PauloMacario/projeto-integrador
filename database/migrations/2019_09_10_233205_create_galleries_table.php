@@ -18,7 +18,7 @@ class CreateGalleriesTable extends Migration
             $table->unsignedBigInteger('id_ong');
             $table->string('name', 45)->nullable();
             $table->string('image', 100);
-            $table->foreign('id_ong')->references('id')->on('ongs');;
+            $table->foreign('id_ong')->references('id')->on('ongs')->onDelete('cascade');
         });
     }
 

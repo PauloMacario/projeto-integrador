@@ -19,8 +19,8 @@ class CreateActionEventHasUserTable extends Migration
             $table->unsignedBigInteger('id_user');
             $table->foreign('id_action_event')->references('id')->on('actions_events')->onDelete('cascade');
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
-           
-            
+
+
         });
     }
 

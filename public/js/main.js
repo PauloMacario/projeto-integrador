@@ -171,15 +171,15 @@
 
 
                             $('#card').attr('style', 'display:block;')
-                            
+
 							if(response.ongs[i].avatar == ''){
-								$('#card').prepend('<img src="images/avatar-ong-default.png" class="card-img-top" width="100px" height="200px" alt="...">\
+								$('#card').prepend('<a href="/homeOng/'+response.ongs[i].id+'" ><img src="images/avatar-ong-default.png" class="card-img-top" width="100px" height="200px" alt="..."></a>\
 								<div class="card-body"><h5 class="card-title">'+response.ongs[i].name+'</h5>\
 									 <p class="card-text">'+ response.ongs[i].description +'</p>\
 									<a href="/homeOng/'+response.ongs[i].id+'" class="btn-editar">Minha ONG</a>\
 								<div> ')
 							}else{
-							$('#card').prepend('<img src="' + response.ongs[i].avatar + '" class="card-img-top" width="100px" height="200px" alt="...">\
+							$('#card').prepend('<a href="/homeOng/'+response.ongs[i].id+'" ><img src="' + response.ongs[i].avatar + '" class="card-img-top" width="100px" height="200px" alt="..."></a>\
 												<div class="card-body"><h5 class="card-title">'+response.ongs[i].name+'</h5>\
 												 	<p class="card-text">'+ response.ongs[i].description +'</p>\
 													<a href="/homeOng/'+response.ongs[i].id+'" class="btn-editar">Minha ONG</a>\
@@ -203,7 +203,7 @@
 
 					})
 				});
-	
+
 	// lista AJAX para EVENTOS
 	$(function(){
 		var id = $('#id-perfil').val()
@@ -217,14 +217,14 @@
 							/* $('#card-evento').attr('style', 'display:block;') */
 							for(var i = 0; i < response.actions_events.length; i++ ){
 								$('#card-evento-title').attr('style', 'display:block;')
-								
-								$('#card-evento').prepend('<div class="evento-content box-img-animate"><a href="/homeOng/'+response.actions_events[i].id+'" class="galeria" class="d-flex align-items-center ">\
+
+								$('#card-evento').prepend('<div class="evento-content box-img-animate"><a href="/eventos/'+response.actions_events[i].id+'" class="galeria" class="d-flex align-items-center ">\
 																<img src="'+response.actions_events[i].image+'" title="" >\
 															</a>\
 															<div class="text-truncate" >'+response.actions_events[i].description+'</div></div>')
 
-                            
-                      
+
+
 						}
 					}
 					}

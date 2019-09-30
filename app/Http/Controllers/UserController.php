@@ -11,18 +11,18 @@ use App\Http\Controllers\Imagem;
 
 class UserController extends Controller
 {
-   
-    
+
+
 
     public function  listarUp($id)
     {
         $user = User::find($id);
         $a = $user->ongs;
-        return view('home')->with('user', $a);  
+        return view('home')->with('user', $a);
     }
 
-    
-  
+
+
     public function editarUser()
     {
         return view('perfilEditar');
@@ -31,9 +31,9 @@ class UserController extends Controller
 
     public function atualizarUser(Request $request, $id)
     {
-        $user = User::find($id);  
-        
-        
+        $user = User::find($id);
+
+
         $arquivo = $request->file('imagem');
         if($arquivo == NULL){
             $path = $user->avatar;
@@ -41,7 +41,7 @@ class UserController extends Controller
             $pasta = 'perfil';
             $path = Imagem::criarCaminhoImagem($arquivo, $pasta);
         }
-        
+
         $request->validate([
             "nome" => "max:100 | min:3",
             "biografia" => "max:1000",
@@ -52,10 +52,10 @@ class UserController extends Controller
             "bairro" => "max:45",
             "cidade" => "max:45",
             "avatar" => "max:100"
-        ]); 
+        ]);
 
 
-        
+
         $user->name       = $request->input('nome');
         $user->email      = $request->input('email');
         $user->occupation = $request->input('ocupacao');
@@ -67,18 +67,18 @@ class UserController extends Controller
         $user->avatar     = $path;
 
         $user->save();
-        
+
         return redirect('home/');
     }
 
     public function listarOngs($id){
         $user = User::find($id);
         $a = $user->ongs;
-        return view('home')->with('user', $a);  
+        return view('home')->with('user', $a);
     }
 
- 
-    
+
+
     //teste do Ajax listagem de Ongs do usuario
 
     public function allOngs($id)
@@ -98,20 +98,20 @@ class UserController extends Controller
 
 
     public function ongAdmin($id)
-    {       
+    {
         $ongAdmin = OngHasUser::all()->where('id_user', '=', $id)->where('permission_level', '=', 1);
 
-        if(count($ongAdmin) > 0 ){        
+        if(count($ongAdmin) > 0 ){
            foreach($ongAdmin as $ong ):
                 $ongAdmin = $ong->id_ong;
-           endforeach;  
-           
-        return redirect('homeOng/'.$ongAdmin);         
+           endforeach;
+
+        return redirect('homeOng/'.$ongAdmin);
         }else{
-            return redirect('home/')->with('semOng','Você ainda não possui ong criada.');    
+            return redirect('home/')->with('semOng','Você ainda não possui ong criada.');
         }
-      
-       
+
+
        /*  $ongAdmin = User::find('ongs')->get();
         return $ongAdmin; */
     }
@@ -120,19 +120,25 @@ class UserController extends Controller
     {
         // pega o id do usuario que esta oculto
         $userId = $request->input('identificador');
+
         $user = User::find($userId);
-        $userOng = $user->ongs;
-        $userOng = json_decode($userOng, true);
+        $ongUser = OngHasUser::all()->where('id_user', '=', $userId)
+                                ->where('permission_level', '=', 1)->first();
 
 
-       if(count($userOng) > 0){
-           $user->ongs()->delete();
-        }
 
-        $user->delete();
+        if($ongUser){
 
+            $ong = Ong::find($ongUser->id_ong);
+            $user->delete();
+            $ong->delete();
+            return redirect('/');
 
-        return redirect('/');
+       }else{
+           $user->delete();
+           return redirect('/');
+
+       }
 
     }
 
