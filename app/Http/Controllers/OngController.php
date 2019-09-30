@@ -126,6 +126,7 @@ class OngController extends Controller
        // Salva a ong no banco
         Ong::create([
             'name' => $request->input('nome'),
+            'email' => $request->input('email'),
             'segment' => $request->input('segmento'),
             'description' => $request->input('descricao'),
             'address' => $request->input('endereco'),

@@ -78,15 +78,6 @@
                                     {{ Auth::user()->email }} </p>
 
                                 <p class="mt-1 mr-3">
-                                    <i class="fas fa-globe-africa icone-perfil"></i>
-
-
-                                @if (Auth::user()->website == NULL)
-                                    Adicione seu website</p>
-                                @else
-                                    {{ Auth::user()->website1 }}</p>
-                                @endif
-                                <p class="mt-1 mr-3">
                                         <i class="fas fa-map-signs icone-perfil"></i>
 
                                 @if (Auth::user()->district == NULL)
