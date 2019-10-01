@@ -24,16 +24,8 @@
 
 
 		<section id="noticia" class="projeto-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 col-md-offset-12 text-center heading-section" id="titulo">
-						<h3>Bem-Vindo a área de eventos!</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet praesentium harum voluptatum minima perspiciatis? Natus provident unde est et. Dolore quas tempore commodi eveniet ab totam recusandae ad molestiae doloremque.</p>
-					</div>
-				</div>
-			</div>
 
-			@if(!isset($eventos))
+@if($eventos->isEmpty())
     <div class="container">
         <div class="titulo">
             <div class="col-md-12 col-md-offset-12 text-center heading-section ">
