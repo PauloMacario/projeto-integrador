@@ -83,7 +83,7 @@
                             <div class="form-row">
                                 <div class="col-12 col-md-4">
                                     <label>CEP:</label>
-                                    <input type="text" class="form-control" id="CEP" name="CEP">
+                                    <input type="text" class="form-control" id="CEP" name="CEP" placeholder="00000-000" required>
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <label>Bairro:</label>
@@ -92,6 +92,14 @@
                                 <div class="col-12 col-md-4">
                                     <label>Cidade:</label>
                                     <input type="text" class="form-control" id="cidade" name="cidade" value="{{  Auth::user()->city }}" readonly>
+                                </div>
+                                <div class="form-group col-md-2">
+
+                                    <input type="hidden" class="form-control" id="uf" name="uf" readonly required>
+                                </div>
+                                <div class="form-group col-md-8">
+
+                                    <input type="hidden" class="form-control" id="endereco" name="endereco" readonly required>
                                 </div>
                             </div>
                         </div>

@@ -44,7 +44,7 @@ class UserController extends Controller
 
         $request->validate([
             "nome" => "min:3 | max:100 ",
-            "biografia" => "max:1000 | | min:3",
+            "biografia" => "max:1000 | min:3",
             "email" => "max:45",
             "ocupacao" => "max:50|nullable",
             "areas" => "max:255",
