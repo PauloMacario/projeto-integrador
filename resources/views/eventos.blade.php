@@ -41,7 +41,7 @@
                     @foreach ($eventos as $evento)
                         <div class="col-md-4 col-sm-6 mb-4">
                             <div class="noticia box-img-animate">
-                                <a href="{{url('eventos/'.$evento->id)}}"><img class="img-responsive" src="{{url($evento->image)}}" title="{{$evento->title}}" alt="" width="250" height="200"></a>
+                                <a href="{{url('eventos/'.$evento->id)}}"><img class="img-responsive" src="{{url($evento->image)}}" title="{{$evento->title}}" alt="" width="250" height="240"></a>
                                 <a href="{{url('eventos/'.$evento->id)}}">
                                     <div class="noticia-text">
                                         <div class="noticia-title">
@@ -57,34 +57,6 @@
                         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-					{{-- <div class="col-md-4 col-12 box-img-animate">
-						<div class="noticia">
-							<a href="{{url('eventos/'.$evento->id)}}">
-								<img src="{{$evento->image}}" alt="" title="{{$evento->title}}" width="250px" height="200px">
-                            </a>
-                            <a href="{{url('eventos/'.$evento->id)}}">
-                                <div class="noticia-text">
-                                    <div class="noticia-title">
-                                        <h3>{{$evento->title}}</h3>
-                                        <span class="posted_by">{{$evento->date}}</span>
-
-                                        <p>{{$evento->description}}</p>
-                                        <p>Leia mais...</p>
-                                    </div>
-                                </div>
-                            </a>
-						</div>
-					</div> --}}
 					@endforeach
 
 						</div>

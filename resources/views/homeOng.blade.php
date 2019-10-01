@@ -138,7 +138,7 @@
 
                                         </div>
 
-                                        <div class="col-12 col-md-12 ml-2 mt-5 text-center">
+                                        <div class="col-12 col-md-12 p-4 text-center">
 
                                            {{-- ##############  modal de esclusão da ong ################# --}}
                                            <div class="modal fade" id="modalExcluirOng" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -182,14 +182,14 @@
 
 
                                             @if($item->pivot->id_user == Auth::user()->id && $item->pivot->permission_level == 1)
-                                                        <p class="mr-3"><a href="{{url('homeOng/perfil-ong-editar')}}/{{$ong->id}}" class="btn-editar">Alterar informações</a></p>
-                                                        <p class="mr-3"><a href="{{url('homeOng/evento/criar/'.$ong->id)}}" class="btn-editar">Criar Evento</a></p>
-                                                        <p><a href="{{url('homeOng/galeria/postar/'.$ong->id)}}" class="btn-editar">Postar foto</a></p>
+                                                    <div id="box-botoes">
 
-                                                        <p> <a href="#" class="btn-excluir " data-toggle="modal" data-target="#modalExcluirOng">
-                                                                Excluir ONG
-                                                        </a> </p>
+                                                       <p class="d-flex"><a href="{{url('homeOng/perfil-ong-editar')}}/{{$ong->id}}" class="btn-editar btn-block">Alterar informações</a></p>
+                                                       <p class="d-flex"><a href="{{url('homeOng/evento/criar/'.$ong->id)}}" class="btn-editar btn-block">Criar Evento</a></p>
+                                                       <p class="d-flex"><a href="{{url('homeOng/galeria/postar/'.$ong->id)}}" class="btn-editar btn-block">Postar foto</a></p>
+                                                       <p class="d-flex"><a href="#" class="btn-excluir btn-block" data-toggle="modal" data-target="#modalExcluirOng">Excluir ONG</a></p>
 
+                                                    </div>
                                                         @break
 
 
