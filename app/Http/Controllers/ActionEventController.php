@@ -80,6 +80,7 @@ class ActionEventController extends Controller
     // Salva o Evento
     public function salvarEvento(Request $request)
     {
+
         $user = $request->input('id');
         $ong = $request->input('id2');
         $verifica = OngHasUser::all()->where('id_user', '=', $user)
@@ -127,7 +128,7 @@ class ActionEventController extends Controller
 
         $idResult->delete();
         return redirect('homeOng/'.$idOng)->with('excluido', 'Evento excluído com sucesso!');
-    }    
+    }
 
     public function participar($idEvento, $idUser)
     {

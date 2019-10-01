@@ -28,18 +28,8 @@
             </div>
             <div class="form-group col-md-3">
                 <label for="date">Data do evento</label>
-                <input class="form-control"
-                type="text"
-                name="data"
-                placeholder="dd/mm/yyyy"
-                onkeyup="
-                    var v = this.value;
-                    if (v.match(/^\d{2}$/) !== null) {
-                        this.value = v + '/';
-                    } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
-                        this.value = v + '/';
-                    }"
-                maxlength="10" required>
+                <input class="form-control" type="date" name="data" placeholder="dd/mm/yyyy">
+
             </div>
 
             {{-- <div class="form-group col-12 col-md-3">

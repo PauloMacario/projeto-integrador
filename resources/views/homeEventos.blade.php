@@ -9,7 +9,7 @@
 
 <div class="col-md-12">
     <div class="card">
-           
+
             <section class="container perfil-user box-event">
                     @if (session('sucess'))
 
@@ -27,7 +27,7 @@
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                @endif     
+                @endif
                 <div class=" box-perfil ">
                     <div class="container emp-profile box-perfil-event">
                         <div class="row">
@@ -35,18 +35,18 @@
                                 <div class="profile-event-img text-center">
                                     <a href="">
                                         @if (($evento->image) == NULL)
-                                        <img src="{{url('images/avatar-ong-default.png')}}" > 
-                                        @else    
+                                        <img src="{{url('images/avatar-ong-default.png')}}" >
+                                        @else
                                         <img src="{{url($evento->image)}}" alt="" title="{{$evento->title}}">
                                         @endif
-                                        
+
 
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12 ">  
+                            <div class="col-md-12 ">
                                 <div class="profile-event-box text-center">
                                     <span><h3>{{$evento->title}}</h3></span>
                                     <div class="event-description ">
@@ -62,7 +62,7 @@
 
                                     </p>
 
-                                    <p><span><i class="fas fa-calendar-alt icone-perfil mt-3"></i>{{$evento->date}}</span>
+                                    <p><span><i class="fas fa-calendar-alt icone-perfil mt-3"></i>{{date('d-m-Y'), strtotime($evento->date)}}</span>
                                     </p>
                                 </div>
                             </div>
@@ -120,7 +120,7 @@
                                     @endif
 
 
-                                        
+
  --}}
                                         @if(isset($total))
 

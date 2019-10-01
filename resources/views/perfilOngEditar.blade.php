@@ -20,8 +20,16 @@
 
                     <div class="col-12 col-md-12" >
                         <label for="name" >Nome da ONG:</label>
-                        <input id="name" type="text" class="form-control-sm form-control" id="name" name="nome" value="{{$ong->name}}"  required  autofocus>
+                        <input id="name" type="text" class="form-control-sm form-control" id="nome" name="nome" value="{{$ong->name}}"  required  autofocus>
                     </div>
+                    @error('nome')
+                            <div class="col-12 alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                                <strong> {{ $message }}.</strong>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @enderror
                     <div class="col-12 col-md-6">
                         <label for="bairro">Email</label>
                         <input type="email" class="form-control-sm form-control" id="email" name="email" value="{{$ong->email}}" >
@@ -43,17 +51,25 @@
                         <label for="descricao">Descrição</label>
                         <textarea class="form-control-sm form-control" id="descricao" name="descricao" placeholder="max 500 caracteres ...">{{$ong->description}}</textarea>
                     </div>
+                    @error('descricao')
+                        <div class="col-12 alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                            <strong> {{ $message }}.</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @enderror
                 </div>
             </div>
             <div class="form-group col-md-12">
                 <div class="form-row">
                     <div class="col-12 col-md-6">
-                        <label for="phone1">Telefone 1</label>
-                        <input type="text" class="form-control-sm form-control" id="phone1" name="phone1" value="{{$ong->phone1}}" >
+                        <label for="telefone">Telefone</label>
+                        <input type="text" class="form-control-sm form-control" id="telefone" name="phone1" placeholder="(xx)xxxx-xxxx" value="{{$ong->phone1}}" >
                     </div>
                     <div class="col-12 col-md-6">
-                        <label for="phone2">Telefone 2</label>
-                        <input type="text" class="form-control-sm form-control" id="phone2" name="phone2" value="{{$ong->phone2}}" >
+                        <label for="Celular">Celular</label>
+                        <input type="text" class="form-control-sm form-control" id="celular" name="phone2" placeholder="(xx)xxxxx-xxxx" value="{{$ong->phone2}}" >
                     </div>
                 </div>
             </div>
@@ -125,7 +141,7 @@
                        <div>
                            <img src="{{url('images/preview-default.png')}}" alt="" title="Pré-Visualização" class="preview-img-avatar" id="preview">
                        </div>
-    
+
                     </div>
                 </div>
             <div class="form-group col-md-12 mt-5" >

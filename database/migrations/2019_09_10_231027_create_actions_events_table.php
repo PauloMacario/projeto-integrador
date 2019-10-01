@@ -22,7 +22,7 @@ class CreateActionsEventsTable extends Migration
             $table->string('district', 45);
             $table->string('city', 45);
             $table->string('uf', 2);
-            $table->string('date', 45)->nullable();
+            $table->date('date', 45)->nullable();
             $table->string('image', 100);
             $table->foreign('id_ong')->references('id')->on('ongs')->onDelete('cascade');
         });

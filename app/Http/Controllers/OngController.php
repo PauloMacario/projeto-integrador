@@ -63,6 +63,14 @@ class OngController extends Controller
 
     public function atualizarOng(Request $request, $id)
     {
+        $request->validate([
+            "nome" => "min:3|max:100",
+            "email" => "max:100",
+            "descricao" => "min:3|max:500",
+            "avatar" => "max:100"
+        ]);
+
+
         $ong = ong::find($id);
         $arquivo = $request->file('imagem');
        /*  $userId = $request->input('id'); */
@@ -102,7 +110,12 @@ class OngController extends Controller
      // Salva a Ong
     public function salvarOng(Request $request, $id)
     {
-
+        $request->validate([
+            "nome" => "min:3|max:100",
+            "email" => "max:100",
+            "descricao" => "min:3|max:500",
+            "avatar" => "max:100"
+        ]);
 
         $result =  OngHasUser::all()->where('id_user', '=', $id)->where('permission_level', '=', 1 );
 

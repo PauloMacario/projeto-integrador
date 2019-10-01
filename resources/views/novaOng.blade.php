@@ -19,10 +19,26 @@
                 <label for="nome">Nome da ONG</label>
                 <input type="text" class="form-control" id="nome" name="nome"  required>
             </div>
+            @error('nome')
+                <div class="col-12 alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                    <strong> {{ $message }}.</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @enderror
             <div class="col-12 col-md-6">
-                <label for="bairro">Email</label>
+                <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" name="email" required>
             </div>
+            @error('email')
+                <div class="col-12 alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                    <strong> {{ $message }}.</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @enderror
             <div class="form-group col-12 col-md-6 mb-3">
                 {{-- <input type="text" class="form-control" id="segmento" name="segmento" placeholder="Segmento" required> --}}
 
@@ -43,15 +59,24 @@
                 <label for="descricao">Descrição</label>
                 <textarea class="form-control" id="descricao" name="descricao" placeholder="max 500 caracteres ..."  required ></textarea>
             </div>
+            @error('descricao')
+            <div class="col-12 alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                <strong> {{ $message }}.</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @enderror
             <div class="form-group col-md-4">
-                <label for="nome">CEP</label>
+                <label for="CEP">CEP</label>
                 <input type="text" class="form-control" id="CEP" name="CEP" placeholder="00000-000" required>
             </div>
             <div class="form-group col-md-8">
-                <label for="nome">Endereço</label>
+                <label for="endereco">Endereço</label>
                 <input type="text" class="form-control" id="endereco" name="endereco" readonly required>
             </div>
         </div>
+
         <div class="form-row ">
             <div class="form-group col-md-5">
                 <label for="bairro">Bairro</label>

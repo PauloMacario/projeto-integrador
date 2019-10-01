@@ -22,7 +22,7 @@ class ActionEventTableSeeder extends Seeder
             'district' => 'Vila Adoção',
             'city' => 'São Paulo',
             'uf' => 'SP',
-            'date' => 'Segunda a Sexta das 09h as 18h',
+
             'image' => 'images/apadrinhamento.jpg'
         ]);
 
@@ -34,7 +34,7 @@ class ActionEventTableSeeder extends Seeder
             'district' => 'Jardim empoderamento',
             'city' => 'São Paulo',
             'uf' => 'SP',
-            'date' => '20-11-2019 - 09:00',
+
             'image' => 'images/palestra.jpg'
         ]);
 
@@ -46,7 +46,7 @@ class ActionEventTableSeeder extends Seeder
             'district' => 'Vila Ensino',
             'city' => 'São Paulo',
             'uf' => 'SP',
-            'date' => '12-09-2019 - 13:00',
+
             'image' => 'images/aprender.jpg'
         ]);
     }

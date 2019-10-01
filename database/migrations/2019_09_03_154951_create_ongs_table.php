@@ -22,15 +22,15 @@ class CreateOngsTable extends Migration
             $table->string('district', 45);
             $table->string('city', 45);
             $table->string('uf', 2)->nullable();
-            $table->bigInteger('phone1')->nullable();
-            $table->bigInteger('phone2')->nullable();
+            $table->string('phone1', 13)->nullable();
+            $table->string('phone2', 14)->nullable();
             $table->string('email', 100)->nullable();
             $table->string('website1', 100)->nullable();
             $table->string('website2', 100)->nullable();
             $table->string('website3', 100)->nullable();
             $table->string('website4', 100)->nullable();
             $table->string('avatar', 100)->nullable();
-            
+
         });
     }
 

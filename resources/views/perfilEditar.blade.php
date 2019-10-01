@@ -17,51 +17,11 @@
                         <div class="form-group col-md-12">
                             <h4 class="text-center">Atualize seus dados.</h4>
                         </div>
-
-
-                       {{--  @if ($errors->any())
-
-
-
-                        <div class="form-group col-md-12 mt-5">
-                            <div class="form-row">
-                                <div class="col-md-12 mb-3alert">
-                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                        <strong>
-                                                <ul>
-                                                    @foreach ($errors->all() as $error)
-                                                        <li>{{ $error }}</li>
-                                                    @endforeach
-                                                </ul>
-                                            </strong>
-                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        @endif     --}}
-
-
-
                         <div class="form-group col-md-12">
                             <div class="form-row">
                                 <div class="col-12 col-md-6" >
-                                    <label for="name" >Nome:</label>
-                                    <input type="text" class="form-control" id="name" name="nome" value="{{ Auth::user()->name  }}"  required  autofocus>
-                                    @error('nome')
-
-                                    <div class="alert alert-danger alert-dismissible fade show  mt-2" role="alert">
-                                            <strong> {{ $message }}.</strong>
-                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                            </button>
-                                          </div>
-
-                                    @enderror
+                                    <label for="nome" >Nome:</label>
+                                    <input type="text" class="form-control" id="nome" name="nome" value="{{ Auth::user()->name  }}"  required  autofocus>
                                 </div>
                                 <div class="col-12 col-md-6 mb-3">
                                     <label for="email">E-mail:</label>
@@ -69,26 +29,56 @@
                                 </div>
                             </div>
                         </div>
+                        @error('nome')
+                            <div class="col-12 alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                                <strong> {{ $message }}.</strong>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @enderror
+                        @error('email')
+                            <div class="col-12 alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                                <strong> {{ $message }}.</strong>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @enderror
                         <div class="form-group col-md-12">
                             <div class="form-row">
                                 <div class="col-12 col-md-6">
                                     <label for="occupation">Ocupação:</label>
-                                    <input type="text" class="form-control" id="ucuppation" name="ocupacao" value="{{  Auth::user()->occupation }}" >
+                                    <input type="text" class="form-control" id="ocupacao" name="ocupacao" value="{{  Auth::user()->occupation }}" >
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label for="biography">Áreas de interesses:</label>
+                                    <label for="areas">Áreas de interesses:</label>
                                     <input type="text" class="form-control" id="areas" name="areas" value="{{ Auth::user()->areas  }}" >
                                 </div>
+
+                                @error('ocupacao')
+
+                                <div class="col-12 alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                                        <strong> {{ $message }}.</strong>
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+
+                                @enderror
+
+                                @error('areas')
+
+                                <div class="col-12 alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                                        <strong> {{ $message }}.</strong>
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+
+                                @enderror
                             </div>
                         </div>
-                        <div class="form-group col-md-12">
-                                <div class="form-row">
-                                    <div class="col-12 col-md-12">
-                                        <label for="website1">Website</label>
-                                        <input type="text" class="form-control" id="website1" name="website1" value="{{  Auth::user()->website1 }}" >
-                                    </div>
-                                </div>
-                            </div>
                         <div class="form-group col-md-12">
                             <div class="form-row">
                                 <div class="col-12 col-md-4">
@@ -103,12 +93,6 @@
                                     <label>Cidade:</label>
                                     <input type="text" class="form-control" id="cidade" name="cidade" value="{{  Auth::user()->city }}" readonly>
                                 </div>
-                                <div class="">
-                                    <input type="hidden" class="form-control" id="endereco" name="endereco" value="">
-                                </div>
-                                <div class="">
-                                    <input type="hidden" class="form-control" id="uf" name="uf" value="">
-                                </div>
                             </div>
                         </div>
                         <div class="form-group col-md-12">
@@ -118,7 +102,7 @@
                                     <textarea class="form-control" id="exampleFormControlTextarea1" name="biografia" rows="3">{{  Auth::user()->biography }}</textarea>
                                     @error('biografia')
 
-                                    <div class="alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                                    <div class="col-12 alert alert-danger alert-dismissible fade show mt-2" role="alert">
                                             <strong> {{ $message }}.</strong>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                               <span aria-hidden="true">&times;</span>
