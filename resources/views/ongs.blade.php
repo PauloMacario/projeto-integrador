@@ -8,7 +8,7 @@
             <a href="#titulo" target="" class="">
                 <div class="desc ">
                     <h2><strong>ONGs</strong></h2>
-                    <span>Confira abaixo as ONGs participantes.</span>
+                    <span>Inspirando você a fazer o bem</span>
                         <!-- <span><a class="btn btn-primary btn-lg" href="#">Donate Now</a></span> -->
                 </div>
             </a>
@@ -28,7 +28,7 @@
     <div class="container">
             <div class="titulo" id="titulo">
                 <div class="col-md-12 col-md-offset-12 text-center heading-section ">
-                    <h3>Conheça as ONGs e Instituições participantes.</h3>
+                    <h3>Conheça as ONGs e Instituições Participantes.</h3>
                 </div>
             </div>
         </div>

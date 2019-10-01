@@ -154,7 +154,7 @@
 		</div>
 		<div class="container ">
 			<div class="row row-bottom-padded-md">
-				<div class="col-lg-4 col-md-12 col-sm-12">
+				<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
 					<div class="noticia">
 					<iframe width="100%" height="280" src="https://www.youtube.com/embed/j8L1CcanjT8?mute=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						<div class="noticia-text">
@@ -165,13 +165,13 @@
 						</div> 
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-12 col-sm-12">
+				<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
 					<div class="noticia">
 					<iframe width="100%" height="280" src="https://www.youtube.com/embed/soT7jdW5bvE?mute=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						<div class="noticia-text">
 							<div class="noticia-title">
 								<h3><a target="_blank" href="https://www.youtube.com/watch?v=soT7jdW5bvE">Um olhar sobre o futuro do Santuário de Elefantes Brasil.</a></h3>
-								<p>Breve descrição da notícia.</p>									
+								<p>Nossa missão é proteger, resgatar e prover um santuário de ambiente natural para os elefantes em cativeiro.</p>									
 							</div>
 						</div> 
 					</div>
@@ -183,7 +183,7 @@
 							<div class="noticia-text">
 								<div class="noticia-title">
 									<h3><a target="_blank" href="https://www.youtube.com/watch?v=_oeYCEYpaRo">O trabalho infantil no Brasil</a></h3>
-									<p>Breve descrição da notícia.</p>
+									<p>Os dados do Instituto Brasileiro de Geografia e Estatística (IBGE) de 2016 mostram que o Brasil tem 2,4 milhões de crianças e adolescentes entre 5 e 17 anos trabalhando.</p>
 									
 								</div>
 							</div> 

@@ -80,9 +80,8 @@
 							<a class="link-topo" href="/contato">Contato</a>
                             <a href="https://www.facebook.com/" class="grow" target="_blank"><!-- <i class="icon-facebook2"></i> --> <i class="fab fa-facebook-square" title="Facebook"></i></a>
                             <a href="https://twitter.com/" class="grow" target="_blank"><!-- <i class="icon-twitter2"></i> --> <i class="fab fa-twitter-square" title="Twitter"></i></a>
-                            <a href="https://www.instagram.com/" class="grow" target="_blank"><!-- <i class="icon-instagram2"></i> --><i class="fab fa-instagram" title="Instagram"></i></a>
-
-
+							<a href="https://www.instagram.com/" class="grow" target="_blank"><!-- <i class="icon-instagram2"></i> --><i class="fab fa-instagram" title="Instagram"></i></a>
+							
 						</div>
                     </div>
                 </div>
