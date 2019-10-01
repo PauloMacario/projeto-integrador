@@ -146,7 +146,7 @@
                         </div>
                             <div class="col-12 mt-3">
                                 <div class="col-12">
-                                <table id="tabela-acompanho" class="table table-striped  my-ongs" style="display:none;">
+                                <table id="tabela-acompanho" class="table table-striped table-responsive-sm my-ongs" style="display:none;">
                                     <thead>
                                         <tr >
                                             <th class="text-center" width=""></th>

@@ -194,7 +194,7 @@
 							$('#tabela-acompanho').prepend('<tr>\
 																<td><a href="/homeOng/'+response.ongs[i].id+'" ><img src="'+response.ongs[i].avatar+'"></a></td>\
 																<td>'+response.ongs[i].name+'</td>\
-																<td>'+response.ongs[i].description+'</td>\
+																<td class="text-truncate" style="max-width: 150px;">'+response.ongs[i].description+'</td>\
 															</tr>')
 
                         }
