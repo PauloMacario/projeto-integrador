@@ -82,7 +82,7 @@
                     </div>
                     <div class="col-12 col-md-8">
                         <label for="endereco">Endereço</label>
-                        <input type="text" class="form-control-sm form-control" id="endereco" name="endereco" value="{{$ong->address}}">
+                        <input type="text" class="form-control-sm form-control" id="endereco" name="endereco" value="{{$ong->address}}" readonly>
                     </div>
                 </div>
             </div>
@@ -90,15 +90,15 @@
                 <div class="form-row">
                     <div class="col-12 col-md-5 mt-2">
                         <label for="bairro">Bairro</label>
-                        <input type="text" class="form-control-sm form-control" id="bairro" name="bairro" value="{{$ong->district}}" >
+                        <input type="text" class="form-control-sm form-control" id="bairro" name="bairro" value="{{$ong->district}}" readonly>
                     </div>
                     <div class="col-12 col-md-5 mt-2">
                         <label for="cidade">Cidade</label>
-                        <input type="text" class="form-control-sm form-control" id="cidade" name="cidade" value="{{$ong->city}}" >
+                        <input type="text" class="form-control-sm form-control" id="cidade" name="cidade" value="{{$ong->city}}" readonly>
                     </div>
                     <div class="col-12 col-md-2 mt-2">
                         <label for="uf">Estado</label>
-                        <input type="text" class="form-control-sm form-control" id="uf" name="uf" value="{{$ong->uf}}" >
+                        <input type="text" class="form-control-sm form-control" id="uf" name="uf" value="{{$ong->uf}}" readonly>
                     </div>
                 </div>
             </div>

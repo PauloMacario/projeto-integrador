@@ -67,11 +67,7 @@ class OngController extends Controller
             "nome" => "min:3|max:100",
             "email" => "max:100",
             "descricao" => "min:3|max:500",
-            "avatar" => "max:100",
-            "address" => "required|max:100",
-            "district" => "required|max:100",
-            "city" => "required|max:100",
-            "uf" => "required|max:100"
+            "avatar" => "max:100"
         ]);
 
 
