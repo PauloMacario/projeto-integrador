@@ -6,7 +6,7 @@
 		<section class="home" id="home">
 			<div class="overlay"></div>
 			<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/cover_nature_01.jpg);background-size: cover; background-repeat: no-repeat;">
-				<a href="login" class="">
+				<a href="login" class="" title="Seja Voluntário">
 					<div class="desc ">
 						<h2><strong>Seja voluntário!</strong></h2>
 						<span>Encontre aqui um trabalho voluntário para participar </span>
@@ -160,9 +160,9 @@
 						<div class="noticia-text">
 							<div class="noticia-title">
 								<h3><a target="_blank" href="https://www.youtube.com/watch?v=j8L1CcanjT8">Conheça os 17 Objetivos de Desenvolvimento Sustentável</a></h3>
-								<p>Acesse aqui a Agenda 2030 na íntegra, com o documento final adotado na Cúpula das Nações Unidas sobre o Desenvolvimento Sustentável.</p>									
+								<p>Acesse aqui a Agenda 2030 na íntegra, com o documento final adotado na Cúpula das Nações Unidas sobre o Desenvolvimento Sustentável.</p>
 							</div>
-						</div> 
+						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-12 col-sm-12 box-img-animate">
@@ -171,9 +171,9 @@
 						<div class="noticia-text">
 							<div class="noticia-title">
 								<h3><a target="_blank" href="https://www.youtube.com/watch?v=soT7jdW5bvE">Um olhar sobre o futuro do Santuário de Elefantes Brasil.</a></h3>
-								<p>Nossa missão é proteger, resgatar e prover um santuário de ambiente natural para os elefantes em cativeiro.</p>									
+								<p>Nossa missão é proteger, resgatar e prover um santuário de ambiente natural para os elefantes em cativeiro.</p>
 							</div>
-						</div> 
+						</div>
 					</div>
 				</div>
 				<div class="clearfix visible-sm-block"></div>
@@ -184,9 +184,9 @@
 								<div class="noticia-title">
 									<h3><a target="_blank" href="https://www.youtube.com/watch?v=_oeYCEYpaRo">O trabalho infantil no Brasil</a></h3>
 									<p>Os dados do Instituto Brasileiro de Geografia e Estatística (IBGE) de 2016 mostram que o Brasil tem 2,4 milhões de crianças e adolescentes entre 5 e 17 anos trabalhando.</p>
-									
+
 								</div>
-							</div> 
+							</div>
 						</div>
 					</div>
 				<div class="clearfix visible-md-block"></div>

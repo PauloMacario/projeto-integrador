@@ -25,9 +25,9 @@
 
                                         <a href="#">
                                             @if($ong->avatar == NULL)
-                                                <img src="{{url('images/avatar-ong-default.png')}}" alt=""  title="Adicione uma foto">
+                                                <img src="{{url('images/avatar-ong-default.png')}}" alt=""  title="{{$ong->name}}">
                                             @else
-                                                <img src="{{url($ong->avatar)}}" alt="" title="Adicione uma foto">
+                                                <img src="{{url($ong->avatar)}}" alt="" title="{{$ong->name}}">
                                             @endif
                                         </a>
                                     </div>
@@ -60,7 +60,7 @@
                                                                 @if ($ong->website1 == NULL)
                                                                 Adicione seu website
                                                                 @else
-                                                                <span><a href="htpp://{{$ong->website1}}" target="_blank">{{$ong->website1}}</a></span>
+                                                                <span><a href="//{{$ong->website1}}" target="_blank">{{$ong->website1}}</a></span>
                                                                 @endif
                                                             </td>
                                                         </tr>
@@ -71,7 +71,7 @@
                                                                     <span><i class="fas fa-globe-africa icone-perfil"></i> </span>
                                                                 </td>
                                                                 <td class="text-left">
-                                                                   <span><a href="htpp://{{$ong->website2}}" target="_blank" >{{$ong->website2}}</a></span>
+                                                                   <span><a href="//{{$ong->website2}}" target="_blank" >{{$ong->website2}}</a></span>
 
                                                                 </td>
                                                             </tr>
@@ -83,18 +83,19 @@
                                                                     <span><i class="fas fa-globe-africa icone-perfil"></i> </span>
                                                                 </td>
                                                                 <td class="text-left">
-                                                                    <span><a href="htpp://{{$ong->website3}}" target="_blank">{{$ong->website3}}</a></span>
+                                                                    <span><a href="//{{$ong->website3}}" target="_blank">{{$ong->website3}}</a></span>
                                                                 </td>
                                                             </tr>
                                                         @endif
                                                         @if ($ong->website4 == NULL)
+
                                                         @else
                                                             <tr>
                                                                 <td class="text-left">
                                                                     <span><i class="fas fa-globe-africa icone-perfil"></i> </span>
                                                                 </td>
                                                                 <td class="text-left">
-                                                                    <span><a href="htpp://{{$ong->website4}}" target="_blank">{{$ong->website4}}</a></span>
+                                                                    <span><a href="//{{$ong->website4}}" target="_blank">{{$ong->website4}}</a></span>
                                                                 </td>
                                                             </tr>
                                                         @endif
@@ -292,7 +293,7 @@
                                             @if (($evento->image) == NULL)
                                             <td class="text-center" ><a href="{{url('eventos/'.$evento->id)}}" ><img src="{{url('images/avatar-ong-default.png')}}" ></a></td>
                                             @else
-                                            <td class="text-center" ><a href="{{url('eventos/'.$evento->id)}}" ><img src="{{url($evento->image)}}" ></a></td>
+                                            <td class="text-center" ><a href="{{url('eventos/'.$evento->id)}}" ><img src="{{url($evento->image)}}" title="{{$ong->name}}"></a></td>
                                             @endif
                                             <td class="text-center" >{{$evento->title}}</td>
                                             <td class="text-center text-truncate" style="max-width: 150px;"  >{{$evento->description}}</td>

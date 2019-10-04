@@ -5,7 +5,7 @@
 <section class="home">
 		<div class="overlay"></div>
 		<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo_caridade.jpg);">
-            <a href="#titulo" target="" class="">
+            <a href="#titulo" target="" class="" title="ONGs">
                 <div class="desc ">
                     <h2><strong>ONGs</strong></h2>
                     <span>Inspirando você a fazer o bem</span>

@@ -36,44 +36,44 @@
         <div class="row">
             <div class="col-12 box-img-galeria">
                 <div class="img-galeria box-img-animate ">
-                    <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos">
+                    <a href="{{asset("images/photo_01.jpeg")}}" class="galeria" data-lightbox="photos" title="Voluntariado">
                         <img src="{{asset("images/photo_01.jpeg")}}" alt="">
                     </a>
                 </div>
                 <div class="img-galeria box-img-animate">
-                    <a href="{{asset("images/photo-amazonia.jpeg")}}" class="galeria" data-lightbox="photos">
+                    <a href="{{asset("images/photo-amazonia.jpeg")}}" class="galeria" data-lightbox="photos" title="Desmatamento">
                         <img src="{{asset("images/photo-amazonia.jpeg")}}" alt="">
                     </a>
                 </div>
                 <div class="img-galeria box-img-animate">
-                    <a href="{{asset("images/photo-volunteer.jpg")}}" class="galeria" data-lightbox="photos">
+                    <a href="{{asset("images/photo-volunteer.jpg")}}" class="galeria" data-lightbox="photos" title="Doação">
                         <img src="{{asset("images/photo-volunteer.jpg")}}" alt="">
                     </a>
                 </div>
             </div>
-        </div> 
-@else 
+        </div>
+@else
 
 <div class="row">
         <div class="col-12 box-img-galeria">
 
             @foreach ($fotos as $foto)
-                
+
             <div class="img-galeria box-img-animate ">
                 <a href="{{url($foto->image)}}" class="galeria" data-lightbox="photos">
                 <img src="{{url($foto->image)}}" title="{{$foto->name}}" alt="">
                 </a>
             </div>
             @endforeach
-            
+
         </div>
-    </div>        
+    </div>
 
 
 
 
-             
-   
+
+
 
 
       <!--  <div class="bgbox">
@@ -112,7 +112,7 @@
         <!--  ===================== Botao seja voluntário - (FINAL)  ====================  -->
         @endif
     </div>
-</section>        
+</section>
 
 
 

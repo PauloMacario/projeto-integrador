@@ -48,7 +48,7 @@
                                     @if(Auth::user()->avatar == NULL)
                                         <img src="{{url('images/avatar-default.png')}}" alt="" title="Adicione uma foto">
                                     @else
-                                        <img src="{{url(Auth::user()->avatar)}}" alt="" title="Adicione uma foto">
+                                        <img src="{{url(Auth::user()->avatar)}}" alt="" title=" {{ Auth::user()->name }}">
                                     @endif
                                 </a>
                             </div>
@@ -164,27 +164,7 @@
                     </div>
                 </div>
 
-                            {{-- <div class="col-12 col-md-12 mt-5 mb-5">
-                                <div class="col-12 col-md-12 mt-3 text-center mt-4 " >
-                                    <h3  id="ong-follow-title" style="display:none;">ONGs que eu acompanho.</h3>
-                                </div>
-                                    <div class="col-12 mt-3">
-                                        <div class="col-12">
-                                        <table id="tabela-acompanho" class="table table-striped  my-ongs" style="display:none;">
-                                            <thead>
-                                                <tr >
-                                                    <th class="text-center" width=""></th>
-                                                    <th class="text-center" width="25%">Nome</th>
-                                                    <th class="text-center" width="100%">Descrição</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
 
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div> --}}
 
             </section>
 

@@ -35,7 +35,7 @@
                                 <div class="profile-event-img text-center">
                                     <a href="">
                                         @if (($evento->image) == NULL)
-                                        <img src="{{url('images/avatar-ong-default.png')}}" >
+                                        <img src="{{url('images/avatar-ong-default.png')}}" title="{{$evento->title}}" >
                                         @else
                                         <img src="{{url($evento->image)}}" alt="" title="{{$evento->title}}">
                                         @endif
@@ -55,7 +55,7 @@
                                         <p> <span><i class="fas fa-map-marker-alt icone-perfil mt-3"></i>{{$evento->address}}</span>
                                             <span>{{$evento->district}} </span><span>{{$evento->city}} </span>
                                         </p>
-                                        <p><span><i class="fas fa-calendar-alt icone-perfil mt-3"></i>{{date('d-m-Y'), strtotime($evento->date)}}</span></p>
+                                        <p><span><i class="fas fa-calendar-alt icone-perfil mt-3"></i>{{ ($evento->date) ? $evento->date->format('d/m/Y') : ''}}</span></p>
 
                                         <div class="col-12 mt-3 d-flex justify-content-center align-items-center">
                                             <div class="text-center col-md-4">

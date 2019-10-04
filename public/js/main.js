@@ -179,7 +179,7 @@
 									<a href="/homeOng/'+response.ongs[i].id+'" class="btn-editar">Minha ONG</a>\
 								<div> ')
 							}else{
-							$('#card').prepend('<a href="/homeOng/'+response.ongs[i].id+'" ><img src="' + response.ongs[i].avatar + '" class="card-img-top" width="100px" height="200px" alt="..."></a>\
+							$('#card').prepend('<a href="/homeOng/'+response.ongs[i].id+'" ><img src="' + response.ongs[i].avatar + '" class="card-img-top" width="100px" height="200px" alt="..." title="'+response.ongs[i].name+'"></a>\
 												<div class="card-body"><h5 class="card-title">'+response.ongs[i].name+'</h5>\
 												 	<p class="card-text">'+ response.ongs[i].description +'</p>\
 													<a href="/homeOng/'+response.ongs[i].id+'" class="btn-editar">Minha ONG</a>\
@@ -192,7 +192,7 @@
                             $('#ong-follow-title').attr('style', 'display:block;')
                             $('#tabela-acompanho').attr('style', 'display:block;')
 							$('#tabela-acompanho').prepend('<tr>\
-																<td><a href="/homeOng/'+response.ongs[i].id+'" ><img src="'+response.ongs[i].avatar+'"></a></td>\
+																<td><a href="/homeOng/'+response.ongs[i].id+'" ><img src="'+response.ongs[i].avatar+'" title="'+response.ongs[i].name+'"></a></td>\
 																<td>'+response.ongs[i].name+'</td>\
 																<td class="text-truncate" style="max-width: 150px;">'+response.ongs[i].description+'</td>\
 															</tr>')
@@ -219,7 +219,7 @@
 								$('#card-evento-title').attr('style', 'display:block;')
 
 								$('#card-evento').prepend('<div class="evento-content box-img-animate"><a href="/eventos/'+response.actions_events[i].id+'" class="galeria" class="d-flex align-items-center ">\
-																<img src="'+response.actions_events[i].image+'" title="" >\
+																<img src="'+response.actions_events[i].image+'" title="'+response.actions_events[i].title+'" >\
 															</a>\
 															<div class="text-truncate" >'+response.actions_events[i].description+'</div></div>')
 
@@ -250,7 +250,7 @@ $('#btn-busca').click(function(e){
                         $('#box-result').css('max-height', '800px')
                         $('#box-result').css('overflow', 'scroll')
                             for(var i = 0; i < response.length; i++ ){
-                                $('#tabela').addClass('reset').append('<tr class="result-busca"><td width="25%"><a href="homeOng/'+response[i].id+'" ><img src="'+response[i].avatar+'"></a></td><td width="25%">'+response[i].name+'</td><td width="25%">'+response[i].description+'</td> <td width="25%">'+response[i].district+'</td></tr>')
+                                $('#tabela').addClass('reset').append('<tr class="result-busca"><td width="25%"><a href="homeOng/'+response[i].id+'" ><img src="'+response[i].avatar+'" title="'+response[i].name+'"></a></td><td width="25%">'+response[i].name+'</td><td width="25%">'+response[i].description+'</td> <td width="25%">'+response[i].district+'</td></tr>')
                             }
                         }
                         else{

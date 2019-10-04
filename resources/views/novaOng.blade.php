@@ -75,6 +75,14 @@
                 <label for="endereco">Endereço</label>
                 <input type="text" class="form-control" id="endereco" name="endereco" readonly required>
             </div>
+            @error('address')
+            <div class="col-12 alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                <strong> {{ $message }}.</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @enderror
         </div>
 
         <div class="form-row ">
@@ -82,14 +90,17 @@
                 <label for="bairro">Bairro</label>
                 <input type="text" class="form-control" id="bairro" name="bairro" readonly required>
             </div>
+
             <div class="form-group col-md-5">
                 <label for="cidade">Cidade</label>
                 <input type="text" class="form-control" id="cidade" name="cidade" readonly required>
             </div>
+
             <div class="form-group col-md-2">
                 <label for="uf">Estado</label>
                 <input type="text" class="form-control" id="uf" name="uf" readonly required>
             </div>
+
         </div>
         <div class="form-row ">
                 <div class="form-group col-md-12 mt-3">

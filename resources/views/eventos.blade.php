@@ -7,7 +7,7 @@
 <section class="home">
 		<div class="overlay"></div>
 		<div class="home-cover text-center" data-stellar-background-ratio="1" style="background-image: url(images/photo-gt.jpeg);">
-			<a href="#titulo" class="">
+			<a href="#titulo" class="" title="Eventos">
 				<div class="desc ">
 					<h2><strong>Eventos</strong></h2>
 					<span>Alguns de nossos eventos cadastrados</span>

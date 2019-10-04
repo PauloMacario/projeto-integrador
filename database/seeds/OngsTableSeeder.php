@@ -19,10 +19,10 @@ class OngsTableSeeder extends Seeder
             'phone1' => 1198765432,
             'phone2' => 11987654321,
             'email' => 'casanovamulher.ong@gmail.com',
-            'website1' => 'https://www.ongnovamulher.org/',
-            'website2' => 'https://www.facebook.com/ongnovamulher',
-            'website3' => 'https://www.instagram.com/ongnovamulher/',
-            'website4' => 'NULL',
+            'website1' => 'http://www.ongnovamulher.org/',
+            'website2' => 'http://www.facebook.com/ongnovamulher',
+            'website3' => 'http://www.instagram.com/ongnovamulher/',
+            'website4' => '',
             'avatar' => 'images/novamulher.jpg'
         ]);
 
@@ -38,9 +38,9 @@ class OngsTableSeeder extends Seeder
             'phone2' => 11987654321,
             'email' => 'faleconosco@caosemdono.com.br',
             'website1' => 'http://www.caosemdono.com.br/',
-            'website2' => 'https://www.facebook.com/caosemdono/',
-            'website3' => 'https://twitter.com/caosemdono',
-            'website4' => 'NULL',
+            'website2' => 'http://www.facebook.com/caosemdono/',
+            'website3' => 'http://twitter.com/caosemdono',
+            'website4' => '',
             'avatar' => 'images/caosemdono.jpg'
         ]);
 
@@ -55,10 +55,10 @@ class OngsTableSeeder extends Seeder
             'phone1' => 1198765432,
             'phone2' => 11987654321,
             'email' => 'contato@casadozezinho.org.br',
-            'website1' => 'https://novo.casadozezinho.org.br/',
-            'website2' => 'https://www.facebook.com/casadozezinho',
-            'website3' => 'https://www.instagram.com/casadozezinho/',
-            'website4' => 'NULL',
+            'website1' => 'http://novo.casadozezinho.org.br/',
+            'website2' => 'http://www.facebook.com/casadozezinho',
+            'website3' => 'http://www.instagram.com/casadozezinho/',
+            'website4' => '',
             'avatar' => 'images/casadozezinho.jpg'
         ]);
     }
